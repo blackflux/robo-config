@@ -41,7 +41,7 @@ module.exports.loadConfig = (configName, variables) => {
 };
 
 
-module.exports.writeConfig = (config) => {
+module.exports.applyConfig = (config) => {
   assert(config instanceof Object && !Array.isArray(config));
 
   const target = path.join(appRoot.path, config.target);

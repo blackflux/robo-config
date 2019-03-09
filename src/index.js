@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { loadConfig, writeConfig } = require('./util/config');
+const { loadConfig, applyConfig } = require('./util/config');
 
 
 module.exports = (configNames, variables = {}) => {
@@ -12,7 +12,7 @@ module.exports = (configNames, variables = {}) => {
     const config = loadConfig(configName, variables);
     if (config === null) {
       events.push(`${configName}: Error! Bad Name!`);
-    } else if (writeConfig(config)) {
+    } else if (applyConfig(config)) {
       events.push(`${configName}: Configuration File Updated`);
     }
   });
