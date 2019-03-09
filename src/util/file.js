@@ -4,18 +4,22 @@ const path = require('path');
 const yaml = require('js-yaml');
 
 
-const stringifyContent = (filepath, content) => {
+const convertContent = (filepath, content) => {
+  const isStringInput = typeof content === 'string';
+
   assert(typeof filepath === 'string');
-  assert(content instanceof Object);
+  assert(isStringInput || content instanceof Object);
 
   switch (filepath.slice(filepath.lastIndexOf('.') + 1)) {
     case 'json':
-      return JSON.stringify(content, null, 2);
+      return isStringInput
+        ? JSON.parse(content)
+        : JSON.stringify(content, null, 2);
     case 'yml':
     case 'yaml':
-      return yaml.safeDump(content);
+      return yaml[isStringInput ? 'safeLoad' : 'safeDump'](content);
     default:
-      return content.join('\n');
+      return content[isStringInput ? 'split' : 'join']('\n');
   }
 };
 
@@ -24,7 +28,7 @@ module.exports.writeFile = (filepath, content) => {
   assert(content instanceof Object);
 
   const currentContent = fs.existsSync(filepath) ? fs.readFileSync(filepath, 'utf8') : null;
-  const contentString = stringifyContent(filepath, content);
+  const contentString = convertContent(filepath, content);
 
   if (currentContent !== contentString) {
     fs.mkdirSync(path.dirname(filepath), { recursive: true });
@@ -34,24 +38,9 @@ module.exports.writeFile = (filepath, content) => {
   return false;
 };
 
-const parseContent = (filepath, content) => {
-  assert(typeof filepath === 'string');
-  assert(typeof content === 'string');
-
-  switch (filepath.slice(filepath.lastIndexOf('.') + 1)) {
-    case 'json':
-      return JSON.parse(content);
-    case 'yml':
-    case 'yaml':
-      return yaml.safeLoad(content);
-    default:
-      return content.split('\n');
-  }
-};
-
 module.exports.loadFile = (filepath) => {
   assert(typeof filepath === 'string');
 
   const content = fs.readFileSync(filepath, 'utf8');
-  return parseContent(filepath, content);
+  return convertContent(filepath, content);
 };
