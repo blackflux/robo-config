@@ -1,0 +1,21 @@
+workflows:
+  version: 2
+  node-multi-build:
+    jobs:
+      - release:
+          requires:
+            - gally-create-pr
+            - test-node-v10
+            - test-node-v8.10
+          filters:
+            branches:
+              only: master
+version: 2
+jobs:
+  release:
+    docker:
+      - image: 'circleci/node:10'
+    steps:
+      - checkout
+      - run: yarn install --frozen-lockfile
+      - run: yarn run semantic-release

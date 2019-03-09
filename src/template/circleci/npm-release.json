@@ -1,0 +1,10 @@
+{
+  "target": ".circleci/config.yml",
+  "modules": [
+    "auto-create-pr.yml",
+    "base.yml",
+    "dependabot-auto-merge.yml",
+    "semantic-release.yml"
+  ],
+  "variables": {}
+}

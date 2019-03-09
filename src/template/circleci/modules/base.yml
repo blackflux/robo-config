@@ -1,0 +1,33 @@
+workflows:
+  version: 2
+  node-multi-build:
+    jobs:
+      - test-node-v10:
+          requires:
+            - gally-create-pr
+      - test-node-v8.10:
+          requires:
+            - gally-create-pr
+version: 2
+jobs:
+  test-node-v10:
+    docker:
+      - image: 'circleci/node:10'
+    steps:
+      - checkout
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+      - run: (git add . && git diff-index --quiet HEAD --) || (git status && exit 1);
+      - run:
+          command: |
+            if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+              yarn run coveralls
+            fi
+  test-node-v8.10:
+    docker:
+      - image: 'circleci/node:8.10'
+    steps:
+      - checkout
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+      - run: (git add . && git diff-index --quiet HEAD --) || (git status && exit 1);

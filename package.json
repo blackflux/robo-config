@@ -87,5 +87,9 @@
   "files": [
     "lib"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "app-root-path": "2.1.0",
+    "deepmerge": "^3.2.0",
+    "js-yaml": "^3.12.2"
+  }
 }
