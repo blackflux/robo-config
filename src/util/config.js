@@ -16,8 +16,7 @@ const configSchema = Joi.object().keys({
   }).unknown(false).required()),
   configs: Joi.array().items(Joi.string())
 })
-  .with('target', 'variables')
-  .with('target', 'modules')
+  .and('target', 'variables', 'modules')
   .unknown(false)
   .required();
 
