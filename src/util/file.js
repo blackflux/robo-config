@@ -4,6 +4,19 @@ const path = require('path');
 const yaml = require('yaml-boost');
 
 
+const mkdirSync = (dirPath, options) => {
+  try {
+    fs.mkdirSync(dirPath, options);
+    return true;
+  } catch (err) {
+    if (err.code !== 'EEXIST') {
+      throw err;
+    }
+    return false;
+  }
+};
+module.exports.mkdirSync = mkdirSync;
+
 const stringifyContent = (filepath, content) => {
   assert(typeof filepath === 'string');
   assert(content instanceof Object);
@@ -28,7 +41,7 @@ module.exports.writeFile = (filepath, content) => {
   const contentString = stringifyContent(filepath, content);
 
   if (currentContent !== contentString) {
-    fs.mkdirSync(path.dirname(filepath), { recursive: true });
+    mkdirSync(path.dirname(filepath), { recursive: true });
     fs.writeFileSync(filepath, contentString);
     return true;
   }
