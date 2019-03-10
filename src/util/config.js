@@ -27,7 +27,7 @@ const loadModule = (moduleDir, moduleName, config, moduleVars) => {
 
   const module = loadFile(fileName);
 
-  return populateVars(module, moduleVars);
+  return populateVars(module, moduleVars, false);
 };
 
 
@@ -41,13 +41,13 @@ module.exports.loadConfig = (configName, variables) => {
     return null;
   }
   const config = loadFile(configFilePath);
-  Object.assign(config, { variables: populateVars(config.variables, variables) });
+  Object.assign(config, { variables: populateVars(config.variables, variables, true) });
 
   // load and merge config modules into config
   const moduleDir = path.join(__dirname, '..', 'template', configName.split('/')[0], 'modules');
   config.toWrite = deepmerge.all(config.modules
     .map(m => [m.name, m.variables])
-    .map(([moduleName, moduleVars]) => [moduleName, populateVars(moduleVars, config.variables)])
+    .map(([moduleName, moduleVars]) => [moduleName, populateVars(moduleVars, config.variables, true)])
     .map(([moduleName, moduleVars]) => loadModule(moduleDir, moduleName, config, moduleVars)));
 
   return config;

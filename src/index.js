@@ -3,9 +3,9 @@ const { loadConfig, applyConfig } = require('./util/config');
 
 
 module.exports = (configNames, variables = {}) => {
-  assert(Array.isArray(configNames));
-  assert(configNames.every(configName => configName.split('/').length === 2));
+  assert(Array.isArray(configNames) && configNames.every(configName => configName.split('/').length === 2));
   assert(variables instanceof Object && !Array.isArray(variables));
+
   const events = [];
 
   configNames.forEach((configName) => {
