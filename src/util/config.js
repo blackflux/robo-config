@@ -13,15 +13,7 @@ const loadModule = (moduleDir, moduleName, config, moduleVars) => {
   assert(moduleVars instanceof Object && !Array.isArray(moduleVars));
 
   const fileName = ['json', 'yml', 'yaml', 'txt'].reduce(
-    (name, ext) => {
-      if (!fs.existsSync(name)) {
-        const nameNew = `${name}.${ext}`;
-        if (fs.existsSync(nameNew)) {
-          return nameNew;
-        }
-      }
-      return name;
-    },
+    (name, ext) => (!fs.existsSync(name) && fs.existsSync(`${name}.${ext}`) ? `${name}.${ext}` : name),
     path.join(moduleDir, moduleName)
   );
 
