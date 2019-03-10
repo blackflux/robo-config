@@ -4,13 +4,7 @@ const robo = require('../src/index');
 
 it('Executing Configuration', () => {
   expect(robo({
-    configs: [
-      'gally/two-branch',
-      'circleci/npm-release',
-      'dependabot/nodejs-instant',
-      'semantic-release/commit-convention',
-      'editor/two-space'
-    ],
+    configs: ['assorted/npm-opensource'],
     variables: {
       repoKey: 'blackflux/robo-config',
       owner: 'simlu',
