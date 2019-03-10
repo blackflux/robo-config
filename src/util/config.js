@@ -40,7 +40,8 @@ module.exports.loadConfig = (configName, variables) => {
   if (!fs.existsSync(configFilePath)) {
     return null;
   }
-  const config = populateVars(loadFile(configFilePath), variables);
+  const config = loadFile(configFilePath);
+  Object.assign(config, { variables: populateVars(config.variables, variables) });
 
   // load and merge config modules into config
   const moduleDir = path.join(__dirname, '..', 'template', configName.split('/')[0], 'modules');
