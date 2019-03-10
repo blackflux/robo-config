@@ -1,0 +1,14 @@
+{
+  "target": ".releaserc.json",
+  "modules": [
+    {
+      "name": "angular",
+      "variables": {}
+    },
+    {
+      "name": "build-deps-as-patch",
+      "variables": {}
+    }
+  ],
+  "variables": {}
+}
