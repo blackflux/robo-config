@@ -33,14 +33,19 @@ module.exports.loadConfig = (configName, variables) => {
     return null;
   }
   const config = sls.smartRead(configFilePath);
-  Object.assign(config, { variables: populateVars(config.variables, variables, true) });
 
-  // load and merge config modules into config
-  const moduleDir = path.join(__dirname, '..', 'template', configName.split('/')[0], 'modules');
-  config.toWrite = deepmerge.all(config.modules
-    .map(m => [m.name, m.variables])
-    .map(([moduleName, moduleVars]) => [moduleName, populateVars(moduleVars, config.variables, true)])
-    .map(([moduleName, moduleVars]) => loadModule(moduleDir, moduleName, config, moduleVars)));
+  if (typeof config.target === 'string') {
+    Object.assign(config, { variables: populateVars(config.variables, variables, true) });
+
+    // load and merge config modules into config
+    const moduleDir = path.join(__dirname, '..', 'template', configName.split('/')[0], 'modules');
+    config.toWrite = deepmerge.all(config.modules
+      .map(m => [m.name, m.variables])
+      .map(([moduleName, moduleVars]) => [moduleName, populateVars(moduleVars, config.variables, true)])
+      .map(([moduleName, moduleVars]) => loadModule(moduleDir, moduleName, config, moduleVars)));
+  }
+
+  // todo: validate config here using joi
 
   return config;
 };
