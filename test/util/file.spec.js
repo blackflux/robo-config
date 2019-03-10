@@ -17,7 +17,7 @@ describe('Integration util/file.js', () => {
 
   it('Testing Create Nested Folder (Error)', () => {
     try {
-      mkdirSync(path.join(dir, 'dir', 'dir'))
+      mkdirSync(path.join(dir, 'dir', 'dir'));
     } catch (e) {
       expect(e.code).to.equal('ENOENT');
     }
