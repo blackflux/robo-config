@@ -90,8 +90,8 @@
   "dependencies": {
     "app-root-path": "2.1.0",
     "deepmerge": "3.2.0",
-    "js-yaml": "3.12.2",
     "lodash.clonedeep": "4.5.0",
-    "object-scan": "5.0.2"
+    "object-scan": "5.0.2",
+    "yaml-boost": "1.8.4"
   }
 }
