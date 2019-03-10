@@ -2,7 +2,7 @@ const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
 const deepmerge = require('deepmerge');
-const { writeFile, loadFile } = require('./file');
+const sls = require('smart-fs');
 const { populateVars } = require('./vars');
 
 
@@ -17,7 +17,7 @@ const loadModule = (moduleDir, moduleName, config, moduleVars) => {
     path.join(moduleDir, moduleName)
   );
 
-  const module = loadFile(fileName);
+  const module = sls.smartRead(fileName);
 
   return populateVars(module, moduleVars, false);
 };
@@ -32,7 +32,7 @@ module.exports.loadConfig = (configName, variables) => {
   if (!fs.existsSync(configFilePath)) {
     return null;
   }
-  const config = loadFile(configFilePath);
+  const config = sls.smartRead(configFilePath);
   Object.assign(config, { variables: populateVars(config.variables, variables, true) });
 
   // load and merge config modules into config
@@ -51,5 +51,5 @@ module.exports.applyConfig = (config, projectRoot) => {
   assert(typeof projectRoot === 'string');
 
   const target = path.join(projectRoot, config.target);
-  return writeFile(target, config.toWrite);
+  return sls.smartWrite(target, config.toWrite);
 };

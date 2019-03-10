@@ -3819,6 +3819,11 @@ lodash.get@4.4.2, lodash.get@^4.4.2:
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
+lodash.isequal@4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
@@ -6068,6 +6073,16 @@ smart-buffer@^1.0.13:
   version "1.1.15"
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-1.1.15.tgz#7f114b5b65fab3e2a35aa775bb12f0d1c649bf16"
   integrity sha1-fxFLW2X6s+KjWqd1uxLw0cZJvxY=
+
+smart-fs@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.1.0.tgz#b012322eaf42e3f2e360b0ac0fdb89e673e70f4d"
+  integrity sha512-wIXYHVoOATG7oziNuplH+FKuTHyvO75OcSkcm/glDBlWS60BasiL21eT8eAKn1E+cuKhsLEEOAn3dN1KonH1ig==
+  dependencies:
+    fs-extra "7.0.1"
+    lodash.clonedeep "4.5.0"
+    lodash.isequal "4.5.0"
+    yaml-boost "1.8.4"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
