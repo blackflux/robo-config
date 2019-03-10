@@ -1,7 +1,6 @@
 const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
-const appRoot = require('app-root-path');
 const deepmerge = require('deepmerge');
 const { writeFile, loadFile } = require('./file');
 const { populateVars } = require('./vars');
@@ -54,9 +53,10 @@ module.exports.loadConfig = (configName, variables) => {
 };
 
 
-module.exports.applyConfig = (config) => {
+module.exports.applyConfig = (config, projectRoot) => {
   assert(config instanceof Object && !Array.isArray(config));
+  assert(typeof projectRoot === 'string');
 
-  const target = path.join(appRoot.path, config.target);
+  const target = path.join(projectRoot, config.target);
   return writeFile(target, config.toWrite);
 };
