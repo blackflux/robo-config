@@ -13,9 +13,19 @@ const loadModule = (moduleDir, moduleName, config, moduleVars) => {
   assert(config instanceof Object && !Array.isArray(config));
   assert(moduleVars instanceof Object && !Array.isArray(moduleVars));
 
-  // todo: make file endings options for modules
+  let fileName = path.join(moduleDir, moduleName);
+  if (!fs.existsSync(fileName)) {
+    ['json', 'yml', 'yaml', 'txt'].forEach((fileEnding) => {
+      if (fileName.indexOf('.') === -1) {
+        const fileNameTest = `${fileName}.${fileEnding}`;
+        if (fs.existsSync(fileNameTest)) {
+          fileName = fileNameTest;
+        }
+      }
+    });
+  }
 
-  const module = loadFile(path.join(moduleDir, moduleName));
+  const module = loadFile(fileName);
 
   return injectVars(module, moduleVars);
 };

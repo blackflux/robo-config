@@ -2,11 +2,11 @@
   "target": ".circleci/config.yml",
   "modules": [
     {
-      "name": "00-base.yml",
+      "name": "00-base",
       "variables": {}
     },
     {
-      "name": "01-gally-create-staging-pr.yml",
+      "name": "01-gally-create-staging-pr",
       "variables": {
         "job-name": "gally-create-pr",
         "docker-image": "circleci/node:10",
@@ -14,7 +14,7 @@
       }
     },
     {
-      "name": "02-run-yarn-tests.yml",
+      "name": "02-run-yarn-tests",
       "variables": {
         "job-name": "test-node-v10",
         "docker-image": "circleci/node:10",
@@ -26,14 +26,14 @@
       }
     },
     {
-      "name": "03-inject-coveralls-step.yml",
+      "name": "03-inject-coveralls-step",
       "variables": {
         "job-name": "test-node-v10",
         "ci-env-branch-name": "CIRCLE_BRANCH"
       }
     },
     {
-      "name": "02-run-yarn-tests.yml",
+      "name": "02-run-yarn-tests",
       "variables": {
         "job-name": "test-node-v8.10",
         "docker-image": "circleci/node:8.10",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "name": "04-dependabot-auto-merge.yml",
+      "name": "04-dependabot-auto-merge",
       "variables": {
         "job-name": "gally-auto-merge",
         "docker-image": "circleci/node:10",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "name": "05-semantic-release.yml",
+      "name": "05-semantic-release",
       "variables": {
         "job-name": "release",
         "docker-image": "circleci/node:10",
