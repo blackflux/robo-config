@@ -1,0 +1,14 @@
+{
+  "target": ".dependabot/config.yml",
+  "modules": [
+    {
+      "name": "base",
+      "variables": {
+        "update-schedule": "live",
+        "package-manager": "javascript",
+        "target-branch": "dev"
+      }
+    }
+  ],
+  "variables": {}
+}
