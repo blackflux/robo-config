@@ -12,17 +12,18 @@ const loadModule = (moduleDir, moduleName, config, moduleVars) => {
   assert(config instanceof Object && !Array.isArray(config));
   assert(moduleVars instanceof Object && !Array.isArray(moduleVars));
 
-  let fileName = path.join(moduleDir, moduleName);
-  if (!fs.existsSync(fileName)) {
-    ['json', 'yml', 'yaml', 'txt'].forEach((fileEnding) => {
-      if (fileName.indexOf('.') === -1) {
-        const fileNameTest = `${fileName}.${fileEnding}`;
-        if (fs.existsSync(fileNameTest)) {
-          fileName = fileNameTest;
+  const fileName = ['json', 'yml', 'yaml', 'txt'].reduce(
+    (name, ext) => {
+      if (!fs.existsSync(name)) {
+        const nameNew = `${name}.${ext}`;
+        if (fs.existsSync(nameNew)) {
+          return nameNew;
         }
       }
-    });
-  }
+      return name;
+    },
+    path.join(moduleDir, moduleName)
+  );
 
   const module = loadFile(fileName);
 
