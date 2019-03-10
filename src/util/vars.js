@@ -2,7 +2,7 @@ const assert = require('assert');
 const cloneDeep = require('lodash.clonedeep');
 const objectScan = require('object-scan');
 
-module.exports.injectVars = (data, variables) => {
+module.exports.populateVars = (data, variables) => {
   const result = cloneDeep(data);
   const variableEntries = Object
     .entries(variables)

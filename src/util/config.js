@@ -4,7 +4,7 @@ const path = require('path');
 const appRoot = require('app-root-path');
 const deepmerge = require('deepmerge');
 const { writeFile, loadFile } = require('./file');
-const { injectVars } = require('./vars');
+const { populateVars } = require('./vars');
 
 
 const loadModule = (moduleDir, moduleName, config, moduleVars) => {
@@ -27,7 +27,7 @@ const loadModule = (moduleDir, moduleName, config, moduleVars) => {
 
   const module = loadFile(fileName);
 
-  return injectVars(module, moduleVars);
+  return populateVars(module, moduleVars);
 };
 
 
@@ -40,13 +40,13 @@ module.exports.loadConfig = (configName, variables) => {
   if (!fs.existsSync(configFilePath)) {
     return null;
   }
-  const config = loadFile(configFilePath);
+  const config = populateVars(loadFile(configFilePath), variables);
 
   // load and merge config modules into config
   const moduleDir = path.join(__dirname, '..', 'template', configName.split('/')[0], 'modules');
   config.toWrite = deepmerge.all(config.modules
     .map(m => [m.name, m.variables])
-    .map(([moduleName, moduleVars]) => [moduleName, injectVars(moduleVars, variables)])
+    .map(([moduleName, moduleVars]) => [moduleName, populateVars(moduleVars, config.variables)])
     .map(([moduleName, moduleVars]) => loadModule(moduleDir, moduleName, config, moduleVars)));
 
   return config;

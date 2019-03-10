@@ -4,6 +4,11 @@ const robo = require('../src/index');
 it('Executing Configuration', () => {
   expect(robo([
     'circleci/npm-release',
-    'dependabot/nodejs-instant'
-  ])).to.deep.equal([]);
+    'dependabot/nodejs-instant',
+    'gally/two-branch'
+  ], {
+    repoKey: 'blackflux/robo-config',
+    owner: 'simlu',
+    mergeBot: 'MrsFlux'
+  })).to.deep.equal([]);
 });
