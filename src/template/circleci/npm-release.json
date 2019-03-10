@@ -1,10 +1,87 @@
 {
   "target": ".circleci/config.yml",
   "modules": [
-    "auto-create-pr.yml",
-    "base.yml",
-    "dependabot-auto-merge.yml",
-    "semantic-release.yml"
+    {
+      "name": "00-base.yml",
+      "variables": {}
+    },
+    {
+      "name": "01-gally-create-staging-pr.yml",
+      "variables": {
+        "job-name": "gally-create-pr",
+        "docker-image": "circleci/node:10",
+        "ci-env-branch-name": "$CIRCLE_BRANCH"
+      }
+    },
+    {
+      "name": "02-run-yarn-tests.yml",
+      "variables": {
+        "job-name": "test-node-v10",
+        "docker-image": "circleci/node:10",
+        "job-options": {
+          "requires": [
+            "gally-create-pr"
+          ]
+        }
+      }
+    },
+    {
+      "name": "03-inject-coveralls-step.yml",
+      "variables": {
+        "job-name": "test-node-v10",
+        "ci-env-branch-name": "CIRCLE_BRANCH"
+      }
+    },
+    {
+      "name": "02-run-yarn-tests.yml",
+      "variables": {
+        "job-name": "test-node-v8.10",
+        "docker-image": "circleci/node:8.10",
+        "job-options": {
+          "requires": [
+            "gally-create-pr"
+          ]
+        }
+      }
+    },
+    {
+      "name": "04-dependabot-auto-merge.yml",
+      "variables": {
+        "job-name": "gally-auto-merge",
+        "docker-image": "circleci/node:10",
+        "job-options": {
+          "requires": [
+            "gally-create-pr",
+            "test-node-v10",
+            "test-node-v8.10"
+          ],
+          "filters": {
+            "branches": {
+              "only": "/dependabot\\/.*/"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "05-semantic-release.yml",
+      "variables": {
+        "job-name": "release",
+        "docker-image": "circleci/node:10",
+        "job-options": {
+          "requires": [
+            "gally-create-pr",
+            "test-node-v10",
+            "test-node-v8.10"
+          ],
+          "filters": {
+            "branches": {
+              "only": "master"
+            }
+          }
+        }
+      }
+    }
   ],
   "variables": {}
 }

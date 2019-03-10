@@ -1,0 +1,8 @@
+jobs:
+  ${job-name}:
+    steps:
+      - run:
+          command: |
+            if [[ "${${ci-env-branch-name}}" == "master" ]]; then
+              yarn run coveralls
+            fi

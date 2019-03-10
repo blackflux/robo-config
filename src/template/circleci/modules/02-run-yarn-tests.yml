@@ -1,0 +1,14 @@
+workflows:
+  node-multi-build:
+    jobs:
+      - ${job-name}: ${job-options}
+
+jobs:
+  ${job-name}:
+    docker:
+      - image: '${docker-image}'
+    steps:
+      - checkout
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+      - run: (git add . && git diff-index --quiet HEAD --) || (git status && exit 1);

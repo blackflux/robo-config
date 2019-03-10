@@ -4,20 +4,20 @@ const path = require('path');
 const appRoot = require('app-root-path');
 const deepmerge = require('deepmerge');
 const { writeFile, loadFile } = require('./file');
+const { injectVars } = require('./vars');
 
 
-const loadModule = (moduleDir, moduleName, config, variables) => {
+const loadModule = (moduleDir, moduleName, config, moduleVars) => {
   assert(typeof moduleDir === 'string');
   assert(typeof moduleName === 'string');
   assert(config instanceof Object && !Array.isArray(config));
-  assert(variables instanceof Object && !Array.isArray(variables));
+  assert(moduleVars instanceof Object && !Array.isArray(moduleVars));
+
+  // todo: make file endings options for modules
 
   const module = loadFile(path.join(moduleDir, moduleName));
 
-  // todo: inject variables
-  // ...
-
-  return module;
+  return injectVars(module, moduleVars);
 };
 
 
@@ -34,8 +34,10 @@ module.exports.loadConfig = (configName, variables) => {
 
   // load and merge config modules into config
   const moduleDir = path.join(__dirname, '..', 'template', configName.split('/')[0], 'modules');
-  config.toWrite = deepmerge
-    .all(config.modules.map(moduleName => loadModule(moduleDir, moduleName, config, variables)));
+  config.toWrite = deepmerge.all(config.modules
+    .map(m => [m.name, m.variables])
+    .map(([moduleName, moduleVars]) => [moduleName, injectVars(moduleVars, variables)])
+    .map(([moduleName, moduleVars]) => loadModule(moduleDir, moduleName, config, moduleVars)));
 
   return config;
 };
