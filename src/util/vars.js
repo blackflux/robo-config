@@ -37,8 +37,8 @@ module.exports.populateVars = (data, variables, allowUnused) => {
   objectScan(['**'], {
     joined: false,
     filterFn: (key, value, { parents }) => {
-      const parentTarget = key[key.length - 1];
-      const entry = { key: parentTarget, value };
+      const relKey = key[key.length - 1];
+      const entry = { key: relKey, value };
 
       if (!Array.isArray(parents[0])) {
         entry.key = substituteVariables(entry.key, variables, false, usedVars);
@@ -47,10 +47,10 @@ module.exports.populateVars = (data, variables, allowUnused) => {
         entry.value = substituteVariables(entry.value, variables, true, usedVars);
       }
 
-      const newKey = parentTarget !== entry.key;
+      const newKey = relKey !== entry.key;
       if (newKey) {
         // eslint-disable-next-line no-param-reassign
-        delete parents[0][parentTarget];
+        delete parents[0][relKey];
       }
       if (newKey || entry.value !== value) {
         // eslint-disable-next-line no-param-reassign
