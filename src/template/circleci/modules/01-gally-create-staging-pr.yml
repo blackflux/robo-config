@@ -1,0 +1,13 @@
+workflows:
+  node-multi-build:
+    jobs:
+      - '${job-name}'
+
+jobs:
+  '${job-name}':
+    docker:
+      - image: '${docker-image}'
+    steps:
+      - checkout
+      - run: sudo yarn global add gally
+      - run: ga promote ${ci-env-branch-name}

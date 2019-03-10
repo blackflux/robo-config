@@ -1,0 +1,13 @@
+workflows:
+  node-multi-build:
+    jobs:
+      - ${job-name}: ${job-options}
+
+jobs:
+  release:
+    docker:
+      - image: ${docker-image}
+    steps:
+      - checkout
+      - run: yarn install --frozen-lockfile
+      - run: yarn run semantic-release

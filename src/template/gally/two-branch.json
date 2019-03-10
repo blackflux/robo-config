@@ -1,0 +1,32 @@
+{
+  "target": ".gally.json",
+  "modules": [
+    {
+      "name": "two-branch",
+      "variables": {
+        "repo-key": "${repo-key}",
+        "merge-dev-users": [
+          "${owner}",
+          "${merge-bot}"
+        ],
+        "dismissal-users": [
+          "${owner}"
+        ],
+        "release-users": [
+          "${owner}"
+        ],
+        "required-status-checks": [
+          "ci/circleci: gally-create-pr",
+          "ci/circleci: test-node-v10",
+          "ci/circleci: test-node-v8.10"
+        ],
+        "required-review-count": 1
+      }
+    }
+  ],
+  "variables": {
+    "repo-key": "${repoKey}",
+    "owner": "${owner}",
+    "merge-bot": "${mergeBot}"
+  }
+}
