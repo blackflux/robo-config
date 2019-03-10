@@ -1,6 +1,5 @@
 {
   "analyzeCommits": {
-    "preset": "angular",
     "releaseRules": [
       {
         "type": "build",

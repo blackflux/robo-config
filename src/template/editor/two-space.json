@@ -1,0 +1,12 @@
+{
+  "target": ".editorconfig",
+  "modules": [
+    {
+      "name": "base",
+      "variables": {
+        "indent": "2"
+      }
+    }
+  ],
+  "variables": {}
+}
