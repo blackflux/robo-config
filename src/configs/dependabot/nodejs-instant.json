@@ -1,12 +1,13 @@
 {
   "target": ".dependabot/config.yml",
+  "strategy": "overwrite",
   "snippets": [
     {
       "name": "base",
       "variables": {
-        "update-schedule": "live",
-        "package-manager": "javascript",
-        "target-branch": "dev"
+        "updateSchedule": "live",
+        "packageManager": "javascript",
+        "targetBranch": "dev"
       }
     }
   ],

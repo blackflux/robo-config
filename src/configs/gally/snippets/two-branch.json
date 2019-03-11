@@ -2,7 +2,7 @@
   "defaultBranch": "master",
   "contribBranch": "dev",
   "repository": {
-    "url": "https://github.com/${repo-key}.git"
+    "url": "https://github.com/${repoKey}.git"
   },
   "branches": {
     "dev": {
@@ -28,7 +28,7 @@
     "$full-dev": {
       "@": "$full",
       "restrictions": {
-        "users": "${merge-dev-users}"
+        "users": "${mergeDevUsers}"
       }
     },
     "$full-master": {
@@ -40,20 +40,20 @@
     "$full": {
       "required_status_checks": {
         "strict": true,
-        "contexts": "${required-status-checks}"
+        "contexts": "${requiredStatusChecks}"
       },
       "enforce_admins": true,
       "required_pull_request_reviews": {
         "dismissal_restrictions": {
-          "users": "${dismissal-users}",
+          "users": "${dismissalUsers}",
           "teams": []
         },
         "dismiss_stale_reviews": true,
         "require_code_owner_reviews": true,
-        "required_approving_review_count": "${required-review-count}"
+        "required_approving_review_count": "${requiredReviewCount}"
       },
       "restrictions": {
-        "users": "${release-users}",
+        "users": "${releaseUsers}",
         "teams": []
       }
     }

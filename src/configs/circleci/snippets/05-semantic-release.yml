@@ -1,12 +1,12 @@
 workflows:
   node-multi-build:
     jobs:
-      - ${job-name}: ${job-options}
+      - ${jobName}: ${jobOptions}
 
 jobs:
   release:
     docker:
-      - image: ${docker-image}
+      - image: ${dockerImage}
     steps:
       - checkout
       - run: yarn install --frozen-lockfile

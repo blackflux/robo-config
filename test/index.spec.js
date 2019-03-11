@@ -7,6 +7,7 @@ it('Executing Configuration', () => {
     configs: ['assorted/npm-opensource'],
     variables: {
       repoKey: 'blackflux/robo-config',
+      repoName: 'robo-config',
       owner: 'simlu',
       mergeBot: 'MrsFlux'
     }
