@@ -14,10 +14,10 @@ Automatically manage configuration files.
 ## But why...?
 
 _Why the hell does this package even exist?_ -
-Let's face it, without npm and micro-services this repo probably would not exit. 
-Npm has encourages us to create a new repo and package for every 
-re-usable code snippet. This is great from the re-usability perspective.
-However it means that a single developer might actively maintain many repos.
+Let's face it, without npm and micro-services this repo would probably not exist. 
+Npm has encouraged us to create a new repo and package for every 
+re-usable code snippet. This is great from the re-usability perspective,
+however it means that a single developer might actively maintain many repos.
 
 Most maintenance tasks (automated repository configuration, automated tests, automated dependency updated, automated versioning and releases) 
 can be done by just simply adding a configuration file to the repo and activating the corresponding service.
@@ -26,7 +26,7 @@ That's great, but what happens when:
 - A nasty bug is discovered in one of the config files? 
 - A provider changes their configuration file format?
 - A major language version was released and tests should also be run against it?
-- A new cool service popped up and one should really use it?
+- A cool new service popped up and one should really use it?
 
 How does one ensure changes will propagate to all relevant repos?
 If you never had to batch update a few dozen repos with the same change manually, you're lucky -
