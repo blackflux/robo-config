@@ -24,7 +24,7 @@ can be done by just simply adding a configuration file to the repo and activatin
 That's great, but what happens when:
 
 - A nasty bug is discovered in one of the config files? 
-- A provider deprecates their configuration file format?
+- A provider changes their configuration file format?
 - A new language version was released and your tests should also be run using it?
 - A new cool service popped up and one should really use it?
 
