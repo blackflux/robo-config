@@ -40,7 +40,7 @@
     "babel-eslint": "10.0.1",
     "chai": "4.2.0",
     "coveralls": "3.0.3",
-    "js-gardener": "1.38.0",
+    "js-gardener": "1.38.1",
     "nyc": "13.3.0",
     "semantic-release": "15.13.3",
     "tmp": "0.0.33"
@@ -95,6 +95,6 @@
     "lodash.clonedeep": "4.5.0",
     "lodash.difference": "4.5.0",
     "object-scan": "5.0.2",
-    "smart-fs": "1.1.1"
+    "smart-fs": "1.1.2"
   }
 }
