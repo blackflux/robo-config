@@ -30,7 +30,8 @@ That's great, but what happens when:
 
 How does one ensure changes will propagate to all relevant repos?
 If you never had to batch update a few dozen repos with the same change manually, you're lucky -
-I can tell you it's not fun. And that's where this package comes in! 
+I can tell you it's not fun. Either you do them all at the same time (let's hope it was the right change) or 
+you will inadvertently forget to apply the change to some repos. That's where this package comes in! 
 
 ### Sounds scary...?
 
