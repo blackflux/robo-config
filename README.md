@@ -25,10 +25,11 @@ That's great, but what happens when:
 
 - A nasty bug is discovered in one of the config files? 
 - A provider deprecates their configuration file format?
-- Tests should also be run against the just released new language version?
+- A new language version was released and your tests should also be run using it?
 - A new cool service popped up and one should really use it?
 
-If you never had to batch update a few dozen repos with the same change, you're lucky -
+How do you ensure this change will propagate to all relevant repos?
+If you never had to batch update a few dozen repos with the same change manually, you're lucky -
 I can tell you it's not fun. And that's where this package comes in! 
 
 ### Sounds scary...?
