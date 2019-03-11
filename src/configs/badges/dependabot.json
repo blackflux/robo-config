@@ -5,11 +5,11 @@
     {
       "name": "dependabot",
       "variables": {
-        "repo-key": "${repo-key}"
+        "repoKey": "${repoKey}"
       }
     }
   ],
   "variables": {
-    "repo-key": "${repoKey}"
+    "repoKey": "${repoKey}"
   }
 }

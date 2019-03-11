@@ -5,9 +5,9 @@
     {
       "name": "base",
       "variables": {
-        "update-schedule": "live",
-        "package-manager": "javascript",
-        "target-branch": "dev"
+        "updateSchedule": "live",
+        "packageManager": "javascript",
+        "targetBranch": "dev"
       }
     }
   ],

@@ -1,1 +1,1 @@
-[![Dependencies](https://david-dm.org/${repo-key}/status.svg)](https://david-dm.org/${repo-key})
+[![Dependencies](https://david-dm.org/${repoKey}/status.svg)](https://david-dm.org/${repoKey})
