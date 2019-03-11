@@ -1,6 +1,6 @@
 {
   "target": ".dependabot/config.yml",
-  "modules": [
+  "snippets": [
     {
       "name": "base",
       "variables": {

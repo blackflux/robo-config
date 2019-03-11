@@ -1,6 +1,6 @@
 {
   "target": ".releaserc.json",
-  "modules": [
+  "snippets": [
     {
       "name": "angular",
       "variables": {}

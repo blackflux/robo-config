@@ -10,31 +10,31 @@ const { populateVars } = require('./vars');
 const configSchema = Joi.object().keys({
   target: Joi.string(),
   variables: Joi.object(),
-  modules: Joi.array().items(Joi.object().keys({
+  snippets: Joi.array().items(Joi.object().keys({
     name: Joi.string().required(),
     variables: Joi.object().required()
   }).unknown(false).required()),
   configs: Joi.array().items(Joi.string())
 })
-  .and('target', 'variables', 'modules')
+  .and('target', 'variables', 'snippets')
   .unknown(false)
   .required();
 
 
-const loadModule = (moduleDir, moduleName, config, moduleVars) => {
-  assert(typeof moduleDir === 'string');
-  assert(typeof moduleName === 'string');
+const loadSnippet = (snippetDir, snippetName, config, snippetVars) => {
+  assert(typeof snippetDir === 'string');
+  assert(typeof snippetName === 'string');
   assert(config instanceof Object && !Array.isArray(config));
-  assert(moduleVars instanceof Object && !Array.isArray(moduleVars));
+  assert(snippetVars instanceof Object && !Array.isArray(snippetVars));
 
   const fileName = ['json', 'yml', 'yaml', 'txt'].reduce(
     (name, ext) => (!fs.existsSync(name) && fs.existsSync(`${name}.${ext}`) ? `${name}.${ext}` : name),
-    path.join(moduleDir, moduleName)
+    path.join(snippetDir, snippetName)
   );
 
-  const module = sls.smartRead(fileName);
+  const snippet = sls.smartRead(fileName);
 
-  return populateVars(module, moduleVars, false);
+  return populateVars(snippet, snippetVars, false);
 };
 
 
@@ -54,12 +54,12 @@ module.exports.loadConfig = (configName, variables) => {
   if (typeof config.target === 'string') {
     Object.assign(config, { variables: populateVars(config.variables, variables, true) });
 
-    // load and merge config modules into config
-    const moduleDir = path.join(__dirname, '..', 'configs', configName.split('/')[0], 'modules');
-    config.toWrite = deepmerge.all(config.modules
+    // load and merge config snippets into config
+    const snippetDir = path.join(__dirname, '..', 'configs', configName.split('/')[0], 'snippets');
+    config.toWrite = deepmerge.all(config.snippets
       .map(m => [m.name, m.variables])
-      .map(([moduleName, moduleVars]) => [moduleName, populateVars(moduleVars, config.variables, true)])
-      .map(([moduleName, moduleVars]) => loadModule(moduleDir, moduleName, config, moduleVars)));
+      .map(([snippetName, snippetVars]) => [snippetName, populateVars(snippetVars, config.variables, true)])
+      .map(([snippetName, snippetVars]) => loadSnippet(snippetDir, snippetName, config, snippetVars)));
   }
 
   return config;

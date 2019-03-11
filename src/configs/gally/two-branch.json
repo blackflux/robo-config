@@ -1,6 +1,6 @@
 {
   "target": ".gally.json",
-  "modules": [
+  "snippets": [
     {
       "name": "two-branch",
       "variables": {
