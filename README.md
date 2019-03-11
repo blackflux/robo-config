@@ -15,7 +15,7 @@ Automatically manage various configuration files.
 
 _Why the hell does this package even exist?_ -
 Let's face it, without npm and micro-services this repo probably would not exit. 
-Reality is that npm has encourages us to create a new repo and package for every 
+Npm has encourages us to create a new repo and package for every 
 re-usable code snippet. This is great from the re-usability perspective.
 However it means that a single developer might actively maintains a large amount of repos.
 
