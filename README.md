@@ -28,7 +28,7 @@ That's great, but what happens when:
 - A major language version was released and tests should also be run against it?
 - A new cool service popped up and one should really use it?
 
-How do you ensure this change will propagate to all relevant repos?
+How does one ensure changes will propagate to all relevant repos?
 If you never had to batch update a few dozen repos with the same change manually, you're lucky -
 I can tell you it's not fun. And that's where this package comes in! 
 
