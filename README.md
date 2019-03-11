@@ -17,7 +17,7 @@ _Why the hell does this package even exist?_ -
 Let's face it, without npm and micro-services this repo probably would not exit. 
 Npm has encourages us to create a new repo and package for every 
 re-usable code snippet. This is great from the re-usability perspective.
-However it means that a single developer might actively maintains a large amount of repos.
+However it means that a single developer might actively maintain many repos.
 
 Most maintenance tasks (automated repository configuration, automated tests, automated dependency updated, automated versioning and releases) 
 can be done by just simply adding a configuration file to the repo and activating the corresponding service.
