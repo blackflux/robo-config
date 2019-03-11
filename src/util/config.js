@@ -5,12 +5,12 @@ const deepmerge = require('deepmerge');
 const Joi = require('joi');
 const sls = require('smart-fs');
 const { populateVars } = require('./vars');
-const { getMergeStrategy } = require('./merge');
+const strategies = require('./strategies');
 
 
 const configSchema = Joi.object().keys({
   target: Joi.string(),
-  strategy: Joi.string().valid('overwrite', 'merge-below-title'),
+  strategy: Joi.string().valid(...Object.keys(strategies)),
   variables: Joi.object(),
   snippets: Joi.array().items(Joi.object().keys({
     name: Joi.string().required(),
@@ -75,6 +75,6 @@ module.exports.applyConfig = (config, projectRoot) => {
 
   const target = path.join(projectRoot, config.target);
   return sls.smartWrite(target, config.toWrite, {
-    mergeStrategy: getMergeStrategy(config.strategy)
+    mergeStrategy: strategies[config.strategy]
   });
 };
