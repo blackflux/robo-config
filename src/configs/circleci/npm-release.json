@@ -1,6 +1,6 @@
 {
   "target": ".circleci/config.yml",
-  "modules": [
+  "snippets": [
     {
       "name": "00-base",
       "variables": {}

@@ -1,6 +1,6 @@
 {
   "target": ".editorconfig",
-  "modules": [
+  "snippets": [
     {
       "name": "base",
       "variables": {
