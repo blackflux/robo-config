@@ -1,5 +1,6 @@
 {
   "target": ".gally.json",
+  "strategy": "overwrite",
   "snippets": [
     {
       "name": "two-branch",

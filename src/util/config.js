@@ -5,10 +5,12 @@ const deepmerge = require('deepmerge');
 const Joi = require('joi');
 const sls = require('smart-fs');
 const { populateVars } = require('./vars');
+const { getMergeStrategy } = require('./merge');
 
 
 const configSchema = Joi.object().keys({
   target: Joi.string(),
+  strategy: Joi.string().valid('overwrite', 'merge-below-title'),
   variables: Joi.object(),
   snippets: Joi.array().items(Joi.object().keys({
     name: Joi.string().required(),
@@ -16,7 +18,7 @@ const configSchema = Joi.object().keys({
   }).unknown(false).required()),
   configs: Joi.array().items(Joi.string())
 })
-  .and('target', 'variables', 'snippets')
+  .and('target', 'strategy', 'variables', 'snippets')
   .unknown(false)
   .required();
 
@@ -27,10 +29,11 @@ const loadSnippet = (snippetDir, snippetName, config, snippetVars) => {
   assert(config instanceof Object && !Array.isArray(config));
   assert(snippetVars instanceof Object && !Array.isArray(snippetVars));
 
-  const fileName = ['json', 'yml', 'yaml', 'txt'].reduce(
-    (name, ext) => (!fs.existsSync(name) && fs.existsSync(`${name}.${ext}`) ? `${name}.${ext}` : name),
-    path.join(snippetDir, snippetName)
-  );
+  const relevantFiles = fs
+    .readdirSync(snippetDir)
+    .filter(f => f === snippetName || f.startsWith(`${snippetName}.`));
+  assert(relevantFiles.length === 1, `Invalid Snippet File Name: ${snippetName}`);
+  const fileName = path.join(snippetDir, relevantFiles[0]);
 
   const snippet = sls.smartRead(fileName);
 
@@ -71,5 +74,7 @@ module.exports.applyConfig = (config, projectRoot) => {
   assert(typeof projectRoot === 'string');
 
   const target = path.join(projectRoot, config.target);
-  return sls.smartWrite(target, config.toWrite);
+  return sls.smartWrite(target, config.toWrite, {
+    mergeStrategy: getMergeStrategy(config.strategy)
+  });
 };

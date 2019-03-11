@@ -1,0 +1,15 @@
+{
+  "target": "README.md",
+  "strategy": "merge-below-title",
+  "snippets": [
+    {
+      "name": "coveralls",
+      "variables": {
+        "repo-key": "${repo-key}"
+      }
+    }
+  ],
+  "variables": {
+    "repo-key": "${repoKey}"
+  }
+}
