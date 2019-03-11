@@ -1,1 +1,1 @@
-[![NPM](https://img.shields.io/npm/v/${repo-name}.svg)](https://www.npmjs.com/package/${repo-name})
+[![NPM](https://img.shields.io/npm/v/${repoName}.svg)](https://www.npmjs.com/package/${repoName})

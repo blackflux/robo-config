@@ -1,10 +1,10 @@
 version: 1
 update_configs:
-  - package_manager: "${package-manager}"
+  - package_manager: "${packageManager}"
     directory: "/"
-    update_schedule: "${update-schedule}"
+    update_schedule: "${updateSchedule}"
 
-    target_branch: ${target-branch}
+    target_branch: ${targetBranch}
 
     automerged_updates:
       - match:

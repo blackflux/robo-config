@@ -5,11 +5,11 @@
     {
       "name": "npm-status",
       "variables": {
-        "repo-name": "${repo-name}"
+        "repoName": "${repoName}"
       }
     }
   ],
   "variables": {
-    "repo-name": "${repoName}"
+    "repoName": "${repoName}"
   }
 }

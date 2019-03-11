@@ -9,17 +9,17 @@
     {
       "name": "01-gally-create-staging-pr",
       "variables": {
-        "job-name": "gally-create-pr",
-        "docker-image": "circleci/node:10",
-        "ci-env-branch-name": "$CIRCLE_BRANCH"
+        "jobName": "gally-create-pr",
+        "dockerImage": "circleci/node:10",
+        "ciEnvBranchName": "$CIRCLE_BRANCH"
       }
     },
     {
       "name": "02-run-yarn-tests",
       "variables": {
-        "job-name": "test-node-v10",
-        "docker-image": "circleci/node:10",
-        "job-options": {
+        "jobName": "test-node-v10",
+        "dockerImage": "circleci/node:10",
+        "jobOptions": {
           "requires": [
             "gally-create-pr"
           ]
@@ -29,16 +29,16 @@
     {
       "name": "03-inject-coveralls-step",
       "variables": {
-        "job-name": "test-node-v10",
-        "ci-env-branch-name": "CIRCLE_BRANCH"
+        "jobName": "test-node-v10",
+        "ciEnvBranchName": "CIRCLE_BRANCH"
       }
     },
     {
       "name": "02-run-yarn-tests",
       "variables": {
-        "job-name": "test-node-v8.10",
-        "docker-image": "circleci/node:8.10",
-        "job-options": {
+        "jobName": "test-node-v8.10",
+        "dockerImage": "circleci/node:8.10",
+        "jobOptions": {
           "requires": [
             "gally-create-pr"
           ]
@@ -48,9 +48,9 @@
     {
       "name": "04-dependabot-auto-merge",
       "variables": {
-        "job-name": "gally-auto-merge",
-        "docker-image": "circleci/node:10",
-        "job-options": {
+        "jobName": "gally-auto-merge",
+        "dockerImage": "circleci/node:10",
+        "jobOptions": {
           "requires": [
             "gally-create-pr",
             "test-node-v10",
@@ -67,9 +67,9 @@
     {
       "name": "05-semantic-release",
       "variables": {
-        "job-name": "release",
-        "docker-image": "circleci/node:10",
-        "job-options": {
+        "jobName": "release",
+        "dockerImage": "circleci/node:10",
+        "jobOptions": {
           "requires": [
             "gally-create-pr",
             "test-node-v10",
