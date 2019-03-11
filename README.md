@@ -9,7 +9,7 @@
 [![Semantic-Release](https://github.com/blackflux/js-gardener/blob/master/assets/icons/semver.svg)](https://github.com/semantic-release/semantic-release)
 [![Gardener](https://github.com/blackflux/js-gardener/blob/master/assets/badge.svg)](https://github.com/blackflux/js-gardener)
 
-Automatically manage various configuration files.
+Automatically manage configuration files.
 
 ## But why...?
 

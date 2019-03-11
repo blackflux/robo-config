@@ -1,7 +1,7 @@
 {
   "name": "robo-config",
   "version": "0.0.0-development",
-  "description": "Automatically manage various configuration files.",
+  "description": "Automatically manage configuration files.",
   "main": "lib/index.js",
   "scripts": {
     "test": "npm run clean && npm run gardener && npm run test-simple",
