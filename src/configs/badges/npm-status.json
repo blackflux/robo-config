@@ -1,0 +1,15 @@
+{
+  "target": "README.md",
+  "strategy": "merge-below-title",
+  "snippets": [
+    {
+      "name": "npm-status",
+      "variables": {
+        "repo-name": "${repo-name}"
+      }
+    }
+  ],
+  "variables": {
+    "repo-name": "${repoName}"
+  }
+}

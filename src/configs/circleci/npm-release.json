@@ -1,5 +1,6 @@
 {
   "target": ".circleci/config.yml",
+  "strategy": "overwrite",
   "snippets": [
     {
       "name": "00-base",

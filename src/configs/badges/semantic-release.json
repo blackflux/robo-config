@@ -1,0 +1,11 @@
+{
+  "target": "README.md",
+  "strategy": "merge-below-title",
+  "snippets": [
+    {
+      "name": "semantic-release",
+      "variables": {}
+    }
+  ],
+  "variables": {}
+}
