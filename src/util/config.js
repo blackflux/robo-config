@@ -12,10 +12,13 @@ const configSchema = Joi.object().keys({
   target: Joi.string(),
   strategy: Joi.string().valid(...Object.keys(strategies)),
   variables: Joi.object(),
-  snippets: Joi.array().items(Joi.object().keys({
-    name: Joi.string().required(),
-    variables: Joi.object().required()
-  }).unknown(false).required()),
+  snippets: Joi.array().items(
+    Joi.string(),
+    Joi.object().keys({
+      name: Joi.string().required(),
+      variables: Joi.object().min(1).required()
+    }).unknown(false)
+  ).min(1),
   configs: Joi.array().items(Joi.string())
 })
   .and('target', 'strategy', 'variables', 'snippets')
@@ -56,7 +59,7 @@ module.exports.loadConfig = (configName, variables) => {
     // load and merge config snippets into config
     const snippetDir = path.join(__dirname, '..', 'configs', configName.split('/')[0], 'snippets');
     config.toWrite = deepmerge.all(config.snippets
-      .map(m => [m.name, m.variables])
+      .map(m => (typeof m === 'string' ? [m, {}] : [m.name, m.variables]))
       .map(([snippetName, snippetVars]) => [snippetName, populateVars(snippetVars, config.variables, true)])
       .map(([snippetName, snippetVars]) => loadSnippet(snippetDir, snippetName, config, snippetVars)));
   }

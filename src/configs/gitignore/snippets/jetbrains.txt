@@ -64,26 +64,3 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
-
-# ----------------------------------------
-
-# OSX Specific
-.DS_Store
-
-# ----------------------------------------
-
-# NodeJs Specific
-node_modules
-npm-debug.log
-yarn-error.log
-
-# ----------------------------------------
-# ----------------------------------------
-# ----------------------------------------
-
-# Custom
-coverage/
-.coveralls.yml
-lib/
-release.tar.gz
-.idea/dictionaries

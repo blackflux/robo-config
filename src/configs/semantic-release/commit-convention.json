@@ -2,14 +2,8 @@
   "target": ".releaserc.json",
   "strategy": "overwrite",
   "snippets": [
-    {
-      "name": "angular",
-      "variables": {}
-    },
-    {
-      "name": "build-deps-as-patch",
-      "variables": {}
-    }
+    "angular",
+    "build-deps-as-patch"
   ],
   "variables": {}
 }

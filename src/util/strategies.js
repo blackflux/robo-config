@@ -16,5 +16,20 @@ module.exports = {
     existing.splice(injectAt, 0, ...changeset.filter(line => !existing.includes(line)));
     return existing;
   },
+  'merge-top': (existing, changeset) => {
+    changeset.forEach((line) => {
+      for (let idx = 0; idx < existing.length; idx += 1) {
+        const l = existing[idx];
+        if (line === l) {
+          existing.splice(idx, 1);
+          idx -= 1;
+          if (l === '') {
+            break; // line has now caused exactly one removal
+          }
+        }
+      }
+    });
+    return changeset.concat(existing);
+  },
   overwrite: (existing, changeset) => changeset
 };

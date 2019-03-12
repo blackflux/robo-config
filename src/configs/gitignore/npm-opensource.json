@@ -1,0 +1,13 @@
+{
+  "target": ".gitignore",
+  "strategy": "merge-top",
+  "snippets": [
+    "jetbrains",
+    "spacer-small",
+    "osx",
+    "spacer-small",
+    "nodejs",
+    "spacer-big"
+  ],
+  "variables": {}
+}
