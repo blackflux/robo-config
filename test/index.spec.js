@@ -9,6 +9,7 @@ it('Executing Configuration', () => {
       repoKey: 'blackflux/robo-config',
       repoName: 'robo-config',
       owner: 'simlu',
+      ownerName: 'Lukas Siemon',
       mergeBot: 'MrsFlux'
     }
   })).to.deep.equal([]);

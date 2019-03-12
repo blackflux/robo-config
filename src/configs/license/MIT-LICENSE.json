@@ -1,0 +1,15 @@
+{
+  "target": "LICENSE",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "MIT-LICENSE",
+      "variables": {
+        "ownerName": "${ownerName}"
+      }
+    }
+  ],
+  "variables": {
+    "ownerName": "${ownerName}"
+  }
+}

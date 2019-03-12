@@ -7,6 +7,7 @@
     "circleci/npm-release",
     "dependabot/nodejs-instant",
     "semantic-release/commit-convention",
-    "editor/two-space"
+    "editor/two-space",
+    "license/MIT"
   ]
 }
