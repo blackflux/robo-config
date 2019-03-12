@@ -29,12 +29,8 @@ const loadSnippet = (snippetDir, snippetName, config, snippetVars) => {
   assert(config instanceof Object && !Array.isArray(config));
   assert(snippetVars instanceof Object && !Array.isArray(snippetVars));
 
-  const relevantFiles = fs
-    .readdirSync(snippetDir)
-    .filter(f => f === snippetName || f.startsWith(`${snippetName}.`));
-  assert(relevantFiles.length === 1, `Invalid Snippet File Name: ${snippetName}`);
-  const fileName = path.join(snippetDir, relevantFiles[0]);
-
+  const fileName = sls.guessFile(path.join(snippetDir, snippetName));
+  assert(fileName !== null, `Invalid Snippet File Name: ${snippetName}`);
   const snippet = sls.smartRead(fileName);
 
   return populateVars(snippet, snippetVars, false);
