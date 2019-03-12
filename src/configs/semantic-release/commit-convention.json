@@ -4,6 +4,5 @@
   "snippets": [
     "angular",
     "build-deps-as-patch"
-  ],
-  "variables": {}
+  ]
 }

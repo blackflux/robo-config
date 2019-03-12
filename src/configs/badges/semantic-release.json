@@ -3,6 +3,5 @@
   "strategy": "merge-below-title",
   "snippets": [
     "semantic-release"
-  ],
-  "variables": {}
+  ]
 }

@@ -9,9 +9,5 @@
         "authorName": "${authorName}"
       }
     }
-  ],
-  "variables": {
-    "repoKey": "${repoKey}",
-    "authorName": "${authorName}"
-  }
+  ]
 }
