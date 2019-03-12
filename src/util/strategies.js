@@ -31,5 +31,6 @@ module.exports = {
     });
     return changeset.concat(existing);
   },
+  'merge-shallow': (existing, changeset) => Object.assign(existing, changeset),
   overwrite: (existing, changeset) => changeset
 };

@@ -1,15 +1,17 @@
 {
-  "target": "LICENSE",
-  "strategy": "overwrite",
+  "target": "package.json",
+  "strategy": "merge-shallow",
   "snippets": [
     {
-      "name": "MIT-LICENSE",
+      "name": "MIT-package",
       "variables": {
+        "repoKey": "${repoKey}",
         "authorName": "${authorName}"
       }
     }
   ],
   "variables": {
+    "repoKey": "${repoKey}",
     "authorName": "${authorName}"
   }
 }
