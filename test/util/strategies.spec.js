@@ -15,4 +15,11 @@ describe('Integration strategies.js', () => {
     expect(strategies['merge-below-title'](existing, changeset))
       .to.deep.equal(['title1', 'title2', '', 'new', 'text']);
   });
+
+  it('Testing Merge Strategy: merge-top', () => {
+    const existing = ['title1', 'title2', '', 'new', 'text'];
+    const changeset = ['new'];
+    expect(strategies['merge-top'](existing, changeset))
+      .to.deep.equal(['new', 'title1', 'title2', '', 'text']);
+  });
 });
