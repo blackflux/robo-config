@@ -2,10 +2,7 @@
   "target": ".circleci/config.yml",
   "strategy": "overwrite",
   "snippets": [
-    {
-      "name": "00-base",
-      "variables": {}
-    },
+    "00-base",
     {
       "name": "01-gally-create-staging-pr",
       "variables": {
