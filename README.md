@@ -51,3 +51,7 @@ It does not do it automatically or silently.
 ## Usage
 
 ...
+
+## Assorted Configs
+
+- [Npm Open Source](docs/configs/assorted/npm-opensource.md)
