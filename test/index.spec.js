@@ -4,7 +4,7 @@ const robo = require('../src/index');
 
 it('Executing Configuration', () => {
   expect(robo({
-    configs: ['assorted/npm-opensource'],
+    configs: ['assorted/@npm-opensource'],
     variables: {
       repoKey: 'blackflux/robo-config',
       repoName: 'robo-config',

@@ -22,6 +22,7 @@ const configSchema = Joi.object().keys({
   configs: Joi.array().items(Joi.string())
 })
   .and('target', 'strategy', 'variables', 'snippets')
+  .xor('target', 'configs')
   .unknown(false)
   .required();
 
@@ -52,6 +53,7 @@ module.exports.loadConfig = (configName, variables) => {
   const config = sls.smartRead(configFilePath);
 
   assert(Joi.validate(config, configSchema).error === null, `Invalid Config Detected: ${configName}`);
+  assert(configName.includes('/@') === (config.configs !== undefined), `Invalid Config Name Detected: ${configName}`);
 
   if (typeof config.target === 'string') {
     Object.assign(config, { variables: populateVars(config.variables, variables, true) });

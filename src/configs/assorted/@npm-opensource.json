@@ -1,6 +1,6 @@
 {
   "configs": [
-    "badges/npm-opensource",
+    "badges/@npm-opensource",
     "gitignore/npm-opensource",
     "npmignore/default",
     "gally/two-branch",
@@ -8,6 +8,6 @@
     "dependabot/nodejs-instant",
     "semantic-release/commit-convention",
     "editor/two-space",
-    "license/MIT"
+    "license/@MIT"
   ]
 }
