@@ -11,7 +11,6 @@ const strategies = require('./strategies');
 const configSchema = Joi.object().keys({
   target: Joi.string(),
   strategy: Joi.string().valid(...Object.keys(strategies)),
-  variables: Joi.object(),
   snippets: Joi.array().items(
     Joi.string(),
     Joi.object().keys({
@@ -21,7 +20,8 @@ const configSchema = Joi.object().keys({
   ).min(1),
   configs: Joi.array().items(Joi.string())
 })
-  .and('target', 'strategy', 'variables', 'snippets')
+  .and('target', 'strategy', 'snippets')
+  .xor('target', 'configs')
   .unknown(false)
   .required();
 
@@ -52,15 +52,14 @@ module.exports.loadConfig = (configName, variables) => {
   const config = sls.smartRead(configFilePath);
 
   assert(Joi.validate(config, configSchema).error === null, `Invalid Config Detected: ${configName}`);
+  assert(configName.includes('/@') === (config.configs !== undefined), `Invalid Config Name Detected: ${configName}`);
 
   if (typeof config.target === 'string') {
-    Object.assign(config, { variables: populateVars(config.variables, variables, true) });
-
     // load and merge config snippets into config
     const snippetDir = path.join(__dirname, '..', 'configs', configName.split('/')[0], 'snippets');
     config.toWrite = deepmerge.all(config.snippets
       .map(m => (typeof m === 'string' ? [m, {}] : [m.name, m.variables]))
-      .map(([snippetName, snippetVars]) => [snippetName, populateVars(snippetVars, config.variables, true)])
+      .map(([snippetName, snippetVars]) => [snippetName, populateVars(snippetVars, variables, true)])
       .map(([snippetName, snippetVars]) => loadSnippet(snippetDir, snippetName, config, snippetVars)));
   }
 

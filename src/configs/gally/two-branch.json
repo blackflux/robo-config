@@ -24,10 +24,5 @@
         "requiredReviewCount": 1
       }
     }
-  ],
-  "variables": {
-    "repoKey": "${repoKey}",
-    "owner": "${owner}",
-    "mergeBot": "${mergeBot}"
-  }
+  ]
 }

@@ -8,8 +8,5 @@
         "repoKey": "${repoKey}"
       }
     }
-  ],
-  "variables": {
-    "repoKey": "${repoKey}"
-  }
+  ]
 }

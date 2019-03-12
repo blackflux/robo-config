@@ -1,0 +1,8 @@
+{
+  "target": ".npmignore",
+  "strategy": "merge-top",
+  "snippets": [
+    "message",
+    "spacer-big"
+  ]
+}

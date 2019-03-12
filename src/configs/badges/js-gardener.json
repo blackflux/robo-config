@@ -3,6 +3,5 @@
   "strategy": "merge-below-title",
   "snippets": [
     "js-gardener"
-  ],
-  "variables": {}
+  ]
 }

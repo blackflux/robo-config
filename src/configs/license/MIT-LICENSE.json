@@ -1,11 +1,11 @@
 {
-  "target": ".editorconfig",
+  "target": "LICENSE",
   "strategy": "overwrite",
   "snippets": [
     {
-      "name": "base",
+      "name": "MIT-LICENSE",
       "variables": {
-        "indent": "2"
+        "authorName": "${authorName}"
       }
     }
   ]
