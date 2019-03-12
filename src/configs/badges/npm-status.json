@@ -8,8 +8,5 @@
         "repoName": "${repoName}"
       }
     }
-  ],
-  "variables": {
-    "repoName": "${repoName}"
-  }
+  ]
 }

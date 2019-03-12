@@ -8,8 +8,5 @@
         "authorName": "${authorName}"
       }
     }
-  ],
-  "variables": {
-    "authorName": "${authorName}"
-  }
+  ]
 }
