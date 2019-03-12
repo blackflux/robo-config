@@ -1,0 +1,17 @@
+{
+  "target": "package.json",
+  "strategy": "merge-shallow",
+  "snippets": [
+    {
+      "name": "MIT-package",
+      "variables": {
+        "repoKey": "${repoKey}",
+        "authorName": "${authorName}"
+      }
+    }
+  ],
+  "variables": {
+    "repoKey": "${repoKey}",
+    "authorName": "${authorName}"
+  }
+}
