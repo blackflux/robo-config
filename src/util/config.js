@@ -57,6 +57,7 @@ module.exports.loadConfig = (configName, variables) => {
   if (typeof config.target === 'string') {
     // load and merge config snippets into config
     const snippetDir = path.join(__dirname, '..', 'configs', configName.split('/')[0], 'snippets');
+    config.target = populateVars([config.target], variables, true)[0];
     config.toWrite = deepmerge.all(config.snippets
       .map(m => (typeof m === 'string' ? [m, {}] : [m.name, m.variables]))
       .map(([snippetName, snippetVars]) => [snippetName, populateVars(snippetVars, variables, true)])
