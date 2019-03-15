@@ -5,10 +5,7 @@ const mergeRec = (target, changeset) => Object
   .map(([attr, elements]) => {
     const changesetElements = changeset[attr];
 
-    if (
-      changesetElements === undefined
-      || !Array.isArray(elements)
-    ) {
+    if (changesetElements === undefined || !Array.isArray(elements)) {
       return [attr, changesetElements !== undefined ? changesetElements : elements];
     }
 
