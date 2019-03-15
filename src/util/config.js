@@ -10,6 +10,7 @@ const strategies = require('./strategies');
 
 const configSchema = Joi.object().keys({
   target: Joi.string(),
+  format: Joi.string().allow(null),
   strategy: Joi.string().valid(...Object.keys(strategies)),
   snippets: Joi.array().items(
     Joi.string(),
@@ -20,7 +21,7 @@ const configSchema = Joi.object().keys({
   ).min(1),
   configs: Joi.array().items(Joi.string())
 })
-  .and('target', 'strategy', 'snippets')
+  .and('target', 'strategy', 'snippets', 'format')
   .xor('target', 'configs')
   .unknown(false)
   .required();
@@ -34,7 +35,7 @@ const loadSnippet = (snippetDir, snippetName, config, snippetVars) => {
 
   const fileName = sls.guessFile(path.join(snippetDir, snippetName));
   assert(fileName !== null, `Invalid Snippet File Name: ${snippetName}`);
-  const snippet = sls.smartRead(fileName);
+  const snippet = sls.smartRead(fileName, { treatAs: config.format });
 
   return populateVars(snippet, snippetVars, false);
 };
@@ -50,6 +51,9 @@ module.exports.loadConfig = (configName, variables) => {
     return null;
   }
   const config = sls.smartRead(configFilePath);
+  if (config.target !== undefined) {
+    config.format = config.format || null;
+  }
 
   assert(Joi.validate(config, configSchema).error === null, `Invalid Config Detected: ${configName}`);
   assert(configName.includes('/@') === (config.configs !== undefined), `Invalid Config Name Detected: ${configName}`);
@@ -74,6 +78,7 @@ module.exports.applyConfig = (config, projectRoot) => {
 
   const target = path.join(projectRoot, config.target);
   return sls.smartWrite(target, config.toWrite, {
+    treatAs: config.format,
     mergeStrategy: strategies[config.strategy]
   });
 };
