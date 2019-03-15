@@ -6,10 +6,7 @@ const mergeRec = (target, changeset) => Object
     const changesetElements = changeset[attr];
 
     if (!Array.isArray(elements)) {
-      if (changesetElements !== undefined) {
-        return [attr, changesetElements];
-      }
-      return [attr, elements];
+      return [attr, changesetElements !== undefined ? changesetElements : elements];
     }
 
     let next = 0;
