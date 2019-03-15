@@ -13,7 +13,7 @@ const mergeRec = (target, changeset) => Object
     }
 
     let next = 0;
-    for (let idx = 0, len = elements.length; idx < len && next < changesetElements.length; idx += 1) {
+    for (let idx = 0; idx < elements.length && next < changesetElements.length; idx += 1) {
       const targetElement = elements[idx];
       const toInsert = changesetElements[next];
 
