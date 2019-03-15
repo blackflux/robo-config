@@ -1,4 +1,5 @@
 const assert = require('assert');
+const xmlMerge = require('./xml-merge');
 
 module.exports = {
   'merge-below-title': (existing, changeset) => {
@@ -32,5 +33,6 @@ module.exports = {
     return changeset.concat(existing);
   },
   'merge-shallow': (existing, changeset) => Object.assign(existing, changeset),
+  'xml-merge': (existing, changeset) => xmlMerge(existing, changeset),
   overwrite: (existing, changeset) => changeset
 };
