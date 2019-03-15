@@ -1,11 +1,14 @@
 const objectDeepContain = require('object-deep-contain');
 
 const mergeRec = (target, changeset) => Object
-  .entries(target || {})
+  .entries(Object.assign(target.type === 'element' ? { elements: [] } : {}, target))
   .map(([attr, elements]) => {
     const changesetElements = changeset[attr];
 
-    if (!Array.isArray(elements)) {
+    if (
+      changesetElements === undefined
+      || !Array.isArray(elements)
+    ) {
       return [attr, changesetElements !== undefined ? changesetElements : elements];
     }
 
@@ -28,6 +31,9 @@ const mergeRec = (target, changeset) => Object
     elements.push(...changesetElements.slice(next));
     return [attr, elements];
   })
-  .reduce((p, [k, v]) => Object.assign(p, { [k]: v }), {});
+  .reduce((p, [k, v]) => Object.assign(
+    p,
+    k === 'elements' && target.elements === undefined && v.length === 0 ? {} : { [k]: v }
+  ), {});
 
 module.exports = (target, changeset) => Object.assign(target, { data: mergeRec(target.data, changeset.data) });
