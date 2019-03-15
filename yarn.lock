@@ -4847,6 +4847,11 @@ object-copy@^0.1.0:
     define-property "^0.2.5"
     kind-of "^3.0.3"
 
+object-deep-contain@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.4.tgz#67aff0a661f9d3fbf2a5222af7341a9d0f22d75f"
+  integrity sha512-DvaKKA6M32cSkt3nWmLTbmThdr0Z6YjM9orEkXYWlk/RBiGJbWXBjrrn9PfkWxedItgXiBTYh6RsJfzsVtHHew==
+
 object-keys@^1.0.11, object-keys@^1.0.12:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.0.tgz#11bd22348dd2e096a045ab06f6c85bcc340fa032"

@@ -1,0 +1,12 @@
+{
+  "target": ".idea/${projectName}.iml",
+  "strategy": "xml-merge",
+  "snippets": [
+    {
+      "name": "exclude-folder-from-module",
+      "variables": {
+        "folder": "coverage"
+      }
+    }
+  ]
+}

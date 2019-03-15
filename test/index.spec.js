@@ -4,10 +4,14 @@ const robo = require('../src/index');
 
 it('Executing Configuration', () => {
   expect(robo({
-    configs: ['assorted/@npm-opensource'],
+    configs: [
+      'assorted/@npm-opensource',
+      'jetbrains/@common'
+    ],
     variables: {
       repoKey: 'blackflux/robo-config',
       repoName: 'robo-config',
+      projectName: 'robo-config',
       owner: 'simlu',
       authorName: 'Lukas Siemon',
       mergeBot: 'MrsFlux'
