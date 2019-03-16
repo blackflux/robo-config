@@ -34,9 +34,14 @@ const generateDocsRec = (configNames, level = 0) => {
     .forEach((configName) => {
       const config = sfs.smartRead(sfs.guessFile(path.join(__dirname, '..', 'configs', configName)));
       result.push(...documentConfig(configName, config, level + 1));
-      result.push('<details><summary>Details</summary>');
-      result.push(...generateDocsRec(config.configs || [], level + 1));
-      result.push('</details>');
+      if (typeof config.target !== 'string') {
+        result.push(`${'  '.repeat(level)}<details>`);
+        result.push(`${'  '.repeat(level + 1)}<summary>Details</summary>`);
+        result.push('');
+        result.push(...generateDocsRec(config.configs || [], level + 1));
+        result.push(`${'  '.repeat(level)}</details>`);
+        result.push('');
+      }
     });
   return result;
 };
