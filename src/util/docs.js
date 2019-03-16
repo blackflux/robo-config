@@ -26,7 +26,7 @@ const documentConfig = (heading, config, level) => {
   return result;
 };
 
-const generateDocsRec = (configNames, level = 0) => {
+const generateDocs = (configNames, level = 0) => {
   assert(Array.isArray(configNames) && configNames.every(e => typeof e === 'string'));
   const result = [];
   configNames
@@ -38,25 +38,11 @@ const generateDocsRec = (configNames, level = 0) => {
         result.push(`${'  '.repeat(level)}<details>`);
         result.push(`${'  '.repeat(level + 1)}<summary>Details</summary>`);
         result.push('');
-        result.push(...generateDocsRec(config.configs || [], level + 1));
+        result.push(...generateDocs(config.configs, level + 1));
         result.push(`${'  '.repeat(level)}</details>`);
         result.push('');
       }
     });
   return result;
 };
-
-const generateDocs = (title, details, configNames) => {
-  assert(typeof title === 'string');
-  assert(typeof details === 'string');
-  assert(Array.isArray(configNames) && configNames.every(e => typeof e === 'string'));
-  return [
-    `# ${title}`,
-    '',
-    `${details}`,
-    '',
-    ...generateDocsRec(configNames)
-  ];
-};
-
 module.exports.generateDocs = generateDocs;

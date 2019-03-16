@@ -32,6 +32,17 @@ const applyConfigRec = (configNames, variables, projectRoot) => {
   return result;
 };
 
+const generateTaskDocs = (configNames) => {
+  assert(Array.isArray(configNames) && configNames.every(e => typeof e === 'string'));
+  return [
+    '# Codebase Configuration Documentation',
+    '',
+    'Documents configuration managed by [robo-config](https://github.com/blackflux/robo-config) for this Codebase.',
+    '',
+    ...generateDocs(configNames)
+  ];
+};
+
 module.exports = (args = {}) => {
   // load from input args with defaults
   const opts = Object.assign({
@@ -57,15 +68,7 @@ module.exports = (args = {}) => {
 
   // execute configuration
   const result = applyConfigRec(opts.configs, opts.variables, opts.projectRoot);
-  if (sfs.smartWrite(
-    path.join(opts.projectRoot, opts.confDocsPath),
-    generateDocs(
-      'Codebase Configuration Documentation',
-      'Documents configuration managed by '
-      + '[robo-config](https://github.com/blackflux/robo-config) for this Codebase.',
-      opts.configs
-    )
-  )) {
+  if (sfs.smartWrite(path.join(opts.projectRoot, opts.confDocsPath), generateTaskDocs(opts.configs))) {
     result.push(`Updated: ${opts.confDocsPath}`);
   }
 
