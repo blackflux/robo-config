@@ -7,10 +7,12 @@ const generateDocs = (title, description, configNames, level = 0) => {
 
   const result = [`${'#'.repeat(level + 1)} ${title}`, '', description, ''];
 
-  configNames.forEach((configName) => {
-    const config = sfs.smartRead(sfs.guessFile(path.join(__dirname, '..', 'configs', configName)));
-    result.push(...generateDocs(configName, config.description, config.configs || [], level + 1));
-  });
+  configNames
+    .sort((a, b) => a.indexOf('/@') - b.indexOf('/@'))
+    .forEach((configName) => {
+      const config = sfs.smartRead(sfs.guessFile(path.join(__dirname, '..', 'configs', configName)));
+      result.push(...generateDocs(configName, config.description, config.configs || [], level + 1));
+    });
 
   return result;
 };

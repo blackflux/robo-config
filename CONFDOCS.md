@@ -2,9 +2,41 @@
 
 Documents configuration managed by [robo-config](https://github.com/blackflux/robo-config) for this Codebase.
 
+## editor/@default
+
+Recommended base [code editor configuration](https://editorconfig.org/).
+
+### editor/two-space
+
+Basic two space indent editor configuration file.
+
 ## assorted/@npm-opensource
 
 Manage various configuration files for an open source npm github repo.
+
+### circleci/npm-opensource:two-branch
+
+Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
+
+### gally/npm-opensource:two-branch
+
+Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
+
+### git/@default
+
+Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
+
+#### git/gitignore
+
+Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files).
+
+### npm/@default
+
+Recommended base configuration when using [npm](https://www.npmjs.com/).
+
+#### npm/npmignore
+
+Inject comment into .npmignore explaining when to use it.
 
 ### badges/@npm-opensource
 
@@ -42,30 +74,6 @@ Insert [coveralls](https://coveralls.io/) badge into project README.md [markdown
 
 Insert [circleci](https://circleci.com/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
 
-### circleci/npm-opensource:two-branch
-
-Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
-
-### dependabot/@default-js
-
-Recommended base [dependabot configuration](https://dependabot.com/) for javascript projects.
-
-#### dependabot/js-instant
-
-Dependabot config to instantly merge javascript dependency updated into the dev branch.
-
-### gally/npm-opensource:two-branch
-
-Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
-
-### git/@default
-
-Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
-
-#### git/gitignore
-
-Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files).
-
 ### license/@MIT-npm
 
 Recommended base configuration when using MIT License with npm.
@@ -78,13 +86,13 @@ Generate basic [MIT license](https://en.wikipedia.org/wiki/MIT_License) file.
 
 Link MIT license file into [npm](https://www.npmjs.com/) configuration.
 
-### npm/@default
+### dependabot/@default-js
 
-Recommended base configuration when using [npm](https://www.npmjs.com/).
+Recommended base [dependabot configuration](https://dependabot.com/) for javascript projects.
 
-#### npm/npmignore
+#### dependabot/js-instant
 
-Inject comment into .npmignore explaining when to use it.
+Dependabot config to instantly merge javascript dependency updated into the dev branch.
 
 ### semantic-release/@default
 
@@ -101,12 +109,4 @@ Recommended base configuration when using Jetbrains.
 ### jetbrains/exclude-coverage-folder
 
 Mark `coverage` Folder as excluded in Jetbrains.
-
-## editor/@default
-
-Recommended base [code editor configuration](https://editorconfig.org/).
-
-### editor/two-space
-
-Basic two space indent editor configuration file.
 
