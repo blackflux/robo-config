@@ -6,18 +6,24 @@ const mergeRec = (target, changeset) => Object
   .map(([attr, elements]) => {
     const changesetElements = changeset[attr];
 
-    if (changesetElements === undefined || !Array.isArray(elements)) {
-      if (
+    if (changesetElements === undefined) {
+      return [attr, elements];
+    }
+
+    // merge non-arrays
+    if (!Array.isArray(elements) || !Array.isArray(changesetElements)) {
+      return [
+        attr,
         elements instanceof Object
         && changesetElements instanceof Object
         && !Array.isArray(elements)
         && !Array.isArray(changesetElements)
-      ) {
-        return [attr, deepmerge(elements, changesetElements)];
-      }
-      return [attr, changesetElements !== undefined ? changesetElements : elements];
+          ? deepmerge(elements, changesetElements)
+          : changesetElements
+      ];
     }
 
+    // merge arrays recursively
     let next = 0;
     for (let idx = 0; idx < elements.length && next < changesetElements.length; idx += 1) {
       const targetElement = elements[idx];
@@ -35,6 +41,7 @@ const mergeRec = (target, changeset) => Object
       }
     }
     elements.push(...changesetElements.slice(next));
+
     return [attr, elements];
   })
   .reduce((p, [k, v]) => Object.assign(
