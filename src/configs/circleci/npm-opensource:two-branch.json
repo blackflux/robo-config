@@ -2,9 +2,9 @@
   "target": ".circleci/config.yml",
   "strategy": "overwrite",
   "snippets": [
-    "00-base",
+    "base",
     {
-      "name": "01-gally-create-staging-pr",
+      "name": "gally-create-staging-pr",
       "variables": {
         "jobName": "gally-create-pr",
         "dockerImage": "circleci/node:10",
@@ -12,7 +12,7 @@
       }
     },
     {
-      "name": "02-run-yarn-tests",
+      "name": "run-yarn-tests",
       "variables": {
         "jobName": "test-node-v10",
         "dockerImage": "circleci/node:10",
@@ -24,14 +24,14 @@
       }
     },
     {
-      "name": "03-inject-coveralls-step",
+      "name": "inject-coveralls-step",
       "variables": {
         "jobName": "test-node-v10",
         "ciEnvBranchName": "CIRCLE_BRANCH"
       }
     },
     {
-      "name": "02-run-yarn-tests",
+      "name": "run-yarn-tests",
       "variables": {
         "jobName": "test-node-v8.10",
         "dockerImage": "circleci/node:8.10",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "name": "04-dependabot-auto-merge",
+      "name": "dependabot-auto-merge",
       "variables": {
         "jobName": "gally-auto-merge",
         "dockerImage": "circleci/node:10",
@@ -62,7 +62,7 @@
       }
     },
     {
-      "name": "05-semantic-release",
+      "name": "semantic-release",
       "variables": {
         "jobName": "release",
         "dockerImage": "circleci/node:10",
@@ -80,5 +80,16 @@
         }
       }
     }
-  ]
+  ],
+  "requires": [
+    "npm",
+    "yarn",
+    "gally",
+    "github",
+    "circleci",
+    "coveralls",
+    "dependabot",
+    "semantic-release"
+  ],
+  "description": "Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages."
 }

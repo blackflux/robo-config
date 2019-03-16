@@ -1,7 +1,7 @@
 {
   "configs": [
     "badges/@npm-opensource",
-    "circleci/npm-release",
+    "circleci/npm-opensource:two-branch",
     "dependabot/@default-js",
     "gally/npm-opensource:two-branch",
     "git/@default",
