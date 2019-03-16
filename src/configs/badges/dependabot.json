@@ -12,5 +12,5 @@
   "requires": [
     "dependabot"
   ],
-  "description": "Insert [dependabot](https://dependabot.com/) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file."
+  "description": "Insert [dependabot](https://dependabot.com/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file."
 }

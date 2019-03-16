@@ -7,5 +7,5 @@
   "requires": [
     "js-gardener"
   ],
-  "description": "Insert [js-gardener](https://github.com/blackflux/js-gardener) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file."
+  "description": "Insert [js-gardener](https://github.com/blackflux/js-gardener) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file."
 }

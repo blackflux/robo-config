@@ -12,5 +12,5 @@
   "requires": [
     "david-dm"
   ],
-  "description": "Insert [david-dm.com](https://david-dm.org/) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file."
+  "description": "Insert [david-dm.com](https://david-dm.org/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file."
 }

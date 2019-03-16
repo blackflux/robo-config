@@ -8,39 +8,39 @@ Manage various configuration files for an open source npm github repo.
 
 ### badges/@npm-opensource
 
-Insert various badges into into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file.
+Insert various badges into into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
 
 #### badges/js-gardener
 
-Insert [js-gardener](https://github.com/blackflux/js-gardener) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file.
+Insert [js-gardener](https://github.com/blackflux/js-gardener) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
 
 #### badges/semantic-release
 
-Insert [semantic-release](https://github.com/semantic-release/semantic-release) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file.
+Insert [semantic-release](https://github.com/semantic-release/semantic-release) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
 
 #### badges/npm-downloads
 
-Insert [npm downloads](https://www.npmjs.com/) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file.
+Insert [npm downloads](https://www.npmjs.com/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
 
 #### badges/npm-status
 
-Insert [npm status](https://www.npmjs.com/) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file.
+Insert [npm status](https://www.npmjs.com/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
 
 #### badges/david-dm
 
-Insert [david-dm.com](https://david-dm.org/) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file.
+Insert [david-dm.com](https://david-dm.org/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
 
 #### badges/dependabot
 
-Insert [dependabot](https://dependabot.com/) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file.
+Insert [dependabot](https://dependabot.com/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
 
 #### badges/coveralls
 
-Insert [coveralls](https://coveralls.io/) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file.
+Insert [coveralls](https://coveralls.io/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
 
 #### badges/circleci
 
-Insert [circleci](https://circleci.com/) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file.
+Insert [circleci](https://circleci.com/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
 
 ### circleci/npm-opensource:two-branch
 
