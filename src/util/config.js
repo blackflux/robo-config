@@ -19,6 +19,10 @@ const configSchema = Joi.object().keys({
       variables: Joi.object().min(1).required()
     }).unknown(false)
   ).min(1),
+  // todo: make required with target
+  requires: Joi.array().items(Joi.string()),
+  // todo: make always required
+  description: Joi.string(),
   configs: Joi.array().items(Joi.string())
 })
   .and('target', 'strategy', 'snippets', 'format')

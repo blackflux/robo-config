@@ -4,5 +4,9 @@
   "snippets": [
     "angular",
     "build-deps-as-patch"
-  ]
+  ],
+  "requires": [
+    "semantic-release"
+  ],
+  "description": "Slightly extended [release commit convention](https://github.com/semantic-release/semantic-release#commit-message-format) for semantic-release."
 }

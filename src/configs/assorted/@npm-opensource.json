@@ -2,7 +2,7 @@
   "configs": [
     "badges/@npm-opensource",
     "gitignore/npm-opensource",
-    "npmignore/default",
+    "npm/@default",
     "gally/two-branch",
     "circleci/npm-release",
     "dependabot/nodejs-instant",
