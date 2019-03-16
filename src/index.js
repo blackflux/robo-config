@@ -9,17 +9,21 @@ const applyConfigRec = (configNames, variables, projectRoot) => {
   const result = [];
   configNames.forEach((configName) => {
     const config = loadConfig(configName, variables);
-    if (config === null) {
-      result.push(`${configName}: Error! Bad Name!`);
-    } else {
-      if (config.target !== undefined && applyConfig(config, projectRoot)) {
-        result.push(`${configName}: Configuration File Updated`);
-      }
-      if (config.configs !== undefined) {
-        result.push(...applyConfigRec(config.configs, variables, projectRoot));
-      }
+    assert(config !== null, `Bad Config Name: ${configName}`);
+    if (config.target !== undefined && applyConfig(config, projectRoot)) {
+      result.push(`Updated: ${config.target}`);
+    }
+    if (config.configs !== undefined) {
+      result.push(...applyConfigRec(config.configs, variables, projectRoot));
     }
   });
+  return result;
+};
+
+const generateDocsRec = (configNames) => {
+  const result = [
+    '# Codebase Configuration Documentation'
+  ];
   return result;
 };
 
@@ -27,7 +31,8 @@ const applyConfigRec = (configNames, variables, projectRoot) => {
 module.exports = ({
   configs: configNames,
   variables = {},
-  projectRoot = appRoot.path
+  projectRoot = appRoot.path,
+  confDocsPath = 'CONFDOCS.md'
 } = {}) => {
   if (configNames === undefined) {
     const roboConfig = sfs.smartRead(path.join(projectRoot, '.roboconfig.json'));
@@ -42,5 +47,9 @@ module.exports = ({
   assert(Array.isArray(configNames) && configNames.every(configName => configName.split('/').length === 2));
   assert(variables instanceof Object && !Array.isArray(variables));
 
-  return applyConfigRec(configNames, variables, projectRoot);
+  const result = applyConfigRec(configNames, variables, projectRoot);
+  if (sfs.smartWrite(path.join(projectRoot, confDocsPath), generateDocsRec(configNames))) {
+    result.push(`Updated: ${confDocsPath}`);
+  }
+  return result;
 };

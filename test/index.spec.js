@@ -13,16 +13,19 @@ describe('Integration Tests', () => {
   });
 
   it('Testing Bad Config', () => {
-    expect(robo({
+    expect(() => robo({
       configs: ['unknown/config'],
       projectRoot: dir
-    })).to.deep.equal(['unknown/config: Error! Bad Name!']);
+    })).to.throw('Bad Config Name: unknown/config');
   });
 
   it('Testing Configuration File Updated', () => {
     expect(robo({
       configs: ['editor/two-space'],
       projectRoot: dir
-    })).to.deep.equal(['editor/two-space: Configuration File Updated']);
+    })).to.deep.equal([
+      'Updated: .editorconfig',
+      'Updated: CONFDOCS.md'
+    ]);
   });
 });
