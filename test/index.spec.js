@@ -14,14 +14,14 @@ describe('Integration Tests', () => {
 
   it('Testing Bad Config', () => {
     expect(() => robo({
-      configs: ['unknown/config'],
+      configs: ['unknown/@config'],
       projectRoot: dir
-    })).to.throw('Bad Config Name: unknown/config');
+    })).to.throw('Bad Config Name: unknown/@config');
   });
 
   it('Testing Configuration File Updated', () => {
     expect(robo({
-      configs: ['editor/two-space'],
+      configs: ['editor/@default'],
       projectRoot: dir
     })).to.deep.equal([
       'Updated: .editorconfig',

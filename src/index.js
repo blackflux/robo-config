@@ -1,10 +1,20 @@
 const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
+const Joi = require('joi');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
 const { loadConfig, applyConfig } = require('./util/config');
 
+const roboConfigSchema = Joi.object().keys({
+  configs: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)).required(),
+  variables: Joi.object().required(),
+  projectRoot: Joi.string().required(),
+  configPath: Joi.string().required(),
+  confDocsPath: Joi.string().required()
+})
+  .unknown(false)
+  .required();
 
 const applyConfigRec = (configNames, variables, projectRoot) => {
   const result = [];
@@ -47,7 +57,10 @@ module.exports = (args = {}) => {
   }
 
   // validate roboconfig
-  // todo: ...
+  const robotConfigValidationError = Joi.validate(opts, roboConfigSchema).error;
+  if (robotConfigValidationError !== null) {
+    throw new Error(robotConfigValidationError);
+  }
 
   // execute configuration
   const result = applyConfigRec(opts.configs, opts.variables, opts.projectRoot);
