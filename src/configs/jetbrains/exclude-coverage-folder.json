@@ -9,5 +9,10 @@
         "folder": "coverage"
       }
     }
-  ]
+  ],
+  "requires": [
+    "jetbrains",
+    "nyc"
+  ],
+  "description": "Mark `coverage` Folder as excluded in Jetbrains."
 }

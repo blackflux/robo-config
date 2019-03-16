@@ -2,5 +2,5 @@
   "configs": [
     "npm/npmignore"
   ],
-  "description": "Recommended base configuration when publishing to [npm](https://www.npmjs.com/)."
+  "description": "Recommended base configuration when using [npm](https://www.npmjs.com/)."
 }
