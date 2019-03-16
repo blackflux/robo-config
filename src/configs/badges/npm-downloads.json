@@ -8,5 +8,9 @@
         "repoName": "${repoName}"
       }
     }
-  ]
+  ],
+  "requires": [
+    "npm-release"
+  ],
+  "description": "Insert [npm downloads](https://www.npmjs.com/) badge into project README.md [markdown[(https://en.wikipedia.org/wiki/Markdown) file."
 }

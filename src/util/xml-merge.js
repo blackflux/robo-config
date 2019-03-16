@@ -10,7 +10,11 @@ const mergeRec = (target, changeset) => {
     return changeset;
   }
 
-  if (isArray) {
+  if (
+    isArray
+    && target.every(e => e instanceof Object && !Array.isArray(e))
+    && changeset.every(e => e instanceof Object && !Array.isArray(e))
+  ) {
     let next = 0;
     for (let idx = 0; idx < target.length && next < changeset.length; idx += 1) {
       const targetElement = target[idx];

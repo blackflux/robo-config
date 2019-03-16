@@ -8,5 +8,9 @@
     "spacer-small",
     "nodejs",
     "spacer-big"
-  ]
+  ],
+  "requires": [
+    "git"
+  ],
+  "description": "Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files)."
 }

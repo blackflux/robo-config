@@ -24,5 +24,11 @@
         "requiredReviewCount": 1
       }
     }
-  ]
+  ],
+  "requires": [
+    "circleci",
+    "gally",
+    "github"
+  ],
+  "description": "Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages."
 }

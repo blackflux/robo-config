@@ -6,7 +6,8 @@ it('Executing Configuration', () => {
   expect(robo({
     configs: [
       'assorted/@npm-opensource',
-      'jetbrains/@common'
+      'jetbrains/@default',
+      'editor/@default'
     ],
     variables: {
       repoKey: 'blackflux/robo-config',

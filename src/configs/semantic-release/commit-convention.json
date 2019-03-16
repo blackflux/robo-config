@@ -1,8 +1,0 @@
-{
-  "target": ".releaserc.json",
-  "strategy": "overwrite",
-  "snippets": [
-    "angular",
-    "build-deps-as-patch"
-  ]
-}

@@ -1,13 +1,13 @@
 {
   "configs": [
     "badges/@npm-opensource",
-    "gitignore/npm-opensource",
-    "npmignore/default",
-    "gally/two-branch",
-    "circleci/npm-release",
-    "dependabot/nodejs-instant",
-    "semantic-release/commit-convention",
-    "editor/two-space",
-    "license/@MIT"
-  ]
+    "circleci/npm-opensource:two-branch",
+    "dependabot/@default-js",
+    "gally/npm-opensource:two-branch",
+    "git/@default",
+    "license/@MIT-npm",
+    "npm/@default",
+    "semantic-release/@default"
+  ],
+  "description": "Manage various configuration files for an open source npm github repo."
 }
