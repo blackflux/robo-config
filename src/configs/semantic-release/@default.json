@@ -1,0 +1,5 @@
+{
+  "configs": [
+    "semantic-release/commit-conventions"
+  ]
+}

@@ -6,7 +6,7 @@
     "gally/two-branch",
     "circleci/npm-release",
     "dependabot/nodejs-instant",
-    "semantic-release/commit-convention",
+    "semantic-release/@default",
     "editor/two-space",
     "license/@MIT"
   ]
