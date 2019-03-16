@@ -3,7 +3,6 @@
     "badges/@npm-opensource",
     "circleci/npm-release",
     "dependabot/nodejs-instant",
-    "editor/two-space",
     "gally/npm-opensource:two-branch",
     "git/@default",
     "license/@MIT-npm",

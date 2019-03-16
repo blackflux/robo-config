@@ -8,5 +8,7 @@
         "indent": "2"
       }
     }
-  ]
+  ],
+  "requires": [],
+  "description": "Basic two space indent editor configuration file."
 }
