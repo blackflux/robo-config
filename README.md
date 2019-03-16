@@ -13,7 +13,7 @@ Automatically manage configuration files.
 
 ## But why...?
 
-_Why the hell does this package even exist?_ -
+_Why does this package even exist?_ -
 Let's face it, without npm and micro-services this repo would probably not exist. 
 Npm has encouraged us to create a new repo and package for every 
 re-usable code snippet. This is great from the re-usability perspective,
