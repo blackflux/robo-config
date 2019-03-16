@@ -1,10 +1,10 @@
 {
   "configs": [
     "badges/@npm-opensource",
-    "gally/two-branch",
     "circleci/npm-release",
     "dependabot/nodejs-instant",
     "editor/two-space",
+    "gally/npm-opensource:two-branch",
     "git/@default",
     "license/@MIT-npm",
     "npm/@default",
