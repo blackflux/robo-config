@@ -3,21 +3,7 @@ const expect = require('chai').expect;
 const robo = require('../src/index');
 
 it('Executing Configuration', () => {
-  expect(robo({
-    configs: [
-      'assorted/@npm-opensource',
-      'jetbrains/@default',
-      'editor/@default'
-    ],
-    variables: {
-      repoKey: 'blackflux/robo-config',
-      repoName: 'robo-config',
-      projectName: 'robo-config',
-      owner: 'simlu',
-      authorName: 'Lukas Siemon',
-      mergeBot: 'MrsFlux'
-    }
-  })).to.deep.equal([]);
+  expect(robo()).to.deep.equal([]);
 });
 
 describe('Integration Tests', () => {
