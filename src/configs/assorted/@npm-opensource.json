@@ -8,5 +8,6 @@
     "license/@MIT-npm",
     "npm/@default",
     "semantic-release/@default"
-  ]
+  ],
+  "description": "Manage various configuration files for an open source npm github repo."
 }
