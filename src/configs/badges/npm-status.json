@@ -10,7 +10,7 @@
     }
   ],
   "requires": [
-    "npm-release"
+    "npm-published"
   ],
   "purpose": [
     "Display [npm status](https://www.npmjs.com/) badge in README."

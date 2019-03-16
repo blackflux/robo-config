@@ -12,6 +12,10 @@ const documentConfig = (heading, config, level) => {
     result.push(`${'#'.repeat(level + 1)} ${heading}`, '');
     result.push(`_Updating \`${config.target}\` using \`${config.strategy}\`._`);
     result.push('');
+    if (config.requires.length !== 0) {
+      result.push(`_Requires ${config.requires.map(r => `\`${r}\``).join(', ')}._`);
+      result.push('');
+    }
     result.push(...config.purpose.map(d => `- ${d}`));
     result.push('');
   } else {
