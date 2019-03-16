@@ -5,6 +5,7 @@ const Joi = require('joi');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
 const { loadConfig, applyConfig } = require('./util/config');
+const { generateDocs } = require('./util/docs');
 
 const roboConfigSchema = Joi.object().keys({
   configs: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)).required(),
@@ -31,14 +32,6 @@ const applyConfigRec = (configNames, variables, projectRoot) => {
   return result;
 };
 
-const generateDocsRec = (configNames) => {
-  const result = [
-    '# Codebase Configuration Documentation'
-  ];
-  return result;
-};
-
-
 module.exports = (args = {}) => {
   // load from input args with defaults
   const opts = Object.assign({
@@ -64,7 +57,10 @@ module.exports = (args = {}) => {
 
   // execute configuration
   const result = applyConfigRec(opts.configs, opts.variables, opts.projectRoot);
-  if (sfs.smartWrite(path.join(opts.projectRoot, opts.confDocsPath), generateDocsRec(opts.configs))) {
+  if (sfs.smartWrite(
+    path.join(opts.projectRoot, opts.confDocsPath),
+    generateDocs('Codebase Configuration Documentation', opts.configs)
+  )) {
     result.push(`Updated: ${opts.confDocsPath}`);
   }
 
