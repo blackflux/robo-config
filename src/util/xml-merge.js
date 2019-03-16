@@ -1,33 +1,20 @@
-const deepmerge = require('deepmerge');
 const objectDeepContain = require('object-deep-contain');
 
-const mergeRec = (target, changeset) => Object
-  .entries(Object.assign(target.type === 'element' ? { elements: [] } : {}, target))
-  .map(([attr, elements]) => {
-    const changesetElements = changeset[attr];
+const mergeRec = (target, changeset) => {
+  if (changeset === undefined) {
+    return target;
+  }
 
-    if (changesetElements === undefined) {
-      return [attr, elements];
-    }
+  const isArray = Array.isArray(target);
+  if (isArray !== Array.isArray(changeset)) {
+    return changeset;
+  }
 
-    // merge non-arrays
-    if (!Array.isArray(elements) || !Array.isArray(changesetElements)) {
-      return [
-        attr,
-        elements instanceof Object
-        && changesetElements instanceof Object
-        && !Array.isArray(elements)
-        && !Array.isArray(changesetElements)
-          ? deepmerge(elements, changesetElements)
-          : changesetElements
-      ];
-    }
-
-    // merge arrays recursively
+  if (isArray) {
     let next = 0;
-    for (let idx = 0; idx < elements.length && next < changesetElements.length; idx += 1) {
-      const targetElement = elements[idx];
-      const toInsert = changesetElements[next];
+    for (let idx = 0; idx < target.length && next < changeset.length; idx += 1) {
+      const targetElement = target[idx];
+      const toInsert = changeset[next];
 
       if (objectDeepContain(
         targetElement,
@@ -36,17 +23,20 @@ const mergeRec = (target, changeset) => Object
           .reduce((p, [k, v]) => Object.assign(p, k === 'elements' ? {} : { [k]: v }), {})
       )) {
         // eslint-disable-next-line no-param-reassign
-        elements[idx] = mergeRec(targetElement, toInsert);
+        target[idx] = mergeRec(targetElement, toInsert);
         next += 1;
       }
     }
-    elements.push(...changesetElements.slice(next));
+    target.push(...changeset.slice(next));
+    return target;
+  }
 
-    return [attr, elements];
-  })
-  .reduce((p, [k, v]) => Object.assign(
-    p,
-    k === 'elements' && target.elements === undefined && v.length === 0 ? {} : { [k]: v }
-  ), {});
+  if (target instanceof Object && changeset instanceof Object) {
+    return [...new Set(Object.keys(target).concat(Object.keys(changeset)))]
+      .reduce((p, k) => Object.assign(p, { [k]: mergeRec(target[k], changeset[k]) }), {});
+  }
+
+  return changeset;
+};
 
 module.exports = (target, changeset) => Object.assign(target, { data: mergeRec(target.data, changeset.data) });
