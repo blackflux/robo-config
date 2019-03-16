@@ -59,7 +59,12 @@ module.exports = (args = {}) => {
   const result = applyConfigRec(opts.configs, opts.variables, opts.projectRoot);
   if (sfs.smartWrite(
     path.join(opts.projectRoot, opts.confDocsPath),
-    generateDocs('Codebase Configuration Documentation', opts.configs)
+    generateDocs(
+      'Codebase Configuration Documentation',
+      'Documents configuration managed by '
+      + '[robo-config](https://github.com/blackflux/robo-config) for this Codebase.',
+      opts.configs
+    )
   )) {
     result.push(`Updated: ${opts.confDocsPath}`);
   }
