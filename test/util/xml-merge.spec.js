@@ -40,4 +40,12 @@ describe('Unit xml-merge.js', () => {
     executeTest('<a/>', '<b/>', '<a/><b/>');
     executeTest('<r><a/></r>', '<r><b/></r>', '<r><a/><b/></r>');
   });
+
+  it('Test Header Merge', () => {
+    executeTest(
+      '<?xml version="1.0" ?>',
+      '<?xml encoding="UTF-8" ?>',
+      '<?xml version="1.0" encoding="UTF-8" ?>'
+    );
+  });
 });

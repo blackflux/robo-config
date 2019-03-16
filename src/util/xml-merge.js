@@ -1,3 +1,4 @@
+const deepmerge = require('deepmerge');
 const objectDeepContain = require('object-deep-contain');
 
 const mergeRec = (target, changeset) => Object
@@ -6,6 +7,14 @@ const mergeRec = (target, changeset) => Object
     const changesetElements = changeset[attr];
 
     if (changesetElements === undefined || !Array.isArray(elements)) {
+      if (
+        elements instanceof Object
+        && changesetElements instanceof Object
+        && !Array.isArray(elements)
+        && !Array.isArray(changesetElements)
+      ) {
+        return [attr, deepmerge(elements, changesetElements)];
+      }
       return [attr, changesetElements !== undefined ? changesetElements : elements];
     }
 
