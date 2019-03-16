@@ -1,4 +1,5 @@
 const assert = require('assert');
+const fs = require('fs');
 const path = require('path');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
@@ -28,28 +29,31 @@ const generateDocsRec = (configNames) => {
 };
 
 
-module.exports = ({
-  configs: configNames,
-  variables = {},
-  projectRoot = appRoot.path,
-  confDocsPath = 'CONFDOCS.md'
-} = {}) => {
-  if (configNames === undefined) {
-    const roboConfig = sfs.smartRead(path.join(projectRoot, '.roboconfig.json'));
+module.exports = (args = {}) => {
+  // load from input args with defaults
+  const opts = Object.assign({
+    variables: {},
+    projectRoot: appRoot.path,
+    configPath: '.roboconfig.json',
+    confDocsPath: 'CONFDOCS.md'
+  }, args);
+
+  // load from roboconfig configuration file
+  const configFilePath = path.join(opts.projectRoot, opts.configPath);
+  if (fs.existsSync(configFilePath)) {
+    const roboConfig = sfs.smartRead(configFilePath);
     assert(roboConfig instanceof Object && !Array.isArray(roboConfig));
-    assert(Object.keys(roboConfig).length === 2);
-    // eslint-disable-next-line no-param-reassign
-    configNames = roboConfig.configs;
-    // eslint-disable-next-line no-param-reassign
-    variables = roboConfig.variables;
+    Object.assign(opts, roboConfig);
   }
 
-  assert(Array.isArray(configNames) && configNames.every(configName => configName.split('/').length === 2));
-  assert(variables instanceof Object && !Array.isArray(variables));
+  // validate roboconfig
+  // todo: ...
 
-  const result = applyConfigRec(configNames, variables, projectRoot);
-  if (sfs.smartWrite(path.join(projectRoot, confDocsPath), generateDocsRec(configNames))) {
-    result.push(`Updated: ${confDocsPath}`);
+  // execute configuration
+  const result = applyConfigRec(opts.configs, opts.variables, opts.projectRoot);
+  if (sfs.smartWrite(path.join(opts.projectRoot, opts.confDocsPath), generateDocsRec(opts.configs))) {
+    result.push(`Updated: ${opts.confDocsPath}`);
   }
+
   return result;
 };
