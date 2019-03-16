@@ -30,7 +30,7 @@ const generateDocsRec = (configNames, level = 0) => {
   assert(Array.isArray(configNames) && configNames.every(e => typeof e === 'string'));
   const result = [];
   configNames
-    .sort((a, b) => a.includes('/@') - b.includes('/@'))
+    .sort((a, b) => b.includes('/@') - a.includes('/@'))
     .forEach((configName) => {
       const config = sfs.smartRead(sfs.guessFile(path.join(__dirname, '..', 'configs', configName)));
       result.push(...documentConfig(configName, config, level + 1));

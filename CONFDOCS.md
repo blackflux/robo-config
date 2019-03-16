@@ -6,24 +6,6 @@ Documents configuration managed by [robo-config](https://github.com/blackflux/ro
 
 Manage various configuration files for an open source npm github repo.
 
-### circleci/npm-opensource:two-branch
-
-_Updating `.circleci/config.yml` using `overwrite`._
-
-_Requires `npm`, `yarn`, `gally`, `github`, `circleci`, `coveralls`, `dependabot`, `semantic-release`._
-
-- Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
-- TODO
-
-### gally/npm-opensource:two-branch
-
-_Updating `.gally.json` using `overwrite`._
-
-_Requires `circleci`, `gally`, `github`._
-
-- Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
-- TODO ...
-
 ### `badges/@npm-opensource`
 
 Display various badges in README.
@@ -160,6 +142,24 @@ _Updating `.releaserc.json` using `overwrite`._
 _Requires `semantic-release`._
 
 - Slightly extended [release commit convention](https://github.com/semantic-release/semantic-release#commit-message-format) for semantic-release.
+
+### circleci/npm-opensource:two-branch
+
+_Updating `.circleci/config.yml` using `overwrite`._
+
+_Requires `npm`, `yarn`, `gally`, `github`, `circleci`, `coveralls`, `dependabot`, `semantic-release`._
+
+- Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
+- TODO
+
+### gally/npm-opensource:two-branch
+
+_Updating `.gally.json` using `overwrite`._
+
+_Requires `circleci`, `gally`, `github`._
+
+- Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
+- TODO ...
 
 ## `jetbrains/@default`
 
