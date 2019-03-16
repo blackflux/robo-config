@@ -8,5 +8,7 @@
   "requires": [
     "npm"
   ],
-  "description": "Inject comment into .npmignore explaining when to use it."
+  "purpose": [
+    "Inject comment into .npmignore explaining when to use it."
+  ]
 }

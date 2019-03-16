@@ -12,5 +12,10 @@
   "requires": [
     "git"
   ],
-  "description": "Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files)."
+  "purpose": [
+    "Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files).",
+    "Default ignores for JetBrains IDE.",
+    "Default ignores for OSX",
+    "Default ignores for NodeJs"
+  ]
 }

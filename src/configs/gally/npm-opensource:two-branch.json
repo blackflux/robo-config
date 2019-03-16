@@ -30,5 +30,8 @@
     "gally",
     "github"
   ],
-  "description": "Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages."
+  "purpose": [
+    "Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.",
+    "TODO ..."
+  ]
 }

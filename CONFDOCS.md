@@ -8,47 +8,49 @@ Manage various configuration files for an open source npm github repo.
 
 ### circleci/npm-opensource:two-branch
 
-Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
+- Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
+- TODO
 
 ### gally/npm-opensource:two-branch
 
-Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
+- Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
+- TODO ...
 
 ### badges/@npm-opensource
 
-Insert various badges into into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
+Display various badges in README.
 
 #### badges/js-gardener
 
-Insert [js-gardener](https://github.com/blackflux/js-gardener) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
+- Display [js-gardener](https://github.com/blackflux/js-gardener) badge in README.
 
 #### badges/semantic-release
 
-Insert [semantic-release](https://github.com/semantic-release/semantic-release) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
+- Display [semantic-release](https://github.com/semantic-release/semantic-release) badge in README.
 
 #### badges/npm-downloads
 
-Insert [npm downloads](https://www.npmjs.com/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
+- Display [npm downloads](https://www.npmjs.com/) badge in README.
 
 #### badges/npm-status
 
-Insert [npm status](https://www.npmjs.com/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
+- Display [npm status](https://www.npmjs.com/) badge in README.
 
 #### badges/david-dm
 
-Insert [david-dm.com](https://david-dm.org/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
+- Display [david-dm.com](https://david-dm.org/) badge in README.
 
 #### badges/dependabot
 
-Insert [dependabot](https://dependabot.com/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
+- Display [dependabot](https://dependabot.com/) badge in README.
 
 #### badges/coveralls
 
-Insert [coveralls](https://coveralls.io/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
+- Display [coveralls](https://coveralls.io/) badge in README.
 
 #### badges/circleci
 
-Insert [circleci](https://circleci.com/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file.
+- Display [circleci](https://circleci.com/) badge in README.
 
 ### dependabot/@default-js
 
@@ -56,7 +58,7 @@ Recommended base [dependabot configuration](https://dependabot.com/) for javascr
 
 #### dependabot/js-instant
 
-Dependabot config to instantly merge javascript dependency updated into the dev branch.
+- Configure dependabot to instantly merge javascript dependency updates into the `dev` branch.
 
 ### git/@default
 
@@ -64,7 +66,10 @@ Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Gi
 
 #### git/gitignore
 
-Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files).
+- Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files).
+- Default ignores for JetBrains IDE.
+- Default ignores for OSX
+- Default ignores for NodeJs
 
 ### license/@MIT-npm
 
@@ -72,11 +77,11 @@ Recommended base configuration when using MIT License with npm.
 
 #### license/MIT-LICENSE
 
-Generate basic [MIT license](https://en.wikipedia.org/wiki/MIT_License) file.
+- Generate [MIT license](https://en.wikipedia.org/wiki/MIT_License) file.
 
 #### license/MIT-npm
 
-Link MIT license file into [npm](https://www.npmjs.com/) configuration.
+- Link MIT license file into [npm](https://www.npmjs.com/) configuration.
 
 ### npm/@default
 
@@ -84,7 +89,7 @@ Recommended base configuration when using [npm](https://www.npmjs.com/).
 
 #### npm/npmignore
 
-Inject comment into .npmignore explaining when to use it.
+- Inject comment into .npmignore explaining when to use it.
 
 ### semantic-release/@default
 
@@ -92,7 +97,7 @@ Recommended base configuration when using [semantic-release](https://github.com/
 
 #### semantic-release/commit-conventions
 
-Slightly extended [release commit convention](https://github.com/semantic-release/semantic-release#commit-message-format) for semantic-release.
+- Slightly extended [release commit convention](https://github.com/semantic-release/semantic-release#commit-message-format) for semantic-release.
 
 ## jetbrains/@default
 
@@ -100,7 +105,7 @@ Recommended base configuration when using Jetbrains.
 
 ### jetbrains/exclude-coverage-folder
 
-Mark `coverage` Folder as excluded in Jetbrains.
+- Mark `coverage` Folder as excluded in Jetbrains.
 
 ## editor/@default
 
@@ -108,5 +113,8 @@ Recommended base [code editor configuration](https://editorconfig.org/).
 
 ### editor/two-space
 
-Basic two space indent editor configuration file.
+- Two space line indentation.
+- Set `lf` line endings.
+- Set `utf8` encoding.
+- Remove unnecessary whitespaces.
 

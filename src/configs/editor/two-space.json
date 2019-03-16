@@ -10,5 +10,10 @@
     }
   ],
   "requires": [],
-  "description": "Basic two space indent editor configuration file."
+  "purpose": [
+    "Two space line indentation.",
+    "Set `lf` line endings.",
+    "Set `utf8` encoding.",
+    "Remove unnecessary whitespaces."
+  ]
 }

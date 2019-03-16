@@ -9,5 +9,5 @@
     "badges/coveralls",
     "badges/circleci"
   ],
-  "description": "Insert various badges into into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file."
+  "description": "Display various badges in README."
 }

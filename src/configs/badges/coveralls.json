@@ -12,5 +12,7 @@
   "requires": [
     "coveralls"
   ],
-  "description": "Insert [coveralls](https://coveralls.io/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file."
+  "purpose": [
+    "Display [coveralls](https://coveralls.io/) badge in README."
+  ]
 }

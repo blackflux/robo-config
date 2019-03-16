@@ -7,5 +7,7 @@
   "requires": [
     "semantic-release"
   ],
-  "description": "Insert [semantic-release](https://github.com/semantic-release/semantic-release) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file."
+  "purpose": [
+    "Display [semantic-release](https://github.com/semantic-release/semantic-release) badge in README."
+  ]
 }

@@ -16,5 +16,7 @@
     "github",
     "javascript"
   ],
-  "description": "Dependabot config to instantly merge javascript dependency updated into the dev branch."
+  "purpose": [
+    "Configure dependabot to instantly merge javascript dependency updates into the `dev` branch."
+  ]
 }

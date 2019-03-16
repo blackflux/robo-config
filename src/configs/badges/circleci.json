@@ -12,5 +12,7 @@
   "requires": [
     "circleci"
   ],
-  "description": "Insert [circleci](https://circleci.com/) badge into project README.md [markdown](https://en.wikipedia.org/wiki/Markdown) file."
+  "purpose": [
+    "Display [circleci](https://circleci.com/) badge in README."
+  ]
 }

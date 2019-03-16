@@ -20,10 +20,12 @@ const configSchema = Joi.object().keys({
     }).unknown(false)
   ).min(1),
   requires: Joi.array().items(Joi.string()),
-  description: Joi.string().required(),
+  purpose: Joi.array().items(Joi.string()),
+  description: Joi.string(),
   configs: Joi.array().items(Joi.string())
 })
-  .and('target', 'strategy', 'snippets', 'format', 'requires')
+  .and('target', 'strategy', 'snippets', 'format', 'requires', 'purpose')
+  .and('configs', 'description')
   .xor('target', 'configs')
   .unknown(false)
   .required();

@@ -14,5 +14,7 @@
     "jetbrains",
     "nyc"
   ],
-  "description": "Mark `coverage` Folder as excluded in Jetbrains."
+  "purpose": [
+    "Mark `coverage` Folder as excluded in Jetbrains."
+  ]
 }

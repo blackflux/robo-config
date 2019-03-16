@@ -9,6 +9,8 @@
       }
     }
   ],
-  "description": "Generate basic [MIT license](https://en.wikipedia.org/wiki/MIT_License) file.",
-  "requires": []
+  "requires": [],
+  "purpose": [
+    "Generate [MIT license](https://en.wikipedia.org/wiki/MIT_License) file."
+  ]
 }
