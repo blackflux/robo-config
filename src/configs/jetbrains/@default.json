@@ -2,5 +2,5 @@
   "configs": [
     "jetbrains/exclude-coverage-folder"
   ],
-  "description": "Recommended base configuration when using Jetbrains"
+  "description": "Recommended base configuration when using Jetbrains."
 }
