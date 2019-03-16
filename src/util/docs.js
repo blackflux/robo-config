@@ -2,20 +2,20 @@ const assert = require('assert');
 const path = require('path');
 const sfs = require('smart-fs');
 
-const documentConfig = (heading, config, level = 0) => {
+const documentConfig = (heading, config, level) => {
   assert(typeof heading === 'string');
   assert(config instanceof Object && !Array.isArray(config));
   assert(Number.isInteger(level));
 
   const result = [];
-  result.push(`${'#'.repeat(level + 1)} \`${heading}\``, '');
-  const hasTarget = typeof config.target === 'string';
-  if (hasTarget) {
+  if (typeof config.target === 'string') {
+    result.push(`${'#'.repeat(level + 1)} ${heading}`, '');
     result.push(`_Updating \`${config.target}\` using \`${config.strategy}\`._`);
     result.push('');
     result.push(...config.purpose.map(d => `- ${d}`));
     result.push('');
   } else {
+    result.push(`${'#'.repeat(level + 1)} \`${heading}\``, '');
     result.push(config.description);
     result.push('');
   }

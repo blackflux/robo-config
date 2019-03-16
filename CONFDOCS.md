@@ -6,14 +6,14 @@ Documents configuration managed by [robo-config](https://github.com/blackflux/ro
 
 Manage various configuration files for an open source npm github repo.
 
-### `circleci/npm-opensource:two-branch`
+### circleci/npm-opensource:two-branch
 
 _Updating `.circleci/config.yml` using `overwrite`._
 
 - Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
 - TODO
 
-### `gally/npm-opensource:two-branch`
+### gally/npm-opensource:two-branch
 
 _Updating `.gally.json` using `overwrite`._
 
@@ -24,49 +24,49 @@ _Updating `.gally.json` using `overwrite`._
 
 Display various badges in README.
 
-#### `badges/js-gardener`
+#### badges/js-gardener
 
 _Updating `README.md` using `merge-below-title`._
 
 - Display [js-gardener](https://github.com/blackflux/js-gardener) badge in README.
 
-#### `badges/semantic-release`
+#### badges/semantic-release
 
 _Updating `README.md` using `merge-below-title`._
 
 - Display [semantic-release](https://github.com/semantic-release/semantic-release) badge in README.
 
-#### `badges/npm-downloads`
+#### badges/npm-downloads
 
 _Updating `README.md` using `merge-below-title`._
 
 - Display [npm downloads](https://www.npmjs.com/) badge in README.
 
-#### `badges/npm-status`
+#### badges/npm-status
 
 _Updating `README.md` using `merge-below-title`._
 
 - Display [npm status](https://www.npmjs.com/) badge in README.
 
-#### `badges/david-dm`
+#### badges/david-dm
 
 _Updating `README.md` using `merge-below-title`._
 
 - Display [david-dm.com](https://david-dm.org/) badge in README.
 
-#### `badges/dependabot`
+#### badges/dependabot
 
 _Updating `README.md` using `merge-below-title`._
 
 - Display [dependabot](https://dependabot.com/) badge in README.
 
-#### `badges/coveralls`
+#### badges/coveralls
 
 _Updating `README.md` using `merge-below-title`._
 
 - Display [coveralls](https://coveralls.io/) badge in README.
 
-#### `badges/circleci`
+#### badges/circleci
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -76,7 +76,7 @@ _Updating `README.md` using `merge-below-title`._
 
 Recommended base [dependabot configuration](https://dependabot.com/) for javascript projects.
 
-#### `dependabot/js-instant`
+#### dependabot/js-instant
 
 _Updating `.dependabot/config.yml` using `overwrite`._
 
@@ -86,7 +86,7 @@ _Updating `.dependabot/config.yml` using `overwrite`._
 
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
 
-#### `git/gitignore`
+#### git/gitignore
 
 _Updating `.gitignore` using `merge-top`._
 
@@ -99,13 +99,13 @@ _Updating `.gitignore` using `merge-top`._
 
 Recommended base configuration when using MIT License with npm.
 
-#### `license/MIT-LICENSE`
+#### license/MIT-LICENSE
 
 _Updating `LICENSE` using `overwrite`._
 
 - Generate [MIT license](https://en.wikipedia.org/wiki/MIT_License) file.
 
-#### `license/MIT-npm`
+#### license/MIT-npm
 
 _Updating `package.json` using `merge-shallow`._
 
@@ -115,7 +115,7 @@ _Updating `package.json` using `merge-shallow`._
 
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
-#### `npm/npmignore`
+#### npm/npmignore
 
 _Updating `.npmignore` using `merge-top`._
 
@@ -125,7 +125,7 @@ _Updating `.npmignore` using `merge-top`._
 
 Recommended base configuration when using [semantic-release](https://github.com/semantic-release/semantic-release).
 
-#### `semantic-release/commit-conventions`
+#### semantic-release/commit-conventions
 
 _Updating `.releaserc.json` using `overwrite`._
 
@@ -135,7 +135,7 @@ _Updating `.releaserc.json` using `overwrite`._
 
 Recommended base configuration when using Jetbrains.
 
-### `jetbrains/exclude-coverage-folder`
+### jetbrains/exclude-coverage-folder
 
 _Updating `.idea/${projectName}.iml` using `xml-merge`._
 
@@ -145,7 +145,7 @@ _Updating `.idea/${projectName}.iml` using `xml-merge`._
 
 Recommended base [code editor configuration](https://editorconfig.org/).
 
-### `editor/two-space`
+### editor/two-space
 
 _Updating `.editorconfig` using `overwrite`._
 
