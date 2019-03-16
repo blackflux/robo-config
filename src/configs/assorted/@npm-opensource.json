@@ -2,7 +2,7 @@
   "configs": [
     "badges/@npm-opensource",
     "circleci/npm-release",
-    "dependabot/nodejs-instant",
+    "dependabot/@default-js",
     "gally/npm-opensource:two-branch",
     "git/@default",
     "license/@MIT-npm",

@@ -10,5 +10,11 @@
         "targetBranch": "dev"
       }
     }
-  ]
+  ],
+  "requires": [
+    "dependabot",
+    "github",
+    "javascript"
+  ],
+  "description": "Dependabot config to instantly merge javascript dependency updated into the dev branch."
 }
