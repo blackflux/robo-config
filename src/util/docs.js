@@ -3,12 +3,12 @@ const path = require('path');
 const sfs = require('smart-fs');
 
 const documentConfig = (heading, config, level = 0) => {
-  assert(typeof configName === 'string');
+  assert(typeof heading === 'string');
   assert(config instanceof Object && !Array.isArray(config));
   assert(Number.isInteger(level));
 
   const result = [];
-  result.push(`${'#'.repeat(level + 1)} ${heading}`, '');
+  result.push(`${'#'.repeat(level + 1)} \`${heading}\``, '');
   const hasTarget = typeof config.target === 'string';
   if (hasTarget) {
     result.push(`_Updating \`${config.target}\` using \`${config.strategy}\`._`);
