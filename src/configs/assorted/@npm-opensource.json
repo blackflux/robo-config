@@ -2,12 +2,12 @@
   "configs": [
     "badges/@npm-opensource",
     "gitignore/npm-opensource",
-    "npm/@default",
     "gally/two-branch",
     "circleci/npm-release",
     "dependabot/nodejs-instant",
-    "semantic-release/@default",
     "editor/two-space",
-    "license/@MIT"
+    "license/@MIT-npm",
+    "npm/@default",
+    "semantic-release/@default"
   ]
 }

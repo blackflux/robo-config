@@ -9,5 +9,9 @@
         "authorName": "${authorName}"
       }
     }
+  ],
+  "description": "Link MIT license file into [npm](https://www.npmjs.com/) configuration.",
+  "requires": [
+    "npm"
   ]
 }
