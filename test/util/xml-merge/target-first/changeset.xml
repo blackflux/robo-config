@@ -1,7 +1,7 @@
 <module>
   <component>
-    <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/coverage"/>
-    </content>
+    <orderEntry type="B">
+      <test/>
+    </orderEntry>
   </component>
 </module>

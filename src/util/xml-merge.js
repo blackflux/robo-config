@@ -1,3 +1,4 @@
+const deepmerge = require('deepmerge');
 const objectDeepContain = require('object-deep-contain');
 
 const mergeRec = (target, changeset) => Object
@@ -5,15 +6,20 @@ const mergeRec = (target, changeset) => Object
   .map(([attr, elements]) => {
     const changesetElements = changeset[attr];
 
-    if (
-      changesetElements === undefined
-      || !Array.isArray(elements)
-    ) {
+    if (changesetElements === undefined || !Array.isArray(elements)) {
+      if (
+        elements instanceof Object
+        && changesetElements instanceof Object
+        && !Array.isArray(elements)
+        && !Array.isArray(changesetElements)
+      ) {
+        return [attr, deepmerge(elements, changesetElements)];
+      }
       return [attr, changesetElements !== undefined ? changesetElements : elements];
     }
 
     let next = 0;
-    for (let idx = 0, len = elements.length; idx < len && next < changesetElements.length; idx += 1) {
+    for (let idx = 0; idx < elements.length && next < changesetElements.length; idx += 1) {
       const targetElement = elements[idx];
       const toInsert = changesetElements[next];
 
