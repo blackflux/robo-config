@@ -1,18 +1,18 @@
-## `assorted/@npm-opensource.json`
+# `assorted/@npm-opensource.json`
 
 Manage various configuration files for an open source npm github repo.
 
 <details>
   <summary>Details</summary>
 
-### `badges/@npm-opensource`
+## `badges/@npm-opensource`
 
 Display various badges in README.
 
   <details>
     <summary>Details</summary>
 
-#### badges/js-gardener
+### badges/js-gardener
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -20,7 +20,7 @@ _Requires `js-gardener`._
 
 - Display [js-gardener](https://github.com/blackflux/js-gardener) badge in README.
 
-#### badges/semantic-release
+### badges/semantic-release
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -28,7 +28,7 @@ _Requires `semantic-release`._
 
 - Display [semantic-release](https://github.com/semantic-release/semantic-release) badge in README.
 
-#### badges/npm-downloads
+### badges/npm-downloads
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -36,7 +36,7 @@ _Requires `npm-published`._
 
 - Display [npm downloads](https://www.npmjs.com/) badge in README.
 
-#### badges/npm-status
+### badges/npm-status
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -44,7 +44,7 @@ _Requires `npm-published`._
 
 - Display [npm status](https://www.npmjs.com/) badge in README.
 
-#### badges/david-dm
+### badges/david-dm
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -52,7 +52,7 @@ _Requires `david-dm`._
 
 - Display [david-dm.com](https://david-dm.org/) badge in README.
 
-#### badges/dependabot
+### badges/dependabot
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -60,7 +60,7 @@ _Requires `dependabot`._
 
 - Display [dependabot](https://dependabot.com/) badge in README.
 
-#### badges/coveralls
+### badges/coveralls
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -68,7 +68,7 @@ _Requires `coveralls`._
 
 - Display [coveralls](https://coveralls.io/) badge in README.
 
-#### badges/circleci
+### badges/circleci
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -78,14 +78,14 @@ _Requires `circleci`._
 
   </details>
 
-### `dependabot/@default-js`
+## `dependabot/@default-js`
 
 Recommended base [dependabot configuration](https://dependabot.com/) for javascript projects.
 
   <details>
     <summary>Details</summary>
 
-#### dependabot/js-instant
+### dependabot/js-instant
 
 _Updating `.dependabot/config.yml` using `overwrite`._
 
@@ -95,14 +95,14 @@ _Requires `dependabot`, `github`, `javascript`._
 
   </details>
 
-### `git/@default`
+## `git/@default`
 
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
 
   <details>
     <summary>Details</summary>
 
-#### git/gitignore
+### git/gitignore
 
 _Updating `.gitignore` using `merge-top`._
 
@@ -115,20 +115,20 @@ _Requires `git`._
 
   </details>
 
-### `license/@MIT-npm`
+## `license/@MIT-npm`
 
 Recommended base configuration when using MIT License with npm.
 
   <details>
     <summary>Details</summary>
 
-#### license/MIT-LICENSE
+### license/MIT-LICENSE
 
 _Updating `LICENSE` using `overwrite`._
 
 - Generate [MIT license](https://en.wikipedia.org/wiki/MIT_License) file.
 
-#### license/MIT-npm
+### license/MIT-npm
 
 _Updating `package.json` using `merge-shallow`._
 
@@ -138,14 +138,14 @@ _Requires `npm`._
 
   </details>
 
-### `npm/@default`
+## `npm/@default`
 
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
   <details>
     <summary>Details</summary>
 
-#### npm/npmignore
+### npm/npmignore
 
 _Updating `.npmignore` using `merge-top`._
 
@@ -155,14 +155,14 @@ _Requires `npm`._
 
   </details>
 
-### `semantic-release/@default`
+## `semantic-release/@default`
 
 Recommended base configuration when using [semantic-release](https://github.com/semantic-release/semantic-release).
 
   <details>
     <summary>Details</summary>
 
-#### semantic-release/commit-conventions
+### semantic-release/commit-conventions
 
 _Updating `.releaserc.json` using `overwrite`._
 
@@ -172,7 +172,7 @@ _Requires `semantic-release`._
 
   </details>
 
-### circleci/npm-opensource:two-branch
+## circleci/npm-opensource:two-branch
 
 _Updating `.circleci/config.yml` using `overwrite`._
 
@@ -181,7 +181,7 @@ _Requires `npm`, `yarn`, `gally`, `github`, `circleci`, `coveralls`, `dependabot
 - Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
 - TODO
 
-### gally/npm-opensource:two-branch
+## gally/npm-opensource:two-branch
 
 _Updating `.gally.json` using `overwrite`._
 

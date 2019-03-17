@@ -1,11 +1,11 @@
-## `jetbrains/@default.json`
+# `jetbrains/@default.json`
 
 Recommended base configuration when using Jetbrains.
 
 <details>
   <summary>Details</summary>
 
-### jetbrains/exclude-coverage-folder
+## jetbrains/exclude-coverage-folder
 
 _Updating `.idea/${projectName}.iml` using `xml-merge`._
 

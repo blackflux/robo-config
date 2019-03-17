@@ -1,11 +1,11 @@
-## `editor/@default.json`
+# `editor/@default.json`
 
 Recommended base [code editor configuration](https://editorconfig.org/).
 
 <details>
   <summary>Details</summary>
 
-### editor/two-space
+## editor/two-space
 
 _Updating `.editorconfig` using `overwrite`._
 

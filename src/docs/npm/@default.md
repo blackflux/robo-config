@@ -1,11 +1,11 @@
-## `npm/@default.json`
+# `npm/@default.json`
 
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
 <details>
   <summary>Details</summary>
 
-### npm/npmignore
+## npm/npmignore
 
 _Updating `.npmignore` using `merge-top`._
 

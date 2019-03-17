@@ -1,11 +1,11 @@
-## `semantic-release/@default.json`
+# `semantic-release/@default.json`
 
 Recommended base configuration when using [semantic-release](https://github.com/semantic-release/semantic-release).
 
 <details>
   <summary>Details</summary>
 
-### semantic-release/commit-conventions
+## semantic-release/commit-conventions
 
 _Updating `.releaserc.json` using `overwrite`._
 

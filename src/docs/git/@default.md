@@ -1,11 +1,11 @@
-## `git/@default.json`
+# `git/@default.json`
 
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
 
 <details>
   <summary>Details</summary>
 
-### git/gitignore
+## git/gitignore
 
 _Updating `.gitignore` using `merge-top`._
 

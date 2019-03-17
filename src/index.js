@@ -39,7 +39,7 @@ const generateTaskDocs = (taskNames) => {
     '',
     'Documents configuration tasks managed by [robo-config](https://github.com/blackflux/robo-config).',
     '',
-    ...generateDocs(taskNames)
+    ...generateDocs(taskNames, 1)
   ];
 };
 
