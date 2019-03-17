@@ -1,7 +1,5 @@
 const assert = require('assert');
 const path = require('path');
-const get = require('lodash.get');
-const set = require('lodash.set');
 const sfs = require('smart-fs');
 const { determineVars } = require('./vars');
 
@@ -21,18 +19,19 @@ const documentFiles = (root, files) => {
   result.push(root);
 
   const tree = {};
-  files.forEach(f => set(tree, f.split('/'), true));
+  // eslint-disable-next-line no-param-reassign,no-return-assign
+  files.forEach(f => f.split('/').reduce((p, c) => p[c] = p[c] || {}, tree));
 
   const neighbours = [];
   const keys = Object.keys(tree).sort().map(k => [k]);
   for (let idx = 0; idx < keys.length; idx += 1) {
     const key = keys[idx];
-    const node = get(tree, key);
+    const node = key.reduce((p, c) => p[c], tree);
 
-    neighbours[key.length - 1] = get(keys[idx + 1], 'length') === key.length;
+    neighbours[key.length - 1] = idx + 1 < keys.length && keys[idx + 1].length === key.length;
     result.push(`${
       neighbours.slice(0, key.length - 1).map(n => (n === true ? '|   ' : '    ')).join('')
-    }${neighbours[key.length - 1] === true ? '├' : '└'}── ${key[key.length - 1]}`);
+    }${neighbours[key.length - 1] === true ? '├── ' : '└── '}${key[key.length - 1]}`);
 
     keys.splice(
       idx + 1,
