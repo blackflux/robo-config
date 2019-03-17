@@ -19,8 +19,7 @@ const documentFiles = (root, files) => {
   result.push(root);
 
   const tree = {};
-  // eslint-disable-next-line no-param-reassign,no-return-assign
-  files.forEach(f => f.split('/').reduce((p, c) => p[c] = p[c] || {}, tree));
+  files.forEach(f => f.split('/').reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], tree));
 
   const neighbours = [];
   const keys = Object.keys(tree).sort().map(k => [k]);
