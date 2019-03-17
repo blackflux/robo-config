@@ -30,8 +30,8 @@ const documentFiles = (root, files) => {
 
     neighbours[key.length - 1] = idx + 1 < keys.length && keys[idx + 1].length === key.length;
     result.push(`${
-      neighbours.slice(0, key.length - 1).map(n => (n === true ? '|   ' : '    ')).join('')
-    }${neighbours[key.length - 1] === true ? '├── ' : '└── '}${key[key.length - 1]}`);
+      neighbours.slice(0, key.length - 1).map(n => (n ? '|   ' : '    ')).join('')
+    }${neighbours[key.length - 1] ? '├── ' : '└── '}${key[key.length - 1]}`);
 
     keys.splice(
       idx + 1,
