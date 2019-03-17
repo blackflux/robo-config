@@ -1,5 +1,5 @@
 {
-  "configs": [
+  "tasks": [
     "git/gitignore"
   ],
   "description": "Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git)."

@@ -2,43 +2,43 @@ const assert = require('assert');
 const path = require('path');
 const sfs = require('smart-fs');
 
-const documentConfig = (heading, config, level) => {
+const documentTask = (heading, task, level) => {
   assert(typeof heading === 'string');
-  assert(config instanceof Object && !Array.isArray(config));
+  assert(task instanceof Object && !Array.isArray(task));
   assert(Number.isInteger(level));
 
   const result = [];
-  if (typeof config.target === 'string') {
+  if (typeof task.target === 'string') {
     result.push(`${'#'.repeat(level + 1)} ${heading}`, '');
-    result.push(`_Updating \`${config.target}\` using \`${config.strategy}\`._`);
+    result.push(`_Updating \`${task.target}\` using \`${task.strategy}\`._`);
     result.push('');
-    if (config.requires.length !== 0) {
-      result.push(`_Requires ${config.requires.map(r => `\`${r}\``).join(', ')}._`);
+    if (task.requires.length !== 0) {
+      result.push(`_Requires ${task.requires.map(r => `\`${r}\``).join(', ')}._`);
       result.push('');
     }
-    result.push(...config.purpose.map(d => `- ${d}`));
+    result.push(...task.purpose.map(d => `- ${d}`));
     result.push('');
   } else {
     result.push(`${'#'.repeat(level + 1)} \`${heading}\``, '');
-    result.push(config.description);
+    result.push(task.description);
     result.push('');
   }
   return result;
 };
 
-const generateDocs = (configNames, level = 0) => {
-  assert(Array.isArray(configNames) && configNames.every(e => typeof e === 'string'));
+const generateDocs = (taskNames, level = 0) => {
+  assert(Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'));
   const result = [];
-  configNames
+  taskNames
     .sort((a, b) => b.includes('/@') - a.includes('/@'))
-    .forEach((configName) => {
-      const config = sfs.smartRead(sfs.guessFile(path.join(__dirname, '..', 'configs', configName)));
-      result.push(...documentConfig(configName, config, level + 1));
-      if (typeof config.target !== 'string') {
+    .forEach((taskName) => {
+      const task = sfs.smartRead(sfs.guessFile(path.join(__dirname, '..', 'tasks', taskName)));
+      result.push(...documentTask(taskName, task, level + 1));
+      if (typeof task.target !== 'string') {
         result.push(`${'  '.repeat(level)}<details>`);
         result.push(`${'  '.repeat(level + 1)}<summary>Details</summary>`);
         result.push('');
-        result.push(...generateDocs(config.configs, level + 1));
+        result.push(...generateDocs(task.tasks, level + 1));
         result.push(`${'  '.repeat(level)}</details>`);
         result.push('');
       }

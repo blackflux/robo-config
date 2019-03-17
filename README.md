@@ -35,8 +35,8 @@ you will inadvertently forget to apply the change to some repos. That's where th
 
 ### Sounds scary...?
 
-Simply pick the config (set) that is most appropriate for your repo or create your own (prs are welcome).
-Config snippets are reused as appropriate. A change to a snippet will then quickly make it to every repository using it.
+Simply pick the task(s) that is most appropriate for your repo or create your own (prs are encouraged).
+Tasks and snippets are reused as appropriate. A change to a snippet will then quickly make it to every repository using it.
 
 Sounds scary?
 Consider that configuration changes are tied to version updates of this package and can not be

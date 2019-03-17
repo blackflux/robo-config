@@ -1,6 +1,6 @@
 # Codebase Configuration Documentation
 
-Documents configuration managed by [robo-config](https://github.com/blackflux/robo-config) for this Codebase.
+Documents configuration tasks managed by [robo-config](https://github.com/blackflux/robo-config).
 
 ## `assorted/@npm-opensource`
 

@@ -1,5 +1,5 @@
 {
-  "configs": [
+  "tasks": [
     "semantic-release/commit-conventions"
   ],
   "description": "Recommended base configuration when using [semantic-release](https://github.com/semantic-release/semantic-release)."

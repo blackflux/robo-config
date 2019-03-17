@@ -1,5 +1,5 @@
 {
-  "configs": [
+  "tasks": [
     "badges/js-gardener",
     "badges/semantic-release",
     "badges/npm-downloads",

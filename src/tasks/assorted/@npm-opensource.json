@@ -1,5 +1,5 @@
 {
-  "configs": [
+  "tasks": [
     "badges/@npm-opensource",
     "circleci/npm-opensource:two-branch",
     "dependabot/@default-js",

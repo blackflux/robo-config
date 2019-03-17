@@ -1,5 +1,5 @@
 {
-  "configs": [
+  "tasks": [
     "npm/npmignore"
   ],
   "description": "Recommended base configuration when using [npm](https://www.npmjs.com/)."
