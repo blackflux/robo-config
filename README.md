@@ -52,6 +52,6 @@ It does not do it automatically or silently.
 
 ...
 
-## Assorted Configs
+## Assorted Tasks
 
-- [Npm Open Source](docs/configs/assorted/npm-opensource.md)
+All usable tasks are documented [here](src/docs).
