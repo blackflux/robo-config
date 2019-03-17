@@ -148,6 +148,7 @@ _Updating `README.md` using `merge-below-title`._
 
 <!---2--></details>
 
+------
 <!---1--></details>
 
 ## `dependabot/@default-js`
@@ -181,6 +182,7 @@ _Updating `.dependabot/config.yml` using `overwrite`._
 
 <!---2--></details>
 
+------
 <!---1--></details>
 
 ## `git/@default`
@@ -213,6 +215,7 @@ _Updating `.gitignore` using `merge-top`._
 
 <!---2--></details>
 
+------
 <!---1--></details>
 
 ## `license/@MIT-npm`
@@ -248,6 +251,7 @@ _Updating `package.json` using `merge-shallow`._
 
 <!---2--></details>
 
+------
 <!---1--></details>
 
 ## `npm/@default`
@@ -277,6 +281,7 @@ _Updating `.npmignore` using `merge-top`._
 
 <!---2--></details>
 
+------
 <!---1--></details>
 
 ## `semantic-release/@default`
@@ -306,6 +311,7 @@ _Updating `.releaserc.json` using `overwrite`._
 
 <!---2--></details>
 
+------
 <!---1--></details>
 
 ## circleci/npm-opensource:two-branch

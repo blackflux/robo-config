@@ -79,6 +79,7 @@ const generateDocs = (taskNames, baseLevel) => {
     if (lastLevel < section.level) {
       result.push(...startSpoiler('Details', lastLevel - baseLevel));
     } else if (lastLevel > section.level) {
+      result.push('------');
       result.push(...endSpoiler(section.level - baseLevel));
     }
     result.push(...documentSection(baseLevel, section));
