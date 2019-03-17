@@ -46,6 +46,7 @@ const documentFiles = (root, files) => {
 
   return result;
 };
+module.exports.documentFiles = documentFiles;
 
 const documentSection = (baseLevel, {
   level, taskName, task, targets, requires, variables
