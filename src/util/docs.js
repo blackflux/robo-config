@@ -47,17 +47,16 @@ const generateDocs = (taskNames, baseLevel) => {
   // generate docs for tasks
   let lastLevel = baseLevel;
   sections.forEach((section) => {
-    const { level, taskName, task } = section;
-    if (lastLevel < level) {
+    if (lastLevel < section.level) {
       result.push(`${'  '.repeat(lastLevel - baseLevel)}<details>`);
       result.push(`${'  '.repeat(lastLevel + 1 - baseLevel)}<summary>Details</summary>`);
       result.push('');
-    } else if (lastLevel > level) {
-      result.push(`${'  '.repeat(level - baseLevel)}</details>`);
+    } else if (lastLevel > section.level) {
+      result.push(`${'  '.repeat(section.level - baseLevel)}</details>`);
       result.push('');
     }
-    result.push(...documentTask({ level, taskName, task }));
-    lastLevel = level;
+    result.push(...documentTask(section));
+    lastLevel = section.level;
   });
   result.push('</details>');
   result.push('');
