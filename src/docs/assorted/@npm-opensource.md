@@ -22,6 +22,17 @@ Manage various configuration files for an open source npm github repo.
 <!---0--></details>
 
 <!---0--><details>
+<!---0--><summary>Variables</summary>
+
+- repoName
+- repoKey
+- authorName
+- owner
+- mergeBot
+
+<!---0--></details>
+
+<!---0--><details>
 <!---0--><summary>Details</summary>
 
 ## `badges/@npm-opensource`
@@ -38,6 +49,14 @@ Display various badges in README.
 - dependabot
 - coveralls
 - circleci
+
+<!---1--></details>
+
+<!---1--><details>
+<!---1--><summary>Variables</summary>
+
+- repoName
+- repoKey
 
 <!---1--></details>
 
@@ -83,6 +102,13 @@ _Updating `README.md` using `merge-below-title`._
 
 <!---2--></details>
 
+<!---2--><details>
+<!---2--><summary>Variables</summary>
+
+- repoName
+
+<!---2--></details>
+
 ### badges/npm-status
 
 _Updating `README.md` using `merge-below-title`._
@@ -93,6 +119,13 @@ _Updating `README.md` using `merge-below-title`._
 <!---2--><summary>Requires</summary>
 
 - npm-published
+
+<!---2--></details>
+
+<!---2--><details>
+<!---2--><summary>Variables</summary>
+
+- repoName
 
 <!---2--></details>
 
@@ -109,6 +142,13 @@ _Updating `README.md` using `merge-below-title`._
 
 <!---2--></details>
 
+<!---2--><details>
+<!---2--><summary>Variables</summary>
+
+- repoKey
+
+<!---2--></details>
+
 ### badges/dependabot
 
 _Updating `README.md` using `merge-below-title`._
@@ -119,6 +159,13 @@ _Updating `README.md` using `merge-below-title`._
 <!---2--><summary>Requires</summary>
 
 - dependabot
+
+<!---2--></details>
+
+<!---2--><details>
+<!---2--><summary>Variables</summary>
+
+- repoKey
 
 <!---2--></details>
 
@@ -135,6 +182,13 @@ _Updating `README.md` using `merge-below-title`._
 
 <!---2--></details>
 
+<!---2--><details>
+<!---2--><summary>Variables</summary>
+
+- repoKey
+
+<!---2--></details>
+
 ### badges/circleci
 
 _Updating `README.md` using `merge-below-title`._
@@ -145,6 +199,13 @@ _Updating `README.md` using `merge-below-title`._
 <!---2--><summary>Requires</summary>
 
 - circleci
+
+<!---2--></details>
+
+<!---2--><details>
+<!---2--><summary>Variables</summary>
+
+- repoKey
 
 <!---2--></details>
 
@@ -230,6 +291,14 @@ Recommended base configuration when using MIT License with npm.
 <!---1--></details>
 
 <!---1--><details>
+<!---1--><summary>Variables</summary>
+
+- authorName
+- repoKey
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Details</summary>
 
 ### license/MIT-LICENSE
@@ -237,6 +306,13 @@ Recommended base configuration when using MIT License with npm.
 _Updating `LICENSE` using `overwrite`._
 
 - Generate [MIT license](https://en.wikipedia.org/wiki/MIT_License) file.
+
+<!---2--><details>
+<!---2--><summary>Variables</summary>
+
+- authorName
+
+<!---2--></details>
 
 ### license/MIT-npm
 
@@ -248,6 +324,14 @@ _Updating `package.json` using `merge-shallow`._
 <!---2--><summary>Requires</summary>
 
 - npm
+
+<!---2--></details>
+
+<!---2--><details>
+<!---2--><summary>Variables</summary>
+
+- authorName
+- repoKey
 
 <!---2--></details>
 
@@ -348,6 +432,15 @@ _Updating `.gally.json` using `overwrite`._
 - circleci
 - gally
 - github
+
+<!---1--></details>
+
+<!---1--><details>
+<!---1--><summary>Variables</summary>
+
+- owner
+- mergeBot
+- repoKey
 
 <!---1--></details>
 

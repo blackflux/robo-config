@@ -1,6 +1,7 @@
 const assert = require('assert');
 const path = require('path');
 const sfs = require('smart-fs');
+const { determineVars } = require('./vars');
 
 const startSpoiler = (summary, level) => [
   `<!---${level}--><details>`,
@@ -13,7 +14,7 @@ const endSpoiler = level => [
 ];
 
 const documentSection = (baseLevel, {
-  level, taskName, task, requires
+  level, taskName, task, requires, variables
 }) => {
   assert(Number.isInteger(level));
   assert(typeof taskName === 'string');
@@ -35,6 +36,13 @@ const documentSection = (baseLevel, {
   if (requires.length !== 0) {
     result.push(...startSpoiler('Requires', level - baseLevel));
     result.push(...requires.map(r => `- ${r}`));
+    result.push('');
+    result.push(...endSpoiler(level - baseLevel));
+  }
+
+  if (variables.length !== 0) {
+    result.push(...startSpoiler('Variables', level - baseLevel));
+    result.push(...variables.map(r => `- ${r}`));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }
@@ -63,14 +71,29 @@ const generateDocs = (taskNames, baseLevel) => {
   // pull information into upper sections
   sections.forEach((section, idx) => {
     const requires = section.task.requires || [];
+    const variables = (section.task.snippets || [])
+      .filter(s => typeof s !== 'string')
+      .reduce(
+        (p, s) => p.concat(...determineVars(s.variables)),
+        determineVars({ target: section.task.target })
+      );
     for (let i = idx + 1; i < sections.length; i += 1) {
       const subSection = sections[i];
       if (subSection.level <= section.level) {
         break;
       }
       requires.push(...(subSection.task.requires || []));
+      variables.push(...(subSection.task.snippets || [])
+        .filter(s => typeof s !== 'string')
+        .reduce(
+          (p, s) => p.concat(...determineVars(s.variables)),
+          determineVars({ target: subSection.task.target })
+        ));
     }
-    Object.assign(section, { requires: [...new Set(requires)] });
+    Object.assign(section, {
+      requires: [...new Set(requires)],
+      variables: [...new Set(variables)]
+    });
   });
 
   // generate docs for tasks

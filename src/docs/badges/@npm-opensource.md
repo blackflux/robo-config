@@ -16,6 +16,14 @@ Display various badges in README.
 <!---0--></details>
 
 <!---0--><details>
+<!---0--><summary>Variables</summary>
+
+- repoName
+- repoKey
+
+<!---0--></details>
+
+<!---0--><details>
 <!---0--><summary>Details</summary>
 
 ## badges/js-gardener
@@ -57,6 +65,13 @@ _Updating `README.md` using `merge-below-title`._
 
 <!---1--></details>
 
+<!---1--><details>
+<!---1--><summary>Variables</summary>
+
+- repoName
+
+<!---1--></details>
+
 ## badges/npm-status
 
 _Updating `README.md` using `merge-below-title`._
@@ -67,6 +82,13 @@ _Updating `README.md` using `merge-below-title`._
 <!---1--><summary>Requires</summary>
 
 - npm-published
+
+<!---1--></details>
+
+<!---1--><details>
+<!---1--><summary>Variables</summary>
+
+- repoName
 
 <!---1--></details>
 
@@ -83,6 +105,13 @@ _Updating `README.md` using `merge-below-title`._
 
 <!---1--></details>
 
+<!---1--><details>
+<!---1--><summary>Variables</summary>
+
+- repoKey
+
+<!---1--></details>
+
 ## badges/dependabot
 
 _Updating `README.md` using `merge-below-title`._
@@ -93,6 +122,13 @@ _Updating `README.md` using `merge-below-title`._
 <!---1--><summary>Requires</summary>
 
 - dependabot
+
+<!---1--></details>
+
+<!---1--><details>
+<!---1--><summary>Variables</summary>
+
+- repoKey
 
 <!---1--></details>
 
@@ -109,6 +145,13 @@ _Updating `README.md` using `merge-below-title`._
 
 <!---1--></details>
 
+<!---1--><details>
+<!---1--><summary>Variables</summary>
+
+- repoKey
+
+<!---1--></details>
+
 ## badges/circleci
 
 _Updating `README.md` using `merge-below-title`._
@@ -119,6 +162,13 @@ _Updating `README.md` using `merge-below-title`._
 <!---1--><summary>Requires</summary>
 
 - circleci
+
+<!---1--></details>
+
+<!---1--><details>
+<!---1--><summary>Variables</summary>
+
+- repoKey
 
 <!---1--></details>
 

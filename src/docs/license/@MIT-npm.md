@@ -10,6 +10,14 @@ Recommended base configuration when using MIT License with npm.
 <!---0--></details>
 
 <!---0--><details>
+<!---0--><summary>Variables</summary>
+
+- authorName
+- repoKey
+
+<!---0--></details>
+
+<!---0--><details>
 <!---0--><summary>Details</summary>
 
 ## license/MIT-LICENSE
@@ -17,6 +25,13 @@ Recommended base configuration when using MIT License with npm.
 _Updating `LICENSE` using `overwrite`._
 
 - Generate [MIT license](https://en.wikipedia.org/wiki/MIT_License) file.
+
+<!---1--><details>
+<!---1--><summary>Variables</summary>
+
+- authorName
+
+<!---1--></details>
 
 ## license/MIT-npm
 
@@ -28,6 +43,14 @@ _Updating `package.json` using `merge-shallow`._
 <!---1--><summary>Requires</summary>
 
 - npm
+
+<!---1--></details>
+
+<!---1--><details>
+<!---1--><summary>Variables</summary>
+
+- authorName
+- repoKey
 
 <!---1--></details>
 
