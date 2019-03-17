@@ -26,25 +26,41 @@ const documentTask = (heading, task, level) => {
   return result;
 };
 
-const generateDocs = (taskNames, level = 0) => {
+const generateDocs = (taskNames, baseLevel = 0) => {
   assert(Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'));
-  assert(Number.isInteger(level));
+  assert(Number.isInteger(baseLevel));
+
+  const tasks = taskNames.map(taskName => ({ level: baseLevel, taskName }));
+
+  // expand tasks with subtasks
+  for (let idx = 0; idx < tasks.length; idx += 1) {
+    const { level, taskName } = tasks[idx];
+    const task = sfs.smartRead(sfs.guessFile(path.join(__dirname, '..', 'tasks', taskName)));
+    tasks[idx].task = task;
+    tasks.splice(idx + 1, 0, ...(task.tasks || [])
+      .sort((a, b) => b.includes('/@') - a.includes('/@'))
+      .map(subtaskName => ({ level: level + 1, taskName: subtaskName })));
+  }
 
   const result = [];
-  taskNames
-    .sort((a, b) => b.includes('/@') - a.includes('/@'))
-    .forEach((taskName) => {
-      const task = sfs.smartRead(sfs.guessFile(path.join(__dirname, '..', 'tasks', taskName)));
-      result.push(...documentTask(taskName, task, level + 1));
-      if (typeof task.target !== 'string') {
-        result.push(`${'  '.repeat(level)}<details>`);
-        result.push(`${'  '.repeat(level + 1)}<summary>Details</summary>`);
-        result.push('');
-        result.push(...generateDocs(task.tasks, level + 1));
-        result.push(`${'  '.repeat(level)}</details>`);
-        result.push('');
-      }
-    });
+
+  // generate docs for tasks
+  let lastLevel = baseLevel;
+  tasks.forEach(({ level, taskName, task }) => {
+    if (lastLevel < level) {
+      result.push(`${'  '.repeat(lastLevel)}<details>`);
+      result.push(`${'  '.repeat(lastLevel + 1)}<summary>Details</summary>`);
+      result.push('');
+    } else if (lastLevel > level) {
+      result.push(`${'  '.repeat(level)}</details>`);
+      result.push('');
+    }
+    result.push(...documentTask(taskName, task, level + 1));
+    lastLevel = level;
+  });
+  result.push('</details>');
+  result.push('');
+
   return result;
 };
 module.exports.generateDocs = generateDocs;
