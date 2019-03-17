@@ -3,6 +3,16 @@
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
 <!---0--><details>
+<!---0--><summary>Targets</summary>
+
+```
+project
+└── .npmignore
+```
+
+<!---0--></details>
+
+<!---0--><details>
 <!---0--><summary>Requires</summary>
 
 - npm
@@ -17,6 +27,16 @@ Recommended base configuration when using [npm](https://www.npmjs.com/).
 _Updating `.npmignore` using `merge-top`._
 
 - Inject comment into .npmignore explaining when to use it.
+
+<!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── .npmignore
+```
+
+<!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Requires</summary>

@@ -3,6 +3,26 @@
 Manage various configuration files for an open source npm github repo.
 
 <!---0--><details>
+<!---0--><summary>Targets</summary>
+
+```
+project
+├── .circleci
+|   └── config.yml
+├── .dependabot
+|   └── config.yml
+├── .gally.json
+├── .gitignore
+├── .npmignore
+├── .releaserc.json
+├── LICENSE
+├── README.md
+└── package.json
+```
+
+<!---0--></details>
+
+<!---0--><details>
 <!---0--><summary>Requires</summary>
 
 - js-gardener
@@ -40,6 +60,16 @@ Manage various configuration files for an open source npm github repo.
 Display various badges in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
 - js-gardener
@@ -70,6 +100,16 @@ _Updating `README.md` using `merge-below-title`._
 - Display [js-gardener](https://github.com/blackflux/js-gardener) badge in README.
 
 <!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---2--></details>
+
+<!---2--><details>
 <!---2--><summary>Requires</summary>
 
 - js-gardener
@@ -83,6 +123,16 @@ _Updating `README.md` using `merge-below-title`._
 - Display [semantic-release](https://github.com/semantic-release/semantic-release) badge in README.
 
 <!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---2--></details>
+
+<!---2--><details>
 <!---2--><summary>Requires</summary>
 
 - semantic-release
@@ -94,6 +144,16 @@ _Updating `README.md` using `merge-below-title`._
 _Updating `README.md` using `merge-below-title`._
 
 - Display [npm downloads](https://www.npmjs.com/) badge in README.
+
+<!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Requires</summary>
@@ -116,6 +176,16 @@ _Updating `README.md` using `merge-below-title`._
 - Display [npm status](https://www.npmjs.com/) badge in README.
 
 <!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---2--></details>
+
+<!---2--><details>
 <!---2--><summary>Requires</summary>
 
 - npm-published
@@ -134,6 +204,16 @@ _Updating `README.md` using `merge-below-title`._
 _Updating `README.md` using `merge-below-title`._
 
 - Display [david-dm.com](https://david-dm.org/) badge in README.
+
+<!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Requires</summary>
@@ -156,6 +236,16 @@ _Updating `README.md` using `merge-below-title`._
 - Display [dependabot](https://dependabot.com/) badge in README.
 
 <!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---2--></details>
+
+<!---2--><details>
 <!---2--><summary>Requires</summary>
 
 - dependabot
@@ -176,6 +266,16 @@ _Updating `README.md` using `merge-below-title`._
 - Display [coveralls](https://coveralls.io/) badge in README.
 
 <!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---2--></details>
+
+<!---2--><details>
 <!---2--><summary>Requires</summary>
 
 - coveralls
@@ -194,6 +294,16 @@ _Updating `README.md` using `merge-below-title`._
 _Updating `README.md` using `merge-below-title`._
 
 - Display [circleci](https://circleci.com/) badge in README.
+
+<!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Requires</summary>
@@ -217,6 +327,17 @@ _Updating `README.md` using `merge-below-title`._
 Recommended base [dependabot configuration](https://dependabot.com/) for javascript projects.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── .dependabot
+    └── config.yml
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
 - dependabot
@@ -235,6 +356,17 @@ _Updating `.dependabot/config.yml` using `overwrite`._
 - Configure dependabot to instantly merge javascript dependency updates into the `dev` branch.
 
 <!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── .dependabot
+    └── config.yml
+```
+
+<!---2--></details>
+
+<!---2--><details>
 <!---2--><summary>Requires</summary>
 
 - dependabot
@@ -249,6 +381,16 @@ _Updating `.dependabot/config.yml` using `overwrite`._
 ## `git/@default`
 
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
+
+<!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── .gitignore
+```
+
+<!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Requires</summary>
@@ -270,6 +412,16 @@ _Updating `.gitignore` using `merge-top`._
 - Default ignores for NodeJs
 
 <!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── .gitignore
+```
+
+<!---2--></details>
+
+<!---2--><details>
 <!---2--><summary>Requires</summary>
 
 - git
@@ -282,6 +434,17 @@ _Updating `.gitignore` using `merge-top`._
 ## `license/@MIT-npm`
 
 Recommended base configuration when using MIT License with npm.
+
+<!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+├── LICENSE
+└── package.json
+```
+
+<!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Requires</summary>
@@ -308,6 +471,16 @@ _Updating `LICENSE` using `overwrite`._
 - Generate [MIT license](https://en.wikipedia.org/wiki/MIT_License) file.
 
 <!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── LICENSE
+```
+
+<!---2--></details>
+
+<!---2--><details>
 <!---2--><summary>Variables</summary>
 
 - authorName
@@ -319,6 +492,16 @@ _Updating `LICENSE` using `overwrite`._
 _Updating `package.json` using `merge-shallow`._
 
 - Link MIT license file into [npm](https://www.npmjs.com/) configuration.
+
+<!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── package.json
+```
+
+<!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Requires</summary>
@@ -343,6 +526,16 @@ _Updating `package.json` using `merge-shallow`._
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── .npmignore
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
 - npm
@@ -359,6 +552,16 @@ _Updating `.npmignore` using `merge-top`._
 - Inject comment into .npmignore explaining when to use it.
 
 <!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── .npmignore
+```
+
+<!---2--></details>
+
+<!---2--><details>
 <!---2--><summary>Requires</summary>
 
 - npm
@@ -371,6 +574,16 @@ _Updating `.npmignore` using `merge-top`._
 ## `semantic-release/@default`
 
 Recommended base configuration when using [semantic-release](https://github.com/semantic-release/semantic-release).
+
+<!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── .releaserc.json
+```
+
+<!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Requires</summary>
@@ -389,6 +602,16 @@ _Updating `.releaserc.json` using `overwrite`._
 - Slightly extended [release commit convention](https://github.com/semantic-release/semantic-release#commit-message-format) for semantic-release.
 
 <!---2--><details>
+<!---2--><summary>Targets</summary>
+
+```
+project
+└── .releaserc.json
+```
+
+<!---2--></details>
+
+<!---2--><details>
 <!---2--><summary>Requires</summary>
 
 - semantic-release
@@ -404,6 +627,17 @@ _Updating `.circleci/config.yml` using `overwrite`._
 
 - Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
 - TODO
+
+<!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── .circleci
+    └── config.yml
+```
+
+<!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Requires</summary>
@@ -425,6 +659,16 @@ _Updating `.gally.json` using `overwrite`._
 
 - Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
 - TODO ...
+
+<!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── .gally.json
+```
+
+<!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Requires</summary>

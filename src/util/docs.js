@@ -1,5 +1,7 @@
 const assert = require('assert');
 const path = require('path');
+const get = require('lodash.get');
+const set = require('lodash.set');
 const sfs = require('smart-fs');
 const { determineVars } = require('./vars');
 
@@ -13,8 +15,44 @@ const endSpoiler = level => [
   ''
 ];
 
+const documentFiles = (root, files) => {
+  const result = [];
+  result.push('```');
+  result.push(root);
+
+  const tree = {};
+  files.forEach(f => set(tree, f.split('/'), true));
+
+  const neighbours = [];
+  const keys = Object.keys(tree).sort().map(k => [k]);
+  for (let idx = 0; idx < keys.length; idx += 1) {
+    const key = keys[idx];
+    const node = get(tree, key);
+
+    const neighbour = keys[idx + 1];
+    neighbours[key.length - 1] = get(neighbour, 'length', 0) === key.length;
+
+    keys.splice(
+      idx + 1,
+      0,
+      ...Object.keys(node).sort().map(k => key.concat(k))
+    );
+
+    let line = '';
+    for (let i = 0; i < key.length - 1; i += 1) {
+      line += neighbours[i] === true ? '|   ' : '    ';
+    }
+    line += `${neighbours[key.length - 1] === true ? '├' : '└'}── ${key[key.length - 1]}`;
+    result.push(line);
+  }
+  result.push('```');
+  result.push('');
+
+  return result;
+};
+
 const documentSection = (baseLevel, {
-  level, taskName, task, requires, variables
+  level, taskName, task, targets, requires, variables
 }) => {
   assert(Number.isInteger(level));
   assert(typeof taskName === 'string');
@@ -32,6 +70,10 @@ const documentSection = (baseLevel, {
     result.push(task.description);
     result.push('');
   }
+
+  result.push(...startSpoiler('Targets', level - baseLevel));
+  result.push(...documentFiles('project', targets));
+  result.push(...endSpoiler(level - baseLevel));
 
   if (requires.length !== 0) {
     result.push(...startSpoiler('Requires', level - baseLevel));
@@ -70,6 +112,7 @@ const generateDocs = (taskNames, baseLevel) => {
 
   // pull information into upper sections
   sections.forEach((section, idx) => {
+    const targets = [section.task.target];
     const requires = section.task.requires || [];
     const variables = (section.task.snippets || [])
       .filter(s => typeof s !== 'string')
@@ -82,6 +125,7 @@ const generateDocs = (taskNames, baseLevel) => {
       if (subSection.level <= section.level) {
         break;
       }
+      targets.push(subSection.task.target);
       requires.push(...(subSection.task.requires || []));
       variables.push(...(subSection.task.snippets || [])
         .filter(s => typeof s !== 'string')
@@ -91,6 +135,7 @@ const generateDocs = (taskNames, baseLevel) => {
         ));
     }
     Object.assign(section, {
+      targets: [...new Set(targets.filter(e => !!e))],
       requires: [...new Set(requires)],
       variables: [...new Set(variables)]
     });

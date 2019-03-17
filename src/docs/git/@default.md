@@ -3,6 +3,16 @@
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
 
 <!---0--><details>
+<!---0--><summary>Targets</summary>
+
+```
+project
+└── .gitignore
+```
+
+<!---0--></details>
+
+<!---0--><details>
 <!---0--><summary>Requires</summary>
 
 - git
@@ -20,6 +30,16 @@ _Updating `.gitignore` using `merge-top`._
 - Default ignores for JetBrains IDE.
 - Default ignores for OSX
 - Default ignores for NodeJs
+
+<!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── .gitignore
+```
+
+<!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Requires</summary>

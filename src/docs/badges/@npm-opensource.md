@@ -3,6 +3,16 @@
 Display various badges in README.
 
 <!---0--><details>
+<!---0--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---0--></details>
+
+<!---0--><details>
 <!---0--><summary>Requires</summary>
 
 - js-gardener
@@ -33,6 +43,16 @@ _Updating `README.md` using `merge-below-title`._
 - Display [js-gardener](https://github.com/blackflux/js-gardener) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
 - js-gardener
@@ -46,6 +66,16 @@ _Updating `README.md` using `merge-below-title`._
 - Display [semantic-release](https://github.com/semantic-release/semantic-release) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
 - semantic-release
@@ -57,6 +87,16 @@ _Updating `README.md` using `merge-below-title`._
 _Updating `README.md` using `merge-below-title`._
 
 - Display [npm downloads](https://www.npmjs.com/) badge in README.
+
+<!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Requires</summary>
@@ -79,6 +119,16 @@ _Updating `README.md` using `merge-below-title`._
 - Display [npm status](https://www.npmjs.com/) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
 - npm-published
@@ -97,6 +147,16 @@ _Updating `README.md` using `merge-below-title`._
 _Updating `README.md` using `merge-below-title`._
 
 - Display [david-dm.com](https://david-dm.org/) badge in README.
+
+<!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Requires</summary>
@@ -119,6 +179,16 @@ _Updating `README.md` using `merge-below-title`._
 - Display [dependabot](https://dependabot.com/) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
 - dependabot
@@ -139,6 +209,16 @@ _Updating `README.md` using `merge-below-title`._
 - Display [coveralls](https://coveralls.io/) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
 - coveralls
@@ -157,6 +237,16 @@ _Updating `README.md` using `merge-below-title`._
 _Updating `README.md` using `merge-below-title`._
 
 - Display [circleci](https://circleci.com/) badge in README.
+
+<!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└── README.md
+```
+
+<!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Requires</summary>
