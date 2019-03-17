@@ -3,13 +3,16 @@ const cloneDeep = require('lodash.clonedeep');
 const difference = require('lodash.difference');
 const objectScan = require('object-scan');
 
+const varRegex = /\${([-_a-zA-Z0-9]+)}/g;
+const varRegexExact = /^\${([-_a-zA-Z0-9]+)}$/g;
+
 const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
   assert(typeof input === 'string');
   assert(variables instanceof Object && !Array.isArray(variables));
   assert(typeof allowFullMatch === 'boolean');
   assert(usedVars instanceof Set);
 
-  if (allowFullMatch === true && input.match(/^\${[-_a-zA-Z0-9]+}$/g) !== null) {
+  if (allowFullMatch === true && input.match(varRegexExact) !== null) {
     const varName = input.slice(2, -1);
     const result = variables[varName];
     assert(result !== undefined, `Unmatched Variable Found: $\{${varName}}`);
@@ -17,7 +20,7 @@ const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
     return result;
   }
   return input
-    .replace(/\${([-_a-zA-Z0-9]+)}/g, (_, varName) => {
+    .replace(varRegex, (_, varName) => {
       const result = variables[varName];
       assert(result !== undefined, `Unmatched Variable Found: $\{${varName}}`);
       assert(typeof result === 'string', `Variable Expected to be String: $\{${varName}}`);
@@ -67,5 +70,23 @@ module.exports.populateVars = (data, variables, allowUnused) => {
     `Unmatched Variables Provided: ${JSON.stringify(difference(Object.keys(variables), [...usedVars]))}`
   );
 
+  return result;
+};
+
+module.exports.determineVars = (data) => {
+  assert(data instanceof Object);
+
+  const result = [];
+  objectScan(['**'], {
+    joined: false,
+    filterFn: (key, value) => {
+      [key[key.length - 1], value]
+        .filter(str => typeof str === 'string')
+        .map(str => str.match(varRegex))
+        .filter(matches => matches !== null)
+        .forEach(matches => result.push(...matches.map(m => m.slice(2, -1))));
+      return true;
+    }
+  })(data);
   return result;
 };

@@ -1,17 +1,29 @@
-## `npm/@default.json`
+# `npm/@default.json`
 
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
-<details>
-  <summary>Details</summary>
+<!---0--><details>
+<!---0--><summary>Requires</summary>
 
-### npm/npmignore
+- npm
+
+<!---0--></details>
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+## npm/npmignore
 
 _Updating `.npmignore` using `merge-top`._
 
-_Requires `npm`._
-
 - Inject comment into .npmignore explaining when to use it.
+
+<!---1--><details>
+<!---1--><summary>Requires</summary>
+
+- npm
+
+<!---1--></details>
 
 </details>
 
