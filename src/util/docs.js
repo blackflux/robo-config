@@ -2,7 +2,19 @@ const assert = require('assert');
 const path = require('path');
 const sfs = require('smart-fs');
 
-const documentTask = ({ level, taskName, task }) => {
+const startSpoiler = (summary, level) => [
+  `${'  '.repeat(level)}<details>`,
+  `${'  '.repeat(level + 1)}<summary>${summary}</summary>`,
+  ''
+];
+const endSpoiler = level => [
+  `${'  '.repeat(level)}</details>`,
+  ''
+];
+
+const documentSection = ({
+  level, taskName, task, requires
+}) => {
   assert(Number.isInteger(level));
   assert(typeof taskName === 'string');
   assert(task instanceof Object && !Array.isArray(task));
@@ -12,10 +24,6 @@ const documentTask = ({ level, taskName, task }) => {
     result.push(`${'#'.repeat(level + 1)} ${taskName}`, '');
     result.push(`_Updating \`${task.target}\` using \`${task.strategy}\`._`);
     result.push('');
-    if (task.requires.length !== 0) {
-      result.push(`_Requires ${task.requires.map(r => `\`${r}\``).join(', ')}._`);
-      result.push('');
-    }
     result.push(...task.purpose.map(d => `- ${d}`));
     result.push('');
   } else {
@@ -23,6 +31,14 @@ const documentTask = ({ level, taskName, task }) => {
     result.push(task.description);
     result.push('');
   }
+
+  if (requires.length !== 0) {
+    result.push(...startSpoiler('Requires', level));
+    result.push(...requires.map(r => `- ${r}`));
+    result.push('');
+    result.push(...endSpoiler(level));
+  }
+
   return result;
 };
 
@@ -44,18 +60,28 @@ const generateDocs = (taskNames, baseLevel) => {
 
   const result = [];
 
+  // pull information into upper sections
+  sections.forEach((section, idx) => {
+    const requires = section.task.requires || [];
+    for (let i = idx + 1; i < sections.length; i += 1) {
+      const subSection = sections[i];
+      if (subSection.level <= section.level) {
+        break;
+      }
+      requires.push(...(subSection.task.requires || []));
+    }
+    Object.assign(section, { requires: [...new Set(requires)] });
+  });
+
   // generate docs for tasks
   let lastLevel = baseLevel;
   sections.forEach((section) => {
     if (lastLevel < section.level) {
-      result.push(`${'  '.repeat(lastLevel - baseLevel)}<details>`);
-      result.push(`${'  '.repeat(lastLevel + 1 - baseLevel)}<summary>Details</summary>`);
-      result.push('');
+      result.push(...startSpoiler('Details', lastLevel - baseLevel));
     } else if (lastLevel > section.level) {
-      result.push(`${'  '.repeat(section.level - baseLevel)}</details>`);
-      result.push('');
+      result.push(...endSpoiler(section.level - baseLevel));
     }
-    result.push(...documentTask(section));
+    result.push(...documentSection(section));
     lastLevel = section.level;
   });
   result.push('</details>');

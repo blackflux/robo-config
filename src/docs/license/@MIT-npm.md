@@ -3,6 +3,13 @@
 Recommended base configuration when using MIT License with npm.
 
 <details>
+  <summary>Requires</summary>
+
+- npm
+
+</details>
+
+<details>
   <summary>Details</summary>
 
 ## license/MIT-LICENSE
@@ -15,9 +22,14 @@ _Updating `LICENSE` using `overwrite`._
 
 _Updating `package.json` using `merge-shallow`._
 
-_Requires `npm`._
-
 - Link MIT license file into [npm](https://www.npmjs.com/) configuration.
+
+  <details>
+    <summary>Requires</summary>
+
+- npm
+
+  </details>
 
 </details>
 
