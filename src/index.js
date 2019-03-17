@@ -53,9 +53,9 @@ module.exports = (args = {}) => {
   }, args);
 
   // load from roboconfig configuration file
-  const configFilePath = path.join(opts.projectRoot, opts.configPath);
-  if (fs.existsSync(configFilePath)) {
-    const roboConfig = sfs.smartRead(configFilePath);
+  const roboConfigFilePath = path.join(opts.projectRoot, opts.configPath);
+  if (fs.existsSync(roboConfigFilePath)) {
+    const roboConfig = sfs.smartRead(roboConfigFilePath);
     assert(roboConfig instanceof Object && !Array.isArray(roboConfig));
     Object.assign(opts, roboConfig);
   }
