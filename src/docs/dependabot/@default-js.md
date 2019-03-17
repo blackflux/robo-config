@@ -5,9 +5,9 @@ Recommended base [dependabot configuration](https://dependabot.com/) for javascr
 <details>
   <summary>Requires</summary>
 
-- dependabot
-- github
-- javascript
+\- dependabot\n
+\- github\n
+\- javascript\n
 
 </details>
 
@@ -23,9 +23,9 @@ _Updating `.dependabot/config.yml` using `overwrite`._
   <details>
     <summary>Requires</summary>
 
-- dependabot
-- github
-- javascript
+\- dependabot\n
+\- github\n
+\- javascript\n
 
   </details>
 

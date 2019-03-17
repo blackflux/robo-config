@@ -12,7 +12,7 @@ const endSpoiler = level => [
   ''
 ];
 
-const documentSection = ({
+const documentSection = (baseLevel, {
   level, taskName, task, requires
 }) => {
   assert(Number.isInteger(level));
@@ -33,10 +33,10 @@ const documentSection = ({
   }
 
   if (requires.length !== 0) {
-    result.push(...startSpoiler('Requires', level));
-    result.push(...requires.map(r => `- ${r}`));
+    result.push(...startSpoiler('Requires', level - baseLevel));
+    result.push(...requires.map(r => `\\- ${r}\\n`));
     result.push('');
-    result.push(...endSpoiler(level));
+    result.push(...endSpoiler(level - baseLevel));
   }
 
   return result;
@@ -81,7 +81,7 @@ const generateDocs = (taskNames, baseLevel) => {
     } else if (lastLevel > section.level) {
       result.push(...endSpoiler(section.level - baseLevel));
     }
-    result.push(...documentSection(section));
+    result.push(...documentSection(baseLevel, section));
     lastLevel = section.level;
   });
   result.push('</details>');

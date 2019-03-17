@@ -5,7 +5,7 @@ Recommended base configuration when using [semantic-release](https://github.com/
 <details>
   <summary>Requires</summary>
 
-- semantic-release
+\- semantic-release\n
 
 </details>
 
@@ -21,7 +21,7 @@ _Updating `.releaserc.json` using `overwrite`._
   <details>
     <summary>Requires</summary>
 
-- semantic-release
+\- semantic-release\n
 
   </details>
 

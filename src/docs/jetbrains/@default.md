@@ -5,8 +5,8 @@ Recommended base configuration when using Jetbrains.
 <details>
   <summary>Requires</summary>
 
-- jetbrains
-- nyc
+\- jetbrains\n
+\- nyc\n
 
 </details>
 
@@ -22,8 +22,8 @@ _Updating `.idea/${projectName}.iml` using `xml-merge`._
   <details>
     <summary>Requires</summary>
 
-- jetbrains
-- nyc
+\- jetbrains\n
+\- nyc\n
 
   </details>
 

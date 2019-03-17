@@ -5,19 +5,19 @@ Manage various configuration files for an open source npm github repo.
 <details>
   <summary>Requires</summary>
 
-- js-gardener
-- semantic-release
-- npm-published
-- david-dm
-- dependabot
-- coveralls
-- circleci
-- github
-- javascript
-- git
-- npm
-- yarn
-- gally
+\- js-gardener\n
+\- semantic-release\n
+\- npm-published\n
+\- david-dm\n
+\- dependabot\n
+\- coveralls\n
+\- circleci\n
+\- github\n
+\- javascript\n
+\- git\n
+\- npm\n
+\- yarn\n
+\- gally\n
 
 </details>
 
@@ -31,13 +31,13 @@ Display various badges in README.
   <details>
     <summary>Requires</summary>
 
-- js-gardener
-- semantic-release
-- npm-published
-- david-dm
-- dependabot
-- coveralls
-- circleci
+\- js-gardener\n
+\- semantic-release\n
+\- npm-published\n
+\- david-dm\n
+\- dependabot\n
+\- coveralls\n
+\- circleci\n
 
   </details>
 
@@ -53,7 +53,7 @@ _Updating `README.md` using `merge-below-title`._
     <details>
       <summary>Requires</summary>
 
-- js-gardener
+\- js-gardener\n
 
     </details>
 
@@ -66,7 +66,7 @@ _Updating `README.md` using `merge-below-title`._
     <details>
       <summary>Requires</summary>
 
-- semantic-release
+\- semantic-release\n
 
     </details>
 
@@ -79,7 +79,7 @@ _Updating `README.md` using `merge-below-title`._
     <details>
       <summary>Requires</summary>
 
-- npm-published
+\- npm-published\n
 
     </details>
 
@@ -92,7 +92,7 @@ _Updating `README.md` using `merge-below-title`._
     <details>
       <summary>Requires</summary>
 
-- npm-published
+\- npm-published\n
 
     </details>
 
@@ -105,7 +105,7 @@ _Updating `README.md` using `merge-below-title`._
     <details>
       <summary>Requires</summary>
 
-- david-dm
+\- david-dm\n
 
     </details>
 
@@ -118,7 +118,7 @@ _Updating `README.md` using `merge-below-title`._
     <details>
       <summary>Requires</summary>
 
-- dependabot
+\- dependabot\n
 
     </details>
 
@@ -131,7 +131,7 @@ _Updating `README.md` using `merge-below-title`._
     <details>
       <summary>Requires</summary>
 
-- coveralls
+\- coveralls\n
 
     </details>
 
@@ -144,7 +144,7 @@ _Updating `README.md` using `merge-below-title`._
     <details>
       <summary>Requires</summary>
 
-- circleci
+\- circleci\n
 
     </details>
 
@@ -157,9 +157,9 @@ Recommended base [dependabot configuration](https://dependabot.com/) for javascr
   <details>
     <summary>Requires</summary>
 
-- dependabot
-- github
-- javascript
+\- dependabot\n
+\- github\n
+\- javascript\n
 
   </details>
 
@@ -175,9 +175,9 @@ _Updating `.dependabot/config.yml` using `overwrite`._
     <details>
       <summary>Requires</summary>
 
-- dependabot
-- github
-- javascript
+\- dependabot\n
+\- github\n
+\- javascript\n
 
     </details>
 
@@ -190,7 +190,7 @@ Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Gi
   <details>
     <summary>Requires</summary>
 
-- git
+\- git\n
 
   </details>
 
@@ -209,7 +209,7 @@ _Updating `.gitignore` using `merge-top`._
     <details>
       <summary>Requires</summary>
 
-- git
+\- git\n
 
     </details>
 
@@ -222,7 +222,7 @@ Recommended base configuration when using MIT License with npm.
   <details>
     <summary>Requires</summary>
 
-- npm
+\- npm\n
 
   </details>
 
@@ -244,7 +244,7 @@ _Updating `package.json` using `merge-shallow`._
     <details>
       <summary>Requires</summary>
 
-- npm
+\- npm\n
 
     </details>
 
@@ -257,7 +257,7 @@ Recommended base configuration when using [npm](https://www.npmjs.com/).
   <details>
     <summary>Requires</summary>
 
-- npm
+\- npm\n
 
   </details>
 
@@ -273,7 +273,7 @@ _Updating `.npmignore` using `merge-top`._
     <details>
       <summary>Requires</summary>
 
-- npm
+\- npm\n
 
     </details>
 
@@ -286,7 +286,7 @@ Recommended base configuration when using [semantic-release](https://github.com/
   <details>
     <summary>Requires</summary>
 
-- semantic-release
+\- semantic-release\n
 
   </details>
 
@@ -302,7 +302,7 @@ _Updating `.releaserc.json` using `overwrite`._
     <details>
       <summary>Requires</summary>
 
-- semantic-release
+\- semantic-release\n
 
     </details>
 
@@ -318,14 +318,14 @@ _Updating `.circleci/config.yml` using `overwrite`._
   <details>
     <summary>Requires</summary>
 
-- npm
-- yarn
-- gally
-- github
-- circleci
-- coveralls
-- dependabot
-- semantic-release
+\- npm\n
+\- yarn\n
+\- gally\n
+\- github\n
+\- circleci\n
+\- coveralls\n
+\- dependabot\n
+\- semantic-release\n
 
   </details>
 
@@ -339,9 +339,9 @@ _Updating `.gally.json` using `overwrite`._
   <details>
     <summary>Requires</summary>
 
-- circleci
-- gally
-- github
+\- circleci\n
+\- gally\n
+\- github\n
 
   </details>
 

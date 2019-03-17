@@ -5,7 +5,7 @@ Recommended base configuration when using [npm](https://www.npmjs.com/).
 <details>
   <summary>Requires</summary>
 
-- npm
+\- npm\n
 
 </details>
 
@@ -21,7 +21,7 @@ _Updating `.npmignore` using `merge-top`._
   <details>
     <summary>Requires</summary>
 
-- npm
+\- npm\n
 
   </details>
 

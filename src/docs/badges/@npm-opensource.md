@@ -5,13 +5,13 @@ Display various badges in README.
 <details>
   <summary>Requires</summary>
 
-- js-gardener
-- semantic-release
-- npm-published
-- david-dm
-- dependabot
-- coveralls
-- circleci
+\- js-gardener\n
+\- semantic-release\n
+\- npm-published\n
+\- david-dm\n
+\- dependabot\n
+\- coveralls\n
+\- circleci\n
 
 </details>
 
@@ -27,7 +27,7 @@ _Updating `README.md` using `merge-below-title`._
   <details>
     <summary>Requires</summary>
 
-- js-gardener
+\- js-gardener\n
 
   </details>
 
@@ -40,7 +40,7 @@ _Updating `README.md` using `merge-below-title`._
   <details>
     <summary>Requires</summary>
 
-- semantic-release
+\- semantic-release\n
 
   </details>
 
@@ -53,7 +53,7 @@ _Updating `README.md` using `merge-below-title`._
   <details>
     <summary>Requires</summary>
 
-- npm-published
+\- npm-published\n
 
   </details>
 
@@ -66,7 +66,7 @@ _Updating `README.md` using `merge-below-title`._
   <details>
     <summary>Requires</summary>
 
-- npm-published
+\- npm-published\n
 
   </details>
 
@@ -79,7 +79,7 @@ _Updating `README.md` using `merge-below-title`._
   <details>
     <summary>Requires</summary>
 
-- david-dm
+\- david-dm\n
 
   </details>
 
@@ -92,7 +92,7 @@ _Updating `README.md` using `merge-below-title`._
   <details>
     <summary>Requires</summary>
 
-- dependabot
+\- dependabot\n
 
   </details>
 
@@ -105,7 +105,7 @@ _Updating `README.md` using `merge-below-title`._
   <details>
     <summary>Requires</summary>
 
-- coveralls
+\- coveralls\n
 
   </details>
 
@@ -118,7 +118,7 @@ _Updating `README.md` using `merge-below-title`._
   <details>
     <summary>Requires</summary>
 
-- circleci
+\- circleci\n
 
   </details>
 

@@ -5,7 +5,7 @@ Recommended base configuration when using MIT License with npm.
 <details>
   <summary>Requires</summary>
 
-- npm
+\- npm\n
 
 </details>
 
@@ -27,7 +27,7 @@ _Updating `package.json` using `merge-shallow`._
   <details>
     <summary>Requires</summary>
 
-- npm
+\- npm\n
 
   </details>
 

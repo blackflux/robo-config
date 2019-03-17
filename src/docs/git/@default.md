@@ -5,7 +5,7 @@ Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Gi
 <details>
   <summary>Requires</summary>
 
-- git
+\- git\n
 
 </details>
 
@@ -24,7 +24,7 @@ _Updating `.gitignore` using `merge-top`._
   <details>
     <summary>Requires</summary>
 
-- git
+\- git\n
 
   </details>
 
