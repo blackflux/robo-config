@@ -30,14 +30,14 @@ const generateDocs = (taskNames, baseLevel) => {
   assert(Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'));
   assert(Number.isInteger(baseLevel));
 
-  const tasks = taskNames.map(taskName => ({ level: baseLevel, taskName }));
+  const sections = taskNames.map(taskName => ({ level: baseLevel, taskName }));
 
   // expand tasks with subtasks
-  for (let idx = 0; idx < tasks.length; idx += 1) {
-    const { level, taskName } = tasks[idx];
+  for (let idx = 0; idx < sections.length; idx += 1) {
+    const { level, taskName } = sections[idx];
     const task = sfs.smartRead(sfs.guessFile(path.join(__dirname, '..', 'tasks', taskName)));
-    tasks[idx].task = task;
-    tasks.splice(idx + 1, 0, ...(task.tasks || [])
+    sections[idx].task = task;
+    sections.splice(idx + 1, 0, ...(task.tasks || [])
       .sort((a, b) => b.includes('/@') - a.includes('/@'))
       .map(subtaskName => ({ level: level + 1, taskName: subtaskName })));
   }
@@ -46,7 +46,8 @@ const generateDocs = (taskNames, baseLevel) => {
 
   // generate docs for tasks
   let lastLevel = baseLevel;
-  tasks.forEach(({ level, taskName, task }) => {
+  sections.forEach((section) => {
+    const { level, taskName, task } = section;
     if (lastLevel < level) {
       result.push(`${'  '.repeat(lastLevel - baseLevel)}<details>`);
       result.push(`${'  '.repeat(lastLevel + 1 - baseLevel)}<summary>Details</summary>`);
