@@ -1,0 +1,14 @@
+{
+  "target": ".npmignore",
+  "strategy": "merge-top",
+  "snippets": [
+    "message",
+    "spacer-big"
+  ],
+  "requires": [
+    "npm"
+  ],
+  "purpose": [
+    "Inject comment into .npmignore explaining when to use it."
+  ]
+}

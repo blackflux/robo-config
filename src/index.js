@@ -1,34 +1,76 @@
 const assert = require('assert');
+const fs = require('fs');
+const path = require('path');
+const Joi = require('joi');
 const appRoot = require('app-root-path');
-const { loadConfig, applyConfig } = require('./util/config');
+const sfs = require('smart-fs');
+const { loadTask, applyTask } = require('./util/task');
+const { generateDocs } = require('./util/docs');
 
+const roboConfigSchema = Joi.object().keys({
+  tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)).required(),
+  variables: Joi.object().required(),
+  projectRoot: Joi.string().required(),
+  configPath: Joi.string().required(),
+  confDocsPath: Joi.string().required()
+})
+  .unknown(false)
+  .required();
 
-const applyConfigRec = (configNames, variables, projectRoot) => {
+const applyTaskRec = (taskNames, variables, projectRoot) => {
   const result = [];
-  configNames.forEach((configName) => {
-    const config = loadConfig(configName, variables);
-    if (config === null) {
-      result.push(`${configName}: Error! Bad Name!`);
-    } else {
-      if (config.target !== undefined && applyConfig(config, projectRoot)) {
-        result.push(`${configName}: Configuration File Updated`);
-      }
-      if (config.configs !== undefined) {
-        result.push(...applyConfigRec(config.configs, variables, projectRoot));
-      }
+  taskNames.forEach((taskName) => {
+    const task = loadTask(taskName, variables);
+    assert(task !== null, `Bad Task Name: ${taskName}`);
+    if (task.target !== undefined && applyTask(task, projectRoot)) {
+      result.push(`Updated: ${task.target}`);
+    }
+    if (task.tasks !== undefined) {
+      result.push(...applyTaskRec(task.tasks, variables, projectRoot));
     }
   });
   return result;
 };
 
+const generateTaskDocs = (taskNames) => {
+  assert(Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'));
+  return [
+    '# Codebase Configuration Documentation',
+    '',
+    'Documents configuration tasks managed by [robo-config](https://github.com/blackflux/robo-config).',
+    '',
+    ...generateDocs(taskNames)
+  ];
+};
 
-module.exports = ({
-  configs: configNames,
-  variables = {},
-  projectRoot = appRoot.path
-}) => {
-  assert(Array.isArray(configNames) && configNames.every(configName => configName.split('/').length === 2));
-  assert(variables instanceof Object && !Array.isArray(variables));
+module.exports = (args = {}) => {
+  // load from input args with defaults
+  const opts = Object.assign({
+    variables: {},
+    projectRoot: appRoot.path,
+    configPath: '.roboconfig.json',
+    confDocsPath: 'CONFDOCS.md'
+  }, args);
 
-  return applyConfigRec(configNames, variables, projectRoot);
+  // load from roboconfig configuration file
+  const roboConfigFilePath = path.join(opts.projectRoot, opts.configPath);
+  if (fs.existsSync(roboConfigFilePath)) {
+    const roboConfig = sfs.smartRead(roboConfigFilePath);
+    assert(roboConfig instanceof Object && !Array.isArray(roboConfig));
+    Object.assign(opts, roboConfig);
+  }
+
+  // validate roboconfig
+  const robotConfigValidationError = Joi.validate(opts, roboConfigSchema).error;
+  if (robotConfigValidationError !== null) {
+    throw new Error(robotConfigValidationError);
+  }
+
+  // execute tasks
+  const result = applyTaskRec(opts.tasks, opts.variables, opts.projectRoot);
+  if (sfs.smartWrite(path.join(opts.projectRoot, opts.confDocsPath), generateTaskDocs(opts.tasks))) {
+    result.push(`Updated: ${opts.confDocsPath}`);
+  }
+
+  return result;
 };

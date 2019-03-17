@@ -1,0 +1,20 @@
+{
+  "target": ".idea/${projectName}.iml",
+  "format": "xml",
+  "strategy": "xml-merge",
+  "snippets": [
+    {
+      "name": "exclude-folder-from-module",
+      "variables": {
+        "folder": "coverage"
+      }
+    }
+  ],
+  "requires": [
+    "jetbrains",
+    "nyc"
+  ],
+  "purpose": [
+    "Mark `coverage` Folder as excluded in Jetbrains."
+  ]
+}

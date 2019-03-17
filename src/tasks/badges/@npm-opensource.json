@@ -1,0 +1,13 @@
+{
+  "tasks": [
+    "badges/js-gardener",
+    "badges/semantic-release",
+    "badges/npm-downloads",
+    "badges/npm-status",
+    "badges/david-dm",
+    "badges/dependabot",
+    "badges/coveralls",
+    "badges/circleci"
+  ],
+  "description": "Display various badges in README."
+}

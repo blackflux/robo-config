@@ -13,7 +13,7 @@ Automatically manage configuration files.
 
 ## But why...?
 
-_Why the hell does this package even exist?_ -
+_Why does this package even exist?_ -
 Let's face it, without npm and micro-services this repo would probably not exist. 
 Npm has encouraged us to create a new repo and package for every 
 re-usable code snippet. This is great from the re-usability perspective,
@@ -35,8 +35,8 @@ you will inadvertently forget to apply the change to some repos. That's where th
 
 ### Sounds scary...?
 
-Simply pick the config (set) that is most appropriate for your repo or create your own (prs are welcome).
-Config snippets are reused as appropriate. A change to a snippet will then quickly make it to every repository using it.
+Simply pick the task(s) that is most appropriate for your repo or create your own (prs are encouraged).
+Tasks and snippets are reused as appropriate. A change to a snippet will then quickly make it to every repository using it.
 
 Sounds scary?
 Consider that configuration changes are tied to version updates of this package and can not be
@@ -52,6 +52,6 @@ It does not do it automatically or silently.
 
 ...
 
-## Assorted Configs
+## Assorted Tasks
 
-- [Npm Open Source](docs/configs/assorted/npm-opensource.md)
+All usable tasks are documented [here](src/docs).

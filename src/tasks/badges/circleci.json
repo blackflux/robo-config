@@ -1,0 +1,18 @@
+{
+  "target": "README.md",
+  "strategy": "merge-below-title",
+  "snippets": [
+    {
+      "name": "circleci",
+      "variables": {
+        "repoKey": "${repoKey}"
+      }
+    }
+  ],
+  "requires": [
+    "circleci"
+  ],
+  "purpose": [
+    "Display [circleci](https://circleci.com/) badge in README."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "tasks": [
+    "assorted/@npm-opensource",
+    "jetbrains/@default",
+    "editor/@default"
+  ],
+  "variables": {
+    "repoKey": "blackflux/robo-config",
+    "repoName": "robo-config",
+    "projectName": "robo-config",
+    "owner": "simlu",
+    "authorName": "Lukas Siemon",
+    "mergeBot": "MrsFlux"
+  }
+}

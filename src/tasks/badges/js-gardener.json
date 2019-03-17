@@ -1,0 +1,13 @@
+{
+  "target": "README.md",
+  "strategy": "merge-below-title",
+  "snippets": [
+    "js-gardener"
+  ],
+  "requires": [
+    "js-gardener"
+  ],
+  "purpose": [
+    "Display [js-gardener](https://github.com/blackflux/js-gardener) badge in README."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "target": "README.md",
+  "strategy": "merge-below-title",
+  "snippets": [
+    {
+      "name": "npm-status",
+      "variables": {
+        "repoName": "${repoName}"
+      }
+    }
+  ],
+  "requires": [
+    "npm-published"
+  ],
+  "purpose": [
+    "Display [npm status](https://www.npmjs.com/) badge in README."
+  ]
+}
