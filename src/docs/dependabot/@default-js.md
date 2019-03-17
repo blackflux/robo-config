@@ -16,9 +16,9 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- dependabot
-- github
-- javascript
+- `dependabot`
+- `github`
+- `javascript`
 
 <!---0--></details>
 
@@ -45,9 +45,9 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- dependabot
-- github
-- javascript
+- `dependabot`
+- `github`
+- `javascript`
 
 <!---1--></details>
 

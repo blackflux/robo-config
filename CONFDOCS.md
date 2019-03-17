@@ -29,30 +29,30 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- js-gardener
-- semantic-release
-- npm-published
-- david-dm
-- dependabot
-- coveralls
-- circleci
-- github
-- javascript
-- git
-- npm
-- yarn
-- gally
+- `js-gardener`
+- `semantic-release`
+- `npm-published`
+- `david-dm`
+- `dependabot`
+- `coveralls`
+- `circleci`
+- `github`
+- `javascript`
+- `git`
+- `npm`
+- `yarn`
+- `gally`
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- repoName
-- repoKey
-- authorName
-- owner
-- mergeBot
+- `repoName`
+- `repoKey`
+- `authorName`
+- `owner`
+- `mergeBot`
 
 <!---0--></details>
 
@@ -76,21 +76,21 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- js-gardener
-- semantic-release
-- npm-published
-- david-dm
-- dependabot
-- coveralls
-- circleci
+- `js-gardener`
+- `semantic-release`
+- `npm-published`
+- `david-dm`
+- `dependabot`
+- `coveralls`
+- `circleci`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- repoName
-- repoKey
+- `repoName`
+- `repoKey`
 
 <!---1--></details>
 
@@ -116,7 +116,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- js-gardener
+- `js-gardener`
 
 <!---2--></details>
 
@@ -139,7 +139,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- semantic-release
+- `semantic-release`
 
 <!---2--></details>
 
@@ -162,14 +162,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- npm-published
+- `npm-published`
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- repoName
+- `repoName`
 
 <!---2--></details>
 
@@ -192,14 +192,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- npm-published
+- `npm-published`
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- repoName
+- `repoName`
 
 <!---2--></details>
 
@@ -222,14 +222,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- david-dm
+- `david-dm`
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- repoKey
+- `repoKey`
 
 <!---2--></details>
 
@@ -252,14 +252,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- dependabot
+- `dependabot`
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- repoKey
+- `repoKey`
 
 <!---2--></details>
 
@@ -282,14 +282,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- coveralls
+- `coveralls`
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- repoKey
+- `repoKey`
 
 <!---2--></details>
 
@@ -312,14 +312,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- circleci
+- `circleci`
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- repoKey
+- `repoKey`
 
 <!---2--></details>
 
@@ -344,9 +344,9 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- dependabot
-- github
-- javascript
+- `dependabot`
+- `github`
+- `javascript`
 
 <!---1--></details>
 
@@ -373,9 +373,9 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- dependabot
-- github
-- javascript
+- `dependabot`
+- `github`
+- `javascript`
 
 <!---2--></details>
 
@@ -399,7 +399,7 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- git
+- `git`
 
 <!---1--></details>
 
@@ -428,7 +428,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- git
+- `git`
 
 <!---2--></details>
 
@@ -453,15 +453,15 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- npm
+- `npm`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- authorName
-- repoKey
+- `authorName`
+- `repoKey`
 
 <!---1--></details>
 
@@ -487,7 +487,7 @@ project
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- authorName
+- `authorName`
 
 <!---2--></details>
 
@@ -510,15 +510,15 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- npm
+- `npm`
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- authorName
-- repoKey
+- `authorName`
+- `repoKey`
 
 <!---2--></details>
 
@@ -542,7 +542,7 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- npm
+- `npm`
 
 <!---1--></details>
 
@@ -568,7 +568,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- npm
+- `npm`
 
 <!---2--></details>
 
@@ -592,7 +592,7 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- semantic-release
+- `semantic-release`
 
 <!---1--></details>
 
@@ -618,7 +618,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- semantic-release
+- `semantic-release`
 
 <!---2--></details>
 
@@ -646,14 +646,14 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- npm
-- yarn
-- gally
-- github
-- circleci
-- coveralls
-- dependabot
-- semantic-release
+- `npm`
+- `yarn`
+- `gally`
+- `github`
+- `circleci`
+- `coveralls`
+- `dependabot`
+- `semantic-release`
 
 <!---1--></details>
 
@@ -677,18 +677,18 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- circleci
-- gally
-- github
+- `circleci`
+- `gally`
+- `github`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- owner
-- mergeBot
-- repoKey
+- `owner`
+- `mergeBot`
+- `repoKey`
 
 <!---1--></details>
 
@@ -713,15 +713,15 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- jetbrains
-- nyc
+- `jetbrains`
+- `nyc`
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- projectName
+- `projectName`
 
 <!---0--></details>
 
@@ -748,15 +748,15 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- jetbrains
-- nyc
+- `jetbrains`
+- `nyc`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- projectName
+- `projectName`
 
 <!---1--></details>
 

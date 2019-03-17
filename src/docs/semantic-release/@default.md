@@ -15,7 +15,7 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- semantic-release
+- `semantic-release`
 
 <!---0--></details>
 
@@ -41,7 +41,7 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- semantic-release
+- `semantic-release`
 
 <!---1--></details>
 

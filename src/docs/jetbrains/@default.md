@@ -16,15 +16,15 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- jetbrains
-- nyc
+- `jetbrains`
+- `nyc`
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- projectName
+- `projectName`
 
 <!---0--></details>
 
@@ -51,15 +51,15 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- jetbrains
-- nyc
+- `jetbrains`
+- `nyc`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- projectName
+- `projectName`
 
 <!---1--></details>
 

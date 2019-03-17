@@ -16,15 +16,15 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- npm
+- `npm`
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- authorName
-- repoKey
+- `authorName`
+- `repoKey`
 
 <!---0--></details>
 
@@ -50,7 +50,7 @@ project
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- authorName
+- `authorName`
 
 <!---1--></details>
 
@@ -73,15 +73,15 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- npm
+- `npm`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- authorName
-- repoKey
+- `authorName`
+- `repoKey`
 
 <!---1--></details>
 

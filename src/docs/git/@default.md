@@ -15,7 +15,7 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- git
+- `git`
 
 <!---0--></details>
 
@@ -44,7 +44,7 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- git
+- `git`
 
 <!---1--></details>
 

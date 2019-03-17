@@ -74,14 +74,14 @@ const documentSection = (baseLevel, {
 
   if (requires.length !== 0) {
     result.push(...startSpoiler('Requires', level - baseLevel));
-    result.push(...requires.map(r => `- ${r}`));
+    result.push(...requires.map(r => `- \`${r}\``));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }
 
   if (variables.length !== 0) {
     result.push(...startSpoiler('Variables', level - baseLevel));
-    result.push(...variables.map(r => `- ${r}`));
+    result.push(...variables.map(r => `- \`${r}\``));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }
