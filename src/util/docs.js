@@ -30,10 +30,9 @@ const documentFiles = (root, files) => {
     const node = get(tree, key);
 
     neighbours[key.length - 1] = get(keys[idx + 1], 'length') === key.length;
-    result.push(key.slice(0, -1).reduce(
-      (p, c, i) => `${neighbours[key.length - i - 2] === true ? '|   ' : '    '}${p}`,
-      `${neighbours[key.length - 1] === true ? '├' : '└'}── ${key[key.length - 1]}`
-    ));
+    result.push(`${
+      neighbours.slice(0, key.length - 1).map(n => (n === true ? '|   ' : '    ')).join('')
+    }${neighbours[key.length - 1] === true ? '├' : '└'}── ${key[key.length - 1]}`);
 
     keys.splice(
       idx + 1,
