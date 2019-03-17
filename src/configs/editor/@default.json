@@ -1,6 +1,0 @@
-{
-  "configs": [
-    "editor/two-space"
-  ],
-  "description": "Recommended base [code editor configuration](https://editorconfig.org/)."
-}

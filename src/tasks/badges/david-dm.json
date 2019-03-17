@@ -1,0 +1,18 @@
+{
+  "target": "README.md",
+  "strategy": "merge-below-title",
+  "snippets": [
+    {
+      "name": "david-dm",
+      "variables": {
+        "repoKey": "${repoKey}"
+      }
+    }
+  ],
+  "requires": [
+    "david-dm"
+  ],
+  "purpose": [
+    "Display [david-dm.com](https://david-dm.org/) badge in README."
+  ]
+}

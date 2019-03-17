@@ -1,0 +1,14 @@
+{
+  "target": ".releaserc.json",
+  "strategy": "overwrite",
+  "snippets": [
+    "angular",
+    "build-deps-as-patch"
+  ],
+  "requires": [
+    "semantic-release"
+  ],
+  "purpose": [
+    "Slightly extended [release commit convention](https://github.com/semantic-release/semantic-release#commit-message-format) for semantic-release."
+  ]
+}

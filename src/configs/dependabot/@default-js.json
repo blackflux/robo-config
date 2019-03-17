@@ -1,6 +1,0 @@
-{
-  "configs": [
-    "dependabot/js-instant"
-  ],
-  "description": "Recommended base [dependabot configuration](https://dependabot.com/) for javascript projects."
-}

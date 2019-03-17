@@ -1,7 +1,0 @@
-{
-  "configs": [
-    "license/MIT-LICENSE",
-    "license/MIT-npm"
-  ],
-  "description": "Recommended base configuration when using MIT License with npm."
-}

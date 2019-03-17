@@ -1,5 +1,5 @@
 {
-  "configs": [
+  "tasks": [
     "assorted/@npm-opensource",
     "jetbrains/@default",
     "editor/@default"

@@ -1,0 +1,16 @@
+{
+  "target": "LICENSE",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "MIT-LICENSE",
+      "variables": {
+        "authorName": "${authorName}"
+      }
+    }
+  ],
+  "requires": [],
+  "purpose": [
+    "Generate [MIT license](https://en.wikipedia.org/wiki/MIT_License) file."
+  ]
+}
