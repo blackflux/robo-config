@@ -28,6 +28,8 @@ const documentTask = (heading, task, level) => {
 
 const generateDocs = (taskNames, level = 0) => {
   assert(Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'));
+  assert(Number.isInteger(level));
+
   const result = [];
   taskNames
     .sort((a, b) => b.includes('/@') - a.includes('/@'))
