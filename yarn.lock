@@ -6157,10 +6157,10 @@ smart-buffer@^1.0.13:
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-1.1.15.tgz#7f114b5b65fab3e2a35aa775bb12f0d1c649bf16"
   integrity sha1-fxFLW2X6s+KjWqd1uxLw0cZJvxY=
 
-smart-fs@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.3.0.tgz#9f7496f6e5c5a73981061c595d7801c8e50e1d0e"
-  integrity sha512-7qxFvSaZ78lzT+43YyGj5hZBrNa9vDvVsDtNrQw62vmA0LEAClRXvEKQubm2y+Rg+Mo79+YfpD9aVj3XB5a2eQ==
+smart-fs@1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-1.4.1.tgz#b545df578c1c1c7b6d2bee671d8365d7951dd13c"
+  integrity sha512-/a32iPZT3TTpVL07issDfUNU5JKMoY3md38MZaSlrXcrkcS0oob5ny2bcQunbfnP+b99zlZMtdwQcKcCihBhqA==
   dependencies:
     fs-extra "7.0.1"
     lodash.clonedeep "4.5.0"
