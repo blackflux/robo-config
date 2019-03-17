@@ -29,21 +29,17 @@ const documentFiles = (root, files) => {
     const key = keys[idx];
     const node = get(tree, key);
 
-    const neighbour = keys[idx + 1];
-    neighbours[key.length - 1] = get(neighbour, 'length', 0) === key.length;
+    neighbours[key.length - 1] = get(keys[idx + 1], 'length') === key.length;
+    result.push(key.slice(0, -1).reduce(
+      (p, c, i) => `${neighbours[key.length - i - 2] === true ? '|   ' : '    '}${p}`,
+      `${neighbours[key.length - 1] === true ? '├' : '└'}── ${key[key.length - 1]}`
+    ));
 
     keys.splice(
       idx + 1,
       0,
       ...Object.keys(node).sort().map(k => key.concat(k))
     );
-
-    let line = '';
-    for (let i = 0; i < key.length - 1; i += 1) {
-      line += neighbours[i] === true ? '|   ' : '    ';
-    }
-    line += `${neighbours[key.length - 1] === true ? '├' : '└'}── ${key[key.length - 1]}`;
-    result.push(line);
   }
   result.push('```');
   result.push('');
