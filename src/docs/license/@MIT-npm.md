@@ -2,15 +2,15 @@
 
 Recommended base configuration when using MIT License with npm.
 
-<details>
-  <summary>Requires</summary>
+<!---0--><details>
+<!---0--><summary>Requires</summary>
 
-\- npm\n
+- npm
 
-</details>
+<!---0--></details>
 
-<details>
-  <summary>Details</summary>
+<!---0--><details>
+<!---0--><summary>Details</summary>
 
 ## license/MIT-LICENSE
 
@@ -24,12 +24,12 @@ _Updating `package.json` using `merge-shallow`._
 
 - Link MIT license file into [npm](https://www.npmjs.com/) configuration.
 
-  <details>
-    <summary>Requires</summary>
+<!---1--><details>
+<!---1--><summary>Requires</summary>
 
-\- npm\n
+- npm
 
-  </details>
+<!---1--></details>
 
 </details>
 

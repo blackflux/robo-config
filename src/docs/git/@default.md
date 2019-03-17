@@ -2,15 +2,15 @@
 
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
 
-<details>
-  <summary>Requires</summary>
+<!---0--><details>
+<!---0--><summary>Requires</summary>
 
-\- git\n
+- git
 
-</details>
+<!---0--></details>
 
-<details>
-  <summary>Details</summary>
+<!---0--><details>
+<!---0--><summary>Details</summary>
 
 ## git/gitignore
 
@@ -21,12 +21,12 @@ _Updating `.gitignore` using `merge-top`._
 - Default ignores for OSX
 - Default ignores for NodeJs
 
-  <details>
-    <summary>Requires</summary>
+<!---1--><details>
+<!---1--><summary>Requires</summary>
 
-\- git\n
+- git
 
-  </details>
+<!---1--></details>
 
 </details>
 

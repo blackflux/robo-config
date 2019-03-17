@@ -3,12 +3,12 @@ const path = require('path');
 const sfs = require('smart-fs');
 
 const startSpoiler = (summary, level) => [
-  `${'  '.repeat(level)}<details>`,
-  `${'  '.repeat(level + 1)}<summary>${summary}</summary>`,
+  `<!---${level}--><details>`,
+  `<!---${level}--><summary>${summary}</summary>`,
   ''
 ];
 const endSpoiler = level => [
-  `${'  '.repeat(level)}</details>`,
+  `<!---${level}--></details>`,
   ''
 ];
 
@@ -34,7 +34,7 @@ const documentSection = (baseLevel, {
 
   if (requires.length !== 0) {
     result.push(...startSpoiler('Requires', level - baseLevel));
-    result.push(...requires.map(r => `\\- ${r}\\n`));
+    result.push(...requires.map(r => `- ${r}`));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }

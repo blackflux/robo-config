@@ -2,8 +2,8 @@
 
 Recommended base [code editor configuration](https://editorconfig.org/).
 
-<details>
-  <summary>Details</summary>
+<!---0--><details>
+<!---0--><summary>Details</summary>
 
 ## editor/two-space
 
