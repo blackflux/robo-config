@@ -3,9 +3,19 @@
 Recommended base configuration when using [semantic-release](https://github.com/semantic-release/semantic-release).
 
 <!---0--><details>
+<!---0--><summary>Targets</summary>
+
+```
+project
+└─ .releaserc.json
+```
+
+<!---0--></details>
+
+<!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- semantic-release
+- `semantic-release`
 
 <!---0--></details>
 
@@ -19,9 +29,19 @@ _Updating `.releaserc.json` using `overwrite`._
 - Slightly extended [release commit convention](https://github.com/semantic-release/semantic-release#commit-message-format) for semantic-release.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└─ .releaserc.json
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- semantic-release
+- `semantic-release`
 
 <!---1--></details>
 

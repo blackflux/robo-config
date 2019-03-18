@@ -3,23 +3,33 @@
 Display various badges in README.
 
 <!---0--><details>
+<!---0--><summary>Targets</summary>
+
+```
+project
+└─ README.md
+```
+
+<!---0--></details>
+
+<!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- js-gardener
-- semantic-release
-- npm-published
-- david-dm
-- dependabot
-- coveralls
-- circleci
+- `js-gardener`
+- `semantic-release`
+- `npm-published`
+- `david-dm`
+- `dependabot`
+- `coveralls`
+- `circleci`
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- repoName
-- repoKey
+- `repoName`
+- `repoKey`
 
 <!---0--></details>
 
@@ -33,9 +43,19 @@ _Updating `README.md` using `merge-below-title`._
 - Display [js-gardener](https://github.com/blackflux/js-gardener) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└─ README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- js-gardener
+- `js-gardener`
 
 <!---1--></details>
 
@@ -46,9 +66,19 @@ _Updating `README.md` using `merge-below-title`._
 - Display [semantic-release](https://github.com/semantic-release/semantic-release) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└─ README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- semantic-release
+- `semantic-release`
 
 <!---1--></details>
 
@@ -59,16 +89,26 @@ _Updating `README.md` using `merge-below-title`._
 - Display [npm downloads](https://www.npmjs.com/) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└─ README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- npm-published
+- `npm-published`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- repoName
+- `repoName`
 
 <!---1--></details>
 
@@ -79,16 +119,26 @@ _Updating `README.md` using `merge-below-title`._
 - Display [npm status](https://www.npmjs.com/) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└─ README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- npm-published
+- `npm-published`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- repoName
+- `repoName`
 
 <!---1--></details>
 
@@ -99,16 +149,26 @@ _Updating `README.md` using `merge-below-title`._
 - Display [david-dm.com](https://david-dm.org/) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└─ README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- david-dm
+- `david-dm`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- repoKey
+- `repoKey`
 
 <!---1--></details>
 
@@ -119,16 +179,26 @@ _Updating `README.md` using `merge-below-title`._
 - Display [dependabot](https://dependabot.com/) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└─ README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- dependabot
+- `dependabot`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- repoKey
+- `repoKey`
 
 <!---1--></details>
 
@@ -139,16 +209,26 @@ _Updating `README.md` using `merge-below-title`._
 - Display [coveralls](https://coveralls.io/) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└─ README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- coveralls
+- `coveralls`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- repoKey
+- `repoKey`
 
 <!---1--></details>
 
@@ -159,16 +239,26 @@ _Updating `README.md` using `merge-below-title`._
 - Display [circleci](https://circleci.com/) badge in README.
 
 <!---1--><details>
+<!---1--><summary>Targets</summary>
+
+```
+project
+└─ README.md
+```
+
+<!---1--></details>
+
+<!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- circleci
+- `circleci`
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- repoKey
+- `repoKey`
 
 <!---1--></details>
 

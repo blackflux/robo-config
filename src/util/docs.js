@@ -1,6 +1,7 @@
 const assert = require('assert');
 const path = require('path');
 const sfs = require('smart-fs');
+const treeify = require('object-treeify');
 const { determineVars } = require('./vars');
 
 const startSpoiler = (summary, level) => [
@@ -13,8 +14,24 @@ const endSpoiler = level => [
   ''
 ];
 
+const documentFiles = (root, files) => {
+  const result = [];
+  result.push('```');
+  result.push(root);
+
+  const tree = {};
+  files.forEach(f => f.split('/').reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], tree));
+
+  result.push(...treeify(tree, { joined: false }));
+  result.push('```');
+  result.push('');
+
+  return result;
+};
+module.exports.documentFiles = documentFiles;
+
 const documentSection = (baseLevel, {
-  level, taskName, task, requires, variables
+  level, taskName, task, targets, requires, variables
 }) => {
   assert(Number.isInteger(level));
   assert(typeof taskName === 'string');
@@ -33,16 +50,20 @@ const documentSection = (baseLevel, {
     result.push('');
   }
 
+  result.push(...startSpoiler('Targets', level - baseLevel));
+  result.push(...documentFiles('project', targets));
+  result.push(...endSpoiler(level - baseLevel));
+
   if (requires.length !== 0) {
     result.push(...startSpoiler('Requires', level - baseLevel));
-    result.push(...requires.map(r => `- ${r}`));
+    result.push(...requires.map(r => `- \`${r}\``));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }
 
   if (variables.length !== 0) {
     result.push(...startSpoiler('Variables', level - baseLevel));
-    result.push(...variables.map(r => `- ${r}`));
+    result.push(...variables.map(r => `- \`${r}\``));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }
@@ -70,6 +91,7 @@ const generateDocs = (taskNames, baseLevel) => {
 
   // pull information into upper sections
   sections.forEach((section, idx) => {
+    const targets = [section.task.target];
     const requires = section.task.requires || [];
     const variables = (section.task.snippets || [])
       .filter(s => typeof s !== 'string')
@@ -82,6 +104,7 @@ const generateDocs = (taskNames, baseLevel) => {
       if (subSection.level <= section.level) {
         break;
       }
+      targets.push(subSection.task.target);
       requires.push(...(subSection.task.requires || []));
       variables.push(...(subSection.task.snippets || [])
         .filter(s => typeof s !== 'string')
@@ -91,6 +114,7 @@ const generateDocs = (taskNames, baseLevel) => {
         ));
     }
     Object.assign(section, {
+      targets: [...new Set(targets.filter(e => !!e))],
       requires: [...new Set(requires)],
       variables: [...new Set(variables)]
     });
