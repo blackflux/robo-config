@@ -11,17 +11,17 @@ Manage various configuration files for an open source npm github repo.
 
 ```
 project
-├── .circleci
-|   └── config.yml
-├── .dependabot
-|   └── config.yml
-├── .gally.json
-├── .gitignore
-├── .npmignore
-├── .releaserc.json
-├── LICENSE
-├── README.md
-└── package.json
+├─ .circleci
+|  └─ config.yml
+├─ .dependabot
+|  └─ config.yml
+├─ .gally.json
+├─ .gitignore
+├─ .npmignore
+├─ .releaserc.json
+├─ LICENSE
+├─ README.md
+└─ package.json
 ```
 
 <!---0--></details>
@@ -68,7 +68,7 @@ Display various badges in README.
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---1--></details>
@@ -108,7 +108,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---2--></details>
@@ -131,7 +131,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---2--></details>
@@ -154,7 +154,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---2--></details>
@@ -184,7 +184,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---2--></details>
@@ -214,7 +214,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---2--></details>
@@ -244,7 +244,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---2--></details>
@@ -274,7 +274,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---2--></details>
@@ -304,7 +304,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---2--></details>
@@ -335,8 +335,8 @@ Recommended base [dependabot configuration](https://dependabot.com/) for javascr
 
 ```
 project
-└── .dependabot
-    └── config.yml
+└─ .dependabot
+   └─ config.yml
 ```
 
 <!---1--></details>
@@ -364,8 +364,8 @@ _Updating `.dependabot/config.yml` using `overwrite`._
 
 ```
 project
-└── .dependabot
-    └── config.yml
+└─ .dependabot
+   └─ config.yml
 ```
 
 <!---2--></details>
@@ -391,7 +391,7 @@ Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Gi
 
 ```
 project
-└── .gitignore
+└─ .gitignore
 ```
 
 <!---1--></details>
@@ -420,7 +420,7 @@ _Updating `.gitignore` using `merge-top`._
 
 ```
 project
-└── .gitignore
+└─ .gitignore
 ```
 
 <!---2--></details>
@@ -444,8 +444,8 @@ Recommended base configuration when using MIT License with npm.
 
 ```
 project
-├── LICENSE
-└── package.json
+├─ LICENSE
+└─ package.json
 ```
 
 <!---1--></details>
@@ -479,7 +479,7 @@ _Updating `LICENSE` using `overwrite`._
 
 ```
 project
-└── LICENSE
+└─ LICENSE
 ```
 
 <!---2--></details>
@@ -502,7 +502,7 @@ _Updating `package.json` using `merge-shallow`._
 
 ```
 project
-└── package.json
+└─ package.json
 ```
 
 <!---2--></details>
@@ -534,7 +534,7 @@ Recommended base configuration when using [npm](https://www.npmjs.com/).
 
 ```
 project
-└── .npmignore
+└─ .npmignore
 ```
 
 <!---1--></details>
@@ -560,7 +560,7 @@ _Updating `.npmignore` using `merge-top`._
 
 ```
 project
-└── .npmignore
+└─ .npmignore
 ```
 
 <!---2--></details>
@@ -584,7 +584,7 @@ Recommended base configuration when using [semantic-release](https://github.com/
 
 ```
 project
-└── .releaserc.json
+└─ .releaserc.json
 ```
 
 <!---1--></details>
@@ -610,7 +610,7 @@ _Updating `.releaserc.json` using `overwrite`._
 
 ```
 project
-└── .releaserc.json
+└─ .releaserc.json
 ```
 
 <!---2--></details>
@@ -637,8 +637,8 @@ _Updating `.circleci/config.yml` using `overwrite`._
 
 ```
 project
-└── .circleci
-    └── config.yml
+└─ .circleci
+   └─ config.yml
 ```
 
 <!---1--></details>
@@ -669,7 +669,7 @@ _Updating `.gally.json` using `overwrite`._
 
 ```
 project
-└── .gally.json
+└─ .gally.json
 ```
 
 <!---1--></details>
@@ -704,8 +704,8 @@ Recommended base configuration when using Jetbrains.
 
 ```
 project
-└── .idea
-    └── ${projectName}.iml
+└─ .idea
+   └─ ${projectName}.iml
 ```
 
 <!---0--></details>
@@ -739,8 +739,8 @@ _Updating `.idea/${projectName}.iml` using `xml-merge`._
 
 ```
 project
-└── .idea
-    └── ${projectName}.iml
+└─ .idea
+   └─ ${projectName}.iml
 ```
 
 <!---1--></details>
@@ -772,7 +772,7 @@ Recommended base [code editor configuration](https://editorconfig.org/).
 
 ```
 project
-└── .editorconfig
+└─ .editorconfig
 ```
 
 <!---0--></details>
@@ -794,7 +794,7 @@ _Updating `.editorconfig` using `overwrite`._
 
 ```
 project
-└── .editorconfig
+└─ .editorconfig
 ```
 
 <!---1--></details>

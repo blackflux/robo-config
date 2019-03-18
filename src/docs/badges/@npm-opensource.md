@@ -7,7 +7,7 @@ Display various badges in README.
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---0--></details>
@@ -47,7 +47,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---1--></details>
@@ -70,7 +70,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---1--></details>
@@ -93,7 +93,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---1--></details>
@@ -123,7 +123,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---1--></details>
@@ -153,7 +153,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---1--></details>
@@ -183,7 +183,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---1--></details>
@@ -213,7 +213,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---1--></details>
@@ -243,7 +243,7 @@ _Updating `README.md` using `merge-below-title`._
 
 ```
 project
-└── README.md
+└─ README.md
 ```
 
 <!---1--></details>

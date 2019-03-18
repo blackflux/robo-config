@@ -7,7 +7,7 @@ Recommended base configuration when using [npm](https://www.npmjs.com/).
 
 ```
 project
-└── .npmignore
+└─ .npmignore
 ```
 
 <!---0--></details>
@@ -33,7 +33,7 @@ _Updating `.npmignore` using `merge-top`._
 
 ```
 project
-└── .npmignore
+└─ .npmignore
 ```
 
 <!---1--></details>

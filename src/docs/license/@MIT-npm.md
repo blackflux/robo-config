@@ -7,8 +7,8 @@ Recommended base configuration when using MIT License with npm.
 
 ```
 project
-├── LICENSE
-└── package.json
+├─ LICENSE
+└─ package.json
 ```
 
 <!---0--></details>
@@ -42,7 +42,7 @@ _Updating `LICENSE` using `overwrite`._
 
 ```
 project
-└── LICENSE
+└─ LICENSE
 ```
 
 <!---1--></details>
@@ -65,7 +65,7 @@ _Updating `package.json` using `merge-shallow`._
 
 ```
 project
-└── package.json
+└─ package.json
 ```
 
 <!---1--></details>

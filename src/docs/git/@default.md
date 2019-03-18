@@ -7,7 +7,7 @@ Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Gi
 
 ```
 project
-└── .gitignore
+└─ .gitignore
 ```
 
 <!---0--></details>
@@ -36,7 +36,7 @@ _Updating `.gitignore` using `merge-top`._
 
 ```
 project
-└── .gitignore
+└─ .gitignore
 ```
 
 <!---1--></details>

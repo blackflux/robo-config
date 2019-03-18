@@ -7,8 +7,8 @@ Recommended base configuration when using Jetbrains.
 
 ```
 project
-└── .idea
-    └── ${projectName}.iml
+└─ .idea
+   └─ ${projectName}.iml
 ```
 
 <!---0--></details>
@@ -42,8 +42,8 @@ _Updating `.idea/${projectName}.iml` using `xml-merge`._
 
 ```
 project
-└── .idea
-    └── ${projectName}.iml
+└─ .idea
+   └─ ${projectName}.iml
 ```
 
 <!---1--></details>

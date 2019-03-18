@@ -1,6 +1,7 @@
 const assert = require('assert');
 const path = require('path');
 const sfs = require('smart-fs');
+const treeify = require('object-treeify');
 const { determineVars } = require('./vars');
 
 const startSpoiler = (summary, level) => [
@@ -21,23 +22,7 @@ const documentFiles = (root, files) => {
   const tree = {};
   files.forEach(f => f.split('/').reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], tree));
 
-  const neighbours = [];
-  const keys = Object.keys(tree).sort().map(k => [k]);
-  for (let idx = 0; idx < keys.length; idx += 1) {
-    const key = keys[idx];
-    const node = key.reduce((p, c) => p[c], tree);
-
-    neighbours[key.length - 1] = idx + 1 < keys.length && keys[idx + 1].length === key.length;
-    result.push(`${
-      neighbours.slice(0, key.length - 1).map(n => (n ? '|   ' : '    ')).join('')
-    }${neighbours[key.length - 1] ? '├── ' : '└── '}${key[key.length - 1]}`);
-
-    keys.splice(
-      idx + 1,
-      0,
-      ...Object.keys(node).sort().map(k => key.concat(k))
-    );
-  }
+  result.push(...treeify(tree, { joined: false }));
   result.push('```');
   result.push('');
 

@@ -7,7 +7,7 @@ Recommended base [code editor configuration](https://editorconfig.org/).
 
 ```
 project
-└── .editorconfig
+└─ .editorconfig
 ```
 
 <!---0--></details>
@@ -29,7 +29,7 @@ _Updating `.editorconfig` using `overwrite`._
 
 ```
 project
-└── .editorconfig
+└─ .editorconfig
 ```
 
 <!---1--></details>

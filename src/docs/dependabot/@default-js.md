@@ -7,8 +7,8 @@ Recommended base [dependabot configuration](https://dependabot.com/) for javascr
 
 ```
 project
-└── .dependabot
-    └── config.yml
+└─ .dependabot
+   └─ config.yml
 ```
 
 <!---0--></details>
@@ -36,8 +36,8 @@ _Updating `.dependabot/config.yml` using `overwrite`._
 
 ```
 project
-└── .dependabot
-    └── config.yml
+└─ .dependabot
+   └─ config.yml
 ```
 
 <!---1--></details>

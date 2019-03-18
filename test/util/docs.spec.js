@@ -15,14 +15,14 @@ describe('Integration docs.js', () => {
     ])).to.deep.equal([
       '```',
       'root',
-      '├── page',
-      '|   ├── hello',
-      '|   |   └── index.css',
-      '|   └── world',
-      '|       ├── index.css',
-      '|       └── index.js',
-      '└── vendor',
-      '    └── index.js',
+      '├─ page',
+      '|  ├─ hello',
+      '|  |  └─ index.css',
+      '|  └─ world',
+      '|     ├─ index.css',
+      '|     └─ index.js',
+      '└─ vendor',
+      '   └─ index.js',
       '```',
       ''
     ]);

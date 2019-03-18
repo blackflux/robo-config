@@ -7,7 +7,7 @@ Recommended base configuration when using [semantic-release](https://github.com/
 
 ```
 project
-└── .releaserc.json
+└─ .releaserc.json
 ```
 
 <!---0--></details>
@@ -33,7 +33,7 @@ _Updating `.releaserc.json` using `overwrite`._
 
 ```
 project
-└── .releaserc.json
+└─ .releaserc.json
 ```
 
 <!---1--></details>
