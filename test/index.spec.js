@@ -46,7 +46,7 @@ describe('Generate Available Tasks Documentation', () => {
         expect(f.endsWith('.json')).to.equal(true);
         const target = path.join(__dirname, '..', 'src', 'docs', `${f.slice(0, -5)}.md`);
         expect(
-          sfs.smartWrite(target, docs.generateDocs([f])),
+          sfs.smartWrite(target, docs.generateDocs([f], 0)),
           'Updated Documentation. Please commit and re-run.'
         ).to.equal(false);
       });
