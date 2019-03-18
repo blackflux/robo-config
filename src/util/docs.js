@@ -19,10 +19,13 @@ const documentFiles = (root, files) => {
   result.push('```');
   result.push(root);
 
-  const tree = {};
-  files.forEach(f => f.split('/').reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], tree));
+  const fileTree = files
+    .reduce((prev, file) => {
+      file.split('/').reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], prev);
+      return prev;
+    }, {});
 
-  result.push(...treeify(tree, { joined: false }));
+  result.push(...treeify(fileTree, { joined: false }));
   result.push('```');
   result.push('');
 
