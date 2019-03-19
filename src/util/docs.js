@@ -74,7 +74,7 @@ const documentSection = (baseLevel, {
   return result;
 };
 
-const generateDocs = (taskNames, baseLevel) => {
+const generateDocs = (taskDir, taskNames, baseLevel) => {
   assert(Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'));
   assert(Number.isInteger(baseLevel));
 
@@ -83,7 +83,7 @@ const generateDocs = (taskNames, baseLevel) => {
   // expand tasks with subtasks
   for (let idx = 0; idx < sections.length; idx += 1) {
     const { level, taskName } = sections[idx];
-    const task = sfs.smartRead(sfs.guessFile(path.join(__dirname, '..', 'tasks', taskName)));
+    const task = sfs.smartRead(sfs.guessFile(path.join(taskDir, taskName)));
     sections[idx].task = task;
     sections.splice(idx + 1, 0, ...(task.tasks || [])
       .sort((a, b) => b.includes('/@') - a.includes('/@'))
@@ -141,3 +141,32 @@ const generateDocs = (taskNames, baseLevel) => {
   return result;
 };
 module.exports.generateDocs = generateDocs;
+
+const documentTasks = (taskDir, docDir) => {
+  const docFiles = [];
+
+  // generate doc files
+  let written = false;
+  sfs
+    .walkDir(taskDir)
+    .filter(f => f.includes('/@'))
+    .filter(f => f.endsWith('.json'))
+    .map(f => [f, `${f.slice(0, -5)}.md`])
+    .forEach(([f, docFile]) => {
+      docFiles.push(docFile);
+      if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(taskDir, [f], 0))) {
+        written = true;
+      }
+    });
+
+  // delete outdated doc files
+  sfs
+    .walkDir(docDir)
+    .filter(f => !docFiles.includes(f))
+    .forEach(f => sfs.cleaningDelete(path.join(docDir, f)));
+
+  if (written === true) {
+    throw new Error('Updated Documentation. Please commit and re-run.');
+  }
+};
+module.exports.documentTasks = documentTasks;
