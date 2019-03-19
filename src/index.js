@@ -4,7 +4,7 @@ const path = require('path');
 const Joi = require('joi');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
-const { loadTask, applyTask } = require('./util/task');
+const { applyTaskRec } = require('./util/task');
 const { generateDocs, syncTaskDocs } = require('./util/docs');
 
 const roboConfigSchema = Joi.object().keys({
@@ -17,21 +17,6 @@ const roboConfigSchema = Joi.object().keys({
 })
   .unknown(false)
   .required();
-
-const applyTaskRec = (taskNames, variables, projectRoot) => {
-  const result = [];
-  taskNames.forEach((taskName) => {
-    const task = loadTask(taskName, variables);
-    assert(task !== null, `Bad Task Name: ${taskName}`);
-    if (task.target !== undefined && applyTask(task, projectRoot)) {
-      result.push(`Updated: ${task.target}`);
-    }
-    if (task.tasks !== undefined) {
-      result.push(...applyTaskRec(task.tasks, variables, projectRoot));
-    }
-  });
-  return result;
-};
 
 const fn = (args = {}) => {
   // load from input args with defaults
