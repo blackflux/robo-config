@@ -41,7 +41,7 @@ describe('Integration docs.js', () => {
     const docDir = path.join(dir, 'docs');
     fs.mkdirSync(docDir);
     fs.mkdirSync(path.join(docDir, 'scope'));
-    fs.writeFileSync(path.join(docDir, 'scope', 'unknown.md'), '');
+    fs.writeFileSync(path.join(docDir, 'scope', '@unknown.md'), '');
 
     const taskDir = path.join(dir, 'tasks');
     fs.mkdirSync(taskDir);
@@ -51,7 +51,7 @@ describe('Integration docs.js', () => {
       description: 'This is a task.'
     }));
 
-    expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/unknown.md']);
+    expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@unknown.md']);
     expect(() => documentTasks(taskDir, docDir)).to.throw('Updated Documentation. Please commit and re-run.');
     expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@task.md']);
   });

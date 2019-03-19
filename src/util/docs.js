@@ -162,6 +162,8 @@ const documentTasks = (taskDir, docDir) => {
   // delete outdated doc files
   sfs
     .walkDir(docDir)
+    .filter(f => f.includes('/@'))
+    .filter(f => f.endsWith('.md'))
     .filter(f => !docFiles.includes(f))
     .forEach(f => sfs.cleaningDelete(path.join(docDir, f)));
 
