@@ -40,7 +40,7 @@
     "babel-eslint": "10.0.1",
     "chai": "4.2.0",
     "coveralls": "3.0.3",
-    "eslint": "5.15.2",
+    "eslint": "5.15.3",
     "js-gardener": "1.38.4",
     "nyc": "13.3.0",
     "semantic-release": "15.13.3",
@@ -98,6 +98,6 @@
     "object-deep-contain": "1.0.4",
     "object-scan": "5.0.3",
     "object-treeify": "1.0.1",
-    "smart-fs": "1.4.1"
+    "smart-fs": "1.5.0"
   }
 }
