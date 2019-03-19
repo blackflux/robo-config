@@ -3,12 +3,12 @@ const tmp = require('tmp');
 const expect = require('chai').expect;
 const robo = require('../src/index');
 
-it('Executing Tasks', () => {
+it('Apply Configuration Tasks', () => {
   expect(robo()).to.deep.equal([]);
 });
 
-it('Generate Tasks Documentation', () => {
-  robo.document(
+it('Synchronize Tasks Documentation', () => {
+  robo.syncTaskDocs(
     path.join(__dirname, '..', 'src', 'tasks'),
     path.join(__dirname, '..', 'src', 'docs')
   );

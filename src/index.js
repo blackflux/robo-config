@@ -59,5 +59,5 @@ const fn = (args = {}) => {
 
   return result;
 };
-fn.document = syncTaskDocs;
+fn.syncTaskDocs = syncTaskDocs;
 module.exports = fn;
