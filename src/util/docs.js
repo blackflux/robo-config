@@ -142,7 +142,7 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
 };
 module.exports.generateDocs = generateDocs;
 
-const documentTasks = (taskDir, docDir) => {
+const syncTaskDocs = (taskDir, docDir) => {
   const docFiles = [];
 
   // generate doc files
@@ -171,4 +171,4 @@ const documentTasks = (taskDir, docDir) => {
     throw new Error('Updated Documentation. Please commit and re-run.');
   }
 };
-module.exports.documentTasks = documentTasks;
+module.exports.syncTaskDocs = syncTaskDocs;

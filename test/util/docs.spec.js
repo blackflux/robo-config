@@ -3,7 +3,7 @@ const path = require('path');
 const tmp = require('tmp');
 const expect = require('chai').expect;
 const sfs = require('smart-fs');
-const { documentFiles, documentTasks } = require('../../src/util/docs');
+const { documentFiles, syncTaskDocs } = require('../../src/util/docs');
 
 describe('Integration docs.js', () => {
   let dir;
@@ -52,7 +52,7 @@ describe('Integration docs.js', () => {
     }));
 
     expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@unknown.md']);
-    expect(() => documentTasks(taskDir, docDir)).to.throw('Updated Documentation. Please commit and re-run.');
+    expect(() => syncTaskDocs(taskDir, docDir)).to.throw('Updated Documentation. Please commit and re-run.');
     expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@task.md']);
   });
 });

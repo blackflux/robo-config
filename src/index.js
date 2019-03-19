@@ -5,7 +5,7 @@ const Joi = require('joi');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
 const { loadTask, applyTask } = require('./util/task');
-const { generateDocs, documentTasks } = require('./util/docs');
+const { generateDocs, syncTaskDocs } = require('./util/docs');
 
 const roboConfigSchema = Joi.object().keys({
   tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)).required(),
@@ -33,17 +33,6 @@ const applyTaskRec = (taskNames, variables, projectRoot) => {
   return result;
 };
 
-const generateTaskDocs = (taskDir, taskNames) => {
-  assert(Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'));
-  return [
-    '# Codebase Configuration Documentation',
-    '',
-    'Documents configuration tasks managed by [robo-config](https://github.com/blackflux/robo-config).',
-    '',
-    ...generateDocs(taskDir, taskNames, 1)
-  ];
-};
-
 const fn = (args = {}) => {
   // load from input args with defaults
   const opts = Object.assign({
@@ -68,16 +57,22 @@ const fn = (args = {}) => {
     throw new Error(robotConfigValidationError);
   }
 
-  // execute tasks
+  // execute tasks and generate docs
   const result = applyTaskRec(opts.tasks, opts.variables, opts.projectRoot);
   if (sfs.smartWrite(
     path.join(opts.projectRoot, opts.confDocsPath),
-    generateTaskDocs(opts.taskDir, opts.tasks)
+    [
+      '# Codebase Configuration Documentation',
+      '',
+      'Documents configuration tasks managed by [robo-config](https://github.com/blackflux/robo-config).',
+      '',
+      ...generateDocs(opts.taskDir, opts.tasks, 1)
+    ]
   )) {
     result.push(`Updated: ${opts.confDocsPath}`);
   }
 
   return result;
 };
-fn.document = documentTasks;
+fn.document = syncTaskDocs;
 module.exports = fn;
