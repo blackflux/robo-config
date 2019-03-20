@@ -45,7 +45,7 @@ const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
 };
 
 
-module.exports.loadTask = (taskName, variables) => {
+const loadTask = (taskName, variables) => {
   assert(typeof taskName === 'string');
   assert(variables instanceof Object && !Array.isArray(variables));
 
@@ -76,7 +76,7 @@ module.exports.loadTask = (taskName, variables) => {
 };
 
 
-module.exports.applyTask = (task, projectRoot) => {
+const applyTask = (task, projectRoot) => {
   assert(task instanceof Object && !Array.isArray(task));
   assert(typeof projectRoot === 'string');
 
@@ -86,3 +86,20 @@ module.exports.applyTask = (task, projectRoot) => {
     mergeStrategy: strategies[task.strategy]
   });
 };
+
+
+const applyTaskRec = (taskNames, variables, projectRoot) => {
+  const result = [];
+  taskNames.forEach((taskName) => {
+    const task = loadTask(taskName, variables);
+    assert(task !== null, `Bad Task Name: ${taskName}`);
+    if (task.target !== undefined && applyTask(task, projectRoot)) {
+      result.push(`Updated: ${task.target}`);
+    }
+    if (task.tasks !== undefined) {
+      result.push(...applyTaskRec(task.tasks, variables, projectRoot));
+    }
+  });
+  return result;
+};
+module.exports.applyTaskRec = applyTaskRec;

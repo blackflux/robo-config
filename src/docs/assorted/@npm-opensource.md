@@ -8,16 +8,16 @@ Manage various configuration files for an open source npm github repo.
 ```
 project
 ├─ .circleci
-|  └─ config.yml
+│  └─ config.yml
 ├─ .dependabot
-|  └─ config.yml
+│  └─ config.yml
 ├─ .gally.json
 ├─ .gitignore
 ├─ .npmignore
 ├─ .releaserc.json
 ├─ LICENSE
-├─ README.md
-└─ package.json
+├─ package.json
+└─ README.md
 ```
 
 <!---0--></details>
