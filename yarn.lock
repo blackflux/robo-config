@@ -4860,10 +4860,10 @@ object-scan@5.0.3:
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-5.0.3.tgz#041c9a3d930cc0938752b71e3a126b8e137205ca"
   integrity sha512-xc1d6G+kN5WRdHgx/izJLi/GXIJ/A6HPZL8fKPn0ivsZztETRxKGgYxQWAqZwlCksh86mhD7WAMt/oECOLk/qA==
 
-object-treeify@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.0.3.tgz#1b7ae4a50041854404bb5d33c8d6a3ecf82c6d4c"
-  integrity sha512-OuUqK0ZimDghCKurBOBzDvNl6WEGf612lOUj6j6rRC2oF1ehcVxeO6kYC1LUKfXj4UydmbhhnTV9LwynpwKsPQ==
+object-treeify@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.0.tgz#b95fa7b0fe1b64178fca307ce3f8857f314c52d4"
+  integrity sha512-2zsSdt5O1ajOEJak/hM+EDmVNygDxfg+to+76GOtqePkhLNmZdNQqItIN8ryTK43BMEwoBIIcgZ6UdwtxAoGlg==
 
 object-visit@^1.0.0:
   version "1.0.1"
