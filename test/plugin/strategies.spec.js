@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const strategies = require('../../src/util/strategies');
+const strategies = require('../../src/plugin/strategies');
 
 describe('Integration strategies.js', () => {
   it('Testing Merge Strategy: overwrite', () => {

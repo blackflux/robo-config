@@ -1,4 +1,18 @@
 const path = require('path');
-const { plugin } = require('./index');
+const { syncDocs, generateDocs } = require('./plugin/docs');
+const { applyTaskRec } = require('./plugin/task');
 
-module.exports = plugin(path.join(__dirname, 'plugin'));
+module.exports = (pluginDir) => {
+  const taskDir = path.join(pluginDir, 'tasks');
+  const docsDir = path.join(pluginDir, 'docs');
+
+  return {
+    syncDocs: () => syncDocs(taskDir, docsDir),
+    generateDocs: (pluginName, taskNames) => [
+      `## Plugin \`${pluginName}\``,
+      '',
+      ...generateDocs(taskDir, taskNames, 2)
+    ],
+    applyTaskRec: (projectRoot, tasks, variables) => applyTaskRec(taskDir, projectRoot, tasks, variables)
+  };
+};

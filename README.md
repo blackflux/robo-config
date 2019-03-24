@@ -54,4 +54,4 @@ It does not do it automatically or silently.
 
 ## Assorted Tasks
 
-All usable tasks are documented [here](src/plugin/docs).
+All usable tasks are documented [here](test/mock/plugin/docs).

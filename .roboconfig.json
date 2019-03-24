@@ -1,5 +1,5 @@
 {
-  "./plugin.js": {
+  "../test/mock/plugin.js": {
     "tasks": [
       "assorted/@npm-opensource",
       "jetbrains/@default",

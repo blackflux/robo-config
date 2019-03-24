@@ -8,7 +8,7 @@ it('Apply Configuration Tasks', () => {
 });
 
 describe('Integration Tests', () => {
-  const pluginFile = path.join(__dirname, '..', 'src', 'plugin.js');
+  const pluginFile = path.join(__dirname, 'mock', 'plugin.js');
 
   let dir;
   beforeEach(() => {

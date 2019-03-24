@@ -3,7 +3,7 @@ const path = require('path');
 const tmp = require('tmp');
 const expect = require('chai').expect;
 const sfs = require('smart-fs');
-const { documentFiles, syncDocs } = require('../../src/util/docs');
+const { documentFiles, syncDocs } = require('../../src/plugin/docs');
 
 describe('Integration docs.js', () => {
   let dir;

@@ -1,4 +1,4 @@
-const plugin = require('./util/plugin');
+const plugin = require('./plugin');
 const process = require('./process');
 
 const fn = (...args) => process(...args);

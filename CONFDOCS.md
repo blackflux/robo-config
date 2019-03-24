@@ -2,7 +2,7 @@
 
 Documents configuration tasks managed by [robo-config](https://github.com/blackflux/robo-config).
 
-## Plugin `./plugin.js`
+## Plugin `../test/mock/plugin.js`
 
 ### `assorted/@npm-opensource`
 

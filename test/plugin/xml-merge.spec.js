@@ -3,7 +3,7 @@ const path = require('path');
 const expect = require('chai').expect;
 const tmp = require('tmp');
 const sfs = require('smart-fs');
-const xmlMerge = require('../../src/util/xml-merge');
+const xmlMerge = require('../../src/plugin/xml-merge');
 
 describe('Integration xml-merge.js', () => {
   fs.readdirSync(path.join(__dirname, 'xml-merge'))

@@ -1,5 +1,4 @@
-const plugin = require('../src/plugin');
-
+const plugin = require('./mock/plugin');
 
 it('Synchronize Tasks Documentation', () => {
   plugin.syncDocs();
