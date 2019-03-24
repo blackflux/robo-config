@@ -1,63 +1,74 @@
 const assert = require('assert');
-const fs = require('fs');
 const path = require('path');
 const Joi = require('joi');
+const deepmerge = require('deepmerge');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
+const pluginLoader = require('./util/plugin-loader');
 const { applyTaskRec } = require('./util/task');
-const { generateDocs, syncTaskDocs } = require('./util/docs');
 
-const roboConfigSchema = Joi.object().keys({
+const pluginPayloadSchema = Joi.object().keys({
   tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)).required(),
   variables: Joi.object().required(),
   projectRoot: Joi.string().required(),
-  taskDir: Joi.string().required(),
-  configPath: Joi.string().required(),
   confDocsPath: Joi.string().required()
 })
   .unknown(false)
   .required();
 
-const fn = (args = {}) => {
-  // load from input args with defaults
-  const opts = Object.assign({
-    variables: {},
-    projectRoot: appRoot.path,
-    taskDir: path.join(appRoot.path, 'src', 'tasks'),
-    configPath: '.roboconfig.json',
-    confDocsPath: 'CONFDOCS.md'
-  }, args);
+const fn = (configFile = path.join(appRoot.path, '.roboconfig.json'), argsCfg = {}) => {
+  assert(argsCfg instanceof Object && !Array.isArray(argsCfg));
 
-  // load from roboconfig configuration file
-  const roboConfigFilePath = path.join(opts.projectRoot, opts.configPath);
-  if (fs.existsSync(roboConfigFilePath)) {
-    const roboConfig = sfs.smartRead(roboConfigFilePath);
-    assert(roboConfig instanceof Object && !Array.isArray(roboConfig));
-    Object.assign(opts, roboConfig);
-  }
+  // load configuration file
+  const fileCfg = configFile !== null ? sfs.smartRead(configFile) : {};
+  assert(fileCfg instanceof Object && !Array.isArray(fileCfg));
 
-  // validate roboconfig
-  const robotConfigValidationError = Joi.validate(opts, roboConfigSchema).error;
-  if (robotConfigValidationError !== null) {
-    throw new Error(robotConfigValidationError);
-  }
+  // merge file and arg config
+  const cfg = deepmerge(fileCfg, argsCfg);
 
-  // execute tasks and generate docs
-  const result = applyTaskRec(opts.tasks, opts.variables, opts.projectRoot);
-  if (sfs.smartWrite(
-    path.join(opts.projectRoot, opts.confDocsPath),
-    [
-      '# Codebase Configuration Documentation',
-      '',
-      'Documents configuration tasks managed by [robo-config](https://github.com/blackflux/robo-config).',
-      '',
-      ...generateDocs(opts.taskDir, opts.tasks, 1)
-    ]
-  )) {
-    result.push(`Updated: ${opts.confDocsPath}`);
-  }
+  // initialize configs with defaults
+  const pluginCfgs = Object
+    .entries(cfg)
+    .reduce((p, [k, v]) => Object.assign(p, {
+      [k]: Object.assign({
+        projectRoot: appRoot.path,
+        variables: {},
+        confDocsPath: 'CONFDOCS.md'
+      }, v)
+    }), {});
 
+  // validate configs
+  Object
+    .values(pluginCfgs)
+    .forEach((pluginPayload) => {
+      const validationError = Joi.validate(pluginPayload, pluginPayloadSchema).error;
+      if (validationError !== null) {
+        throw new Error(validationError);
+      }
+    });
+
+  // execute plugins
+  const result = [];
+  Object
+    .entries(pluginCfgs)
+    .forEach(([pluginName, pluginPayload]) => {
+      // eslint-disable-next-line import/no-dynamic-require,global-require
+      const plugin = require(pluginName);
+      result.push(...applyTaskRec(plugin, pluginPayload.projectRoot, pluginPayload.tasks, pluginPayload.variables));
+      if (sfs.smartWrite(
+        path.join(pluginPayload.projectRoot, pluginPayload.confDocsPath),
+        [
+          '# Codebase Configuration Documentation',
+          '',
+          'Documents configuration tasks managed by [robo-config](https://github.com/blackflux/robo-config).',
+          '',
+          ...plugin.generateDocs(pluginPayload.tasks, 1)
+        ]
+      )) {
+        result.push(`Updated: ${pluginPayload.confDocsPath}`);
+      }
+    });
   return result;
 };
-fn.syncTaskDocs = syncTaskDocs;
+fn.plugin = pluginLoader;
 module.exports = fn;
