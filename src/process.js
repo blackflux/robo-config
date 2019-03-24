@@ -9,7 +9,7 @@ const pluginPayloadSchema = Joi.object().keys({
   tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)).required(),
   variables: Joi.object().required(),
   projectRoot: Joi.string().required(),
-  confDocsPath: Joi.string().required()
+  confDocs: Joi.string().required()
 })
   .unknown(false)
   .required();
@@ -21,17 +21,17 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), args
   const fileCfg = configFile !== null ? sfs.smartRead(configFile) : {};
   assert(fileCfg instanceof Object && !Array.isArray(fileCfg));
 
-  // merge file and arg config
+  // merge file and args config
   const cfg = deepmerge(fileCfg, argsCfg);
 
-  // initialize configs with defaults
+  // initialize configs with static defaults
   const pluginCfgs = Object
     .entries(cfg)
     .reduce((p, [k, v]) => Object.assign(p, {
       [k]: Object.assign({
         projectRoot: appRoot.path,
         variables: {},
-        confDocsPath: 'CONFDOCS.md'
+        confDocs: 'CONFDOCS.md'
       }, v)
     }), {});
 
@@ -45,27 +45,55 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), args
       }
     });
 
-  // execute plugins
-  const result = [];
+  // load the plugins
   Object
     .entries(pluginCfgs)
     .forEach(([pluginName, pluginPayload]) => {
       // eslint-disable-next-line import/no-dynamic-require,global-require
       const plugin = require(pluginName);
-      result.push(...plugin.applyTaskRec(pluginPayload.projectRoot, pluginPayload.tasks, pluginPayload.variables));
-      // todo: fix handling of multiple plugins
+      Object.assign(pluginPayload, { plugin });
+    });
+
+  // execute plugins
+  const result = [];
+  Object
+    .entries(pluginCfgs)
+    .forEach(([pluginName, {
+      plugin, projectRoot, tasks, variables
+    }]) => {
+      result.push(...plugin.applyTaskRec(projectRoot, tasks, variables));
+    });
+
+  // write documentation files
+  const docFiles = {};
+  Object
+    .entries(pluginCfgs)
+    .forEach(([pluginName, {
+      plugin, projectRoot, tasks, confDocs
+    }]) => {
+      const confDocsFile = path.join(projectRoot, confDocs);
+      docFiles[confDocsFile] = docFiles[confDocsFile] || {
+        confDocs,
+        lines: []
+      };
+      docFiles[confDocsFile].lines.push(...plugin.generateDocs(pluginName, tasks));
+    });
+  Object
+    .entries(docFiles)
+    .forEach(([confDocsFile, { confDocs, lines }]) => {
       if (sfs.smartWrite(
-        path.join(pluginPayload.projectRoot, pluginPayload.confDocsPath),
+        confDocsFile,
         [
           '# Codebase Configuration Documentation',
           '',
           'Documents configuration tasks managed by [robo-config](https://github.com/blackflux/robo-config).',
           '',
-          ...plugin.generateDocs(pluginPayload.tasks, 1)
+          ...lines
         ]
       )) {
-        result.push(`Updated: ${pluginPayload.confDocsPath}`);
+        result.push(`Updated: ${confDocs}`);
       }
     });
+
   return result;
 };
