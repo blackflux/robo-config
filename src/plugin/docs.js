@@ -25,7 +25,7 @@ const documentFiles = (root, files) => {
       return prev;
     }, {});
 
-  result.push(...treeify(fileTree, { joined: false }));
+  result.push(...treeify(fileTree, { joined: false, sortFn: (a, b) => a.localeCompare(b) }));
   result.push('```');
   result.push('');
 
@@ -142,7 +142,7 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
 };
 module.exports.generateDocs = generateDocs;
 
-const syncTaskDocs = (taskDir, docDir) => {
+const syncDocs = (taskDir, docDir) => {
   const docFiles = [];
 
   // generate doc files
@@ -171,4 +171,4 @@ const syncTaskDocs = (taskDir, docDir) => {
     throw new Error('Updated Documentation. Please commit and re-run.');
   }
 };
-module.exports.syncTaskDocs = syncTaskDocs;
+module.exports.syncDocs = syncDocs;
