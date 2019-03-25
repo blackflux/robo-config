@@ -45,12 +45,12 @@ const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
 };
 
 
-const loadTask = (taskName, variables) => {
+const loadTask = (taskDir, taskName, variables) => {
   assert(typeof taskName === 'string');
   assert(variables instanceof Object && !Array.isArray(variables));
 
   // load task file
-  const taskFilePath = path.join(__dirname, '..', 'tasks', `${taskName}.json`);
+  const taskFilePath = path.join(taskDir, `${taskName}.json`);
   if (!fs.existsSync(taskFilePath)) {
     return null;
   }
@@ -64,7 +64,7 @@ const loadTask = (taskName, variables) => {
 
   if (typeof task.target === 'string') {
     // load and merge task snippets into task
-    const snippetDir = path.join(__dirname, '..', 'tasks', taskName.split('/')[0], 'snippets');
+    const snippetDir = path.join(taskDir, taskName.split('/')[0], 'snippets');
     task.target = populateVars([task.target], variables, true)[0];
     task.toWrite = deepmerge.all(task.snippets
       .map(m => (typeof m === 'string' ? [m, {}] : [m.name, m.variables]))
@@ -76,7 +76,7 @@ const loadTask = (taskName, variables) => {
 };
 
 
-const applyTask = (task, projectRoot) => {
+const applyTask = (taskDir, projectRoot, task) => {
   assert(task instanceof Object && !Array.isArray(task));
   assert(typeof projectRoot === 'string');
 
@@ -88,16 +88,16 @@ const applyTask = (task, projectRoot) => {
 };
 
 
-const applyTaskRec = (taskNames, variables, projectRoot) => {
+const applyTaskRec = (taskDir, projectRoot, taskNames, variables) => {
   const result = [];
   taskNames.forEach((taskName) => {
-    const task = loadTask(taskName, variables);
+    const task = loadTask(taskDir, taskName, variables);
     assert(task !== null, `Bad Task Name: ${taskName}`);
-    if (task.target !== undefined && applyTask(task, projectRoot)) {
+    if (task.target !== undefined && applyTask(taskDir, projectRoot, task)) {
       result.push(`Updated: ${task.target}`);
     }
     if (task.tasks !== undefined) {
-      result.push(...applyTaskRec(task.tasks, variables, projectRoot));
+      result.push(...applyTaskRec(taskDir, projectRoot, task.tasks, variables));
     }
   });
   return result;

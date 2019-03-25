@@ -2,7 +2,9 @@
 
 Documents configuration tasks managed by [robo-config](https://github.com/blackflux/robo-config).
 
-## `assorted/@npm-opensource`
+## Plugin `test/mock/plugin.js`
+
+### `assorted/@npm-opensource`
 
 Manage various configuration files for an open source npm github repo.
 
@@ -59,7 +61,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-### `badges/@npm-opensource`
+#### `badges/@npm-opensource`
 
 Display various badges in README.
 
@@ -97,7 +99,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-#### badges/js-gardener
+##### badges/js-gardener
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -120,7 +122,7 @@ project
 
 <!---2--></details>
 
-#### badges/semantic-release
+##### badges/semantic-release
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -143,7 +145,7 @@ project
 
 <!---2--></details>
 
-#### badges/npm-downloads
+##### badges/npm-downloads
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -173,7 +175,7 @@ project
 
 <!---2--></details>
 
-#### badges/npm-status
+##### badges/npm-status
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -203,7 +205,7 @@ project
 
 <!---2--></details>
 
-#### badges/david-dm
+##### badges/david-dm
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -233,7 +235,7 @@ project
 
 <!---2--></details>
 
-#### badges/dependabot
+##### badges/dependabot
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -263,7 +265,7 @@ project
 
 <!---2--></details>
 
-#### badges/coveralls
+##### badges/coveralls
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -293,7 +295,7 @@ project
 
 <!---2--></details>
 
-#### badges/circleci
+##### badges/circleci
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -326,7 +328,7 @@ project
 ------
 <!---1--></details>
 
-### `dependabot/@default-js`
+#### `dependabot/@default-js`
 
 Recommended base [dependabot configuration](https://dependabot.com/) for javascript projects.
 
@@ -353,7 +355,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-#### dependabot/js-instant
+##### dependabot/js-instant
 
 _Updating `.dependabot/config.yml` using `overwrite`._
 
@@ -382,7 +384,7 @@ project
 ------
 <!---1--></details>
 
-### `git/@default`
+#### `git/@default`
 
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
 
@@ -406,7 +408,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-#### git/gitignore
+##### git/gitignore
 
 _Updating `.gitignore` using `merge-top`._
 
@@ -435,7 +437,7 @@ project
 ------
 <!---1--></details>
 
-### `license/@MIT-npm`
+#### `license/@MIT-npm`
 
 Recommended base configuration when using MIT License with npm.
 
@@ -468,7 +470,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-#### license/MIT-LICENSE
+##### license/MIT-LICENSE
 
 _Updating `LICENSE` using `overwrite`._
 
@@ -491,7 +493,7 @@ project
 
 <!---2--></details>
 
-#### license/MIT-npm
+##### license/MIT-npm
 
 _Updating `package.json` using `merge-shallow`._
 
@@ -525,7 +527,7 @@ project
 ------
 <!---1--></details>
 
-### `npm/@default`
+#### `npm/@default`
 
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
@@ -549,7 +551,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-#### npm/npmignore
+##### npm/npmignore
 
 _Updating `.npmignore` using `merge-top`._
 
@@ -575,7 +577,7 @@ project
 ------
 <!---1--></details>
 
-### `semantic-release/@default`
+#### `semantic-release/@default`
 
 Recommended base configuration when using [semantic-release](https://github.com/semantic-release/semantic-release).
 
@@ -599,7 +601,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-#### semantic-release/commit-conventions
+##### semantic-release/commit-conventions
 
 _Updating `.releaserc.json` using `overwrite`._
 
@@ -625,7 +627,7 @@ project
 ------
 <!---1--></details>
 
-### circleci/npm-opensource:two-branch
+#### circleci/npm-opensource:two-branch
 
 _Updating `.circleci/config.yml` using `overwrite`._
 
@@ -657,7 +659,7 @@ project
 
 <!---1--></details>
 
-### gally/npm-opensource:two-branch
+#### gally/npm-opensource:two-branch
 
 _Updating `.gally.json` using `overwrite`._
 
@@ -695,7 +697,7 @@ project
 ------
 <!---0--></details>
 
-## `jetbrains/@default`
+### `jetbrains/@default`
 
 Recommended base configuration when using Jetbrains.
 
@@ -728,7 +730,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-### jetbrains/exclude-coverage-folder
+#### jetbrains/exclude-coverage-folder
 
 _Updating `.idea/${projectName}.iml` using `xml-merge`._
 
@@ -763,7 +765,7 @@ project
 ------
 <!---0--></details>
 
-## `editor/@default`
+### `editor/@default`
 
 Recommended base [code editor configuration](https://editorconfig.org/).
 
@@ -780,7 +782,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-### editor/two-space
+#### editor/two-space
 
 _Updating `.editorconfig` using `overwrite`._
 
