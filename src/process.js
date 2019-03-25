@@ -50,7 +50,9 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), args
     .entries(pluginCfgs)
     .forEach(([pluginName, pluginPayload]) => {
       // eslint-disable-next-line import/no-dynamic-require,global-require
-      const plugin = require(pluginName);
+      const plugin = require(pluginName.match(/^[^/].*\.js$/)
+        ? path.join(pluginPayload.projectRoot, pluginName)
+        : pluginName);
       Object.assign(pluginPayload, { plugin });
     });
 
