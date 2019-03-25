@@ -25,7 +25,7 @@ const documentFiles = (root, files) => {
       return prev;
     }, {});
 
-  result.push(...treeify(fileTree, { joined: false }));
+  result.push(...treeify(fileTree, { joined: false, sortFn: (a, b) => a.localeCompare(b) }));
   result.push('```');
   result.push('');
 
