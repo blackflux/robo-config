@@ -61,10 +61,7 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), args
     .forEach(([pluginName, {
       plugin, projectRoot, tasks, variables
     }]) => {
-      // todo: remove legancy
-      result.push(...(typeof plugin.apply === 'function'
-        ? plugin.apply
-        : plugin.applyTaskRec)(projectRoot, tasks, variables));
+      result.push(...plugin.apply(projectRoot, tasks, variables));
     });
 
   // write documentation files
