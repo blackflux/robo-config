@@ -18,7 +18,7 @@ describe('Testing Test Plugin', () => {
       authorName: 'Lukas Siemon',
       mergeBot: 'MrsFlux'
     };
-    const result = plugin.apply(path.join(__dirname, 'mock', 'out'), taskNames, variables);
+    const result = plugin.apply(path.join(__dirname, 'mock', 'project'), taskNames, variables);
     expect(result).to.deep.equal([]);
   });
 });
