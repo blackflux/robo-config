@@ -1,6 +1,6 @@
 const path = require('path');
 const { syncDocs, generateDocs } = require('./plugin/docs');
-const { applyTasksRec } = require('./plugin/task');
+const { applyTasksRec, listTasks } = require('./plugin/task');
 
 module.exports = (pluginDir) => {
   const taskDir = path.join(pluginDir, 'tasks');
@@ -13,6 +13,7 @@ module.exports = (pluginDir) => {
       '',
       ...generateDocs(taskDir, taskNames, 2)
     ],
-    apply: (projectRoot, taskNames, variables) => applyTasksRec(taskDir, projectRoot, taskNames, variables)
+    apply: (projectRoot, taskNames, variables) => applyTasksRec(taskDir, projectRoot, taskNames, variables),
+    test: (projectRoot, variables) => applyTasksRec(taskDir, projectRoot, listTasks(taskDir), variables)
   };
 };
