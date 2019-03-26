@@ -50,9 +50,7 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), args
     .entries(pluginCfgs)
     .forEach(([pluginName, pluginPayload]) => {
       // eslint-disable-next-line import/no-dynamic-require,global-require
-      const plugin = require(pluginName.match(/^[^/].*\.js$/)
-        ? path.join(pluginPayload.projectRoot, pluginName)
-        : pluginName);
+      const plugin = require(pluginName);
       Object.assign(pluginPayload, { plugin });
     });
 
@@ -63,7 +61,10 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), args
     .forEach(([pluginName, {
       plugin, projectRoot, tasks, variables
     }]) => {
-      result.push(...plugin.applyTaskRec(projectRoot, tasks, variables));
+      // todo: remove legancy
+      result.push(...(typeof plugin.apply === 'function'
+        ? plugin.apply
+        : plugin.applyTaskRec)(projectRoot, tasks, variables));
     });
 
   // write documentation files

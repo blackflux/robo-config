@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const deepmerge = require('deepmerge');
 const Joi = require('joi');
-const sls = require('smart-fs');
+const sfs = require('smart-fs');
 const { populateVars } = require('./vars');
 const strategies = require('./strategies');
 
@@ -37,9 +37,9 @@ const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
   assert(task instanceof Object && !Array.isArray(task));
   assert(snippetVars instanceof Object && !Array.isArray(snippetVars));
 
-  const fileName = sls.guessFile(path.join(snippetDir, snippetName));
+  const fileName = sfs.guessFile(path.join(snippetDir, snippetName));
   assert(fileName !== null, `Invalid Snippet File Name: ${snippetName}`);
-  const snippet = sls.smartRead(fileName, { treatAs: task.format });
+  const snippet = sfs.smartRead(fileName, { treatAs: task.format });
 
   return populateVars(snippet, snippetVars, false);
 };
@@ -54,7 +54,7 @@ const loadTask = (taskDir, taskName, variables) => {
   if (!fs.existsSync(taskFilePath)) {
     return null;
   }
-  const task = sls.smartRead(taskFilePath);
+  const task = sfs.smartRead(taskFilePath);
   if (task.target !== undefined) {
     task.format = task.format || null;
   }
@@ -81,14 +81,20 @@ const applyTask = (taskDir, projectRoot, task) => {
   assert(typeof projectRoot === 'string');
 
   const target = path.join(projectRoot, task.target);
-  return sls.smartWrite(target, task.toWrite, {
+  return sfs.smartWrite(target, task.toWrite, {
     treatAs: task.format,
     mergeStrategy: strategies[task.strategy]
   });
 };
 
+const listTasks = taskDir => sfs
+  .walkDir(taskDir)
+  .filter(f => f.includes('/@'))
+  .filter(f => f.endsWith('.json'))
+  .map(f => f.slice(0, -5));
+module.exports.listTasks = listTasks;
 
-const applyTaskRec = (taskDir, projectRoot, taskNames, variables) => {
+const applyTasksRec = (taskDir, projectRoot, taskNames, variables) => {
   const result = [];
   taskNames.forEach((taskName) => {
     const task = loadTask(taskDir, taskName, variables);
@@ -97,9 +103,9 @@ const applyTaskRec = (taskDir, projectRoot, taskNames, variables) => {
       result.push(`Updated: ${task.target}`);
     }
     if (task.tasks !== undefined) {
-      result.push(...applyTaskRec(taskDir, projectRoot, task.tasks, variables));
+      result.push(...applyTasksRec(taskDir, projectRoot, task.tasks, variables));
     }
   });
   return result;
 };
-module.exports.applyTaskRec = applyTaskRec;
+module.exports.applyTasksRec = applyTasksRec;

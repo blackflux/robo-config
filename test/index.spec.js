@@ -3,11 +3,11 @@ const tmp = require('tmp');
 const expect = require('chai').expect;
 const robo = require('../src/index');
 
-it('Apply Configuration Tasks', () => {
+it('Apply Robo Configuration', () => {
   expect(robo()).to.deep.equal([]);
 });
 
-describe('Integration Tests', () => {
+describe('Robo + Plugin Integration Tests', () => {
   const pluginFile = path.join(__dirname, 'mock', 'plugin.js');
 
   let dir;

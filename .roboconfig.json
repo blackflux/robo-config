@@ -1,5 +1,5 @@
 {
-  "test/mock/plugin.js": {
+  "@blackflux/robo-config-plugin": {
     "tasks": [
       "assorted/@npm-opensource",
       "jetbrains/@default",
