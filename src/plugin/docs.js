@@ -3,6 +3,7 @@ const path = require('path');
 const sfs = require('smart-fs');
 const treeify = require('object-treeify');
 const { determineVars } = require('./vars');
+const { listTasks } = require('./task');
 
 const startSpoiler = (summary, level) => [
   `<!---${level}--><details>`,
@@ -146,16 +147,13 @@ const syncDocs = (taskDir, docDir) => {
   const docFiles = [];
 
   // generate doc files
-  let written = false;
-  sfs
-    .walkDir(taskDir)
-    .filter(f => f.includes('/@'))
-    .filter(f => f.endsWith('.json'))
-    .map(f => [f, `${f.slice(0, -5)}.md`])
+  const result = [];
+  listTasks(taskDir)
+    .map(f => [`${f}.json`, `${f}.md`])
     .forEach(([f, docFile]) => {
       docFiles.push(docFile);
       if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(taskDir, [f], 0))) {
-        written = true;
+        result.push(`Updated: ${docFile}`);
       }
     });
 
@@ -167,8 +165,9 @@ const syncDocs = (taskDir, docDir) => {
     .filter(f => !docFiles.includes(f))
     .forEach(f => sfs.cleaningDelete(path.join(docDir, f)));
 
-  if (written === true) {
-    throw new Error('Updated Documentation. Please commit and re-run.');
+  if (result.length !== 0) {
+    result.push('Documentation Updated. Please commit and re-run.');
   }
+  return result;
 };
 module.exports.syncDocs = syncDocs;

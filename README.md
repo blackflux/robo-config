@@ -51,7 +51,3 @@ It does not do it automatically or silently.
 ## Usage
 
 ...
-
-## Assorted Tasks
-
-All usable tasks are documented [here](test/mock/plugin/docs).

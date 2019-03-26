@@ -52,7 +52,10 @@ describe('Integration docs.js', () => {
     }));
 
     expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@unknown.md']);
-    expect(() => syncDocs(taskDir, docDir)).to.throw('Updated Documentation. Please commit and re-run.');
+    expect(syncDocs(taskDir, docDir)).to.deep.equal([
+      'Updated: scope/@task.md',
+      'Documentation Updated. Please commit and re-run.'
+    ]);
     expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@task.md']);
   });
 });
