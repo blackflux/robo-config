@@ -5,5 +5,13 @@
   },
   "key2": {
     "prop": "value"
-  }
+  },
+  "key3": [
+    {
+      "entry": "123456"
+    },
+    {
+      "entry": "other"
+    }
+  ]
 }

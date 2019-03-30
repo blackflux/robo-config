@@ -1,5 +1,6 @@
 const assert = require('assert');
 const deepmerge = require('deepmerge');
+const deepContains = require('object-deep-contain');
 const xmlMerge = require('./xml-merge');
 
 module.exports = {
@@ -34,7 +35,19 @@ module.exports = {
     return changeset.concat(existing);
   },
   'merge-shallow': (existing, changeset) => Object.assign(existing, changeset),
-  'merge-deep': (existing, changeset) => deepmerge(existing, changeset),
+  'merge-deep': (existing, changeset) => deepmerge(existing, changeset, {
+    arrayMerge: (target, source) => {
+      const destination = target.concat(source);
+      for (let idx1 = 0; idx1 < destination.length; idx1 += 1) {
+        for (let idx2 = destination.length - 1; idx2 >= target.length; idx2 -= 1) {
+          if (deepContains(destination[idx1], destination[idx2])) {
+            destination.splice(idx2, 1);
+          }
+        }
+      }
+      return destination
+    }
+  }),
   'xml-merge': (existing, changeset) => xmlMerge(existing, changeset),
   overwrite: (existing, changeset) => changeset
 };
