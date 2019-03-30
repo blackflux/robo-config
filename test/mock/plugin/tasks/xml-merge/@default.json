@@ -1,6 +1,6 @@
 {
   "tasks": [
-    "xml-merge/task"
+    "task"
   ],
   "description": "Task collection description."
 }

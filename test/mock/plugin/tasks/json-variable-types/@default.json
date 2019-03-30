@@ -1,6 +1,6 @@
 {
   "tasks": [
-    "json-variable-types/task"
+    "task"
   ],
   "description": "Task collection description."
 }

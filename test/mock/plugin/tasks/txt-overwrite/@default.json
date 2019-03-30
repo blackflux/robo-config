@@ -1,6 +1,6 @@
 {
   "tasks": [
-    "txt-overwrite/task"
+    "task"
   ],
   "description": "Task collection description."
 }

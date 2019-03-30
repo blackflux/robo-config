@@ -106,7 +106,8 @@ const applyTasksRec = (taskDir, projectRoot, taskNames, variables) => {
       result.push(`Updated: ${task.target}`);
     }
     if (task.tasks !== undefined) {
-      result.push(...applyTasksRec(taskDir, projectRoot, task.tasks, variables));
+      const subtasks = task.tasks.map(stn => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`));
+      result.push(...applyTasksRec(taskDir, projectRoot, subtasks, variables));
     }
   });
   return result;

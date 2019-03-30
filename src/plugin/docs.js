@@ -91,6 +91,7 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
     sections[idx].task = task;
     sections.splice(idx + 1, 0, ...(task.tasks || [])
       .sort((a, b) => b.includes('/@') - a.includes('/@'))
+      .map(stn => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`))
       .map(subtaskName => ({ level: level + 1, taskName: subtaskName })));
   }
 
