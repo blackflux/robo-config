@@ -19,7 +19,7 @@ module.exports = {
     existing.splice(injectAt, 0, ...changeset.filter(line => !existing.includes(line)));
     return existing;
   },
-  'merge-top': (existing, changeset) => {
+  'unique-top': (existing, changeset) => {
     changeset.forEach((line) => {
       for (let idx = 0; idx < existing.length; idx += 1) {
         const l = existing[idx];
