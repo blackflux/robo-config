@@ -3,6 +3,7 @@
     "parent": {
       "children": [
         {
+          "object": {},
           "##key##": "##value##",
           "prefix##pkey##": "value##pvalue##"
         }
