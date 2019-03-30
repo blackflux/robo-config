@@ -9,7 +9,7 @@ module.exports = (pluginDir) => {
   return {
     syncDocs: () => syncDocs(taskDir, docsDir),
     generateDocs: (pluginName, taskNames) => [
-      `## Plugin \`${pluginName}\``,
+      `## Plugin [${pluginName}](https://www.npmjs.com/package/${pluginName})`,
       '',
       ...generateDocs(taskDir, taskNames, 2)
     ],
