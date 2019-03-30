@@ -1,6 +1,6 @@
 {
-  "target": "merge-shallow-target.json",
-  "strategy": "merge-shallow",
+  "target": "merge-deep-target.json",
+  "strategy": "merge-deep",
   "snippets": [
     "snippet"
   ],
