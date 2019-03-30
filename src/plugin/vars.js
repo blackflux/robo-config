@@ -29,7 +29,9 @@ const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
         return r;
       });
   }
-  return result.replace(escapedVarRegex, (_, varName) => `$\{${varName}}`);
+  return typeof result === 'string'
+    ? result.replace(escapedVarRegex, (_, varName) => `$\{${varName}}`)
+    : result;
 };
 
 module.exports.populateVars = (data, variables, allowUnused) => {

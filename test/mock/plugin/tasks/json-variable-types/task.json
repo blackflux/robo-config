@@ -5,6 +5,7 @@
     {
       "name": "snippet",
       "variables": {
+        "object": {},
         "key": "##key##",
         "value": "##value##",
         "partialKey": "##pkey##",
