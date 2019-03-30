@@ -45,7 +45,7 @@ module.exports = {
           }
         }
       }
-      return destination
+      return destination;
     }
   }),
   'xml-merge': (existing, changeset) => xmlMerge(existing, changeset),
