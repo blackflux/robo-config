@@ -1,6 +1,6 @@
 {
   "tasks": [
-    "json-nested-variables/task"
+    "json-variable-types/task"
   ],
   "description": "Task collection description."
 }
