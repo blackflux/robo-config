@@ -9,12 +9,8 @@ describe('Testing Test Plugin', () => {
 
   describe('Testing All Public Tasks', () => {
     const result = plugin.test(path.join(__dirname, 'mock', 'project'), {
-      repoKey: 'blackflux/robo-config',
-      repoName: 'robo-config',
-      projectName: 'robo-config',
-      owner: 'simlu',
-      authorName: 'Lukas Siemon',
-      mergeBot: 'MrsFlux'
+      // todo: generate variables
+      variable: 'variable'
     });
     expect(result).to.deep.equal([]);
   });
