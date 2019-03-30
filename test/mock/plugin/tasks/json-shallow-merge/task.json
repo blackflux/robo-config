@@ -1,0 +1,11 @@
+{
+  "target": "merge-shallow-target.json",
+  "strategy": "merge-shallow",
+  "snippets": [
+    "snippet"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}

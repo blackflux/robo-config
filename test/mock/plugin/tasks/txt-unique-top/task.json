@@ -1,0 +1,13 @@
+{
+  "target": "unique-top.txt",
+  "strategy": "unique-top",
+  "snippets": [
+    "snippet",
+    "divider",
+    "divider"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}

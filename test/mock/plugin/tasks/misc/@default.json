@@ -1,0 +1,8 @@
+{
+  "tasks": [
+    "misc/task",
+    "@other",
+    "misc/task"
+  ],
+  "description": "Task collection description."
+}

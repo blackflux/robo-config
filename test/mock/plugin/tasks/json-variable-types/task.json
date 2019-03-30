@@ -1,0 +1,19 @@
+{
+  "target": "variables-target.json",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "snippet",
+      "variables": {
+        "key": "##key##",
+        "value": "##value##",
+        "partialKey": "##pkey##",
+        "partialValue": "##pvalue##"
+      }
+    }
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}

@@ -4,6 +4,7 @@ const Joi = require('joi');
 const deepmerge = require('deepmerge');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
+const load = require('./load');
 
 const pluginPayloadSchema = Joi.object().keys({
   tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)).required(),
@@ -15,11 +16,11 @@ const pluginPayloadSchema = Joi.object().keys({
   .required();
 
 module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), argsCfg = {}) => {
-  assert(argsCfg instanceof Object && !Array.isArray(argsCfg));
+  assert(argsCfg instanceof Object && !Array.isArray(argsCfg), 'Invalid "argsCfg" parameter format.');
 
   // load configuration file
   const fileCfg = configFile !== null ? sfs.smartRead(configFile) : {};
-  assert(fileCfg instanceof Object && !Array.isArray(fileCfg));
+  assert(fileCfg instanceof Object && !Array.isArray(fileCfg), 'Invalid configuration file content.');
 
   // merge file and args config
   const cfg = deepmerge(fileCfg, argsCfg);
@@ -50,7 +51,7 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), args
     .entries(pluginCfgs)
     .forEach(([pluginName, pluginPayload]) => {
       // eslint-disable-next-line import/no-dynamic-require,global-require
-      const plugin = require(pluginName);
+      const plugin = load(require(pluginName));
       Object.assign(pluginPayload, { plugin });
     });
 
@@ -61,10 +62,7 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), args
     .forEach(([pluginName, {
       plugin, projectRoot, tasks, variables
     }]) => {
-      // todo: remove legancy
-      result.push(...(typeof plugin.apply === 'function'
-        ? plugin.apply
-        : plugin.applyTaskRec)(projectRoot, tasks, variables));
+      result.push(...plugin.apply(projectRoot, tasks, variables));
     });
 
   // write documentation files

@@ -16,10 +16,10 @@ describe('Integration strategies.js', () => {
       .to.deep.equal(['title1', 'title2', '', 'new', 'text']);
   });
 
-  it('Testing Merge Strategy: merge-top', () => {
+  it('Testing Merge Strategy: unique-top', () => {
     const existing = ['title1', 'title2', '', 'new', 'text'];
     const changeset = ['new'];
-    expect(strategies['merge-top'](existing, changeset))
+    expect(strategies['unique-top'](existing, changeset))
       .to.deep.equal(['new', 'title1', 'title2', '', 'text']);
   });
 });
