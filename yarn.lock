@@ -199,12 +199,10 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@blackflux/robo-config-plugin@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-1.0.1.tgz#92b76fd993212790a379be3d47129b85bd2f1f51"
-  integrity sha512-wcvebr+xHM8hSB5r3xoZ8BLqRtY5QLvOsJ7Nyd75/hd2k0HYFzL/gAfr+7Vdoq6I38KcLdbEkft4r6p+V1NlUA==
-  dependencies:
-    robo-config "1.9.1"
+"@blackflux/robo-config-plugin@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-1.0.2.tgz#95d172d604efe9da6207759461a057170a306a69"
+  integrity sha512-XgDlBkU056HEZd9WN6laCmhh+pzFYT2oBKg9kvPYXDwOixudeaigY8ye5hlPxwXGM1jBY/yAdxFRoh3DaAXNYA==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -5981,21 +5979,6 @@ rimraf@2, rimraf@2.6.3, rimraf@^2.5.2, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6
   integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
   dependencies:
     glob "^7.1.3"
-
-robo-config@1.9.1:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-1.9.1.tgz#2057d889340df8da819cb17200ccc2467fe0b5e4"
-  integrity sha512-HA61PbFt98ii1whyPXKb0+9PXW2IpdLd+DGCXnyI219wf4tfrINKrddPSzHWppmjcVJextrs9IGpUEhVsA06qw==
-  dependencies:
-    app-root-path "2.2.1"
-    deepmerge "3.2.0"
-    joi "14.3.1"
-    lodash.clonedeep "4.5.0"
-    lodash.difference "4.5.0"
-    object-deep-contain "1.0.4"
-    object-scan "5.0.3"
-    object-treeify "1.1.4"
-    smart-fs "1.5.0"
 
 run-async@^0.1.0:
   version "0.1.0"

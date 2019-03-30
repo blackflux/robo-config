@@ -2,7 +2,7 @@ const { syncDocs, generateDocs } = require('./plugin/docs');
 const { applyTasksRec, listTasks } = require('./plugin/task');
 
 // todo: validate taskDir, docsDir etc
-module.exports = p => (p.apply === undefined ? ({
+module.exports = p => ({
   syncDocs: () => syncDocs(p.taskDir, p.docsDir),
   generateDocs: (pluginName, taskNames) => [
     `## Plugin [${pluginName}](https://www.npmjs.com/package/${pluginName})`,
@@ -12,4 +12,4 @@ module.exports = p => (p.apply === undefined ? ({
   apply: (projectRoot, taskNames, variables) => applyTasksRec(p.taskDir, projectRoot, taskNames, variables),
   // todo: should generate CONFDOC.md file
   test: (projectRoot, variables) => applyTasksRec(p.taskDir, projectRoot, listTasks(p.taskDir), variables)
-}) : p);
+});
