@@ -4,7 +4,7 @@ const Joi = require('joi');
 const deepmerge = require('deepmerge');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
-const pluginInit = require('./plugin-init');
+const load = require('./load');
 
 const pluginPayloadSchema = Joi.object().keys({
   tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)).required(),
@@ -51,7 +51,7 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), args
     .entries(pluginCfgs)
     .forEach(([pluginName, pluginPayload]) => {
       // eslint-disable-next-line import/no-dynamic-require,global-require
-      const plugin = pluginInit(require(pluginName));
+      const plugin = load(require(pluginName));
       Object.assign(pluginPayload, { plugin });
     });
 
