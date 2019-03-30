@@ -32,10 +32,10 @@ const taskSchema = Joi.object().keys({
 
 
 const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
-  assert(typeof snippetDir === 'string');
-  assert(typeof snippetName === 'string');
-  assert(task instanceof Object && !Array.isArray(task));
-  assert(snippetVars instanceof Object && !Array.isArray(snippetVars));
+  assert(typeof snippetDir === 'string', 'Invalid "snippetDir" parameter format.');
+  assert(typeof snippetName === 'string', 'Invalid "snippetName" parameter format.');
+  assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
+  assert(snippetVars instanceof Object && !Array.isArray(snippetVars), 'Invalid "snippetVars" parameter format.');
 
   const fileName = sfs.guessFile(path.join(snippetDir, snippetName));
   assert(fileName !== null, `Invalid Snippet File Name: ${snippetName}`);
@@ -46,8 +46,8 @@ const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
 
 
 const loadTask = (taskDir, taskName, variables) => {
-  assert(typeof taskName === 'string');
-  assert(variables instanceof Object && !Array.isArray(variables));
+  assert(typeof taskName === 'string', 'Invalid "taskName" parameter format.');
+  assert(variables instanceof Object && !Array.isArray(variables), 'Invalid "variables" parameter format.');
 
   // load task file
   const taskFilePath = path.join(taskDir, `${taskName}.json`);
@@ -59,7 +59,10 @@ const loadTask = (taskDir, taskName, variables) => {
     task.format = task.format || null;
   }
 
-  assert(Joi.validate(task, taskSchema).error === null, `Invalid Task Detected: ${taskName}`);
+  assert(
+    Joi.validate(task, taskSchema).error === null,
+    `Invalid Task: ${taskName}\n\n${JSON.stringify(Joi.validate(task, taskSchema).error, null, 2)}`
+  );
   assert(taskName.includes('/@') === (task.tasks !== undefined), `Invalid Task Name Detected: ${taskName}`);
 
   if (typeof task.target === 'string') {
@@ -77,8 +80,8 @@ const loadTask = (taskDir, taskName, variables) => {
 
 
 const applyTask = (taskDir, projectRoot, task) => {
-  assert(task instanceof Object && !Array.isArray(task));
-  assert(typeof projectRoot === 'string');
+  assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
+  assert(typeof projectRoot === 'string', 'Invalid "projectRoot" parameter format.');
 
   const target = path.join(projectRoot, task.target);
   return sfs.smartWrite(target, task.toWrite, {

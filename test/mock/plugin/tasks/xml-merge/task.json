@@ -1,0 +1,11 @@
+{
+  "target": "merge-target.xml",
+  "strategy": "xml-merge",
+  "snippets": [
+    "snippet"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}

@@ -35,11 +35,11 @@ describe('Robo + Plugin Integration Tests', () => {
   it('Testing Configuration File Updated', () => {
     expect(robo(null, {
       [pluginFile]: {
-        tasks: ['editor/@default'],
+        tasks: ['txt-overwrite/@default'],
         projectRoot: dir
       }
     })).to.deep.equal([
-      'Updated: .editorconfig',
+      'Updated: overwrite-target.txt',
       'Updated: CONFDOCS.md'
     ]);
   });

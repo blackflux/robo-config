@@ -15,11 +15,11 @@ const pluginPayloadSchema = Joi.object().keys({
   .required();
 
 module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), argsCfg = {}) => {
-  assert(argsCfg instanceof Object && !Array.isArray(argsCfg));
+  assert(argsCfg instanceof Object && !Array.isArray(argsCfg), 'Invalid "argsCfg" parameter format.');
 
   // load configuration file
   const fileCfg = configFile !== null ? sfs.smartRead(configFile) : {};
-  assert(fileCfg instanceof Object && !Array.isArray(fileCfg));
+  assert(fileCfg instanceof Object && !Array.isArray(fileCfg), 'Invalid configuration file content.');
 
   // merge file and args config
   const cfg = deepmerge(fileCfg, argsCfg);

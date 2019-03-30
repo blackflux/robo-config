@@ -1,0 +1,11 @@
+{
+  "target": "overwrite-target.txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "snippet"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}

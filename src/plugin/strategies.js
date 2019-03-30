@@ -3,8 +3,8 @@ const xmlMerge = require('./xml-merge');
 
 module.exports = {
   'merge-below-title': (existing, changeset) => {
-    assert(Array.isArray(existing));
-    assert(Array.isArray(changeset));
+    assert(Array.isArray(existing), 'Invalid "existing" parameter format.');
+    assert(Array.isArray(changeset), 'Invalid "changeset" parameter format.');
 
     let injectAt = 0;
     for (let idx = 0; idx < existing.length - 2; idx += 1) {

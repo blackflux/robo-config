@@ -7,10 +7,10 @@ const varRegex = /\${([-_a-zA-Z0-9]+)}/g;
 const varRegexExact = /^\${([-_a-zA-Z0-9]+)}$/g;
 
 const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
-  assert(typeof input === 'string');
-  assert(variables instanceof Object && !Array.isArray(variables));
-  assert(typeof allowFullMatch === 'boolean');
-  assert(usedVars instanceof Set);
+  assert(typeof input === 'string', 'Invalid "input" parameter format.');
+  assert(variables instanceof Object && !Array.isArray(variables), 'Invalid "variables" parameter format.');
+  assert(typeof allowFullMatch === 'boolean', 'Invalid "allowFullMatch" parameter format.');
+  assert(usedVars instanceof Set, 'Invalid "usedVars" parameter format.');
 
   if (allowFullMatch === true && input.match(varRegexExact) !== null) {
     const varName = input.slice(2, -1);
@@ -30,9 +30,9 @@ const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
 };
 
 module.exports.populateVars = (data, variables, allowUnused) => {
-  assert(data instanceof Object);
-  assert(variables instanceof Object && !Array.isArray(variables));
-  assert(typeof allowUnused === 'boolean');
+  assert(data instanceof Object, 'Invalid "data" parameter format.');
+  assert(variables instanceof Object && !Array.isArray(variables), 'Invalid "variables" parameter format.');
+  assert(typeof allowUnused === 'boolean', 'Invalid "allowUnused" parameter format.');
 
   const result = cloneDeep(data);
   const usedVars = new Set();
@@ -74,7 +74,7 @@ module.exports.populateVars = (data, variables, allowUnused) => {
 };
 
 module.exports.determineVars = (data) => {
-  assert(data instanceof Object);
+  assert(data instanceof Object, 'Invalid "data" parameter format.');
 
   const result = [];
   objectScan(['**'], {
