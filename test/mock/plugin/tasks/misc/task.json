@@ -1,0 +1,19 @@
+{
+
+  "target": "misc.txt",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "snippet",
+      "variables": {
+        "variable": "${variable}"
+      }
+    }
+  ],
+  "requires": [
+    "dependency"
+  ],
+  "purpose": [
+    "Some purpose."
+  ]
+}

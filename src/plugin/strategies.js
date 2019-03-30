@@ -1,10 +1,12 @@
 const assert = require('assert');
+const deepmerge = require('deepmerge');
+const deepContains = require('object-deep-contain');
 const xmlMerge = require('./xml-merge');
 
 module.exports = {
   'merge-below-title': (existing, changeset) => {
-    assert(Array.isArray(existing));
-    assert(Array.isArray(changeset));
+    assert(Array.isArray(existing), 'Invalid "existing" parameter format.');
+    assert(Array.isArray(changeset), 'Invalid "changeset" parameter format.');
 
     let injectAt = 0;
     for (let idx = 0; idx < existing.length - 2; idx += 1) {
@@ -17,7 +19,7 @@ module.exports = {
     existing.splice(injectAt, 0, ...changeset.filter(line => !existing.includes(line)));
     return existing;
   },
-  'merge-top': (existing, changeset) => {
+  'unique-top': (existing, changeset) => {
     changeset.forEach((line) => {
       for (let idx = 0; idx < existing.length; idx += 1) {
         const l = existing[idx];
@@ -33,6 +35,19 @@ module.exports = {
     return changeset.concat(existing);
   },
   'merge-shallow': (existing, changeset) => Object.assign(existing, changeset),
+  'merge-deep': (existing, changeset) => deepmerge(existing, changeset, {
+    arrayMerge: (target, source) => {
+      const destination = target.concat(source);
+      for (let idx1 = 0; idx1 < destination.length; idx1 += 1) {
+        for (let idx2 = destination.length - 1; idx2 >= target.length; idx2 -= 1) {
+          if (deepContains(destination[idx1], destination[idx2])) {
+            destination.splice(idx2, 1);
+          }
+        }
+      }
+      return destination;
+    }
+  }),
   'xml-merge': (existing, changeset) => xmlMerge(existing, changeset),
   overwrite: (existing, changeset) => changeset
 };

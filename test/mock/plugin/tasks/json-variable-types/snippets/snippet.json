@@ -1,0 +1,10 @@
+{
+  "grandparent": {
+    "parent": {
+      "children": [{
+        "prefix${partialKey}": "value${partialValue}",
+        "${key}": "${value}"
+      }]
+    }
+  }
+}

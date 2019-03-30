@@ -37,9 +37,9 @@ module.exports.documentFiles = documentFiles;
 const documentSection = (baseLevel, {
   level, taskName, task, targets, requires, variables
 }) => {
-  assert(Number.isInteger(level));
-  assert(typeof taskName === 'string');
-  assert(task instanceof Object && !Array.isArray(task));
+  assert(Number.isInteger(level), 'Invalid "level" parameter format.');
+  assert(typeof taskName === 'string', 'Invalid "taskName" parameter format.');
+  assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
 
   const result = [];
   if (typeof task.target === 'string') {
@@ -76,8 +76,11 @@ const documentSection = (baseLevel, {
 };
 
 const generateDocs = (taskDir, taskNames, baseLevel) => {
-  assert(Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'));
-  assert(Number.isInteger(baseLevel));
+  assert(
+    Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'),
+    'Invalid "taskNames" parameter format.'
+  );
+  assert(Number.isInteger(baseLevel), 'Invalid "baseLevel" parameter format.');
 
   const sections = taskNames.map(taskName => ({ level: baseLevel, taskName }));
 
@@ -88,6 +91,7 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
     sections[idx].task = task;
     sections.splice(idx + 1, 0, ...(task.tasks || [])
       .sort((a, b) => b.includes('/@') - a.includes('/@'))
+      .map(stn => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`))
       .map(subtaskName => ({ level: level + 1, taskName: subtaskName })));
   }
 

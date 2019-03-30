@@ -5,34 +5,37 @@ const objectScan = require('object-scan');
 
 const varRegex = /\${([-_a-zA-Z0-9]+)}/g;
 const varRegexExact = /^\${([-_a-zA-Z0-9]+)}$/g;
+const escapedVarRegex = /\$\\{([-_a-zA-Z0-9]+)}/g;
 
 const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
-  assert(typeof input === 'string');
-  assert(variables instanceof Object && !Array.isArray(variables));
-  assert(typeof allowFullMatch === 'boolean');
-  assert(usedVars instanceof Set);
+  assert(typeof input === 'string', 'Invalid "input" parameter format.');
+  assert(variables instanceof Object && !Array.isArray(variables), 'Invalid "variables" parameter format.');
+  assert(typeof allowFullMatch === 'boolean', 'Invalid "allowFullMatch" parameter format.');
+  assert(usedVars instanceof Set, 'Invalid "usedVars" parameter format.');
 
+  let result;
   if (allowFullMatch === true && input.match(varRegexExact) !== null) {
     const varName = input.slice(2, -1);
-    const result = variables[varName];
+    result = variables[varName];
     assert(result !== undefined, `Unmatched Variable Found: $\{${varName}}`);
     usedVars.add(varName);
-    return result;
+  } else {
+    result = input
+      .replace(varRegex, (_, varName) => {
+        const r = variables[varName];
+        assert(r !== undefined, `Unmatched Variable Found: $\{${varName}}`);
+        assert(typeof r === 'string', `Variable Expected to be String: $\{${varName}}`);
+        usedVars.add(varName);
+        return r;
+      });
   }
-  return input
-    .replace(varRegex, (_, varName) => {
-      const result = variables[varName];
-      assert(result !== undefined, `Unmatched Variable Found: $\{${varName}}`);
-      assert(typeof result === 'string', `Variable Expected to be String: $\{${varName}}`);
-      usedVars.add(varName);
-      return result;
-    });
+  return result.replace(escapedVarRegex, (_, varName) => `$\{${varName}}`);
 };
 
 module.exports.populateVars = (data, variables, allowUnused) => {
-  assert(data instanceof Object);
-  assert(variables instanceof Object && !Array.isArray(variables));
-  assert(typeof allowUnused === 'boolean');
+  assert(data instanceof Object, 'Invalid "data" parameter format.');
+  assert(variables instanceof Object && !Array.isArray(variables), 'Invalid "variables" parameter format.');
+  assert(typeof allowUnused === 'boolean', 'Invalid "allowUnused" parameter format.');
 
   const result = cloneDeep(data);
   const usedVars = new Set();
@@ -74,7 +77,7 @@ module.exports.populateVars = (data, variables, allowUnused) => {
 };
 
 module.exports.determineVars = (data) => {
-  assert(data instanceof Object);
+  assert(data instanceof Object, 'Invalid "data" parameter format.');
 
   const result = [];
   objectScan(['**'], {

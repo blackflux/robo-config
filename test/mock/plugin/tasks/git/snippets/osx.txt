@@ -1,2 +1,0 @@
-# OSX Specific
-.DS_Store

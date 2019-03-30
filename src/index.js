@@ -1,6 +1,6 @@
-const plugin = require('./plugin');
+const load = require('./load');
 const process = require('./process');
 
 const fn = (...args) => process(...args);
-fn.plugin = plugin;
+fn.load = load;
 module.exports = fn;

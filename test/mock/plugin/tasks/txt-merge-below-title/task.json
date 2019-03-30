@@ -1,0 +1,11 @@
+{
+  "target": "merge-below-title.txt",
+  "strategy": "merge-below-title",
+  "snippets": [
+    "snippet"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}
