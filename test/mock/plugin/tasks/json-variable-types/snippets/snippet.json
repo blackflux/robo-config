@@ -3,7 +3,8 @@
     "parent": {
       "children": [{
         "prefix${partialKey}": "value${partialValue}",
-        "${key}": "${value}"
+        "${key}": "${value}",
+        "object": "${object}"
       }]
     }
   }
