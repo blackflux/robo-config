@@ -1,6 +1,7 @@
 const { syncDocs, generateDocs } = require('./plugin/docs');
 const { applyTasksRec, listTasks } = require('./plugin/task');
 
+// todo: validate taskDir, docsDir etc
 module.exports = p => (p.apply === undefined ? ({
   syncDocs: () => syncDocs(p.taskDir, p.docsDir),
   generateDocs: (pluginName, taskNames) => [
