@@ -1,0 +1,11 @@
+{
+  "target": "escaped-variable.txt",
+  "strategy": "overwrite",
+  "snippets": [
+    "snippet"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}
