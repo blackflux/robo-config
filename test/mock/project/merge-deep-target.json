@@ -1,0 +1,9 @@
+{
+  "key1": {
+    "prop": "value",
+    "misc": "value"
+  },
+  "key2": {
+    "prop": "value"
+  }
+}

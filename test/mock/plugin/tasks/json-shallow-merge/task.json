@@ -1,0 +1,11 @@
+{
+  "target": "merge-deep-target.json",
+  "strategy": "merge-deep",
+  "snippets": [
+    "snippet"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}
