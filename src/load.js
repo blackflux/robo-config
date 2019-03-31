@@ -1,4 +1,6 @@
 const assert = require('assert');
+const path = require('path');
+const sfs = require('smart-fs');
 const { syncDocs, generateDocs } = require('./plugin/docs');
 const { applyTasksRec, listTasks } = require('./plugin/task');
 
@@ -17,7 +19,17 @@ module.exports = (p) => {
       ...generateDocs(p.taskDir, p.reqDir, p.varDir, taskNames, 2)
     ],
     apply: (projectRoot, taskNames, variables) => applyTasksRec(p.taskDir, projectRoot, taskNames, variables),
-    // todo: should generate CONFDOC.md file ?
-    test: (projectRoot, variables) => applyTasksRec(p.taskDir, projectRoot, listTasks(p.taskDir), variables)
+    test: (projectRoot, variables) => {
+      const taskNames = listTasks(p.taskDir);
+      const result = applyTasksRec(p.taskDir, projectRoot, taskNames, variables);
+      if (sfs.smartWrite(path.join(projectRoot, 'CONFDOCS.md'), [
+        '## Example CONFDOCS.md',
+        '',
+        ...generateDocs(p.taskDir, p.reqDir, p.varDir, taskNames, 2)
+      ])) {
+        result.push('Updated: CONFDOCS.md');
+      }
+      return result;
+    }
   });
 };
