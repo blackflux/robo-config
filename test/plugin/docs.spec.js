@@ -38,7 +38,6 @@ describe('Integration docs.js', () => {
   });
 
   it('Testing documentFolder (delete and write)', () => {
-
     const taskDir = path.join(dir, 'tasks');
     fs.mkdirSync(taskDir);
     fs.mkdirSync(path.join(taskDir, 'scope'));
