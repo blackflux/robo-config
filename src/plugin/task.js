@@ -118,7 +118,10 @@ module.exports.applyTasksRec = applyTasksRec;
 
 const extractMeta = (taskDir, taskNames) => {
   assert(typeof taskDir === 'string', 'Invalid "taskDir" parameter format');
-  assert(Array.isArray(taskNames) && taskNames.every(t => typeof t === 'string'), 'Invalid "taskDir" parameter format');
+  assert(
+    Array.isArray(taskNames) && taskNames.every(t => typeof t === 'string'),
+    'Invalid "taskNames" parameter format'
+  );
 
   const variables = new Set();
   const target = new Set();
