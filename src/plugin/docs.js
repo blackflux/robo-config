@@ -155,25 +155,25 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
   // append docs for variables and requires
   const reqs = [...new Set(sections.reduce((p, c) => p.concat(c.requires), []))];
   if (reqs.length !== 0) {
+    result.push('------');
+    result.push('');
     result.push('## Requires');
     result.push('');
     reqs.forEach((r) => {
       result.push(`### ${createRef('req', r)}`);
       result.push('');
     });
-    result.push('------');
-    result.push('');
   }
   const vars = [...new Set(sections.reduce((p, c) => p.concat(c.variables), []))];
   if (vars.length !== 0) {
+    result.push('------');
+    result.push('');
     result.push('## Variables');
     result.push('');
     vars.forEach((v) => {
       result.push(`### ${createRef('var', v)}`);
       result.push('');
     });
-    result.push('------');
-    result.push('');
   }
 
   return result;

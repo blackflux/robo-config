@@ -803,6 +803,8 @@ project
 
 </details>
 
+------
+
 ## Requires
 
 ### <a name="req-ref-js-gardener">js-gardener</a>
@@ -850,6 +852,4 @@ project
 ### <a name="var-ref-mergebot">mergeBot</a>
 
 ### <a name="var-ref-projectname">projectName</a>
-
-------
 

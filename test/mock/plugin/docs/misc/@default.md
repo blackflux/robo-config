@@ -155,6 +155,8 @@ project
 
 </details>
 
+------
+
 ## Requires
 
 ### <a name="req-ref-dependency">dependency</a>
@@ -164,6 +166,4 @@ project
 ## Variables
 
 ### <a name="var-ref-variable">variable</a>
-
-------
 
