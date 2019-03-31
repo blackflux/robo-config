@@ -15,14 +15,14 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- `dependency`
+- [dependency](#req-ref-dependency)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- `variable`
+- [variable](#var-ref-variable)
 
 <!---0--></details>
 
@@ -48,16 +48,28 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `dependency`
+- [dependency](#req-ref-dependency)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `variable`
+- [variable](#var-ref-variable)
 
 <!---1--></details>
 
 </details>
+
+## Requires
+
+### <a name="req-ref-dependency">dependency</a>
+
+------
+
+## Variables
+
+### <a name="var-ref-variable">variable</a>
+
+------
 

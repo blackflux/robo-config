@@ -31,30 +31,30 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- `js-gardener`
-- `semantic-release`
-- `npm-published`
-- `david-dm`
-- `dependabot`
-- `coveralls`
-- `circleci`
-- `github`
-- `javascript`
-- `git`
-- `npm`
-- `yarn`
-- `gally`
+- [js-gardener](#req-ref-js-gardener)
+- [semantic-release](#req-ref-semantic-release)
+- [npm-published](#req-ref-npm-published)
+- [david-dm](#req-ref-david-dm)
+- [dependabot](#req-ref-dependabot)
+- [coveralls](#req-ref-coveralls)
+- [circleci](#req-ref-circleci)
+- [github](#req-ref-github)
+- [javascript](#req-ref-javascript)
+- [git](#req-ref-git)
+- [npm](#req-ref-npm)
+- [yarn](#req-ref-yarn)
+- [gally](#req-ref-gally)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- `packageName`
-- `repoKey`
-- `authorName`
-- `owner`
-- `mergeBot`
+- [packageName](#var-ref-packagename)
+- [repoKey](#var-ref-repokey)
+- [authorName](#var-ref-authorname)
+- [owner](#var-ref-owner)
+- [mergeBot](#var-ref-mergebot)
 
 <!---0--></details>
 
@@ -78,21 +78,21 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `js-gardener`
-- `semantic-release`
-- `npm-published`
-- `david-dm`
-- `dependabot`
-- `coveralls`
-- `circleci`
+- [js-gardener](#req-ref-js-gardener)
+- [semantic-release](#req-ref-semantic-release)
+- [npm-published](#req-ref-npm-published)
+- [david-dm](#req-ref-david-dm)
+- [dependabot](#req-ref-dependabot)
+- [coveralls](#req-ref-coveralls)
+- [circleci](#req-ref-circleci)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `packageName`
-- `repoKey`
+- [packageName](#var-ref-packagename)
+- [repoKey](#var-ref-repokey)
 
 <!---1--></details>
 
@@ -118,7 +118,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `js-gardener`
+- [js-gardener](#req-ref-js-gardener)
 
 <!---2--></details>
 
@@ -141,7 +141,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `semantic-release`
+- [semantic-release](#req-ref-semantic-release)
 
 <!---2--></details>
 
@@ -164,14 +164,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `npm-published`
+- [npm-published](#req-ref-npm-published)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `packageName`
+- [packageName](#var-ref-packagename)
 
 <!---2--></details>
 
@@ -194,14 +194,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `npm-published`
+- [npm-published](#req-ref-npm-published)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `packageName`
+- [packageName](#var-ref-packagename)
 
 <!---2--></details>
 
@@ -224,14 +224,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `david-dm`
+- [david-dm](#req-ref-david-dm)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoKey`
+- [repoKey](#var-ref-repokey)
 
 <!---2--></details>
 
@@ -254,14 +254,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `dependabot`
+- [dependabot](#req-ref-dependabot)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoKey`
+- [repoKey](#var-ref-repokey)
 
 <!---2--></details>
 
@@ -284,14 +284,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `coveralls`
+- [coveralls](#req-ref-coveralls)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoKey`
+- [repoKey](#var-ref-repokey)
 
 <!---2--></details>
 
@@ -314,14 +314,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `circleci`
+- [circleci](#req-ref-circleci)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoKey`
+- [repoKey](#var-ref-repokey)
 
 <!---2--></details>
 
@@ -346,9 +346,9 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `dependabot`
-- `github`
-- `javascript`
+- [dependabot](#req-ref-dependabot)
+- [github](#req-ref-github)
+- [javascript](#req-ref-javascript)
 
 <!---1--></details>
 
@@ -375,9 +375,9 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `dependabot`
-- `github`
-- `javascript`
+- [dependabot](#req-ref-dependabot)
+- [github](#req-ref-github)
+- [javascript](#req-ref-javascript)
 
 <!---2--></details>
 
@@ -401,7 +401,7 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `git`
+- [git](#req-ref-git)
 
 <!---1--></details>
 
@@ -430,7 +430,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `git`
+- [git](#req-ref-git)
 
 <!---2--></details>
 
@@ -455,15 +455,15 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `npm`
+- [npm](#req-ref-npm)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `authorName`
-- `repoKey`
+- [authorName](#var-ref-authorname)
+- [repoKey](#var-ref-repokey)
 
 <!---1--></details>
 
@@ -489,7 +489,7 @@ project
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `authorName`
+- [authorName](#var-ref-authorname)
 
 <!---2--></details>
 
@@ -512,15 +512,15 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `npm`
+- [npm](#req-ref-npm)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `authorName`
-- `repoKey`
+- [authorName](#var-ref-authorname)
+- [repoKey](#var-ref-repokey)
 
 <!---2--></details>
 
@@ -544,7 +544,7 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `npm`
+- [npm](#req-ref-npm)
 
 <!---1--></details>
 
@@ -570,7 +570,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `npm`
+- [npm](#req-ref-npm)
 
 <!---2--></details>
 
@@ -594,7 +594,7 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `semantic-release`
+- [semantic-release](#req-ref-semantic-release)
 
 <!---1--></details>
 
@@ -620,7 +620,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `semantic-release`
+- [semantic-release](#req-ref-semantic-release)
 
 <!---2--></details>
 
@@ -648,14 +648,14 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `npm`
-- `yarn`
-- `gally`
-- `github`
-- `circleci`
-- `coveralls`
-- `dependabot`
-- `semantic-release`
+- [npm](#req-ref-npm)
+- [yarn](#req-ref-yarn)
+- [gally](#req-ref-gally)
+- [github](#req-ref-github)
+- [circleci](#req-ref-circleci)
+- [coveralls](#req-ref-coveralls)
+- [dependabot](#req-ref-dependabot)
+- [semantic-release](#req-ref-semantic-release)
 
 <!---1--></details>
 
@@ -679,18 +679,18 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `circleci`
-- `gally`
-- `github`
+- [circleci](#req-ref-circleci)
+- [gally](#req-ref-gally)
+- [github](#req-ref-github)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `owner`
-- `mergeBot`
-- `repoKey`
+- [owner](#var-ref-owner)
+- [mergeBot](#var-ref-mergebot)
+- [repoKey](#var-ref-repokey)
 
 <!---1--></details>
 
@@ -715,15 +715,15 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- `jetbrains`
-- `nyc`
+- [jetbrains](#req-ref-jetbrains)
+- [nyc](#req-ref-nyc)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- `projectName`
+- [projectName](#var-ref-projectname)
 
 <!---0--></details>
 
@@ -750,15 +750,15 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `jetbrains`
-- `nyc`
+- [jetbrains](#req-ref-jetbrains)
+- [nyc](#req-ref-nyc)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `projectName`
+- [projectName](#var-ref-projectname)
 
 <!---1--></details>
 
@@ -802,4 +802,54 @@ project
 <!---1--></details>
 
 </details>
+
+## Requires
+
+### <a name="req-ref-js-gardener">js-gardener</a>
+
+### <a name="req-ref-semantic-release">semantic-release</a>
+
+### <a name="req-ref-npm-published">npm-published</a>
+
+### <a name="req-ref-david-dm">david-dm</a>
+
+### <a name="req-ref-dependabot">dependabot</a>
+
+### <a name="req-ref-coveralls">coveralls</a>
+
+### <a name="req-ref-circleci">circleci</a>
+
+### <a name="req-ref-github">github</a>
+
+### <a name="req-ref-javascript">javascript</a>
+
+### <a name="req-ref-git">git</a>
+
+### <a name="req-ref-npm">npm</a>
+
+### <a name="req-ref-yarn">yarn</a>
+
+### <a name="req-ref-gally">gally</a>
+
+### <a name="req-ref-jetbrains">jetbrains</a>
+
+### <a name="req-ref-nyc">nyc</a>
+
+------
+
+## Variables
+
+### <a name="var-ref-packagename">packageName</a>
+
+### <a name="var-ref-repokey">repoKey</a>
+
+### <a name="var-ref-authorname">authorName</a>
+
+### <a name="var-ref-owner">owner</a>
+
+### <a name="var-ref-mergebot">mergeBot</a>
+
+### <a name="var-ref-projectname">projectName</a>
+
+------
 

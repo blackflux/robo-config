@@ -15,6 +15,15 @@ const endSpoiler = level => [
   ''
 ];
 
+const normalizeRef = input => input
+  .trim()
+  .toLowerCase()
+  .replace(/[^\w\- ]+/g, '')
+  .replace(/\s/g, '-')
+  .replace(/-+$/, '');
+const createRef = (type, content) => `<a name="${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
+const linkRef = (type, content) => `[${content}](#${normalizeRef(`${type}-ref-${content}`)})`;
+
 const documentFiles = (root, files) => {
   const result = [];
   result.push('```');
@@ -60,14 +69,14 @@ const documentSection = (baseLevel, {
 
   if (requires.length !== 0) {
     result.push(...startSpoiler('Requires', level - baseLevel));
-    result.push(...requires.map(r => `- \`${r}\``));
+    result.push(...requires.map(r => `- ${linkRef('req', r)}`));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }
 
   if (variables.length !== 0) {
     result.push(...startSpoiler('Variables', level - baseLevel));
-    result.push(...variables.map(r => `- \`${r}\``));
+    result.push(...variables.map(v => `- ${linkRef('var', v)}`));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }
@@ -142,6 +151,30 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
   });
   result.push('</details>');
   result.push('');
+
+  // append docs for variables and requires
+  const reqs = [...new Set(sections.reduce((p, c) => p.concat(c.requires), []))];
+  if (reqs.length !== 0) {
+    result.push('## Requires');
+    result.push('');
+    reqs.forEach((r) => {
+      result.push(`### ${createRef('req', r)}`);
+      result.push('');
+    });
+    result.push('------');
+    result.push('');
+  }
+  const vars = [...new Set(sections.reduce((p, c) => p.concat(c.variables), []))];
+  if (vars.length !== 0) {
+    result.push('## Variables');
+    result.push('');
+    vars.forEach((v) => {
+      result.push(`### ${createRef('var', v)}`);
+      result.push('');
+    });
+    result.push('------');
+    result.push('');
+  }
 
   return result;
 };
