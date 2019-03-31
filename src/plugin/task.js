@@ -1,10 +1,12 @@
 const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
+const get = require('lodash.get');
 const deepmerge = require('deepmerge');
 const Joi = require('joi');
 const sfs = require('smart-fs');
-const { populateVars } = require('./vars');
+const objectScan = require('object-scan');
+const { populateVars, determineVars } = require('./vars');
 const strategies = require('./strategies');
 
 
@@ -113,3 +115,30 @@ const applyTasksRec = (taskDir, projectRoot, taskNames, variables) => {
   return result;
 };
 module.exports.applyTasksRec = applyTasksRec;
+
+const extractMeta = (taskDir, taskNames) => {
+  assert(typeof taskDir === 'string', 'Invalid "taskDir" parameter format');
+  assert(Array.isArray(taskNames) && taskNames.every(t => typeof t === 'string'), 'Invalid "taskDir" parameter format');
+
+  const variables = new Set();
+  const target = new Set();
+
+  const buffer = taskNames.slice();
+  while (buffer.length !== 0) {
+    const taskName = buffer.pop();
+    const task = sfs.smartRead(sfs.guessFile(path.join(taskDir, taskName)));
+    if (task.tasks !== undefined) {
+      buffer.push(...task.tasks.map(stn => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`)));
+    }
+    objectScan(['snippets[*].variables'])(task, { joined: false })
+      .forEach(vs => determineVars(get(task, vs)).forEach(v => variables.add(v)));
+    if (task.target !== undefined) {
+      target.add(task.target);
+    }
+  }
+  return {
+    variables: [...variables],
+    target: [...target]
+  };
+};
+module.exports.extractMeta = extractMeta;

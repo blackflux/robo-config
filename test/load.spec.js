@@ -16,18 +16,12 @@ describe('Testing Test Plugin', () => {
   });
 
   it('Testing All Public Tasks', () => {
-    const result = loadSpec(plugin).test(path.join(__dirname, 'mock', 'project'), {
-      // todo: generate variables
-      variable: 'variable'
-    });
+    const result = loadSpec(plugin).test(path.join(__dirname, 'mock', 'project'));
     expect(result).to.deep.equal([]);
   });
 
   it('Testing All Public Tasks (Regeneration)', () => {
-    const result = loadSpec(plugin).test(dir, {
-      // todo: generate variables
-      variable: 'variable'
-    });
+    const result = loadSpec(plugin).test(dir);
     expect(result.sort()).to.deep.equal(sfs.walkDir(dir).map(e => `Updated: ${e}`).sort());
   });
 });
