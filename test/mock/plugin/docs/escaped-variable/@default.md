@@ -1,4 +1,4 @@
-# `escaped-variable/@default.json`
+#  `escaped-variable/@default.json`
 
 Task collection description.
 
@@ -15,7 +15,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## escaped-variable/task
+## > escaped-variable/task
 
 _Updating `escaped-variable.txt` using `overwrite`._
 

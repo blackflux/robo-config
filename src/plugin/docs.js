@@ -1,5 +1,6 @@
 const assert = require('assert');
 const path = require('path');
+const Joi = require('joi');
 const sfs = require('smart-fs');
 const treeify = require('object-treeify');
 const { determineVars } = require('./vars');
@@ -14,6 +15,15 @@ const endSpoiler = level => [
   `<!---${level}--></details>`,
   ''
 ];
+
+const normalizeRef = input => input
+  .trim()
+  .toLowerCase()
+  .replace(/[^\w\- ]+/g, '')
+  .replace(/\s/g, '-')
+  .replace(/-+$/, '');
+const createRef = (type, content) => `<a name="${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
+const linkRef = (type, content) => `[${content}](#${normalizeRef(`${type}-ref-${content}`)})`;
 
 const documentFiles = (root, files) => {
   const result = [];
@@ -43,13 +53,13 @@ const documentSection = (baseLevel, {
 
   const result = [];
   if (typeof task.target === 'string') {
-    result.push(`${'#'.repeat(level + 1)} ${taskName}`, '');
+    result.push(`${'#'.repeat(level + 1)} ${'>'.repeat(level)} ${taskName}`, '');
     result.push(`_Updating \`${task.target}\` using \`${task.strategy}\`._`);
     result.push('');
     result.push(...task.purpose.map(d => `- ${d}`));
     result.push('');
   } else {
-    result.push(`${'#'.repeat(level + 1)} \`${taskName}\``, '');
+    result.push(`${'#'.repeat(level + 1)} ${'>'.repeat(level)} \`${taskName}\``, '');
     result.push(task.description);
     result.push('');
   }
@@ -60,14 +70,14 @@ const documentSection = (baseLevel, {
 
   if (requires.length !== 0) {
     result.push(...startSpoiler('Requires', level - baseLevel));
-    result.push(...requires.map(r => `- \`${r}\``));
+    result.push(...requires.map(r => `- ${linkRef('req', r)}`));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }
 
   if (variables.length !== 0) {
     result.push(...startSpoiler('Variables', level - baseLevel));
-    result.push(...variables.map(r => `- \`${r}\``));
+    result.push(...variables.map(v => `- ${linkRef('var', v)}`));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }
@@ -75,7 +85,7 @@ const documentSection = (baseLevel, {
   return result;
 };
 
-const generateDocs = (taskDir, taskNames, baseLevel) => {
+const generateDocs = (taskDir, reqDir, varDir, taskNames, baseLevel) => {
   assert(
     Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'),
     'Invalid "taskNames" parameter format.'
@@ -135,6 +145,7 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
       result.push(...startSpoiler('Details', lastLevel - baseLevel));
     } else if (lastLevel > section.level) {
       result.push('------');
+      result.push('');
       result.push(...endSpoiler(section.level - baseLevel));
     }
     result.push(...documentSection(baseLevel, section));
@@ -143,11 +154,81 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
   result.push('</details>');
   result.push('');
 
+  // append docs for requires and variables
+  [
+    {
+      name: 'Requires',
+      source: 'requires',
+      dir: reqDir,
+      schema: Joi.object().keys({
+        description: Joi.string().required(),
+        details: Joi.string().required(),
+        website: Joi.string().required()
+      })
+        .unknown(false)
+        .required(),
+      render: ({ description, details, website }) => [
+        `[Website](${website})`,
+        '',
+        description,
+        '',
+        ...startSpoiler('Details', 0),
+        details,
+        '',
+        ...endSpoiler(0)
+      ]
+    },
+    {
+      name: 'Variables',
+      source: 'variables',
+      dir: varDir,
+      schema: Joi.object().keys({
+        description: Joi.string().required(),
+        details: Joi.string().required(),
+        type: Joi.string().required()
+      })
+        .unknown(false)
+        .required(),
+      render: ({ description, details, type }) => [
+        `Type: \`${type}\``,
+        '',
+        description,
+        '',
+        ...startSpoiler('Details', 0),
+        details,
+        '',
+        ...endSpoiler(0)
+      ]
+    }
+  ].forEach((def) => {
+    const toDocument = [...new Set(sections.reduce((p, c) => p.concat(c[def.source]), []))];
+    if (toDocument.length !== 0) {
+      result.push('------');
+      result.push('------');
+      result.push('');
+      result.push(`## ${def.name}`);
+      result.push('');
+      toDocument.forEach((e) => {
+        result.push(`### ${createRef(def.name.slice(0, 3), e)}`);
+        result.push('');
+        const f = sfs.guessFile(path.join(def.dir, e));
+        assert(typeof f === 'string', `Missing ${def.name} Definition: ${e}`);
+        const data = sfs.smartRead(f);
+        assert(
+          Joi.validate(data, def.schema).error === null,
+          `Invalid ${def.name} Definition: ${e}\n\n${JSON
+            .stringify(Joi.validate(data, def.schema).error, null, 2)}`
+        );
+        result.push(...def.render(data));
+      });
+    }
+  });
+
   return result;
 };
 module.exports.generateDocs = generateDocs;
 
-const syncDocs = (taskDir, docDir) => {
+const syncDocs = (taskDir, reqDir, varDir, docDir) => {
   const docFiles = [];
 
   // generate doc files
@@ -156,7 +237,7 @@ const syncDocs = (taskDir, docDir) => {
     .map(f => [`${f}.json`, `${f}.md`])
     .forEach(([f, docFile]) => {
       docFiles.push(docFile);
-      if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(taskDir, [f], 0))) {
+      if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(taskDir, reqDir, varDir, [f], 0))) {
         result.push(`Updated: ${docFile}`);
       }
     });

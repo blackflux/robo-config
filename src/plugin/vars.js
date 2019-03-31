@@ -5,7 +5,7 @@ const objectScan = require('object-scan');
 
 const varRegex = /\${([-_a-zA-Z0-9]+)}/g;
 const varRegexExact = /^\${([-_a-zA-Z0-9]+)}$/g;
-const escapedVarRegex = /\$\\{([-_a-zA-Z0-9]+)}/g;
+const escapedVarRegex = /\$([\\]+){([-_a-zA-Z0-9]+)}/g;
 
 const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
   assert(typeof input === 'string', 'Invalid "input" parameter format.');
@@ -30,7 +30,7 @@ const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
       });
   }
   return typeof result === 'string'
-    ? result.replace(escapedVarRegex, (_, varName) => `$\{${varName}}`)
+    ? result.replace(escapedVarRegex, (_, escape, varName) => `$${escape.slice(1)}{${varName}}`)
     : result;
 };
 

@@ -1,4 +1,4 @@
-# `txt-overwrite/@default.json`
+#  `txt-overwrite/@default.json`
 
 Task collection description.
 
@@ -15,7 +15,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## txt-overwrite/task
+## > txt-overwrite/task
 
 _Updating `overwrite-target.txt` using `overwrite`._
 

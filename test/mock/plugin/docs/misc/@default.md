@@ -1,4 +1,4 @@
-# `misc/@default.json`
+#  `misc/@default.json`
 
 Task collection description.
 
@@ -15,21 +15,21 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- `dependency`
+- [dependency](#req-ref-dependency)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- `variable`
+- [variable](#var-ref-variable)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## misc/task
+## > misc/task
 
 _Updating `misc.txt` using `overwrite`._
 
@@ -48,18 +48,18 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `dependency`
+- [dependency](#req-ref-dependency)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `variable`
+- [variable](#var-ref-variable)
 
 <!---1--></details>
 
-## `misc/@other`
+## > `misc/@other`
 
 Task collection description.
 
@@ -76,21 +76,21 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `dependency`
+- [dependency](#req-ref-dependency)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `variable`
+- [variable](#var-ref-variable)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-### misc/task
+### >> misc/task
 
 _Updating `misc.txt` using `overwrite`._
 
@@ -109,21 +109,22 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `dependency`
+- [dependency](#req-ref-dependency)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `variable`
+- [variable](#var-ref-variable)
 
 <!---2--></details>
 
 ------
+
 <!---1--></details>
 
-## misc/task
+## > misc/task
 
 _Updating `misc.txt` using `overwrite`._
 
@@ -142,16 +143,52 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `dependency`
+- [dependency](#req-ref-dependency)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `variable`
+- [variable](#var-ref-variable)
 
 <!---1--></details>
 
 </details>
+
+------
+------
+
+## Requires
+
+### <a name="req-ref-dependency">dependency</a>
+
+[Website](https://www.some-tool-name.com)
+
+Short description about this dependency.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Detailed description about this dependency and how it's used.
+
+<!---0--></details>
+
+------
+------
+
+## Variables
+
+### <a name="var-ref-variable">variable</a>
+
+Type: `string`
+
+Short description of what this variable does.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Detailed description of what this variable does.
+
+<!---0--></details>
 

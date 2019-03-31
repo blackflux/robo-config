@@ -1,4 +1,4 @@
-# `txt-unique-top/@default.json`
+#  `txt-unique-top/@default.json`
 
 Task collection description.
 
@@ -15,7 +15,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## txt-unique-top/task
+## > txt-unique-top/task
 
 _Updating `unique-top.txt` using `unique-top`._
 
