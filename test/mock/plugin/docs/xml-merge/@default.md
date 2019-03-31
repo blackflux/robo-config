@@ -1,4 +1,4 @@
-# `xml-merge/@default.json`
+#  `xml-merge/@default.json`
 
 Task collection description.
 
@@ -15,7 +15,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## xml-merge/task
+## > xml-merge/task
 
 _Updating `merge-target.xml` using `xml-merge`._
 

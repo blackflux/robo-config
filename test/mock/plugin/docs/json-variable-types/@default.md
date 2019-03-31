@@ -1,4 +1,4 @@
-# `json-variable-types/@default.json`
+#  `json-variable-types/@default.json`
 
 Task collection description.
 
@@ -15,7 +15,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## json-variable-types/task
+## > json-variable-types/task
 
 _Updating `variables-target.json` using `overwrite`._
 

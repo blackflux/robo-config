@@ -1,4 +1,4 @@
-# `misc/@other.json`
+#  `misc/@other.json`
 
 Task collection description.
 
@@ -29,7 +29,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## misc/task
+## > misc/task
 
 _Updating `misc.txt` using `overwrite`._
 

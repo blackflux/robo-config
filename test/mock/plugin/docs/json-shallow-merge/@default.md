@@ -1,4 +1,4 @@
-# `json-shallow-merge/@default.json`
+#  `json-shallow-merge/@default.json`
 
 Task collection description.
 
@@ -15,7 +15,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## json-shallow-merge/task
+## > json-shallow-merge/task
 
 _Updating `merge-shallow-target.json` using `merge-shallow`._
 

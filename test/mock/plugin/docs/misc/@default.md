@@ -1,4 +1,4 @@
-# `misc/@default.json`
+#  `misc/@default.json`
 
 Task collection description.
 
@@ -29,7 +29,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## misc/task
+## > misc/task
 
 _Updating `misc.txt` using `overwrite`._
 
@@ -59,7 +59,7 @@ project
 
 <!---1--></details>
 
-## `misc/@other`
+## > `misc/@other`
 
 Task collection description.
 
@@ -90,7 +90,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-### misc/task
+### >> misc/task
 
 _Updating `misc.txt` using `overwrite`._
 
@@ -120,11 +120,11 @@ project
 
 <!---2--></details>
 
-<!---1--></details>
-
 ------
 
-## misc/task
+<!---1--></details>
+
+## > misc/task
 
 _Updating `misc.txt` using `overwrite`._
 

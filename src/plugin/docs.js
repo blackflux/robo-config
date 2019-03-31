@@ -52,13 +52,13 @@ const documentSection = (baseLevel, {
 
   const result = [];
   if (typeof task.target === 'string') {
-    result.push(`${'#'.repeat(level + 1)} ${taskName}`, '');
+    result.push(`${'#'.repeat(level + 1)} ${'>'.repeat(level)} ${taskName}`, '');
     result.push(`_Updating \`${task.target}\` using \`${task.strategy}\`._`);
     result.push('');
     result.push(...task.purpose.map(d => `- ${d}`));
     result.push('');
   } else {
-    result.push(`${'#'.repeat(level + 1)} \`${taskName}\``, '');
+    result.push(`${'#'.repeat(level + 1)} ${'>'.repeat(level)} \`${taskName}\``, '');
     result.push(task.description);
     result.push('');
   }
@@ -143,9 +143,9 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
     if (lastLevel < section.level) {
       result.push(...startSpoiler('Details', lastLevel - baseLevel));
     } else if (lastLevel > section.level) {
-      result.push(...endSpoiler(section.level - baseLevel));
       result.push('------');
       result.push('');
+      result.push(...endSpoiler(section.level - baseLevel));
     }
     result.push(...documentSection(baseLevel, section));
     lastLevel = section.level;

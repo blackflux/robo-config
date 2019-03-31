@@ -1,4 +1,4 @@
-# `txt-merge-below-title/@default.json`
+#  `txt-merge-below-title/@default.json`
 
 Task collection description.
 
@@ -15,7 +15,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## txt-merge-below-title/task
+## > txt-merge-below-title/task
 
 _Updating `merge-below-title.txt` using `merge-below-title`._
 
