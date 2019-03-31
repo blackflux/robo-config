@@ -84,7 +84,7 @@ const documentSection = (baseLevel, {
   return result;
 };
 
-const generateDocs = (taskDir, taskNames, baseLevel) => {
+const generateDocs = (taskDir, reqDir, varDir, taskNames, baseLevel) => {
   assert(
     Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'),
     'Invalid "taskNames" parameter format.'
@@ -183,7 +183,7 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
 };
 module.exports.generateDocs = generateDocs;
 
-const syncDocs = (taskDir, docDir) => {
+const syncDocs = (taskDir, reqDir, varDir, docDir) => {
   const docFiles = [];
 
   // generate doc files
@@ -192,7 +192,7 @@ const syncDocs = (taskDir, docDir) => {
     .map(f => [`${f}.json`, `${f}.md`])
     .forEach(([f, docFile]) => {
       docFiles.push(docFile);
-      if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(taskDir, [f], 0))) {
+      if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(taskDir, reqDir, varDir, [f], 0))) {
         result.push(`Updated: ${docFile}`);
       }
     });

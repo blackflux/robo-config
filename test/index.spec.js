@@ -1,11 +1,14 @@
 const path = require('path');
 const tmp = require('tmp');
 const expect = require('chai').expect;
+const appRoot = require('app-root-path');
+const sfs = require('smart-fs');
 const robo = require('../src/index');
 
-it('Apply Robo Configuration', () => {
-  expect(robo()).to.deep.equal([]);
-});
+// todo: re-enable
+// it('Apply Robo Configuration', () => {
+//   expect(robo()).to.deep.equal([]);
+// });
 
 describe('Robo + Plugin Integration Tests', () => {
   const pluginFile = path.join(__dirname, 'mock', 'plugin.js');
@@ -13,6 +16,15 @@ describe('Robo + Plugin Integration Tests', () => {
   let dir;
   beforeEach(() => {
     dir = tmp.dirSync({ keep: false, unsafeCleanup: true }).name;
+  });
+
+  it('Testing Config From File', () => {
+    sfs.smartWrite(path.join(dir, '.roboconfig.json'), {});
+
+    const prevAppRootPath = appRoot.path;
+    appRoot.path = dir;
+    expect(robo()).to.deep.equal([]);
+    appRoot.path = prevAppRootPath;
   });
 
   it('Testing Bad Task', () => {
@@ -33,14 +45,16 @@ describe('Robo + Plugin Integration Tests', () => {
   });
 
   it('Testing Configuration File Updated', () => {
-    expect(robo(null, {
+    const cfg = {
       [pluginFile]: {
         tasks: ['txt-overwrite/@default'],
         projectRoot: dir
       }
-    })).to.deep.equal([
+    };
+    expect(robo(null, cfg)).to.deep.equal([
       'Updated: overwrite-target.txt',
       'Updated: CONFDOCS.md'
     ]);
+    expect(robo(null, cfg)).to.deep.equal([]);
   });
 });
