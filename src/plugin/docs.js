@@ -1,5 +1,6 @@
 const assert = require('assert');
 const path = require('path');
+const Joi = require('joi');
 const sfs = require('smart-fs');
 const treeify = require('object-treeify');
 const { determineVars } = require('./vars');
@@ -153,31 +154,75 @@ const generateDocs = (taskDir, reqDir, varDir, taskNames, baseLevel) => {
   result.push('</details>');
   result.push('');
 
-  // append docs for variables and requires
-  const reqs = [...new Set(sections.reduce((p, c) => p.concat(c.requires), []))];
-  if (reqs.length !== 0) {
-    result.push('------');
-    result.push('------');
-    result.push('');
-    result.push('## Requires');
-    result.push('');
-    reqs.forEach((r) => {
-      result.push(`### ${createRef('req', r)}`);
+  // append docs for requires and variables
+  [
+    {
+      name: 'Requires',
+      source: 'requires',
+      dir: reqDir,
+      schema: Joi.object().keys({
+        description: Joi.string().required(),
+        details: Joi.string().required(),
+        website: Joi.string().required()
+      })
+        .unknown(false)
+        .required(),
+      render: ({ description, details, website }) => [
+        `[Website](${website})`,
+        '',
+        description,
+        '',
+        ...startSpoiler('Details', 0),
+        details,
+        '',
+        ...endSpoiler(0)
+      ]
+    },
+    {
+      name: 'Variables',
+      source: 'variables',
+      dir: varDir,
+      schema: Joi.object().keys({
+        description: Joi.string().required(),
+        details: Joi.string().required(),
+        type: Joi.string().required()
+      })
+        .unknown(false)
+        .required(),
+      render: ({ description, details, type }) => [
+        `Type: \`${type}\``,
+        '',
+        description,
+        '',
+        ...startSpoiler('Details', 0),
+        details,
+        '',
+        ...endSpoiler(0)
+      ]
+    }
+  ].forEach((def) => {
+    const toDocument = [...new Set(sections.reduce((p, c) => p.concat(c[def.source]), []))];
+    if (toDocument.length !== 0) {
+      result.push('------');
+      result.push('------');
       result.push('');
-    });
-  }
-  const vars = [...new Set(sections.reduce((p, c) => p.concat(c.variables), []))];
-  if (vars.length !== 0) {
-    result.push('------');
-    result.push('------');
-    result.push('');
-    result.push('## Variables');
-    result.push('');
-    vars.forEach((v) => {
-      result.push(`### ${createRef('var', v)}`);
+      result.push(`## ${def.name}`);
       result.push('');
-    });
-  }
+      toDocument.forEach((e) => {
+        result.push(`### ${createRef(def.name.slice(0, 3), e)}`);
+        result.push('');
+        const f = sfs.guessFile(path.join(def.dir, e));
+        assert(typeof f === 'string', `Missing ${def.name} Definition: ${e}`);
+        const data = sfs.smartRead(f);
+        assert(
+          Joi.validate(data, def.schema).error === null,
+          `Invalid ${def.name} Definition: ${e}\n\n${JSON
+            .stringify(Joi.validate(data, def.schema).error, null, 2)}`
+        );
+        result.push(...def.render(data));
+      });
+    }
+  });
 
   return result;
 };

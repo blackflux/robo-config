@@ -163,10 +163,32 @@ project
 
 ### <a name="req-ref-dependency">dependency</a>
 
+[Website](https://www.some-tool-name.com)
+
+Short description about this dependency.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Detailed description about this dependency and how it's used.
+
+<!---0--></details>
+
 ------
 ------
 
 ## Variables
 
 ### <a name="var-ref-variable">variable</a>
+
+Type: `string`
+
+Short description of what this variable does.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Detailed description of what this variable does.
+
+<!---0--></details>
 
