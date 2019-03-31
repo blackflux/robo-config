@@ -38,11 +38,6 @@ describe('Integration docs.js', () => {
   });
 
   it('Testing documentFolder (delete and write)', () => {
-    const docDir = path.join(dir, 'docs');
-    fs.mkdirSync(docDir);
-    fs.mkdirSync(path.join(docDir, 'scope'));
-    fs.writeFileSync(path.join(docDir, 'scope', '@unknown.md'), '');
-
     const taskDir = path.join(dir, 'tasks');
     fs.mkdirSync(taskDir);
     fs.mkdirSync(path.join(taskDir, 'scope'));
@@ -51,8 +46,16 @@ describe('Integration docs.js', () => {
       description: 'This is a task.'
     }));
 
+    const reqDir = path.join(dir, 'reqs');
+    const varDir = path.join(dir, 'vars');
+
+    const docDir = path.join(dir, 'docs');
+    fs.mkdirSync(docDir);
+    fs.mkdirSync(path.join(docDir, 'scope'));
+    fs.writeFileSync(path.join(docDir, 'scope', '@unknown.md'), '');
+
     expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@unknown.md']);
-    expect(syncDocs(taskDir, docDir)).to.deep.equal([
+    expect(syncDocs(taskDir, reqDir, varDir, docDir)).to.deep.equal([
       'Updated: scope/@task.md',
       'Documentation Updated. Please commit and re-run.'
     ]);

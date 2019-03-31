@@ -51,3 +51,10 @@ It does not do it automatically or silently.
 ## Usage
 
 ...
+
+
+## Plugin
+
+- variables + escaping
+- what plugin needs to export
+- file formats / example

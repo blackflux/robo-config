@@ -7,6 +7,7 @@
     ],
     "variables": {
       "repoKey": "blackflux/robo-config",
+      "packageName": "robo-config",
       "repoName": "robo-config",
       "projectName": "robo-config",
       "owner": "simlu",

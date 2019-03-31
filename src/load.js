@@ -1,15 +1,35 @@
+const assert = require('assert');
+const path = require('path');
+const sfs = require('smart-fs');
 const { syncDocs, generateDocs } = require('./plugin/docs');
 const { applyTasksRec, listTasks } = require('./plugin/task');
 
-// todo: validate taskDir, docsDir etc
-module.exports = p => (p.apply === undefined ? ({
-  syncDocs: () => syncDocs(p.taskDir, p.docsDir),
-  generateDocs: (pluginName, taskNames) => [
-    `## Plugin [${pluginName}](https://www.npmjs.com/package/${pluginName})`,
-    '',
-    ...generateDocs(p.taskDir, taskNames, 2)
-  ],
-  apply: (projectRoot, taskNames, variables) => applyTasksRec(p.taskDir, projectRoot, taskNames, variables),
-  // todo: should generate CONFDOC.md file
-  test: (projectRoot, variables) => applyTasksRec(p.taskDir, projectRoot, listTasks(p.taskDir), variables)
-}) : p);
+module.exports = (p) => {
+  assert(Object.keys(p).length === 4, 'Unknown property exposed.');
+  assert(typeof p.taskDir === 'string');
+  assert(typeof p.reqDir === 'string');
+  assert(typeof p.varDir === 'string');
+  assert(typeof p.docDir === 'string');
+
+  return ({
+    syncDocs: () => syncDocs(p.taskDir, p.reqDir, p.varDir, p.docDir),
+    generateDocs: (pluginName, taskNames) => [
+      `## Plugin [${pluginName}](https://www.npmjs.com/package/${pluginName})`,
+      '',
+      ...generateDocs(p.taskDir, p.reqDir, p.varDir, taskNames, 2)
+    ],
+    apply: (projectRoot, taskNames, variables) => applyTasksRec(p.taskDir, projectRoot, taskNames, variables),
+    test: (projectRoot, variables) => {
+      const taskNames = listTasks(p.taskDir);
+      const result = applyTasksRec(p.taskDir, projectRoot, taskNames, variables);
+      if (sfs.smartWrite(path.join(projectRoot, 'CONFDOCS.md'), [
+        '## Example CONFDOCS.md',
+        '',
+        ...generateDocs(p.taskDir, p.reqDir, p.varDir, taskNames, 2)
+      ])) {
+        result.push('Updated: CONFDOCS.md');
+      }
+      return result;
+    }
+  });
+};

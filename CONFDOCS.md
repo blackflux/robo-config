@@ -2,9 +2,9 @@
 
 Documents configuration tasks managed by [robo-config](https://github.com/blackflux/robo-config).
 
-## Plugin `@blackflux/robo-config-plugin`
+## Plugin [@blackflux/robo-config-plugin](https://www.npmjs.com/package/@blackflux/robo-config-plugin)
 
-### `assorted/@npm-opensource`
+### >> `assorted/@npm-opensource`
 
 Manage various configuration files for an open source npm github repo.
 
@@ -31,37 +31,37 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- `js-gardener`
-- `semantic-release`
-- `npm-published`
-- `david-dm`
-- `dependabot`
-- `coveralls`
-- `circleci`
-- `github`
-- `javascript`
-- `git`
-- `npm`
-- `yarn`
-- `gally`
+- [js-gardener](#req-ref-js-gardener)
+- [semantic-release](#req-ref-semantic-release)
+- [npm-published](#req-ref-npm-published)
+- [david-dm](#req-ref-david-dm)
+- [dependabot](#req-ref-dependabot)
+- [coveralls](#req-ref-coveralls)
+- [circleci](#req-ref-circleci)
+- [github](#req-ref-github)
+- [javascript](#req-ref-javascript)
+- [git](#req-ref-git)
+- [npm](#req-ref-npm)
+- [yarn](#req-ref-yarn)
+- [gally](#req-ref-gally)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- `repoName`
-- `repoKey`
-- `authorName`
-- `owner`
-- `mergeBot`
+- [packageName](#var-ref-packagename)
+- [repoKey](#var-ref-repokey)
+- [authorName](#var-ref-authorname)
+- [owner](#var-ref-owner)
+- [mergeBot](#var-ref-mergebot)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### `badges/@npm-opensource`
+#### >>> `badges/@npm-opensource`
 
 Display various badges in README.
 
@@ -78,28 +78,28 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `js-gardener`
-- `semantic-release`
-- `npm-published`
-- `david-dm`
-- `dependabot`
-- `coveralls`
-- `circleci`
+- [js-gardener](#req-ref-js-gardener)
+- [semantic-release](#req-ref-semantic-release)
+- [npm-published](#req-ref-npm-published)
+- [david-dm](#req-ref-david-dm)
+- [dependabot](#req-ref-dependabot)
+- [coveralls](#req-ref-coveralls)
+- [circleci](#req-ref-circleci)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `repoName`
-- `repoKey`
+- [packageName](#var-ref-packagename)
+- [repoKey](#var-ref-repokey)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### badges/js-gardener
+##### >>>> badges/js-gardener
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -118,11 +118,11 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `js-gardener`
+- [js-gardener](#req-ref-js-gardener)
 
 <!---2--></details>
 
-##### badges/semantic-release
+##### >>>> badges/semantic-release
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -141,11 +141,11 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `semantic-release`
+- [semantic-release](#req-ref-semantic-release)
 
 <!---2--></details>
 
-##### badges/npm-downloads
+##### >>>> badges/npm-downloads
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -164,18 +164,18 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `npm-published`
+- [npm-published](#req-ref-npm-published)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoName`
+- [packageName](#var-ref-packagename)
 
 <!---2--></details>
 
-##### badges/npm-status
+##### >>>> badges/npm-status
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -194,18 +194,18 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `npm-published`
+- [npm-published](#req-ref-npm-published)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoName`
+- [packageName](#var-ref-packagename)
 
 <!---2--></details>
 
-##### badges/david-dm
+##### >>>> badges/david-dm
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -224,18 +224,18 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `david-dm`
+- [david-dm](#req-ref-david-dm)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoKey`
+- [repoKey](#var-ref-repokey)
 
 <!---2--></details>
 
-##### badges/dependabot
+##### >>>> badges/dependabot
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -254,18 +254,18 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `dependabot`
+- [dependabot](#req-ref-dependabot)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoKey`
+- [repoKey](#var-ref-repokey)
 
 <!---2--></details>
 
-##### badges/coveralls
+##### >>>> badges/coveralls
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -284,18 +284,18 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `coveralls`
+- [coveralls](#req-ref-coveralls)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoKey`
+- [repoKey](#var-ref-repokey)
 
 <!---2--></details>
 
-##### badges/circleci
+##### >>>> badges/circleci
 
 _Updating `README.md` using `merge-below-title`._
 
@@ -314,21 +314,22 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `circleci`
+- [circleci](#req-ref-circleci)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `repoKey`
+- [repoKey](#var-ref-repokey)
 
 <!---2--></details>
 
 ------
+
 <!---1--></details>
 
-#### `dependabot/@default-js`
+#### >>> `dependabot/@default-js`
 
 Recommended base [dependabot configuration](https://dependabot.com/) for javascript projects.
 
@@ -346,16 +347,16 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `dependabot`
-- `github`
-- `javascript`
+- [dependabot](#req-ref-dependabot)
+- [github](#req-ref-github)
+- [javascript](#req-ref-javascript)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### dependabot/js-instant
+##### >>>> dependabot/js-instant
 
 _Updating `.dependabot/config.yml` using `overwrite`._
 
@@ -375,16 +376,17 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `dependabot`
-- `github`
-- `javascript`
+- [dependabot](#req-ref-dependabot)
+- [github](#req-ref-github)
+- [javascript](#req-ref-javascript)
 
 <!---2--></details>
 
 ------
+
 <!---1--></details>
 
-#### `git/@default`
+#### >>> `git/@default`
 
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
 
@@ -401,16 +403,16 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `git`
+- [git](#req-ref-git)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### git/gitignore
+##### >>>> git/gitignore
 
-_Updating `.gitignore` using `merge-top`._
+_Updating `.gitignore` using `unique-top`._
 
 - Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files).
 - Default ignores for JetBrains IDE.
@@ -430,14 +432,15 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `git`
+- [git](#req-ref-git)
 
 <!---2--></details>
 
 ------
+
 <!---1--></details>
 
-#### `license/@MIT-npm`
+#### >>> `license/@MIT-npm`
 
 Recommended base configuration when using MIT License with npm.
 
@@ -455,22 +458,22 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `npm`
+- [npm](#req-ref-npm)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `authorName`
-- `repoKey`
+- [authorName](#var-ref-authorname)
+- [repoKey](#var-ref-repokey)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### license/MIT-LICENSE
+##### >>>> license/MIT-LICENSE
 
 _Updating `LICENSE` using `overwrite`._
 
@@ -489,11 +492,11 @@ project
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `authorName`
+- [authorName](#var-ref-authorname)
 
 <!---2--></details>
 
-##### license/MIT-npm
+##### >>>> license/MIT-npm
 
 _Updating `package.json` using `merge-shallow`._
 
@@ -512,22 +515,23 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `npm`
+- [npm](#req-ref-npm)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- `authorName`
-- `repoKey`
+- [authorName](#var-ref-authorname)
+- [repoKey](#var-ref-repokey)
 
 <!---2--></details>
 
 ------
+
 <!---1--></details>
 
-#### `npm/@default`
+#### >>> `npm/@default`
 
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
@@ -544,16 +548,16 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `npm`
+- [npm](#req-ref-npm)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### npm/npmignore
+##### >>>> npm/npmignore
 
-_Updating `.npmignore` using `merge-top`._
+_Updating `.npmignore` using `unique-top`._
 
 - Inject comment into .npmignore explaining when to use it.
 
@@ -570,14 +574,15 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `npm`
+- [npm](#req-ref-npm)
 
 <!---2--></details>
 
 ------
+
 <!---1--></details>
 
-#### `semantic-release/@default`
+#### >>> `semantic-release/@default`
 
 Recommended base configuration when using [semantic-release](https://github.com/semantic-release/semantic-release).
 
@@ -594,14 +599,14 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `semantic-release`
+- [semantic-release](#req-ref-semantic-release)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### semantic-release/commit-conventions
+##### >>>> semantic-release/commit-conventions
 
 _Updating `.releaserc.json` using `overwrite`._
 
@@ -620,14 +625,15 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- `semantic-release`
+- [semantic-release](#req-ref-semantic-release)
 
 <!---2--></details>
 
 ------
+
 <!---1--></details>
 
-#### circleci/npm-opensource:two-branch
+#### >>> circleci/npm-opensource:two-branch
 
 _Updating `.circleci/config.yml` using `overwrite`._
 
@@ -648,18 +654,18 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `npm`
-- `yarn`
-- `gally`
-- `github`
-- `circleci`
-- `coveralls`
-- `dependabot`
-- `semantic-release`
+- [npm](#req-ref-npm)
+- [yarn](#req-ref-yarn)
+- [gally](#req-ref-gally)
+- [github](#req-ref-github)
+- [circleci](#req-ref-circleci)
+- [coveralls](#req-ref-coveralls)
+- [dependabot](#req-ref-dependabot)
+- [semantic-release](#req-ref-semantic-release)
 
 <!---1--></details>
 
-#### gally/npm-opensource:two-branch
+#### >>> gally/npm-opensource:two-branch
 
 _Updating `.gally.json` using `overwrite`._
 
@@ -679,25 +685,26 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `circleci`
-- `gally`
-- `github`
+- [circleci](#req-ref-circleci)
+- [gally](#req-ref-gally)
+- [github](#req-ref-github)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `owner`
-- `mergeBot`
-- `repoKey`
+- [owner](#var-ref-owner)
+- [mergeBot](#var-ref-mergebot)
+- [repoKey](#var-ref-repokey)
 
 <!---1--></details>
 
 ------
+
 <!---0--></details>
 
-### `jetbrains/@default`
+### >> `jetbrains/@default`
 
 Recommended base configuration when using Jetbrains.
 
@@ -715,22 +722,22 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- `jetbrains`
-- `nyc`
+- [jetbrains](#req-ref-jetbrains)
+- [nyc](#req-ref-nyc)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- `projectName`
+- [projectName](#var-ref-projectname)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### jetbrains/exclude-coverage-folder
+#### >>> jetbrains/exclude-coverage-folder
 
 _Updating `.idea/${projectName}.iml` using `xml-merge`._
 
@@ -750,22 +757,23 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- `jetbrains`
-- `nyc`
+- [jetbrains](#req-ref-jetbrains)
+- [nyc](#req-ref-nyc)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- `projectName`
+- [projectName](#var-ref-projectname)
 
 <!---1--></details>
 
 ------
+
 <!---0--></details>
 
-### `editor/@default`
+### >> `editor/@default`
 
 Recommended base [code editor configuration](https://editorconfig.org/).
 
@@ -782,7 +790,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### editor/two-space
+#### >>> editor/two-space
 
 _Updating `.editorconfig` using `overwrite`._
 
@@ -802,4 +810,56 @@ project
 <!---1--></details>
 
 </details>
+
+------
+------
+
+## Requires
+
+### <a name="req-ref-js-gardener">js-gardener</a>
+
+### <a name="req-ref-semantic-release">semantic-release</a>
+
+### <a name="req-ref-npm-published">npm-published</a>
+
+### <a name="req-ref-david-dm">david-dm</a>
+
+### <a name="req-ref-dependabot">dependabot</a>
+
+### <a name="req-ref-coveralls">coveralls</a>
+
+### <a name="req-ref-circleci">circleci</a>
+
+### <a name="req-ref-github">github</a>
+
+### <a name="req-ref-javascript">javascript</a>
+
+### <a name="req-ref-git">git</a>
+
+### <a name="req-ref-npm">npm</a>
+
+### <a name="req-ref-yarn">yarn</a>
+
+### <a name="req-ref-gally">gally</a>
+
+### <a name="req-ref-jetbrains">jetbrains</a>
+
+### <a name="req-ref-nyc">nyc</a>
+
+------
+------
+
+## Variables
+
+### <a name="var-ref-packagename">packageName</a>
+
+### <a name="var-ref-repokey">repoKey</a>
+
+### <a name="var-ref-authorname">authorName</a>
+
+### <a name="var-ref-owner">owner</a>
+
+### <a name="var-ref-mergebot">mergeBot</a>
+
+### <a name="var-ref-projectname">projectName</a>
 

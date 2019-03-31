@@ -1,4 +1,4 @@
-# `json-deep-merge/@default.json`
+#  `json-deep-merge/@default.json`
 
 Task collection description.
 
@@ -15,7 +15,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## json-deep-merge/task
+## > json-deep-merge/task
 
 _Updating `merge-deep-target.json` using `merge-deep`._
 
