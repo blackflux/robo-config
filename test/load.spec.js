@@ -21,7 +21,9 @@ describe('Testing Test Plugin', () => {
   });
 
   it('Testing All Public Tasks (Regeneration)', () => {
-    const result = loadSpec(plugin).test(dir);
-    expect(result.sort()).to.deep.equal(sfs.walkDir(dir).map(e => `Updated: ${e}`).sort());
+    expect(loadSpec(plugin).test(dir).sort())
+      .to.deep.equal(sfs.walkDir(dir).map(e => `Updated: ${e}`).sort());
+    expect(loadSpec(plugin).test(dir, { variable: 'custom' }))
+      .to.deep.equal(['Updated: misc.txt']);
   });
 });

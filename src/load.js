@@ -23,7 +23,7 @@ module.exports = (pl) => {
       const taskNames = listTasks(pl.taskDir);
       const meta = extractMeta(pl.taskDir, taskNames);
 
-      const unexpectedVars = Object.keys(variables).filter(v => meta.variables.includes(v));
+      const unexpectedVars = Object.keys(variables).filter(v => !meta.variables.includes(v));
       assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
 
       const vars = meta.variables.reduce((p, c) => Object.assign(p, { [c]: p[c] || c }), variables);
