@@ -325,8 +325,9 @@ project
 
 <!---2--></details>
 
-------
 <!---1--></details>
+
+------
 
 #### `dependabot/@default-js`
 
@@ -381,8 +382,9 @@ project
 
 <!---2--></details>
 
-------
 <!---1--></details>
+
+------
 
 #### `git/@default`
 
@@ -434,8 +436,9 @@ project
 
 <!---2--></details>
 
-------
 <!---1--></details>
+
+------
 
 #### `license/@MIT-npm`
 
@@ -524,8 +527,9 @@ project
 
 <!---2--></details>
 
-------
 <!---1--></details>
+
+------
 
 #### `npm/@default`
 
@@ -574,8 +578,9 @@ project
 
 <!---2--></details>
 
-------
 <!---1--></details>
+
+------
 
 #### `semantic-release/@default`
 
@@ -624,8 +629,9 @@ project
 
 <!---2--></details>
 
-------
 <!---1--></details>
+
+------
 
 #### circleci/npm-opensource:two-branch
 
@@ -694,8 +700,9 @@ project
 
 <!---1--></details>
 
-------
 <!---0--></details>
+
+------
 
 ### `jetbrains/@default`
 
@@ -762,8 +769,9 @@ project
 
 <!---1--></details>
 
-------
 <!---0--></details>
+
+------
 
 ### `editor/@default`
 
