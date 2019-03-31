@@ -156,6 +156,7 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
   const reqs = [...new Set(sections.reduce((p, c) => p.concat(c.requires), []))];
   if (reqs.length !== 0) {
     result.push('------');
+    result.push('------');
     result.push('');
     result.push('## Requires');
     result.push('');
@@ -166,6 +167,7 @@ const generateDocs = (taskDir, taskNames, baseLevel) => {
   }
   const vars = [...new Set(sections.reduce((p, c) => p.concat(c.variables), []))];
   if (vars.length !== 0) {
+    result.push('------');
     result.push('------');
     result.push('');
     result.push('## Variables');

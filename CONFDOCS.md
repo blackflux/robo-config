@@ -804,6 +804,7 @@ project
 </details>
 
 ------
+------
 
 ## Requires
 
@@ -837,6 +838,7 @@ project
 
 ### <a name="req-ref-nyc">nyc</a>
 
+------
 ------
 
 ## Variables

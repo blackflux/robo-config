@@ -62,11 +62,13 @@ project
 </details>
 
 ------
+------
 
 ## Requires
 
 ### <a name="req-ref-dependency">dependency</a>
 
+------
 ------
 
 ## Variables
