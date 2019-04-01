@@ -221,3 +221,8 @@ where `project` should contain files similar to a project you would your plugin 
 Variables used in your snippets can be escaped as `$\{escapedVar}`.
 This is converted into `${escapedVar}` before the snippet is applied.
 Handy when configuration files need to contain variables of the same format.
+
+#### File Guessing
+
+In almost all cases you don't need to and should not specify the file extension of a task/file you're using.
+It will automatically be picked up. 
