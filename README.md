@@ -87,12 +87,12 @@ Changes will propagate to your repos as dependencies are updated, giving you ful
 ## Writing your own Plugin
 
 Writing your own robo-config plugin is very easy and gives you the most control. However it is recommended that you
-use popular plugins for basic configuration management and then write your own plugin for those cases that are not covered yet.
+use popular plugins for basic configuration management and then write your own plugin for those cases that are not covered.
 
 Writing your own Plugin for robo-config is very simple.
 A full example can be found [here](https://github.com/blackflux/robo-config-plugin/blob/master/src/index.js).
 
-A plugin is an npm package that exposes an object containing exactly four keys:
+A plugin is an npm package that exposes an object containing the following keys:
 
 - `name`: Fully qualified npm package name of the plugin
 - `taskDir`: Absolute path to the plugin tasks
@@ -125,8 +125,8 @@ Container task names always starts with an `@` symbol. Only container tasks are 
 
 A container task definition file contains the following keys:
 
-- `tasks`: Array of task names. These can be relative as `actionableTask` 
-or referencing a different task directory as `taskDirectory/actionableTask`
+- `tasks`: Array of task names. These can be relative as `task` 
+or referencing a task directory as `taskDirectory/task`
 - `description`: High level description of what this container task does. 
 
 #### Actionable Tasks
@@ -155,7 +155,7 @@ Local variables must be defined in every task that is using the snippet. Variabl
 The definitions for local variables can contain variables themselves, which are global variables.
 These are required to be filled in by the maintainer of the project using robo-config and need to be documented.
 
-Variables can also be used in the `target` of an `actionable` task. These are also global variables.
+Variables can also be used in the `target` of an actionable task. These are also global variables.
 
 ### reqDir
 
@@ -179,7 +179,7 @@ The folder structure is automatically managed and updated by the plugin tests. Y
 
 Very useful when previewing the configuration your plugin will generate.
 
-To ensure this is synchronized you should set up a test.
+To ensure this is synchronized you should set up a test. See below for details.
 
 ### Merge Strategies
 
