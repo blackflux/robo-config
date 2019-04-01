@@ -179,7 +179,7 @@ The folder structure is automatically managed and updated by the plugin tests. Y
 
 Very useful when previewing the configuration your plugin will generate.
 
-To ensure this is synchronized you should set up a test.
+To ensure this is synchronized you should set up a test. See below for details.
 
 ### Merge Strategies
 
