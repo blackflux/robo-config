@@ -55,7 +55,7 @@ describe('Integration docs.js', () => {
     fs.writeFileSync(path.join(docDir, 'scope', '@unknown.md'), '');
 
     expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@unknown.md']);
-    expect(syncDocs(taskDir, reqDir, varDir, docDir)).to.deep.equal([
+    expect(syncDocs('plugin-name', taskDir, reqDir, varDir, docDir)).to.deep.equal([
       'Updated: scope/@task.md',
       'Documentation Updated. Please commit and re-run.'
     ]);

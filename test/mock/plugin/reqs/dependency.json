@@ -1,5 +1,7 @@
 {
   "description": "Short description about this dependency.",
-  "details": "Detailed description about this dependency and how it's used.",
+  "details": [
+    "Detailed description about this dependency and how it's used."
+  ],
   "website": "https://www.some-tool-name.com"
 }

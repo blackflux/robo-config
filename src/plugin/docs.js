@@ -44,7 +44,7 @@ const documentFiles = (root, files) => {
 };
 module.exports.documentFiles = documentFiles;
 
-const documentSection = (baseLevel, {
+const documentSection = (plName, baseLevel, {
   level, taskName, task, targets, requires, variables
 }) => {
   assert(Number.isInteger(level), 'Invalid "level" parameter format.');
@@ -70,14 +70,14 @@ const documentSection = (baseLevel, {
 
   if (requires.length !== 0) {
     result.push(...startSpoiler('Requires', level - baseLevel));
-    result.push(...requires.map(r => `- ${linkRef('req', r)}`));
+    result.push(...requires.map(r => `- ${linkRef(`${plName}-req`, r)}`));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }
 
   if (variables.length !== 0) {
     result.push(...startSpoiler('Variables', level - baseLevel));
-    result.push(...variables.map(v => `- ${linkRef('var', v)}`));
+    result.push(...variables.map(v => `- ${linkRef(`${plName}-var`, v)}`));
     result.push('');
     result.push(...endSpoiler(level - baseLevel));
   }
@@ -85,7 +85,7 @@ const documentSection = (baseLevel, {
   return result;
 };
 
-const generateDocs = (taskDir, reqDir, varDir, taskNames, baseLevel) => {
+const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => {
   assert(
     Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'),
     'Invalid "taskNames" parameter format.'
@@ -148,7 +148,7 @@ const generateDocs = (taskDir, reqDir, varDir, taskNames, baseLevel) => {
       result.push('');
       result.push(...endSpoiler(section.level - baseLevel));
     }
-    result.push(...documentSection(baseLevel, section));
+    result.push(...documentSection(plName, baseLevel, section));
     lastLevel = section.level;
   });
   result.push('</details>');
@@ -162,7 +162,7 @@ const generateDocs = (taskDir, reqDir, varDir, taskNames, baseLevel) => {
       dir: reqDir,
       schema: Joi.object().keys({
         description: Joi.string().required(),
-        details: Joi.string().required(),
+        details: Joi.array().items(Joi.string()),
         website: Joi.string().required()
       })
         .unknown(false)
@@ -173,7 +173,7 @@ const generateDocs = (taskDir, reqDir, varDir, taskNames, baseLevel) => {
         description,
         '',
         ...startSpoiler('Details', 0),
-        details,
+        ...details,
         '',
         ...endSpoiler(0)
       ]
@@ -184,7 +184,7 @@ const generateDocs = (taskDir, reqDir, varDir, taskNames, baseLevel) => {
       dir: varDir,
       schema: Joi.object().keys({
         description: Joi.string().required(),
-        details: Joi.string().required(),
+        details: Joi.array().items(Joi.string()),
         type: Joi.string().required()
       })
         .unknown(false)
@@ -195,7 +195,7 @@ const generateDocs = (taskDir, reqDir, varDir, taskNames, baseLevel) => {
         description,
         '',
         ...startSpoiler('Details', 0),
-        details,
+        ...details,
         '',
         ...endSpoiler(0)
       ]
@@ -209,7 +209,7 @@ const generateDocs = (taskDir, reqDir, varDir, taskNames, baseLevel) => {
       result.push(`## ${def.name}`);
       result.push('');
       toDocument.forEach((e) => {
-        result.push(`### ${createRef(def.name.slice(0, 3), e)}`);
+        result.push(`### ${createRef(`${plName}-${def.name.slice(0, 3)}`, e)}`);
         result.push('');
         const f = sfs.guessFile(path.join(def.dir, e));
         assert(typeof f === 'string', `Missing ${def.name} Definition: ${e}`);
@@ -228,7 +228,7 @@ const generateDocs = (taskDir, reqDir, varDir, taskNames, baseLevel) => {
 };
 module.exports.generateDocs = generateDocs;
 
-const syncDocs = (taskDir, reqDir, varDir, docDir) => {
+const syncDocs = (plName, taskDir, reqDir, varDir, docDir) => {
   const docFiles = [];
 
   // generate doc files
@@ -237,7 +237,7 @@ const syncDocs = (taskDir, reqDir, varDir, docDir) => {
     .map(f => [`${f}.json`, `${f}.md`])
     .forEach(([f, docFile]) => {
       docFiles.push(docFile);
-      if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(taskDir, reqDir, varDir, [f], 0))) {
+      if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(plName, taskDir, reqDir, varDir, [f], 0))) {
         result.push(`Updated: ${docFile}`);
       }
     });
