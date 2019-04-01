@@ -15,11 +15,13 @@ const pluginPayloadSchema = Joi.object().keys({
   .unknown(false)
   .required();
 
-module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), argsCfg = {}) => {
+module.exports = (configFile = path.join(appRoot.path, '.roboconfig'), argsCfg = {}) => {
   assert(argsCfg instanceof Object && !Array.isArray(argsCfg), 'Invalid "argsCfg" parameter format.');
 
   // load configuration file
-  const fileCfg = configFile !== null ? sfs.smartRead(configFile) : {};
+  const fileCfg = configFile !== null && sfs.guessFile(configFile) != null
+    ? sfs.smartRead(sfs.guessFile(configFile))
+    : {};
   assert(fileCfg instanceof Object && !Array.isArray(fileCfg), 'Invalid configuration file content.');
 
   // merge file and args config
@@ -77,7 +79,7 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), args
         confDocs,
         lines: []
       };
-      docFiles[confDocsFile].lines.push(...plugin.generateDocs(pluginName, tasks));
+      docFiles[confDocsFile].lines.push(...plugin.generateDocs(tasks));
     });
   Object
     .entries(docFiles)

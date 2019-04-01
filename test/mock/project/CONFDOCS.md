@@ -1,4 +1,4 @@
-## Example CONFDOCS.md
+## Plugin [mock-plugin](https://www.npmjs.com/package/mock-plugin)
 
 ### >> `xml-merge/@default`
 
@@ -165,14 +165,14 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- [dependency](#req-ref-dependency)
+- [dependency](#mock-plugin-req-ref-dependency)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- [variable](#var-ref-variable)
+- [variable](#mock-plugin-var-ref-variable)
 
 <!---0--></details>
 
@@ -198,14 +198,14 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [dependency](#req-ref-dependency)
+- [dependency](#mock-plugin-req-ref-dependency)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- [variable](#var-ref-variable)
+- [variable](#mock-plugin-var-ref-variable)
 
 <!---1--></details>
 
@@ -230,14 +230,14 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- [dependency](#req-ref-dependency)
+- [dependency](#mock-plugin-req-ref-dependency)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- [variable](#var-ref-variable)
+- [variable](#mock-plugin-var-ref-variable)
 
 <!---0--></details>
 
@@ -263,14 +263,14 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [dependency](#req-ref-dependency)
+- [dependency](#mock-plugin-req-ref-dependency)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- [variable](#var-ref-variable)
+- [variable](#mock-plugin-var-ref-variable)
 
 <!---1--></details>
 
@@ -291,14 +291,14 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [dependency](#req-ref-dependency)
+- [dependency](#mock-plugin-req-ref-dependency)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- [variable](#var-ref-variable)
+- [variable](#mock-plugin-var-ref-variable)
 
 <!---1--></details>
 
@@ -324,14 +324,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [dependency](#req-ref-dependency)
+- [dependency](#mock-plugin-req-ref-dependency)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- [variable](#var-ref-variable)
+- [variable](#mock-plugin-var-ref-variable)
 
 <!---2--></details>
 
@@ -358,14 +358,14 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [dependency](#req-ref-dependency)
+- [dependency](#mock-plugin-req-ref-dependency)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- [variable](#var-ref-variable)
+- [variable](#mock-plugin-var-ref-variable)
 
 <!---1--></details>
 
@@ -524,7 +524,7 @@ project
 
 ## Requires
 
-### <a name="req-ref-dependency">dependency</a>
+### <a name="mock-plugin-req-ref-dependency">dependency</a>
 
 [Website](https://www.some-tool-name.com)
 
@@ -542,7 +542,7 @@ Detailed description about this dependency and how it's used.
 
 ## Variables
 
-### <a name="var-ref-variable">variable</a>
+### <a name="mock-plugin-var-ref-variable">variable</a>
 
 Type: `string`
 
