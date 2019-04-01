@@ -160,7 +160,7 @@ These are required to be filled in by the maintainer of the project using robo-c
 Contains a definition file `$$REQ$$.json` for every global dependency `$$REQ$$`. Each file contains the following entries:
 
 - `description`: Short description for this dependency.
-- `details`: Detailed description for this dependency and how it's used.
+- `details`: Array containing detailed description for this dependency and how it's used. Each line corresponds to a new line in markdown.
 - `website`: Related website for this dependency.
 
 ### varDir
@@ -168,7 +168,7 @@ Contains a definition file `$$REQ$$.json` for every global dependency `$$REQ$$`.
 Contains a definition file `$$VAR$$.json` for every global variable `$$VAR$$`. Each file contains the following entries:
 
 - `description`: Short description of what is expected for this variable.
-- `details`: Longer description of what is expected and high level "why".
+- `details`: Array containing longer description of what is expected and high level "why". Each line corresponds to a new line in markdown.
 - `type`: The expected variable type.
 
 ### docDir

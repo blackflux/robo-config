@@ -162,7 +162,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
       dir: reqDir,
       schema: Joi.object().keys({
         description: Joi.string().required(),
-        details: Joi.string().required(),
+        details: Joi.array().items(Joi.string()),
         website: Joi.string().required()
       })
         .unknown(false)
@@ -173,7 +173,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
         description,
         '',
         ...startSpoiler('Details', 0),
-        details,
+        ...details,
         '',
         ...endSpoiler(0)
       ]
@@ -184,7 +184,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
       dir: varDir,
       schema: Joi.object().keys({
         description: Joi.string().required(),
-        details: Joi.string().required(),
+        details: Joi.array().items(Joi.string()),
         type: Joi.string().required()
       })
         .unknown(false)
@@ -195,7 +195,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
         description,
         '',
         ...startSpoiler('Details', 0),
-        details,
+        ...details,
         '',
         ...endSpoiler(0)
       ]
