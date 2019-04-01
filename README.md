@@ -112,7 +112,7 @@ For example a task directory `editor` might indicate tasks related to the editor
 Each task directory then contains task files and a `snippets` folder. 
 
 The snippets folder contains raw configuration files or parts thereof which are applied using tasks and merge strategies.
-Snippet files can contain variables which need to be provided when the task references the snippet.
+Snippet files can contain variables which need to be provided when a task references the snippet.
 
 There are two types of task files: 
 
