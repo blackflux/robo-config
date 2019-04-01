@@ -107,7 +107,7 @@ The folder structures are as following:
 This directory is the core of every robo-config plugin.
 
 Top level it only contains sub-directories, which we call "task directories" since they are used to group tasks.
-For example a sub-directory `editor` might indicate tasks related to the editor that is used for the project that uses robo-config.
+For example a task directory `editor` might indicate tasks related to the editor that is used for the project that uses robo-config.
 
 Each task directory then contains task files and a snippets folder. 
 
