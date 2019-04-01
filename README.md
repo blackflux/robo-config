@@ -155,7 +155,7 @@ Local variables must be defined in every task that is using the snippet. Variabl
 The definitions for local variables can contain variables themselves, which are global variables.
 These are required to be filled in by the maintainer of the project using robo-config and need to be documented.
 
-Variables can also be used in the `target` of an `actionable` task. These are also global variables.
+Variables can also be used in the `target` of an actionable task. These are also global variables.
 
 ### reqDir
 
