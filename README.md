@@ -212,7 +212,7 @@ it('Testing Plugin Tasks', () => {
 
 ```
 
-where `project` should contain files similar to a project you would your plugin expect to be used for. 
+where `project` should contain files similar to a project you would your plugin expect to be used in. 
 
 ### Gotchas
 
