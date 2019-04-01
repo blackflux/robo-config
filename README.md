@@ -192,18 +192,19 @@ Merges content at the top of the file and removes existing, duplicate lines.
 
 To ensure your plugin is in a valid state you should set up tests like so
 
+<!-- eslint-disable-next-line import/no-unresolved,import/no-extraneous-dependencies -->
 ```js
 const path = require('path');
 const expect = require('chai').expect;
 const { load } = require('robo-config');
-const plugin = require('../src/index');
+const plugin = require('./path/to/plugin');
 
 it('Documenting Plugin Tasks', () => {
   expect(load(plugin).syncDocs()).to.deep.equal([]);
 });
 
 it('Testing Plugin Tasks', () => {
-  expect(load(plugin).test(path.join(__dirname, 'project')).to.deep.equal([]);
+  expect(load(plugin).test(path.join(__dirname, 'path', 'to', 'mock', 'project'))).to.deep.equal([]);
 });
 
 ```
