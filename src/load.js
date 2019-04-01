@@ -15,28 +15,23 @@ module.exports = (pl) => {
     const meta = extractMeta(pl.taskDir, taskNames);
     const unexpectedVars = Object.keys(variables).filter(v => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
-
     return applyTasksRec(pl.taskDir, projectRoot, taskNames, variables);
   };
+  const genDocs = (title, taskNames) => [title, '', ...generateDocs(pl.taskDir, pl.reqDir, pl.varDir, taskNames, 2)];
 
   return ({
     syncDocs: () => syncDocs(pl.taskDir, pl.reqDir, pl.varDir, pl.docDir),
-    generateDocs: (pluginName, taskNames) => [
+    generateDocs: (pluginName, taskNames) => genDocs(
       `## Plugin [${pluginName}](https://www.npmjs.com/package/${pluginName})`,
-      '',
-      ...generateDocs(pl.taskDir, pl.reqDir, pl.varDir, taskNames, 2)
-    ],
+      taskNames
+    ),
     apply: applyTasks,
     test: (projectRoot, variables = {}) => {
       const taskNames = listTasks(pl.taskDir);
       const vars = extractMeta(pl.taskDir, taskNames).variables
         .reduce((p, c) => Object.assign(p, { [c]: p[c] || c }), variables);
       const result = applyTasks(projectRoot, taskNames, vars);
-      if (sfs.smartWrite(path.join(projectRoot, 'CONFDOCS.md'), [
-        '## Example CONFDOCS.md',
-        '',
-        ...generateDocs(pl.taskDir, pl.reqDir, pl.varDir, taskNames, 2)
-      ])) {
+      if (sfs.smartWrite(path.join(projectRoot, 'CONFDOCS.md'), genDocs('## Example CONFDOCS.md', taskNames))) {
         result.push('Updated: CONFDOCS.md');
       }
       return result;
