@@ -13,7 +13,7 @@ Automatically manage configuration files.
 
 ## Getting Started
 
-The package itself requires npm. However it can be used to manage files in any type of project.
+The package itself requires npm. However it can be used to manage files for any type of project.
 
     $ npm install --save-dev robo-config
 
