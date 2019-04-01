@@ -109,9 +109,9 @@ This directory is the core of every robo-config plugin.
 Top level it only contains sub-directories, which we call "task directories" since they are used to group tasks.
 For example a task directory `editor` might indicate tasks related to the editor that is used for the project that uses robo-config.
 
-Each task directory then contains task files and a snippets folder. 
+Each task directory then contains task files and a `snippets` folder. 
 
-The snippet folder contains raw configuration files or parts thereof which are applied using tasks and merge strategies.
+The snippets folder contains raw configuration files or parts thereof which are applied using tasks and merge strategies.
 Snippet files can contain variables which need to be provided when the task references the snippet.
 
 There are two types of task files: 
