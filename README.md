@@ -150,7 +150,7 @@ Variables are specified as `${variableName}`.
 
 They can be placed as local variables anywhere in the snippet file (e.g. in the key of an object).
 
-Local variables must be defined in every task using the snippet. Variable values can be strings or any other json structure.
+Local variables must be defined in every task that is using the snippet. Variable values can be strings or any other json structure.
 
 The definitions for local variables can contain variables themselves, which are global variables.
 These are required to be filled in by the maintainer of the project using robo-config and need to be documented.
