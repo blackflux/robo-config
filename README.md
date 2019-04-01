@@ -15,15 +15,9 @@ Automatically manage configuration files.
 
 The package itself requires npm. However it can be used to manage files for any type of project.
 
-    $ npm install (-g) --save-dev robo-config
+First we need to set up the (hopefully) only manually managed configuration file called `.roboconfig`.
 
-Next install robo-config plugin(s) and set up a configuration file `.roboconfig.json`.
-
-## Example Setup
-
-    $ npm install (-g) --save-dev @blackflux/robo-config-plugin
-
-and `.roboconfig.json`
+This file could for example contain:
 
 ```json
 {
@@ -34,24 +28,23 @@ and `.roboconfig.json`
     "variables": {}
   }
 }
-
 ```
 
-## Usage
+where `@blackflux/robo-config-plugin` is a specific robo-config plugin.
 
-It is recommended to install dependencies local to the project. but if you are using the cli
-option a global install might also be appropriate.
+To sync the configuration into the project we have two options:
 
-To ensure your configuration is in sync with the plugin definition there are two options:
+1) Sync through test (recommended way)
 
-1) Run CLI
+First install `robo-config` and any plugins referenced in the configuration file, e.g.
 
-`// TODO: still needs to be implemented`
+    $ npm install --save-dev robo-config @blackflux/robo-config-plugin
 
-2) Create Test
+Then create a test similar to
 
 <!-- eslint-disable-next-line import/no-unresolved -->
 ```js
+const expect = require('chai').expect;
 const robo = require('robo-config');
 
 it('Apply Robo Configuration', () => {
@@ -59,6 +52,12 @@ it('Apply Robo Configuration', () => {
 });
 
 ```
+
+
+2) Apply though cli
+
+`// TODO: still needs to be implemented`
+
 
 ## But why...?
 
