@@ -116,7 +116,7 @@ Snippet files can contain variables which need to be provided when a task refere
 
 There are two types of task files: 
 
-- `@containerTaskName.json`: Container task files. They do not specify any action itself, but rather reference other tasks.
+- `@containerTaskName.json`: Container task files. They do not specify any action themselves, but rather reference other tasks.
 - `actionableTaskName.json`: Actionable task files, which contain a single task definition, referencing a snippet.
 
 #### Container Tasks
