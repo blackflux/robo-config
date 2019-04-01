@@ -5,10 +5,9 @@ const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
 const robo = require('../src/index');
 
-// todo: re-enable
-// it('Apply Robo Configuration', () => {
-//   expect(robo()).to.deep.equal([]);
-// });
+it('Apply Robo Configuration', () => {
+  expect(robo()).to.deep.equal([]);
+});
 
 describe('Robo + Plugin Integration Tests', () => {
   const pluginFile = path.join(__dirname, 'mock', 'plugin.js');
