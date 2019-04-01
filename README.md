@@ -136,7 +136,7 @@ Actionable task names must not start with an `@` symbol. They can only be used b
 Actionable task definition files contain the following keys:
 
 - `target`: The relative file path to the target file in the project that robo-config is used in.
-- `format`: Optional to indicate the format of the target file. E.g. the file extension might be `dat`, but the content `xml`). 
+- `format` (_optional_): Indicates the format of the target file. E.g. the file extension might be `dat`, but the content `xml`). 
 Automatically deduced by default. See [smart-fs](https://github.com/blackflux/smart-fs) for supported formats.
 - `strategy`: One of the available merge strategies. These are detailed below.
 - `snippets`: Array of snippets. A snippet is either the name of the snippet file (if no variables are present) or an object
