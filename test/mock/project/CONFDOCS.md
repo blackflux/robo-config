@@ -1,4 +1,4 @@
-## Example CONFDOCS.md
+## Plugin [mock-plugin](https://www.npmjs.com/package/mock-plugin)
 
 ### >> `xml-merge/@default`
 

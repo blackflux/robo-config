@@ -77,7 +77,7 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig.json'), args
         confDocs,
         lines: []
       };
-      docFiles[confDocsFile].lines.push(...plugin.generateDocs(pluginName, tasks));
+      docFiles[confDocsFile].lines.push(...plugin.generateDocs(tasks));
     });
   Object
     .entries(docFiles)
