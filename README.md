@@ -34,7 +34,7 @@ where `@blackflux/robo-config-plugin` is a specific robo-config plugin.
 
 To sync the configuration into the project we have two options:
 
-1) Sync through test (recommended way)
+### Sync through test (recommended way)
 
 First install `robo-config` and any plugins referenced in the configuration file, e.g.
 
@@ -54,7 +54,7 @@ it('Apply Robo Configuration', () => {
 ```
 
 
-2) Apply though cli
+### Apply though cli
 
 `// TODO: still needs to be implemented`
 
