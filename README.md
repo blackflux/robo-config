@@ -87,12 +87,12 @@ Changes will propagate to your repos as dependencies are updated, giving you ful
 ## Writing your own Plugin
 
 Writing your own robo-config plugin is very easy and gives you the most control. However it is recommended that you
-use popular plugins for basic configuration management and then write your own plugin for those cases that are not covered yet.
+use popular plugins for basic configuration management and then write your own plugin for those cases that are not covered.
 
 Writing your own Plugin for robo-config is very simple.
 A full example can be found [here](https://github.com/blackflux/robo-config-plugin/blob/master/src/index.js).
 
-A plugin is an npm package that exposes an object containing exactly four keys:
+A plugin is an npm package that exposes an object containing the following keys:
 
 - `name`: Fully qualified npm package name of the plugin
 - `taskDir`: Absolute path to the plugin tasks
