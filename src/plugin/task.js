@@ -129,14 +129,17 @@ const extractMeta = (taskDir, taskNames) => {
   const buffer = taskNames.slice();
   while (buffer.length !== 0) {
     const taskName = buffer.pop();
-    const task = sfs.smartRead(sfs.guessFile(path.join(taskDir, taskName)));
-    if (task.tasks !== undefined) {
-      buffer.push(...task.tasks.map(stn => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`)));
-    }
-    objectScan(['snippets[*].variables'], { joined: false })(task)
-      .forEach(vs => determineVars(get(task, vs)).forEach(v => variables.add(v)));
-    if (task.target !== undefined) {
-      target.add(task.target);
+    const fileName = sfs.guessFile(path.join(taskDir, taskName));
+    if (fileName !== null) {
+      const task = sfs.smartRead(fileName);
+      if (task.tasks !== undefined) {
+        buffer.push(...task.tasks.map(stn => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`)));
+      }
+      objectScan(['snippets[*].variables'], { joined: false })(task)
+        .forEach(vs => determineVars(get(task, vs)).forEach(v => variables.add(v)));
+      if (task.target !== undefined) {
+        target.add(task.target);
+      }
     }
   }
   return {
