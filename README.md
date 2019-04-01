@@ -155,6 +155,8 @@ Local variables must be defined in every task that is using the snippet. Variabl
 The definitions for local variables can contain variables themselves, which are global variables.
 These are required to be filled in by the maintainer of the project using robo-config and need to be documented.
 
+Variables can also be used in the `target` of an `actionable` task. These are also global variables.
+
 ### reqDir
 
 Contains a definition file `$$REQ$$.json` for every global dependency `$$REQ$$`. Each file contains the following entries:
@@ -221,3 +223,8 @@ where `project` should contain files similar to a project you would your plugin 
 Variables used in your snippets can be escaped as `$\{escapedVar}`.
 This is converted into `${escapedVar}` before the snippet is applied.
 Handy when configuration files need to contain variables of the same format.
+
+#### File Guessing
+
+In almost all cases you don't need to and should not specify the file extension of a task/file you're using.
+It will automatically be picked up. 
