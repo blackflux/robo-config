@@ -157,7 +157,7 @@ Task collection description.
 
 ```
 project
-└─ misc.txt
+└─ ${misc}.txt
 ```
 
 <!---0--></details>
@@ -172,6 +172,7 @@ project
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
+- [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
 
 <!---0--></details>
@@ -181,7 +182,7 @@ project
 
 #### >>> misc/task
 
-_Updating `misc.txt` using `overwrite`._
+_Updating `${misc}.txt` using `overwrite`._
 
 - Some purpose.
 
@@ -190,7 +191,7 @@ _Updating `misc.txt` using `overwrite`._
 
 ```
 project
-└─ misc.txt
+└─ ${misc}.txt
 ```
 
 <!---1--></details>
@@ -205,6 +206,7 @@ project
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
+- [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
 
 <!---1--></details>
@@ -222,7 +224,7 @@ Task collection description.
 
 ```
 project
-└─ misc.txt
+└─ ${misc}.txt
 ```
 
 <!---0--></details>
@@ -237,6 +239,7 @@ project
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
+- [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
 
 <!---0--></details>
@@ -246,7 +249,7 @@ project
 
 #### >>> misc/task
 
-_Updating `misc.txt` using `overwrite`._
+_Updating `${misc}.txt` using `overwrite`._
 
 - Some purpose.
 
@@ -255,7 +258,7 @@ _Updating `misc.txt` using `overwrite`._
 
 ```
 project
-└─ misc.txt
+└─ ${misc}.txt
 ```
 
 <!---1--></details>
@@ -270,6 +273,7 @@ project
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
+- [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
 
 <!---1--></details>
@@ -283,7 +287,7 @@ Task collection description.
 
 ```
 project
-└─ misc.txt
+└─ ${misc}.txt
 ```
 
 <!---1--></details>
@@ -298,6 +302,7 @@ project
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
+- [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
 
 <!---1--></details>
@@ -307,7 +312,7 @@ project
 
 ##### >>>> misc/task
 
-_Updating `misc.txt` using `overwrite`._
+_Updating `${misc}.txt` using `overwrite`._
 
 - Some purpose.
 
@@ -316,7 +321,7 @@ _Updating `misc.txt` using `overwrite`._
 
 ```
 project
-└─ misc.txt
+└─ ${misc}.txt
 ```
 
 <!---2--></details>
@@ -331,6 +336,7 @@ project
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
+- [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
 
 <!---2--></details>
@@ -341,7 +347,7 @@ project
 
 #### >>> misc/task
 
-_Updating `misc.txt` using `overwrite`._
+_Updating `${misc}.txt` using `overwrite`._
 
 - Some purpose.
 
@@ -350,7 +356,7 @@ _Updating `misc.txt` using `overwrite`._
 
 ```
 project
-└─ misc.txt
+└─ ${misc}.txt
 ```
 
 <!---1--></details>
@@ -365,6 +371,7 @@ project
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
+- [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
 
 <!---1--></details>
@@ -541,6 +548,19 @@ Detailed description about this dependency and how it's used.
 ------
 
 ## Variables
+
+### <a name="mock-plugin-var-ref-misc">misc</a>
+
+Type: `string`
+
+Short description of what this variable does.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Detailed description of what this variable does.
+
+<!---0--></details>
 
 ### <a name="mock-plugin-var-ref-variable">variable</a>
 

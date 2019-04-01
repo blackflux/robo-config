@@ -138,6 +138,7 @@ const extractMeta = (taskDir, taskNames) => {
       objectScan(['snippets[*].variables'], { joined: false })(task)
         .forEach(vs => determineVars(get(task, vs)).forEach(v => variables.add(v)));
       if (task.target !== undefined) {
+        determineVars([task.target]).forEach(v => variables.add(v));
         target.add(task.target);
       }
     }

@@ -1,6 +1,6 @@
 {
 
-  "target": "misc.txt",
+  "target": "${misc}.txt",
   "strategy": "overwrite",
   "snippets": [
     {
