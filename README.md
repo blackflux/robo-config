@@ -125,8 +125,8 @@ Container task names always starts with an `@` symbol. Only container tasks are 
 
 A container task definition file contains the following keys:
 
-- `tasks`: Array of task names. These can be relative as `actionableTask` 
-or referencing a different task directory as `taskDirectory/actionableTask`
+- `tasks`: Array of task names. These can be relative as `task` 
+or referencing a different task directory as `taskDirectory/task`
 - `description`: High level description of what this container task does. 
 
 #### Actionable Tasks
