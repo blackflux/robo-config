@@ -15,15 +15,13 @@ Automatically manage configuration files.
 
 The package itself requires npm. However it can be used to manage files for any type of project.
 
-    $ npm install --save-dev robo-config
+    $ npm install (-g) --save-dev robo-config
 
 Next install robo-config plugin(s) and set up a configuration file `.roboconfig.json`.
 
-Writing your own robo-config plugin is very easy and gives you the most control.
-
 ## Example Setup
 
-    $ npm install --save-dev @blackflux/robo-config-plugin
+    $ npm install (-g) --save-dev @blackflux/robo-config-plugin
 
 and `.roboconfig.json`
 
@@ -40,6 +38,9 @@ and `.roboconfig.json`
 ```
 
 ## Usage
+
+It is recommended to install dependencies local to the project. but if you are using the cli
+option a global install might also be appropriate.
 
 To ensure your configuration is in sync with the plugin definition there are two options:
 
@@ -85,6 +86,9 @@ Simply pick the plugin(s)/task(s) that are most appropriate for your repo or cre
 Changes will propagate to your repos as dependencies are updated, giving you full control when they are applied.
 
 ## Writing your own Plugin
+
+Writing your own robo-config plugin is very easy and gives you the most control. However it is recommended that you
+use popular plugins for basic configuration management and then write your own plugin for those cases that are not covered yet.
 
 Writing your own Plugin for robo-config is very simple.
 A full example can be found [here](https://github.com/blackflux/robo-config-plugin/blob/master/src/index.js).
