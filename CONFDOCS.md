@@ -31,30 +31,30 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- [js-gardener](#req-ref-js-gardener)
-- [semantic-release](#req-ref-semantic-release)
-- [npm-published](#req-ref-npm-published)
-- [david-dm](#req-ref-david-dm)
-- [dependabot](#req-ref-dependabot)
-- [coveralls](#req-ref-coveralls)
-- [circleci](#req-ref-circleci)
-- [github](#req-ref-github)
-- [javascript](#req-ref-javascript)
-- [git](#req-ref-git)
-- [npm](#req-ref-npm)
-- [yarn](#req-ref-yarn)
-- [gally](#req-ref-gally)
+- [js-gardener](#blackfluxrobo-config-plugin-req-ref-js-gardener)
+- [semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)
+- [npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)
+- [david-dm](#blackfluxrobo-config-plugin-req-ref-david-dm)
+- [dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)
+- [coveralls](#blackfluxrobo-config-plugin-req-ref-coveralls)
+- [circleci](#blackfluxrobo-config-plugin-req-ref-circleci)
+- [github](#blackfluxrobo-config-plugin-req-ref-github)
+- [javascript](#blackfluxrobo-config-plugin-req-ref-javascript)
+- [git](#blackfluxrobo-config-plugin-req-ref-git)
+- [npm](#blackfluxrobo-config-plugin-req-ref-npm)
+- [yarn](#blackfluxrobo-config-plugin-req-ref-yarn)
+- [gally](#blackfluxrobo-config-plugin-req-ref-gally)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- [packageName](#var-ref-packagename)
-- [repoKey](#var-ref-repokey)
-- [authorName](#var-ref-authorname)
-- [owner](#var-ref-owner)
-- [mergeBot](#var-ref-mergebot)
+- [packageName](#blackfluxrobo-config-plugin-var-ref-packagename)
+- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
+- [ownerName](#blackfluxrobo-config-plugin-var-ref-ownername)
+- [owner](#blackfluxrobo-config-plugin-var-ref-owner)
+- [mergeBot](#blackfluxrobo-config-plugin-var-ref-mergebot)
 
 <!---0--></details>
 
@@ -78,21 +78,21 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [js-gardener](#req-ref-js-gardener)
-- [semantic-release](#req-ref-semantic-release)
-- [npm-published](#req-ref-npm-published)
-- [david-dm](#req-ref-david-dm)
-- [dependabot](#req-ref-dependabot)
-- [coveralls](#req-ref-coveralls)
-- [circleci](#req-ref-circleci)
+- [js-gardener](#blackfluxrobo-config-plugin-req-ref-js-gardener)
+- [semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)
+- [npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)
+- [david-dm](#blackfluxrobo-config-plugin-req-ref-david-dm)
+- [dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)
+- [coveralls](#blackfluxrobo-config-plugin-req-ref-coveralls)
+- [circleci](#blackfluxrobo-config-plugin-req-ref-circleci)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- [packageName](#var-ref-packagename)
-- [repoKey](#var-ref-repokey)
+- [packageName](#blackfluxrobo-config-plugin-var-ref-packagename)
+- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
 
 <!---1--></details>
 
@@ -118,7 +118,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [js-gardener](#req-ref-js-gardener)
+- [js-gardener](#blackfluxrobo-config-plugin-req-ref-js-gardener)
 
 <!---2--></details>
 
@@ -141,7 +141,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [semantic-release](#req-ref-semantic-release)
+- [semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)
 
 <!---2--></details>
 
@@ -164,14 +164,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [npm-published](#req-ref-npm-published)
+- [npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- [packageName](#var-ref-packagename)
+- [packageName](#blackfluxrobo-config-plugin-var-ref-packagename)
 
 <!---2--></details>
 
@@ -194,14 +194,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [npm-published](#req-ref-npm-published)
+- [npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- [packageName](#var-ref-packagename)
+- [packageName](#blackfluxrobo-config-plugin-var-ref-packagename)
 
 <!---2--></details>
 
@@ -224,14 +224,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [david-dm](#req-ref-david-dm)
+- [david-dm](#blackfluxrobo-config-plugin-req-ref-david-dm)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- [repoKey](#var-ref-repokey)
+- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
 
 <!---2--></details>
 
@@ -254,14 +254,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [dependabot](#req-ref-dependabot)
+- [dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- [repoKey](#var-ref-repokey)
+- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
 
 <!---2--></details>
 
@@ -284,14 +284,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [coveralls](#req-ref-coveralls)
+- [coveralls](#blackfluxrobo-config-plugin-req-ref-coveralls)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- [repoKey](#var-ref-repokey)
+- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
 
 <!---2--></details>
 
@@ -314,14 +314,14 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [circleci](#req-ref-circleci)
+- [circleci](#blackfluxrobo-config-plugin-req-ref-circleci)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- [repoKey](#var-ref-repokey)
+- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
 
 <!---2--></details>
 
@@ -347,9 +347,9 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [dependabot](#req-ref-dependabot)
-- [github](#req-ref-github)
-- [javascript](#req-ref-javascript)
+- [dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)
+- [github](#blackfluxrobo-config-plugin-req-ref-github)
+- [javascript](#blackfluxrobo-config-plugin-req-ref-javascript)
 
 <!---1--></details>
 
@@ -376,9 +376,9 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [dependabot](#req-ref-dependabot)
-- [github](#req-ref-github)
-- [javascript](#req-ref-javascript)
+- [dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)
+- [github](#blackfluxrobo-config-plugin-req-ref-github)
+- [javascript](#blackfluxrobo-config-plugin-req-ref-javascript)
 
 <!---2--></details>
 
@@ -403,7 +403,7 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [git](#req-ref-git)
+- [git](#blackfluxrobo-config-plugin-req-ref-git)
 
 <!---1--></details>
 
@@ -432,7 +432,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [git](#req-ref-git)
+- [git](#blackfluxrobo-config-plugin-req-ref-git)
 
 <!---2--></details>
 
@@ -458,15 +458,15 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [npm](#req-ref-npm)
+- [npm](#blackfluxrobo-config-plugin-req-ref-npm)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- [authorName](#var-ref-authorname)
-- [repoKey](#var-ref-repokey)
+- [ownerName](#blackfluxrobo-config-plugin-var-ref-ownername)
+- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
 
 <!---1--></details>
 
@@ -492,7 +492,7 @@ project
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- [authorName](#var-ref-authorname)
+- [ownerName](#blackfluxrobo-config-plugin-var-ref-ownername)
 
 <!---2--></details>
 
@@ -515,15 +515,15 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [npm](#req-ref-npm)
+- [npm](#blackfluxrobo-config-plugin-req-ref-npm)
 
 <!---2--></details>
 
 <!---2--><details>
 <!---2--><summary>Variables</summary>
 
-- [authorName](#var-ref-authorname)
-- [repoKey](#var-ref-repokey)
+- [ownerName](#blackfluxrobo-config-plugin-var-ref-ownername)
+- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
 
 <!---2--></details>
 
@@ -548,7 +548,7 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [npm](#req-ref-npm)
+- [npm](#blackfluxrobo-config-plugin-req-ref-npm)
 
 <!---1--></details>
 
@@ -574,7 +574,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [npm](#req-ref-npm)
+- [npm](#blackfluxrobo-config-plugin-req-ref-npm)
 
 <!---2--></details>
 
@@ -599,7 +599,7 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [semantic-release](#req-ref-semantic-release)
+- [semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)
 
 <!---1--></details>
 
@@ -625,7 +625,7 @@ project
 <!---2--><details>
 <!---2--><summary>Requires</summary>
 
-- [semantic-release](#req-ref-semantic-release)
+- [semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)
 
 <!---2--></details>
 
@@ -654,14 +654,14 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [npm](#req-ref-npm)
-- [yarn](#req-ref-yarn)
-- [gally](#req-ref-gally)
-- [github](#req-ref-github)
-- [circleci](#req-ref-circleci)
-- [coveralls](#req-ref-coveralls)
-- [dependabot](#req-ref-dependabot)
-- [semantic-release](#req-ref-semantic-release)
+- [npm](#blackfluxrobo-config-plugin-req-ref-npm)
+- [yarn](#blackfluxrobo-config-plugin-req-ref-yarn)
+- [gally](#blackfluxrobo-config-plugin-req-ref-gally)
+- [github](#blackfluxrobo-config-plugin-req-ref-github)
+- [circleci](#blackfluxrobo-config-plugin-req-ref-circleci)
+- [coveralls](#blackfluxrobo-config-plugin-req-ref-coveralls)
+- [dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)
+- [semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)
 
 <!---1--></details>
 
@@ -685,18 +685,18 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [circleci](#req-ref-circleci)
-- [gally](#req-ref-gally)
-- [github](#req-ref-github)
+- [circleci](#blackfluxrobo-config-plugin-req-ref-circleci)
+- [gally](#blackfluxrobo-config-plugin-req-ref-gally)
+- [github](#blackfluxrobo-config-plugin-req-ref-github)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- [owner](#var-ref-owner)
-- [mergeBot](#var-ref-mergebot)
-- [repoKey](#var-ref-repokey)
+- [owner](#blackfluxrobo-config-plugin-var-ref-owner)
+- [mergeBot](#blackfluxrobo-config-plugin-var-ref-mergebot)
+- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
 
 <!---1--></details>
 
@@ -722,15 +722,15 @@ project
 <!---0--><details>
 <!---0--><summary>Requires</summary>
 
-- [jetbrains](#req-ref-jetbrains)
-- [nyc](#req-ref-nyc)
+- [jetbrains](#blackfluxrobo-config-plugin-req-ref-jetbrains)
+- [nyc](#blackfluxrobo-config-plugin-req-ref-nyc)
 
 <!---0--></details>
 
 <!---0--><details>
 <!---0--><summary>Variables</summary>
 
-- [projectName](#var-ref-projectname)
+- [projectName](#blackfluxrobo-config-plugin-var-ref-projectname)
 
 <!---0--></details>
 
@@ -757,15 +757,15 @@ project
 <!---1--><details>
 <!---1--><summary>Requires</summary>
 
-- [jetbrains](#req-ref-jetbrains)
-- [nyc](#req-ref-nyc)
+- [jetbrains](#blackfluxrobo-config-plugin-req-ref-jetbrains)
+- [nyc](#blackfluxrobo-config-plugin-req-ref-nyc)
 
 <!---1--></details>
 
 <!---1--><details>
 <!---1--><summary>Variables</summary>
 
-- [projectName](#var-ref-projectname)
+- [projectName](#blackfluxrobo-config-plugin-var-ref-projectname)
 
 <!---1--></details>
 
@@ -816,50 +816,295 @@ project
 
 ## Requires
 
-### <a name="req-ref-js-gardener">js-gardener</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a>
 
-### <a name="req-ref-semantic-release">semantic-release</a>
+[Website](https://github.com/blackflux/js-gardener#readme)
 
-### <a name="req-ref-npm-published">npm-published</a>
+NodeJs Project Management.
 
-### <a name="req-ref-david-dm">david-dm</a>
+<!---0--><details>
+<!---0--><summary>Details</summary>
 
-### <a name="req-ref-dependabot">dependabot</a>
+Enforces and helps setting up best practices around NodeJs projects.
+Enforces highest code quality and minimizes package setup and maintenance complexity - so you can focus on writing code.
+Highly recommended if you are getting started with a new package and extremely useful if you are maintaining multiple packages.
 
-### <a name="req-ref-coveralls">coveralls</a>
+<!---0--></details>
 
-### <a name="req-ref-circleci">circleci</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a>
 
-### <a name="req-ref-github">github</a>
+[Website](https://github.com/semantic-release/semantic-release)
 
-### <a name="req-ref-javascript">javascript</a>
+Automates npm package release workflow.
 
-### <a name="req-ref-git">git</a>
+<!---0--><details>
+<!---0--><summary>Details</summary>
 
-### <a name="req-ref-npm">npm</a>
+Automates the package release workflow including:
+- determining the next version number
+- generating the release notes
+- publishing the package
 
-### <a name="req-ref-yarn">yarn</a>
+<!---0--></details>
 
-### <a name="req-ref-gally">gally</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a>
 
-### <a name="req-ref-jetbrains">jetbrains</a>
+[Website](https://docs.npmjs.com/about-npm/)
 
-### <a name="req-ref-nyc">nyc</a>
+Javascript package repository published.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Requires the project to be published to npm either as a private or public package.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-david-dm">david-dm</a>
+
+[Website](https://david-dm.org/)
+
+Dependency badge for javascript github repositories.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Enables displaying of a status badge indicated whether the dependencies are outdated.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a>
+
+[Website](https://dependabot.com/)
+
+Automatic dependency updates.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Makes dependency updates very easy by automatically creating pull requests in your repo.
+All major programming languages are supported or work is done towards supporting them.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-coveralls">coveralls</a>
+
+[Website](https://coveralls.io/)
+
+Showcase and analyze coverage reports.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Enables displaying of a status badge indicated code coverage percent of the project.
+Furthermore allows anyone to easily drill down into missing coverage or coverage changes.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-circleci">circleci</a>
+
+[Website](https://circleci.com/)
+
+Run automated jobs using docker containers.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Allows set up for ci/cd using docker containers.
+Automates development process quickly, safely, and at scale.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-github">github</a>
+
+[Website](https://github.com/)
+
+Major development platform powered by git.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+GitHub is a code hosting platform for collaboration and version control.
+Lets you and others work together on projects.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+
+[Website](https://en.wikipedia.org/wiki/JavaScript)
+
+Programming Language.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification.
+It is characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-git">git</a>
+
+[Website](https://git-scm.com/)
+
+Version control system.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+The most used version control system. Not to be confused with github (which uses git).
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-npm">npm</a>
+
+[Website](https://docs.npmjs.com/about-npm/)
+
+Javascript package repository.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Requires the project to be conform with the npm standard, i.e. contain a package.json file.
+Does not require the project to be published to npm.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-yarn">yarn</a>
+
+[Website](https://yarnpkg.com/)
+
+Dependency management similar to npm.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Very similar functionality to npm cli. However there are some significant differences.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-gally">gally</a>
+
+[Website](https://github.com/loopmediagroup/gally)
+
+Automation around github.com Repository Management
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Allows management of github.com repositories through configuration.
+Very powerful when you need to synchronize settings across multiple repositories.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a>
+
+[Website](https://www.jetbrains.com)
+
+Collection of various IDEs.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Collection of various IDEs. There exists one for every major programming language and 
+they are all very similar (i.e. shortcuts, layout), which makes them great when switching languages.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-req-ref-nyc">nyc</a>
+
+[Website](https://github.com/istanbuljs/nyc#readme)
+
+Coverage testing for javascript projects.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+A major coverage testing framework for javascript.
+Comes with all the bells and whistles.
+
+<!---0--></details>
 
 ------
 ------
 
 ## Variables
 
-### <a name="var-ref-packagename">packageName</a>
+### <a name="blackfluxrobo-config-plugin-var-ref-packagename">packageName</a>
 
-### <a name="var-ref-repokey">repoKey</a>
+Type: `string`
 
-### <a name="var-ref-authorname">authorName</a>
+Name of the package on npm.
 
-### <a name="var-ref-owner">owner</a>
+<!---0--><details>
+<!---0--><summary>Details</summary>
 
-### <a name="var-ref-mergebot">mergeBot</a>
+The name of the project as published to npm.
+Note that for scoped packages the name can differ significantly from the repo name.
 
-### <a name="var-ref-projectname">projectName</a>
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>
+
+Type: `string`
+
+Repository key.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+The repository key contains the owner or organization of the project and the repository name itself, separated by a slash.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a>
+
+Type: `string`
+
+Name of the owner of this project.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+The owner name of the project is the name of the person or organization publishing the project under their license.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-var-ref-owner">owner</a>
+
+Type: `string`
+
+The owner of the code on github.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+The code owner is the gatekeeper of the project, ultimately responsible for all changes.
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a>
+
+Type: `string`
+
+The github name of the bot used for automatic merging.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+
+<!---0--></details>
+
+### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>
+
+Type: `string`
+
+Name of the project.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+The project name is in most cases identical to the repository name.
+
+<!---0--></details>
 
