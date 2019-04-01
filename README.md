@@ -42,7 +42,7 @@ First install `robo-config` and any plugins referenced in the configuration file
 
 Then create a test similar to
 
-<!-- eslint-disable-next-line import/no-unresolved -->
+<!-- eslint-disable import/no-unresolved, import/no-extraneous-dependencies -->
 ```js
 const expect = require('chai').expect;
 const robo = require('robo-config');
@@ -195,7 +195,7 @@ Merges content at the top of the file and removes existing, duplicate lines.
 
 To ensure your plugin is in a valid state you should set up tests like so
 
-<!-- eslint-disable-next-line import/no-unresolved,import/no-extraneous-dependencies -->
+<!-- eslint-disable import/no-unresolved, import/no-extraneous-dependencies -->
 ```js
 const path = require('path');
 const expect = require('chai').expect;
