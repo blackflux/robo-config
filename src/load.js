@@ -21,11 +21,11 @@ module.exports = (pl) => {
   const genDocs = taskNames => [
     `## Plugin [${pl.name}](https://www.npmjs.com/package/${pl.name})`,
     '',
-    ...generateDocs(pl.taskDir, pl.reqDir, pl.varDir, taskNames, 2)
+    ...generateDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, taskNames, 2)
   ];
 
   return ({
-    syncDocs: () => syncDocs(pl.taskDir, pl.reqDir, pl.varDir, pl.docDir),
+    syncDocs: () => syncDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.docDir),
     generateDocs: taskNames => genDocs(taskNames),
     apply: applyTasks,
     test: (projectRoot, variables = {}) => {
