@@ -15,7 +15,7 @@ Automatically manage configuration files.
 
 The package itself requires npm. However it can be used to manage files for any type of project.
 
-First we need to set up the (hopefully) only manually managed configuration file called `.roboconfig`.
+First we need to set up the (hopefully) only manually managed configuration file called `.roboconfig.json`.
 
 This file could for example contain:
 
