@@ -166,17 +166,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
         website: Joi.string().required()
       })
         .unknown(false)
-        .required(),
-      render: ({ description, details, website }) => [
-        `[Website](${website})`,
-        '',
-        description,
-        '',
-        ...startSpoiler('Details', 0),
-        ...details,
-        '',
-        ...endSpoiler(0)
-      ]
+        .required()
     },
     {
       name: 'Variables',
@@ -188,17 +178,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
         type: Joi.string().required()
       })
         .unknown(false)
-        .required(),
-      render: ({ description, details, type }) => [
-        `Type: \`${type}\``,
-        '',
-        description,
-        '',
-        ...startSpoiler('Details', 0),
-        ...details,
-        '',
-        ...endSpoiler(0)
-      ]
+        .required()
     }
   ].forEach((def) => {
     const toDocument = [...new Set(sections.reduce((p, c) => p.concat(c[def.source]), []))];
@@ -219,7 +199,22 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
           `Invalid ${def.name} Definition: ${e}\n\n${JSON
             .stringify(Joi.validate(data, def.schema).error, null, 2)}`
         );
-        result.push(...def.render(data));
+        if (data.type !== undefined) {
+          result.push(`Type: \`${data.type}\``);
+          result.push('');
+        }
+        if (data.website !== undefined) {
+          result.push(`[Website](${data.website})`);
+          result.push('');
+        }
+        result.push(data.description);
+        result.push('');
+        if (data.details.length !== 0) {
+          result.push(...startSpoiler('Details', 0));
+          result.push(...data.details);
+          result.push('');
+          result.push(...endSpoiler(0));
+        }
       });
     }
   });
