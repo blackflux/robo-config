@@ -1089,12 +1089,6 @@ Type: `string`
 
 The github name of the bot used for automatic merging.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-
-<!---0--></details>
-
 ### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>
 
 Type: `string`
