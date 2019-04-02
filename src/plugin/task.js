@@ -22,7 +22,7 @@ const taskSchema = Joi.object().keys({
     }).unknown(false)
   ).min(1),
   requires: Joi.array().items(Joi.string()),
-  purpose: Joi.array().items(Joi.string()),
+  purpose: Joi.array().min(1).items(Joi.string()),
   description: Joi.string(),
   tasks: Joi.array().items(Joi.string())
 })
