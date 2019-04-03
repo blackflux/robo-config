@@ -19,7 +19,7 @@ project
 
 #### >>> xml-merge/task
 
-_Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)._
+_Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)_
 
 - Some purpose.
 
@@ -56,7 +56,7 @@ project
 
 #### >>> txt-unique-top/task
 
-_Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)._
+_Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)_
 
 - Some purpose.
 
@@ -93,7 +93,7 @@ project
 
 #### >>> txt-overwrite/task
 
-_Updating `overwrite-target.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `overwrite-target.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)_
 
 - Some purpose.
 
@@ -130,7 +130,7 @@ project
 
 #### >>> txt-merge-below-title/task
 
-_Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)._
+_Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)_
 
 - Some purpose.
 
@@ -182,7 +182,7 @@ project
 
 #### >>> misc/task
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)_
 
 - Some purpose.
 
@@ -249,7 +249,7 @@ project
 
 #### >>> misc/task
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)_
 
 - Some purpose.
 
@@ -312,7 +312,7 @@ project
 
 ##### >>>> misc/task
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)_
 
 - Some purpose.
 
@@ -347,7 +347,7 @@ project
 
 #### >>> misc/task
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)_
 
 - Some purpose.
 
@@ -399,7 +399,7 @@ project
 
 #### >>> json-variable-types/task
 
-_Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overwrite)_
 
 - Some purpose.
 
@@ -436,7 +436,7 @@ project
 
 #### >>> json-shallow-merge/task
 
-_Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)._
+_Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)_
 
 - Some purpose.
 
@@ -473,7 +473,7 @@ project
 
 #### >>> json-deep-merge/task
 
-_Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)._
+_Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)_
 
 - Some purpose.
 
@@ -510,7 +510,7 @@ project
 
 #### >>> escaped-variable/task
 
-_Updating `escaped-variable.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `escaped-variable.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)_
 
 - Some purpose.
 
@@ -589,7 +589,7 @@ Does a "smart" deep merge.
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-This will not work for all xml merging, but should for many.
+This will not work as desired for all xml merging, but should for many cases.
 
 <!---0--></details>
 
@@ -602,7 +602,7 @@ Merges content at the top of the file and removes existing, duplicate lines.
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-Very useful for managing e.g. `.gitignore`.
+Useful for managing e.g. `.gitignore` when the original content should be kept.
 
 <!---0--></details>
 
@@ -640,7 +640,7 @@ Does a "smart" deep merge.
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-This will not work for all object deep merging, but should for many cases.
+This will not work as desired for all object deep merging, but should for many cases.
 
 <!---0--></details>
 

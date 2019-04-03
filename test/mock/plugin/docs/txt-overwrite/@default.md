@@ -17,7 +17,7 @@ project
 
 ## > txt-overwrite/task
 
-_Updating `overwrite-target.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `overwrite-target.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)_
 
 - Some purpose.
 

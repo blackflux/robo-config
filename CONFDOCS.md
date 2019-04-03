@@ -101,7 +101,7 @@ project
 
 ##### >>>> badges/js-gardener
 
-_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
+_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)_
 
 - Display [js-gardener](https://github.com/blackflux/js-gardener) badge in README.
 
@@ -124,7 +124,7 @@ project
 
 ##### >>>> badges/semantic-release
 
-_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
+_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)_
 
 - Display [semantic-release](https://github.com/semantic-release/semantic-release) badge in README.
 
@@ -147,7 +147,7 @@ project
 
 ##### >>>> badges/npm-downloads
 
-_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
+_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)_
 
 - Display [npm downloads](https://www.npmjs.com/) badge in README.
 
@@ -177,7 +177,7 @@ project
 
 ##### >>>> badges/npm-status
 
-_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
+_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)_
 
 - Display [npm status](https://www.npmjs.com/) badge in README.
 
@@ -207,7 +207,7 @@ project
 
 ##### >>>> badges/david-dm
 
-_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
+_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)_
 
 - Display [david-dm.com](https://david-dm.org/) badge in README.
 
@@ -237,7 +237,7 @@ project
 
 ##### >>>> badges/dependabot
 
-_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
+_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)_
 
 - Display [dependabot](https://dependabot.com/) badge in README.
 
@@ -267,7 +267,7 @@ project
 
 ##### >>>> badges/coveralls
 
-_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
+_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)_
 
 - Display [coveralls](https://coveralls.io/) badge in README.
 
@@ -297,7 +297,7 @@ project
 
 ##### >>>> badges/circleci
 
-_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
+_Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)_
 
 - Display [circleci](https://circleci.com/) badge in README.
 
@@ -358,7 +358,7 @@ project
 
 ##### >>>> dependabot/js-instant
 
-_Updating `.dependabot/config.yml` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
+_Updating `.dependabot/config.yml` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)_
 
 - Configure dependabot to instantly merge javascript dependency updates into the `dev` branch.
 
@@ -412,7 +412,7 @@ project
 
 ##### >>>> git/gitignore
 
-_Updating `.gitignore` using [unique-top](#blackfluxrobo-config-plugin-strat-ref-unique-top)._
+_Updating `.gitignore` using [unique-top](#blackfluxrobo-config-plugin-strat-ref-unique-top)_
 
 - Inject recommended entries into [gitignore file](https://help.github.com/en/articles/ignoring-files).
 - Default ignores for JetBrains IDE.
@@ -475,7 +475,7 @@ project
 
 ##### >>>> license/MIT-LICENSE
 
-_Updating `LICENSE` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
+_Updating `LICENSE` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)_
 
 - Generate [MIT license](https://en.wikipedia.org/wiki/MIT_License) file.
 
@@ -498,7 +498,7 @@ project
 
 ##### >>>> license/MIT-npm
 
-_Updating `package.json` using [merge-shallow](#blackfluxrobo-config-plugin-strat-ref-merge-shallow)._
+_Updating `package.json` using [merge-shallow](#blackfluxrobo-config-plugin-strat-ref-merge-shallow)_
 
 - Link MIT license file into [npm](https://www.npmjs.com/) configuration.
 
@@ -557,7 +557,7 @@ project
 
 ##### >>>> npm/npmignore
 
-_Updating `.npmignore` using [unique-top](#blackfluxrobo-config-plugin-strat-ref-unique-top)._
+_Updating `.npmignore` using [unique-top](#blackfluxrobo-config-plugin-strat-ref-unique-top)_
 
 - Inject comment into .npmignore explaining when to use it.
 
@@ -608,7 +608,7 @@ project
 
 ##### >>>> semantic-release/commit-conventions
 
-_Updating `.releaserc.json` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
+_Updating `.releaserc.json` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)_
 
 - Slightly extended [release commit convention](https://github.com/semantic-release/semantic-release#commit-message-format) for semantic-release.
 
@@ -635,7 +635,7 @@ project
 
 #### >>> circleci/npm-opensource:two-branch
 
-_Updating `.circleci/config.yml` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
+_Updating `.circleci/config.yml` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)_
 
 - Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
 - TODO
@@ -667,7 +667,7 @@ project
 
 #### >>> gally/npm-opensource:two-branch
 
-_Updating `.gally.json` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
+_Updating `.gally.json` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)_
 
 - Restrictive two-branch [gally](https://github.com/loopmediagroup/gally#readme) config. Custom for npm open source packages.
 - TODO ...
@@ -739,7 +739,7 @@ project
 
 #### >>> jetbrains/exclude-coverage-folder
 
-_Updating `.idea/${projectName}.iml` using [xml-merge](#blackfluxrobo-config-plugin-strat-ref-xml-merge)._
+_Updating `.idea/${projectName}.iml` using [xml-merge](#blackfluxrobo-config-plugin-strat-ref-xml-merge)_
 
 - Mark `coverage` Folder as excluded in Jetbrains.
 
@@ -792,7 +792,7 @@ project
 
 #### >>> editor/two-space
 
-_Updating `.editorconfig` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
+_Updating `.editorconfig` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)_
 
 - Two space line indentation.
 - Set `lf` line endings.
@@ -1128,7 +1128,7 @@ Merges content at the top of the file and removes existing, duplicate lines.
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-Very useful for managing e.g. `.gitignore`.
+Useful for managing e.g. `.gitignore` when the original content should be kept.
 
 <!---0--></details>
 
@@ -1154,7 +1154,7 @@ Does a "smart" deep merge.
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-This will not work for all xml merging, but should for many.
+This will not work as desired for all xml merging, but should for many cases.
 
 <!---0--></details>
 

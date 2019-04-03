@@ -17,7 +17,7 @@ project
 
 ## > txt-merge-below-title/task
 
-_Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)._
+_Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)_
 
 - Some purpose.
 

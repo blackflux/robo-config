@@ -17,7 +17,7 @@ project
 
 ## > txt-unique-top/task
 
-_Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)._
+_Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)_
 
 - Some purpose.
 
@@ -47,7 +47,7 @@ Merges content at the top of the file and removes existing, duplicate lines.
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-Very useful for managing e.g. `.gitignore`.
+Useful for managing e.g. `.gitignore` when the original content should be kept.
 
 <!---0--></details>
 

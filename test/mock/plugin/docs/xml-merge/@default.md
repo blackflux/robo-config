@@ -17,7 +17,7 @@ project
 
 ## > xml-merge/task
 
-_Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)._
+_Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)_
 
 - Some purpose.
 
@@ -47,7 +47,7 @@ Does a "smart" deep merge.
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-This will not work for all xml merging, but should for many.
+This will not work as desired for all xml merging, but should for many cases.
 
 <!---0--></details>
 

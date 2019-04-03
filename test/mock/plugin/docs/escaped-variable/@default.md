@@ -17,7 +17,7 @@ project
 
 ## > escaped-variable/task
 
-_Updating `escaped-variable.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `escaped-variable.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)_
 
 - Some purpose.
 

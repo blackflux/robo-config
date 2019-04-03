@@ -17,7 +17,7 @@ project
 
 ## > json-variable-types/task
 
-_Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overwrite)_
 
 - Some purpose.
 
