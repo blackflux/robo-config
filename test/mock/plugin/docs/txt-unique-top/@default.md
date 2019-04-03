@@ -17,7 +17,7 @@ project
 
 ## > txt-unique-top/task
 
-_Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)_
+_Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)._
 
 - Some purpose.
 

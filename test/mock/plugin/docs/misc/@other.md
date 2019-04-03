@@ -32,7 +32,7 @@ project
 
 ## > misc/task
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)_
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 

@@ -17,7 +17,7 @@ project
 
 ## > json-shallow-merge/task
 
-_Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)_
+_Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)._
 
 - Some purpose.
 

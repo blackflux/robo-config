@@ -17,7 +17,7 @@ project
 
 ## > json-deep-merge/task
 
-_Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)_
+_Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)._
 
 - Some purpose.
 

@@ -17,7 +17,7 @@ project
 
 ## > xml-merge/task
 
-_Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)_
+_Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)._
 
 - Some purpose.
 
