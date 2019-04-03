@@ -32,7 +32,7 @@ Documents configuration tasks managed by [robo-config](https://github.com/blackf
 - [`editor/@default`](#blackfluxrobo-config-plugin-task-ref-editordefault)
   - [`editor/two-space`](#blackfluxrobo-config-plugin-task-ref-editortwo-space)
 
-### >> `assorted/@npm-opensource`
+### <a name="blackfluxrobo-config-plugin-task-ref-assortednpm-opensource">assorted/@npm-opensource</a>
 
 Manage various configuration files for an open source npm github repo.
 
@@ -89,7 +89,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> `badges/@npm-opensource`
+#### <a name="blackfluxrobo-config-plugin-task-ref-badgesnpm-opensource">badges/@npm-opensource</a>
 
 Display various badges in README.
 
@@ -357,7 +357,7 @@ project
 
 <!---1--></details>
 
-#### >>> `dependabot/@default-js`
+#### <a name="blackfluxrobo-config-plugin-task-ref-dependabotdefault-js">dependabot/@default-js</a>
 
 Recommended base [dependabot configuration](https://dependabot.com/) for javascript projects.
 
@@ -414,7 +414,7 @@ project
 
 <!---1--></details>
 
-#### >>> `git/@default`
+#### <a name="blackfluxrobo-config-plugin-task-ref-gitdefault">git/@default</a>
 
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
 
@@ -468,7 +468,7 @@ project
 
 <!---1--></details>
 
-#### >>> `license/@MIT-npm`
+#### <a name="blackfluxrobo-config-plugin-task-ref-licensemit-npm">license/@MIT-npm</a>
 
 Recommended base configuration when using MIT License with npm.
 
@@ -559,7 +559,7 @@ project
 
 <!---1--></details>
 
-#### >>> `npm/@default`
+#### <a name="blackfluxrobo-config-plugin-task-ref-npmdefault">npm/@default</a>
 
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
@@ -610,7 +610,7 @@ project
 
 <!---1--></details>
 
-#### >>> `semantic-release/@default`
+#### <a name="blackfluxrobo-config-plugin-task-ref-semantic-releasedefault">semantic-release/@default</a>
 
 Recommended base configuration when using [semantic-release](https://github.com/semantic-release/semantic-release).
 
@@ -732,7 +732,7 @@ project
 
 <!---0--></details>
 
-### >> `jetbrains/@default`
+### <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">jetbrains/@default</a>
 
 Recommended base configuration when using Jetbrains.
 
@@ -801,7 +801,7 @@ project
 
 <!---0--></details>
 
-### >> `editor/@default`
+### <a name="blackfluxrobo-config-plugin-task-ref-editordefault">editor/@default</a>
 
 Recommended base [code editor configuration](https://editorconfig.org/).
 

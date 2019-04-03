@@ -52,14 +52,13 @@ const documentSection = (plName, baseLevel, {
   assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
 
   const result = [];
+  result.push(`${'#'.repeat(level + 1)} ${createRef(`${plName}-task`, taskName)}`, '');
   if (typeof task.target === 'string') {
-    result.push(`${'#'.repeat(level + 1)} ${createRef(`${plName}-task`, taskName)}`, '');
     result.push(`_Updating \`${task.target}\` using ${linkRef(`${plName}-strat`, task.strategy)}._`);
     result.push('');
     result.push(...task.purpose.map(d => `- ${d}`));
     result.push('');
   } else {
-    result.push(`${'#'.repeat(level + 1)} ${'>'.repeat(level)} \`${taskName}\``, '');
     result.push(task.description);
     result.push('');
   }
