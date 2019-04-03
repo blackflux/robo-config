@@ -1,5 +1,5 @@
-- :open_file_folder: [`xml-merge/@default.json`](#mock-plugin-task-ref-xml-mergedefaultjson)
-  - :clipboard: [`xml-merge/task`](#mock-plugin-task-ref-xml-mergetask)
+- :open_file_folder: <a href="#mock-plugin-task-ref-xml-mergedefaultjson">`xml-merge/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-xml-mergetask">`xml-merge/task`</a>
 
 # :open_file_folder: <a name="mock-plugin-task-ref-xml-mergedefaultjson">xml-merge/@default.json</a>
 
@@ -13,7 +13,7 @@ project
 
 ## :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a>
 
-_Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)._
+_Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xml-merge</a>._
 
 - Some purpose.
 

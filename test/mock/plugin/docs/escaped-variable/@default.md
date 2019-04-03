@@ -1,5 +1,5 @@
-- :open_file_folder: [`escaped-variable/@default.json`](#mock-plugin-task-ref-escaped-variabledefaultjson)
-  - :clipboard: [`escaped-variable/task`](#mock-plugin-task-ref-escaped-variabletask)
+- :open_file_folder: <a href="#mock-plugin-task-ref-escaped-variabledefaultjson">`escaped-variable/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-escaped-variabletask">`escaped-variable/task`</a>
 
 # :open_file_folder: <a name="mock-plugin-task-ref-escaped-variabledefaultjson">escaped-variable/@default.json</a>
 
@@ -13,7 +13,7 @@ project
 
 ## :clipboard: <a name="mock-plugin-task-ref-escaped-variabletask">escaped-variable/task</a>
 
-_Updating `escaped-variable.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 

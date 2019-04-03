@@ -13,7 +13,7 @@ const normalizeRef = input => input
   .replace(/\s/g, '-')
   .replace(/-+$/, '');
 const createRef = (type, content) => `<a name="${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
-const linkRef = (type, content) => `[${content}](#${normalizeRef(`${type}-ref-${content}`)})`;
+const linkRef = (type, content) => `<a href="#${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
 
 const documentFiles = (root, files) => {
   const result = [];

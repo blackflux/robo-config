@@ -1,28 +1,28 @@
 ## Plugin [mock-plugin](https://www.npmjs.com/package/mock-plugin)
 
-- :open_file_folder: [`xml-merge/@default`](#mock-plugin-task-ref-xml-mergedefault)
-  - :clipboard: [`xml-merge/task`](#mock-plugin-task-ref-xml-mergetask)
-- :open_file_folder: [`txt-unique-top/@default`](#mock-plugin-task-ref-txt-unique-topdefault)
-  - :clipboard: [`txt-unique-top/task`](#mock-plugin-task-ref-txt-unique-toptask)
-- :open_file_folder: [`txt-overwrite/@default`](#mock-plugin-task-ref-txt-overwritedefault)
-  - :clipboard: [`txt-overwrite/task`](#mock-plugin-task-ref-txt-overwritetask)
-- :open_file_folder: [`txt-merge-below-title/@default`](#mock-plugin-task-ref-txt-merge-below-titledefault)
-  - :clipboard: [`txt-merge-below-title/task`](#mock-plugin-task-ref-txt-merge-below-titletask)
-- :open_file_folder: [`misc/@other`](#mock-plugin-task-ref-miscother)
-  - :clipboard: [`misc/task`](#mock-plugin-task-ref-misctask)
-- :open_file_folder: [`misc/@default`](#mock-plugin-task-ref-miscdefault)
-  - :clipboard: [`misc/task`](#mock-plugin-task-ref-misctask)
-  - :open_file_folder: [`misc/@other`](#mock-plugin-task-ref-miscother)
-    - :clipboard: [`misc/task`](#mock-plugin-task-ref-misctask)
-  - :clipboard: [`misc/task`](#mock-plugin-task-ref-misctask)
-- :open_file_folder: [`json-variable-types/@default`](#mock-plugin-task-ref-json-variable-typesdefault)
-  - :clipboard: [`json-variable-types/task`](#mock-plugin-task-ref-json-variable-typestask)
-- :open_file_folder: [`json-shallow-merge/@default`](#mock-plugin-task-ref-json-shallow-mergedefault)
-  - :clipboard: [`json-shallow-merge/task`](#mock-plugin-task-ref-json-shallow-mergetask)
-- :open_file_folder: [`json-deep-merge/@default`](#mock-plugin-task-ref-json-deep-mergedefault)
-  - :clipboard: [`json-deep-merge/task`](#mock-plugin-task-ref-json-deep-mergetask)
-- :open_file_folder: [`escaped-variable/@default`](#mock-plugin-task-ref-escaped-variabledefault)
-  - :clipboard: [`escaped-variable/task`](#mock-plugin-task-ref-escaped-variabletask)
+- :open_file_folder: <a href="#mock-plugin-task-ref-xml-mergedefault">`xml-merge/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-xml-mergetask">`xml-merge/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-txt-unique-topdefault">`txt-unique-top/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-txt-unique-toptask">`txt-unique-top/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-txt-overwritedefault">`txt-overwrite/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-txt-overwritetask">`txt-overwrite/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-txt-merge-below-titledefault">`txt-merge-below-title/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-txt-merge-below-titletask">`txt-merge-below-title/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-miscother">`misc/@other`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-miscdefault">`misc/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+  - :open_file_folder: <a href="#mock-plugin-task-ref-miscother">`misc/@other`</a>
+    - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-json-variable-typesdefault">`json-variable-types/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-json-variable-typestask">`json-variable-types/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-json-shallow-mergedefault">`json-shallow-merge/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-json-shallow-mergetask">`json-shallow-merge/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-json-deep-mergedefault">`json-deep-merge/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-json-deep-mergetask">`json-deep-merge/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-escaped-variabledefault">`escaped-variable/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-escaped-variabletask">`escaped-variable/task`</a>
 
 ### :open_file_folder: <a name="mock-plugin-task-ref-xml-mergedefault">xml-merge/@default</a>
 
@@ -36,7 +36,7 @@ project
 
 #### :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a>
 
-_Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)._
+_Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xml-merge</a>._
 
 - Some purpose.
 
@@ -58,7 +58,7 @@ project
 
 #### :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a>
 
-_Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)._
+_Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">unique-top</a>._
 
 - Some purpose.
 
@@ -80,7 +80,7 @@ project
 
 #### :clipboard: <a name="mock-plugin-task-ref-txt-overwritetask">txt-overwrite/task</a>
 
-_Updating `overwrite-target.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -102,7 +102,7 @@ project
 
 #### :clipboard: <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a>
 
-_Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)._
+_Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
 - Some purpose.
 
@@ -131,13 +131,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>
@@ -146,7 +146,7 @@ project
 
 #### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -165,13 +165,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>
@@ -197,13 +197,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>
@@ -212,7 +212,7 @@ project
 
 #### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -231,13 +231,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>
@@ -263,13 +263,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>
@@ -278,7 +278,7 @@ project
 
 ##### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -297,13 +297,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>
@@ -312,7 +312,7 @@ project
 
 #### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -331,13 +331,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>
@@ -356,7 +356,7 @@ project
 
 #### :clipboard: <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a>
 
-_Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -378,7 +378,7 @@ project
 
 #### :clipboard: <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a>
 
-_Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)._
+_Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merge-shallow">merge-shallow</a>._
 
 - Some purpose.
 
@@ -400,7 +400,7 @@ project
 
 #### :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a>
 
-_Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)._
+_Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Some purpose.
 
@@ -422,7 +422,7 @@ project
 
 #### :clipboard: <a name="mock-plugin-task-ref-escaped-variabletask">escaped-variable/task</a>
 
-_Updating `escaped-variable.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 

@@ -1,5 +1,5 @@
-- :open_file_folder: [`txt-merge-below-title/@default.json`](#mock-plugin-task-ref-txt-merge-below-titledefaultjson)
-  - :clipboard: [`txt-merge-below-title/task`](#mock-plugin-task-ref-txt-merge-below-titletask)
+- :open_file_folder: <a href="#mock-plugin-task-ref-txt-merge-below-titledefaultjson">`txt-merge-below-title/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-txt-merge-below-titletask">`txt-merge-below-title/task`</a>
 
 # :open_file_folder: <a name="mock-plugin-task-ref-txt-merge-below-titledefaultjson">txt-merge-below-title/@default.json</a>
 
@@ -13,7 +13,7 @@ project
 
 ## :clipboard: <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a>
 
-_Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)._
+_Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
 - Some purpose.
 

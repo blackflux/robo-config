@@ -1,8 +1,8 @@
-- :open_file_folder: [`misc/@default.json`](#mock-plugin-task-ref-miscdefaultjson)
-  - :clipboard: [`misc/task`](#mock-plugin-task-ref-misctask)
-  - :open_file_folder: [`misc/@other`](#mock-plugin-task-ref-miscother)
-    - :clipboard: [`misc/task`](#mock-plugin-task-ref-misctask)
-  - :clipboard: [`misc/task`](#mock-plugin-task-ref-misctask)
+- :open_file_folder: <a href="#mock-plugin-task-ref-miscdefaultjson">`misc/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+  - :open_file_folder: <a href="#mock-plugin-task-ref-miscother">`misc/@other`</a>
+    - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
 
 # :open_file_folder: <a name="mock-plugin-task-ref-miscdefaultjson">misc/@default.json</a>
 
@@ -23,13 +23,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>
@@ -38,7 +38,7 @@ project
 
 ## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -57,13 +57,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>
@@ -89,13 +89,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>
@@ -104,7 +104,7 @@ project
 
 ### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -123,13 +123,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>
@@ -138,7 +138,7 @@ project
 
 ## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -157,13 +157,13 @@ project
     <tr>
       <td>
         <ul>
-          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>[misc](#mock-plugin-var-ref-misc)</li>
-          <li>[variable](#mock-plugin-var-ref-variable)</li>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
     </tr>

@@ -1,5 +1,5 @@
-- :open_file_folder: [`json-deep-merge/@default.json`](#mock-plugin-task-ref-json-deep-mergedefaultjson)
-  - :clipboard: [`json-deep-merge/task`](#mock-plugin-task-ref-json-deep-mergetask)
+- :open_file_folder: <a href="#mock-plugin-task-ref-json-deep-mergedefaultjson">`json-deep-merge/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-json-deep-mergetask">`json-deep-merge/task`</a>
 
 # :open_file_folder: <a name="mock-plugin-task-ref-json-deep-mergedefaultjson">json-deep-merge/@default.json</a>
 
@@ -13,7 +13,7 @@ project
 
 ## :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a>
 
-_Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)._
+_Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Some purpose.
 

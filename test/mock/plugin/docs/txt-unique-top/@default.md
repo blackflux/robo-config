@@ -1,5 +1,5 @@
-- :open_file_folder: [`txt-unique-top/@default.json`](#mock-plugin-task-ref-txt-unique-topdefaultjson)
-  - :clipboard: [`txt-unique-top/task`](#mock-plugin-task-ref-txt-unique-toptask)
+- :open_file_folder: <a href="#mock-plugin-task-ref-txt-unique-topdefaultjson">`txt-unique-top/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-txt-unique-toptask">`txt-unique-top/task`</a>
 
 # :open_file_folder: <a name="mock-plugin-task-ref-txt-unique-topdefaultjson">txt-unique-top/@default.json</a>
 
@@ -13,7 +13,7 @@ project
 
 ## :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a>
 
-_Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)._
+_Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">unique-top</a>._
 
 - Some purpose.
 
