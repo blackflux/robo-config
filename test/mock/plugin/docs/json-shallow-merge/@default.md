@@ -16,6 +16,7 @@ Task collection description.
 <code>└─ merge-shallow-target.json</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -36,10 +37,10 @@ _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merg
 <code>└─ merge-shallow-target.json</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
-------
 ------
 
 ## Strategies

@@ -16,6 +16,7 @@ Task collection description.
 <code>└─ overwrite-target.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -36,10 +37,10 @@ _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite
 <code>└─ overwrite-target.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
-------
 ------
 
 ## Strategies

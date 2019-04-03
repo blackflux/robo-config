@@ -16,6 +16,7 @@ Task collection description.
 <code>└─ merge-deep-target.json</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -36,10 +37,10 @@ _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-d
 <code>└─ merge-deep-target.json</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
-------
 ------
 
 ## Strategies

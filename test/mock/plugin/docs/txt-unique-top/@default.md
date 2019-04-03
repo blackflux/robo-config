@@ -16,6 +16,7 @@ Task collection description.
 <code>└─ unique-top.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -36,10 +37,10 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
 <code>└─ unique-top.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
-------
 ------
 
 ## Strategies

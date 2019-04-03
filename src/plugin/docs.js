@@ -59,6 +59,7 @@ const documentSection = (plName, baseLevel, {
   result.push('<table>');
   result.push('  <tbody>');
   result.push('    <tr>');
+
   if (requires.length !== 0) {
     result.push('      <th>Targets</th>');
   }
@@ -68,8 +69,10 @@ const documentSection = (plName, baseLevel, {
   if (variables.length !== 0) {
     result.push('      <th>Variables</th>');
   }
+
   result.push('    </tr>');
   result.push('    <tr>');
+
   result.push('      <td align="left" valign="top">');
   result.push('        <ul>');
   result.push(...documentFiles('project', targets).map(l => `<code>${l}</code><br/>`));
@@ -88,8 +91,9 @@ const documentSection = (plName, baseLevel, {
     result.push(...variables.map(v => `          <li>${linkRef(`${plName}-var`, v)}</li>`));
     result.push('        </ul>');
     result.push('      </td>');
-    result.push('    </tr>');
   }
+
+  result.push('    </tr>');
   result.push('  </tbody>');
   result.push('</table>');
   result.push('');
@@ -214,7 +218,6 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
   ].forEach((def) => {
     const toDocument = [...new Set(sections.reduce((p, c) => p.concat(c[def.source]), []))];
     if (toDocument.length !== 0) {
-      content.push('------');
       content.push('------');
       content.push('');
       content.push(`## ${def.name}`);

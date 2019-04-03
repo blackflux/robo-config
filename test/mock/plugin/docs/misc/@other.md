@@ -70,7 +70,6 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
 </table>
 
 ------
-------
 
 ## Requires
 
@@ -83,7 +82,6 @@ Short description about this dependency.
 *Details:*
 Detailed description about this dependency and how it's used.
 
-------
 ------
 
 ## Variables
@@ -106,7 +104,6 @@ Short description of what this variable does.
 *Details:*
 Detailed description of what this variable does.
 
-------
 ------
 
 ## Strategies

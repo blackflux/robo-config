@@ -16,6 +16,7 @@ Task collection description.
 <code>└─ merge-target.xml</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -36,10 +37,10 @@ _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xm
 <code>└─ merge-target.xml</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
-------
 ------
 
 ## Strategies

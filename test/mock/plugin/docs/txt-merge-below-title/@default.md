@@ -16,6 +16,7 @@ Task collection description.
 <code>└─ merge-below-title.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -36,10 +37,10 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
 <code>└─ merge-below-title.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
-------
 ------
 
 ## Strategies

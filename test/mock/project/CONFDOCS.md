@@ -39,6 +39,7 @@ Task collection description.
 <code>└─ merge-target.xml</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -59,6 +60,7 @@ _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xm
 <code>└─ merge-target.xml</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -77,6 +79,7 @@ Task collection description.
 <code>└─ unique-top.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -97,6 +100,7 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
 <code>└─ unique-top.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -115,6 +119,7 @@ Task collection description.
 <code>└─ overwrite-target.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -135,6 +140,7 @@ _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite
 <code>└─ overwrite-target.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -153,6 +159,7 @@ Task collection description.
 <code>└─ merge-below-title.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -173,6 +180,7 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
 <code>└─ merge-below-title.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -430,6 +438,7 @@ Task collection description.
 <code>└─ variables-target.json</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -450,6 +459,7 @@ _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrit
 <code>└─ variables-target.json</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -468,6 +478,7 @@ Task collection description.
 <code>└─ merge-shallow-target.json</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -488,6 +499,7 @@ _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merg
 <code>└─ merge-shallow-target.json</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -506,6 +518,7 @@ Task collection description.
 <code>└─ merge-deep-target.json</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -526,6 +539,7 @@ _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-d
 <code>└─ merge-deep-target.json</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -544,6 +558,7 @@ Task collection description.
 <code>└─ escaped-variable.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -564,10 +579,10 @@ _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite
 <code>└─ escaped-variable.txt</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
-------
 ------
 
 ## Requires
@@ -581,7 +596,6 @@ Short description about this dependency.
 *Details:*
 Detailed description about this dependency and how it's used.
 
-------
 ------
 
 ## Variables
@@ -604,7 +618,6 @@ Short description of what this variable does.
 *Details:*
 Detailed description of what this variable does.
 
-------
 ------
 
 ## Strategies

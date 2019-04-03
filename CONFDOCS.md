@@ -153,6 +153,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
           <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -180,6 +181,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -412,6 +414,7 @@ Recommended base [dependabot configuration](https://dependabot.com/) for javascr
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -442,6 +445,7 @@ _Updating `.dependabot/config.yml` using <a href="#blackfluxrobo-config-plugin-s
           <li><a href="#blackfluxrobo-config-plugin-req-ref-javascript">javascript</a></li>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -467,6 +471,7 @@ Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Gi
           <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -497,6 +502,7 @@ _Updating `.gitignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-uni
           <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -618,6 +624,7 @@ Recommended base configuration when using [npm](https://www.npmjs.com/).
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -645,6 +652,7 @@ _Updating `.npmignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-uni
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -670,6 +678,7 @@ Recommended base configuration when using [semantic-release](https://github.com/
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -697,6 +706,7 @@ _Updating `.releaserc.json` using <a href="#blackfluxrobo-config-plugin-strat-re
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -733,6 +743,7 @@ _Updating `.circleci/config.yml` using <a href="#blackfluxrobo-config-plugin-str
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -860,6 +871,7 @@ Recommended base [code editor configuration](https://editorconfig.org/).
 <code>└─ .editorconfig</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
@@ -883,10 +895,10 @@ _Updating `.editorconfig` using <a href="#blackfluxrobo-config-plugin-strat-ref-
 <code>└─ .editorconfig</code><br/>
         </ul>
       </td>
+    </tr>
   </tbody>
 </table>
 
-------
 ------
 
 ## Requires
@@ -1041,7 +1053,6 @@ A major coverage testing framework for javascript.
 Comes with all the bells and whistles.
 
 ------
-------
 
 ## Variables
 
@@ -1097,7 +1108,6 @@ Name of the project.
 *Details:*
 The project name is in most cases identical to the repository name.
 
-------
 ------
 
 ## Strategies
