@@ -145,7 +145,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
   // generate docs for tasks
   let lastLevel = baseLevel;
   sections.forEach((section) => {
-    index.push(`${'  '.repeat(section.level)}- [${section.taskName}](???)`);
+    index.push(`${'  '.repeat(section.level - baseLevel)}- [${section.taskName}](???)`);
     if (lastLevel < section.level) {
       content.push(...startSpoiler('Details', lastLevel - baseLevel));
     } else if (lastLevel > section.level) {
