@@ -1,39 +1,48 @@
-#  `xml-merge/@default.json`
+- :open_file_folder: <a href="#mock-plugin-task-ref-xml-mergedefaultjson">`xml-merge/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-xml-mergetask">`xml-merge/task`</a>
+
+# :open_file_folder: <a name="mock-plugin-task-ref-xml-mergedefaultjson">xml-merge/@default.json</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-target.xml</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-target.xml
-```
+## :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > xml-merge/task
-
-_Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)._
+_Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xml-merge</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-target.xml</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-target.xml
-```
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Strategies
@@ -44,10 +53,6 @@ Valid for: `xml`
 
 Does a "smart" deep merge.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 This will not work as desired for all xml merging, but should for many cases.
-
-<!---0--></details>
 

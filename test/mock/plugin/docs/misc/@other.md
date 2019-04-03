@@ -1,69 +1,74 @@
-#  `misc/@other.json`
+- :open_file_folder: <a href="#mock-plugin-task-ref-miscotherjson">`misc/@other.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+
+# :open_file_folder: <a name="mock-plugin-task-ref-miscotherjson">misc/@other.json</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ ${misc}.txt
-```
+## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Requires</summary>
-
-- [dependency](#mock-plugin-req-ref-dependency)
-
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Variables</summary>
-
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
-
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > misc/task
-
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ ${misc}.txt
-```
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Requires</summary>
-
-- [dependency](#mock-plugin-req-ref-dependency)
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Variables</summary>
-
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Requires
@@ -74,14 +79,9 @@ project
 
 Short description about this dependency.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Detailed description about this dependency and how it's used.
 
-<!---0--></details>
-
-------
 ------
 
 ## Variables
@@ -92,12 +92,8 @@ Type: `string`
 
 Short description of what this variable does.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Detailed description of what this variable does.
-
-<!---0--></details>
 
 ### <a name="mock-plugin-var-ref-variable">variable</a>
 
@@ -105,14 +101,9 @@ Type: `string`
 
 Short description of what this variable does.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Detailed description of what this variable does.
 
-<!---0--></details>
-
-------
 ------
 
 ## Strategies

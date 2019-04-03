@@ -1,39 +1,48 @@
-#  `json-deep-merge/@default.json`
+- :open_file_folder: <a href="#mock-plugin-task-ref-json-deep-mergedefaultjson">`json-deep-merge/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-json-deep-mergetask">`json-deep-merge/task`</a>
+
+# :open_file_folder: <a name="mock-plugin-task-ref-json-deep-mergedefaultjson">json-deep-merge/@default.json</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-deep-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-deep-target.json
-```
+## :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > json-deep-merge/task
-
-_Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)._
+_Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-deep-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-deep-target.json
-```
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Strategies
@@ -44,10 +53,6 @@ Valid for: `json`, `yml`
 
 Does a "smart" deep merge.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 This will not work as desired for all object deep merging, but should for many cases.
-
-<!---0--></details>
 

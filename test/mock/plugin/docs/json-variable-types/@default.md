@@ -1,39 +1,48 @@
-#  `json-variable-types/@default.json`
+- :open_file_folder: <a href="#mock-plugin-task-ref-json-variable-typesdefaultjson">`json-variable-types/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-json-variable-typestask">`json-variable-types/task`</a>
+
+# :open_file_folder: <a name="mock-plugin-task-ref-json-variable-typesdefaultjson">json-variable-types/@default.json</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ variables-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ variables-target.json
-```
+## :clipboard: <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > json-variable-types/task
-
-_Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ variables-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ variables-target.json
-```
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Strategies

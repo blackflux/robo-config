@@ -1,39 +1,48 @@
-#  `txt-unique-top/@default.json`
+- :open_file_folder: <a href="#mock-plugin-task-ref-txt-unique-topdefaultjson">`txt-unique-top/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-txt-unique-toptask">`txt-unique-top/task`</a>
+
+# :open_file_folder: <a name="mock-plugin-task-ref-txt-unique-topdefaultjson">txt-unique-top/@default.json</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ unique-top.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ unique-top.txt
-```
+## :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > txt-unique-top/task
-
-_Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)._
+_Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">unique-top</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ unique-top.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ unique-top.txt
-```
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Strategies
@@ -44,10 +53,6 @@ Valid for: `list`
 
 Merges content at the top of the file and removes existing, duplicate lines.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Useful for managing e.g. `.gitignore` when the original content should be kept.
-
-<!---0--></details>
 

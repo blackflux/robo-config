@@ -1,532 +1,604 @@
 ## Plugin [mock-plugin](https://www.npmjs.com/package/mock-plugin)
 
-### >> `xml-merge/@default`
+- :open_file_folder: <a href="#mock-plugin-task-ref-xml-mergedefault">`xml-merge/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-xml-mergetask">`xml-merge/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-txt-unique-topdefault">`txt-unique-top/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-txt-unique-toptask">`txt-unique-top/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-txt-overwritedefault">`txt-overwrite/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-txt-overwritetask">`txt-overwrite/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-txt-merge-below-titledefault">`txt-merge-below-title/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-txt-merge-below-titletask">`txt-merge-below-title/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-miscother">`misc/@other`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-miscdefault">`misc/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+  - :open_file_folder: <a href="#mock-plugin-task-ref-miscother">`misc/@other`</a>
+    - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-json-variable-typesdefault">`json-variable-types/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-json-variable-typestask">`json-variable-types/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-json-shallow-mergedefault">`json-shallow-merge/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-json-shallow-mergetask">`json-shallow-merge/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-json-deep-mergedefault">`json-deep-merge/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-json-deep-mergetask">`json-deep-merge/task`</a>
+- :open_file_folder: <a href="#mock-plugin-task-ref-escaped-variabledefault">`escaped-variable/@default`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-escaped-variabletask">`escaped-variable/task`</a>
+
+### :open_file_folder: <a name="mock-plugin-task-ref-xml-mergedefault">xml-merge/@default</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-target.xml</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-target.xml
-```
+#### :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-#### >>> xml-merge/task
-
-_Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)._
+_Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xml-merge</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-target.xml</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-target.xml
-```
-
-<!---1--></details>
-
-------
-
-<!---0--></details>
-
-### >> `txt-unique-top/@default`
+### :open_file_folder: <a name="mock-plugin-task-ref-txt-unique-topdefault">txt-unique-top/@default</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ unique-top.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ unique-top.txt
-```
+#### :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-#### >>> txt-unique-top/task
-
-_Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)._
+_Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">unique-top</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ unique-top.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ unique-top.txt
-```
-
-<!---1--></details>
-
-------
-
-<!---0--></details>
-
-### >> `txt-overwrite/@default`
+### :open_file_folder: <a name="mock-plugin-task-ref-txt-overwritedefault">txt-overwrite/@default</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ overwrite-target.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ overwrite-target.txt
-```
+#### :clipboard: <a name="mock-plugin-task-ref-txt-overwritetask">txt-overwrite/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-#### >>> txt-overwrite/task
-
-_Updating `overwrite-target.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ overwrite-target.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ overwrite-target.txt
-```
-
-<!---1--></details>
-
-------
-
-<!---0--></details>
-
-### >> `txt-merge-below-title/@default`
+### :open_file_folder: <a name="mock-plugin-task-ref-txt-merge-below-titledefault">txt-merge-below-title/@default</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-below-title.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-below-title.txt
-```
+#### :clipboard: <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-#### >>> txt-merge-below-title/task
-
-_Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)._
+_Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-below-title.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-below-title.txt
-```
-
-<!---1--></details>
-
-------
-
-<!---0--></details>
-
-### >> `misc/@other`
+### :open_file_folder: <a name="mock-plugin-task-ref-miscother">misc/@other</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ ${misc}.txt
-```
+#### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Requires</summary>
-
-- [dependency](#mock-plugin-req-ref-dependency)
-
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Variables</summary>
-
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
-
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-#### >>> misc/task
-
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ ${misc}.txt
-```
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Requires</summary>
-
-- [dependency](#mock-plugin-req-ref-dependency)
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Variables</summary>
-
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
-
-<!---1--></details>
-
-------
-
-<!---0--></details>
-
-### >> `misc/@default`
+### :open_file_folder: <a name="mock-plugin-task-ref-miscdefault">misc/@default</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ ${misc}.txt
-```
+#### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Requires</summary>
-
-- [dependency](#mock-plugin-req-ref-dependency)
-
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Variables</summary>
-
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
-
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-#### >>> misc/task
-
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ ${misc}.txt
-```
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Requires</summary>
-
-- [dependency](#mock-plugin-req-ref-dependency)
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Variables</summary>
-
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
-
-<!---1--></details>
-
-#### >>> `misc/@other`
+#### :open_file_folder: <a name="mock-plugin-task-ref-miscother">misc/@other</a>
 
 Task collection description.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ ${misc}.txt
-```
+##### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Requires</summary>
-
-- [dependency](#mock-plugin-req-ref-dependency)
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Variables</summary>
-
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
-
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Details</summary>
-
-##### >>>> misc/task
-
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
-
-- Some purpose.
-
-<!---2--><details>
-<!---2--><summary>Targets</summary>
-
-```
-project
-└─ ${misc}.txt
-```
-
-<!---2--></details>
-
-<!---2--><details>
-<!---2--><summary>Requires</summary>
-
-- [dependency](#mock-plugin-req-ref-dependency)
-
-<!---2--></details>
-
-<!---2--><details>
-<!---2--><summary>Variables</summary>
-
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
-
-<!---2--></details>
-
-------
-
-<!---1--></details>
-
-#### >>> misc/task
-
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ ${misc}.txt
-```
+#### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
-<!---1--></details>
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
-<!---1--><details>
-<!---1--><summary>Requires</summary>
+- Some purpose.
 
-- [dependency](#mock-plugin-req-ref-dependency)
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-<!---1--></details>
-
-<!---1--><details>
-<!---1--><summary>Variables</summary>
-
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
-
-<!---1--></details>
-
-------
-
-<!---0--></details>
-
-### >> `json-variable-types/@default`
+### :open_file_folder: <a name="mock-plugin-task-ref-json-variable-typesdefault">json-variable-types/@default</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ variables-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ variables-target.json
-```
+#### :clipboard: <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-#### >>> json-variable-types/task
-
-_Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ variables-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ variables-target.json
-```
-
-<!---1--></details>
-
-------
-
-<!---0--></details>
-
-### >> `json-shallow-merge/@default`
+### :open_file_folder: <a name="mock-plugin-task-ref-json-shallow-mergedefault">json-shallow-merge/@default</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-shallow-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-shallow-target.json
-```
+#### :clipboard: <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-#### >>> json-shallow-merge/task
-
-_Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)._
+_Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merge-shallow">merge-shallow</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-shallow-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-shallow-target.json
-```
-
-<!---1--></details>
-
-------
-
-<!---0--></details>
-
-### >> `json-deep-merge/@default`
+### :open_file_folder: <a name="mock-plugin-task-ref-json-deep-mergedefault">json-deep-merge/@default</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-deep-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-deep-target.json
-```
+#### :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-#### >>> json-deep-merge/task
-
-_Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)._
+_Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-deep-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-deep-target.json
-```
-
-<!---1--></details>
-
-------
-
-<!---0--></details>
-
-### >> `escaped-variable/@default`
+### :open_file_folder: <a name="mock-plugin-task-ref-escaped-variabledefault">escaped-variable/@default</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ escaped-variable.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ escaped-variable.txt
-```
+#### :clipboard: <a name="mock-plugin-task-ref-escaped-variabletask">escaped-variable/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-#### >>> escaped-variable/task
-
-_Updating `escaped-variable.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+_Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ escaped-variable.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ escaped-variable.txt
-```
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Requires
@@ -537,14 +609,9 @@ project
 
 Short description about this dependency.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Detailed description about this dependency and how it's used.
 
-<!---0--></details>
-
-------
 ------
 
 ## Variables
@@ -555,12 +622,8 @@ Type: `string`
 
 Short description of what this variable does.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Detailed description of what this variable does.
-
-<!---0--></details>
 
 ### <a name="mock-plugin-var-ref-variable">variable</a>
 
@@ -568,14 +631,9 @@ Type: `string`
 
 Short description of what this variable does.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Detailed description of what this variable does.
 
-<!---0--></details>
-
-------
 ------
 
 ## Strategies
@@ -586,12 +644,8 @@ Valid for: `xml`
 
 Does a "smart" deep merge.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 This will not work as desired for all xml merging, but should for many cases.
-
-<!---0--></details>
 
 ### <a name="mock-plugin-strat-ref-unique-top">unique-top</a>
 
@@ -599,12 +653,8 @@ Valid for: `list`
 
 Merges content at the top of the file and removes existing, duplicate lines.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Useful for managing e.g. `.gitignore` when the original content should be kept.
-
-<!---0--></details>
 
 ### <a name="mock-plugin-strat-ref-overwrite">overwrite</a>
 
@@ -624,12 +674,8 @@ Valid for: `json`, `yml`
 
 Does a shallow merge aka `Object.assign()`.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Useful when specific keys of the target need to be overwritten.
-
-<!---0--></details>
 
 ### <a name="mock-plugin-strat-ref-merge-deep">merge-deep</a>
 
@@ -637,10 +683,6 @@ Valid for: `json`, `yml`
 
 Does a "smart" deep merge.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 This will not work as desired for all object deep merging, but should for many cases.
-
-<!---0--></details>
 
