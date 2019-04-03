@@ -7,13 +7,9 @@ const { determineVars } = require('./vars');
 const { listTasks } = require('./task');
 
 const startSpoiler = (summary, level) => [
-  `<!---${level}--><details>`,
-  `<!---${level}--><summary>${summary}</summary>`,
-  ''
+  `*${summary}:*`
 ];
 const endSpoiler = level => [
-  `<!---${level}--></details>`,
-  ''
 ];
 
 const normalizeRef = input => input

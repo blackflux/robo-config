@@ -1,38 +1,28 @@
 - [`escaped-variable/@default.json`](#mock-plugin-task-ref-escaped-variabledefaultjson)
   - [`escaped-variable/task`](#mock-plugin-task-ref-escaped-variabletask)
 
-#  `escaped-variable/@default.json`
+# <a name="mock-plugin-task-ref-escaped-variabledefaultjson">escaped-variable/@default.json</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
-
+*Targets:*
 ```
 project
 └─ escaped-variable.txt
 ```
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 ## <a name="mock-plugin-task-ref-escaped-variabletask">escaped-variable/task</a>
 
 _Updating `escaped-variable.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
-
+*Targets:*
 ```
 project
 └─ escaped-variable.txt
 ```
-
-<!---1--></details>
 
 </details>
 

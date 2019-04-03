@@ -1,38 +1,28 @@
 - [`json-shallow-merge/@default.json`](#mock-plugin-task-ref-json-shallow-mergedefaultjson)
   - [`json-shallow-merge/task`](#mock-plugin-task-ref-json-shallow-mergetask)
 
-#  `json-shallow-merge/@default.json`
+# <a name="mock-plugin-task-ref-json-shallow-mergedefaultjson">json-shallow-merge/@default.json</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
-
+*Targets:*
 ```
 project
 └─ merge-shallow-target.json
 ```
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 ## <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a>
 
 _Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
-
+*Targets:*
 ```
 project
 └─ merge-shallow-target.json
 ```
-
-<!---1--></details>
 
 </details>
 
@@ -47,10 +37,6 @@ Valid for: `json`, `yml`
 
 Does a shallow merge aka `Object.assign()`.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Useful when specific keys of the target need to be overwritten.
-
-<!---0--></details>
 
