@@ -17,7 +17,7 @@ project
 
 ## > json-deep-merge/task
 
-_Updating `merge-deep-target.json` using `merge-deep`._
+_Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)._
 
 - Some purpose.
 
@@ -32,4 +32,22 @@ project
 <!---1--></details>
 
 </details>
+
+------
+------
+
+## Strategies
+
+### <a name="mock-plugin-strat-ref-merge-deep">merge-deep</a>
+
+Valid for: `json`, `yml`
+
+Does a "smart" deep merge.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+This will not work for all object deep merging, but should for many cases.
+
+<!---0--></details>
 

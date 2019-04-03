@@ -1,0 +1,10 @@
+{
+  "validFor": [
+    "json",
+    "yml"
+  ],
+  "description": "Does a \"smart\" deep merge.",
+  "details": [
+    "This will not work as desired for all object deep merging, but should for many cases."
+  ]
+}

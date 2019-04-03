@@ -19,7 +19,7 @@ project
 
 #### >>> xml-merge/task
 
-_Updating `merge-target.xml` using `xml-merge`._
+_Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)._
 
 - Some purpose.
 
@@ -56,7 +56,7 @@ project
 
 #### >>> txt-unique-top/task
 
-_Updating `unique-top.txt` using `unique-top`._
+_Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)._
 
 - Some purpose.
 
@@ -93,7 +93,7 @@ project
 
 #### >>> txt-overwrite/task
 
-_Updating `overwrite-target.txt` using `overwrite`._
+_Updating `overwrite-target.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 
@@ -130,7 +130,7 @@ project
 
 #### >>> txt-merge-below-title/task
 
-_Updating `merge-below-title.txt` using `merge-below-title`._
+_Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)._
 
 - Some purpose.
 
@@ -182,7 +182,7 @@ project
 
 #### >>> misc/task
 
-_Updating `${misc}.txt` using `overwrite`._
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 
@@ -249,7 +249,7 @@ project
 
 #### >>> misc/task
 
-_Updating `${misc}.txt` using `overwrite`._
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 
@@ -312,7 +312,7 @@ project
 
 ##### >>>> misc/task
 
-_Updating `${misc}.txt` using `overwrite`._
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 
@@ -347,7 +347,7 @@ project
 
 #### >>> misc/task
 
-_Updating `${misc}.txt` using `overwrite`._
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 
@@ -399,7 +399,7 @@ project
 
 #### >>> json-variable-types/task
 
-_Updating `variables-target.json` using `overwrite`._
+_Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 
@@ -436,7 +436,7 @@ project
 
 #### >>> json-shallow-merge/task
 
-_Updating `merge-shallow-target.json` using `merge-shallow`._
+_Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)._
 
 - Some purpose.
 
@@ -473,7 +473,7 @@ project
 
 #### >>> json-deep-merge/task
 
-_Updating `merge-deep-target.json` using `merge-deep`._
+_Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)._
 
 - Some purpose.
 
@@ -510,7 +510,7 @@ project
 
 #### >>> escaped-variable/task
 
-_Updating `escaped-variable.txt` using `overwrite`._
+_Updating `escaped-variable.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 
@@ -572,6 +572,75 @@ Short description of what this variable does.
 <!---0--><summary>Details</summary>
 
 Detailed description of what this variable does.
+
+<!---0--></details>
+
+------
+------
+
+## Strategies
+
+### <a name="mock-plugin-strat-ref-xml-merge">xml-merge</a>
+
+Valid for: `xml`
+
+Does a "smart" deep merge.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+This will not work for all xml merging, but should for many.
+
+<!---0--></details>
+
+### <a name="mock-plugin-strat-ref-unique-top">unique-top</a>
+
+Valid for: `list`
+
+Merges content at the top of the file and removes existing, duplicate lines.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Very useful for managing e.g. `.gitignore`.
+
+<!---0--></details>
+
+### <a name="mock-plugin-strat-ref-overwrite">overwrite</a>
+
+Valid for: `any`
+
+Simply replace the old with the new content.
+
+### <a name="mock-plugin-strat-ref-merge-below-title">merge-below-title</a>
+
+Valid for: `list`, `nostruct`
+
+Merges content below title.
+
+### <a name="mock-plugin-strat-ref-merge-shallow">merge-shallow</a>
+
+Valid for: `json`, `yml`
+
+Does a shallow merge aka `Object.assign()`.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Useful when specific keys of the target need to be overwritten.
+
+<!---0--></details>
+
+### <a name="mock-plugin-strat-ref-merge-deep">merge-deep</a>
+
+Valid for: `json`, `yml`
+
+Does a "smart" deep merge.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+This will not work for all object deep merging, but should for many cases.
 
 <!---0--></details>
 
