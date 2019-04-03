@@ -18,12 +18,12 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -52,12 +52,12 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>

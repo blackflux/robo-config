@@ -59,7 +59,7 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
@@ -76,7 +76,7 @@ project
           <li><a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -106,7 +106,7 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
@@ -117,7 +117,7 @@ project
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -176,12 +176,12 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
         </ul>
@@ -209,12 +209,12 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
         </ul>
@@ -242,12 +242,12 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-david-dm">david-dm</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
         </ul>
@@ -275,12 +275,12 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
         </ul>
@@ -308,12 +308,12 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-coveralls">coveralls</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
         </ul>
@@ -341,12 +341,12 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
         </ul>
@@ -438,12 +438,12 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -487,12 +487,12 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -602,14 +602,14 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-owner">owner</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a></li>
@@ -638,13 +638,13 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-nyc">nyc</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
         </ul>
@@ -673,13 +673,13 @@ project
       <th>Variables</th>
     </tr>
     <tr>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-nyc">nyc</a></li>
         </ul>
       </td>
-      <td>
+      <td valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
         </ul>

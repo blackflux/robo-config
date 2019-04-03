@@ -70,12 +70,12 @@ const documentSection = (plName, baseLevel, {
     result.push('      <th>Variables</th>');
     result.push('    </tr>');
     result.push('    <tr>');
-    result.push('      <td>');
+    result.push('      <td valign="top">');
     result.push('        <ul>');
     result.push(...requires.map(r => `          <li>${linkRef(`${plName}-req`, r)}</li>`));
     result.push('        </ul>');
     result.push('      </td>');
-    result.push('      <td>');
+    result.push('      <td valign="top">');
     result.push('        <ul>');
     result.push(...variables.map(v => `          <li>${linkRef(`${plName}-var`, v)}</li>`));
     result.push('        </ul>');
