@@ -1,3 +1,9 @@
+- [misc/@default.json](???)
+  - [misc/task](???)
+  - [misc/@other](???)
+    - [misc/task](???)
+  - [misc/task](???)
+
 #  `misc/@default.json`
 
 Task collection description.

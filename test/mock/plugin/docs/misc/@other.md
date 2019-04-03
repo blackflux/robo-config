@@ -1,3 +1,6 @@
+- [misc/@other.json](???)
+  - [misc/task](???)
+
 #  `misc/@other.json`
 
 Task collection description.

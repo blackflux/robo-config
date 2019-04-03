@@ -1,5 +1,29 @@
 ## Plugin [mock-plugin](https://www.npmjs.com/package/mock-plugin)
 
+    - [xml-merge/@default](???)
+      - [xml-merge/task](???)
+    - [txt-unique-top/@default](???)
+      - [txt-unique-top/task](???)
+    - [txt-overwrite/@default](???)
+      - [txt-overwrite/task](???)
+    - [txt-merge-below-title/@default](???)
+      - [txt-merge-below-title/task](???)
+    - [misc/@other](???)
+      - [misc/task](???)
+    - [misc/@default](???)
+      - [misc/task](???)
+      - [misc/@other](???)
+        - [misc/task](???)
+      - [misc/task](???)
+    - [json-variable-types/@default](???)
+      - [json-variable-types/task](???)
+    - [json-shallow-merge/@default](???)
+      - [json-shallow-merge/task](???)
+    - [json-deep-merge/@default](???)
+      - [json-deep-merge/task](???)
+    - [escaped-variable/@default](???)
+      - [escaped-variable/task](???)
+
 ### >> `xml-merge/@default`
 
 Task collection description.

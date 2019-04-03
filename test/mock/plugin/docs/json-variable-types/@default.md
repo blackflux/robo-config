@@ -1,3 +1,6 @@
+- [json-variable-types/@default.json](???)
+  - [json-variable-types/task](???)
+
 #  `json-variable-types/@default.json`
 
 Task collection description.

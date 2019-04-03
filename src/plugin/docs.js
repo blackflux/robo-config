@@ -105,7 +105,8 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
       .map(subtaskName => ({ level: level + 1, taskName: subtaskName })));
   }
 
-  const result = [];
+  const index = [];
+  const content = [];
 
   // pull information into upper sections
   sections.forEach((section, idx) => {
@@ -144,18 +145,19 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
   // generate docs for tasks
   let lastLevel = baseLevel;
   sections.forEach((section) => {
+    index.push(`${'  '.repeat(section.level)}- [${section.taskName}](???)`);
     if (lastLevel < section.level) {
-      result.push(...startSpoiler('Details', lastLevel - baseLevel));
+      content.push(...startSpoiler('Details', lastLevel - baseLevel));
     } else if (lastLevel > section.level) {
-      result.push('------');
-      result.push('');
-      result.push(...endSpoiler(section.level - baseLevel));
+      content.push('------');
+      content.push('');
+      content.push(...endSpoiler(section.level - baseLevel));
     }
-    result.push(...documentSection(plName, baseLevel, section));
+    content.push(...documentSection(plName, baseLevel, section));
     lastLevel = section.level;
   });
-  result.push('</details>');
-  result.push('');
+  content.push('</details>');
+  content.push('');
 
   // append docs for requires, variables and strategies
   [
@@ -205,14 +207,14 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
   ].forEach((def) => {
     const toDocument = [...new Set(sections.reduce((p, c) => p.concat(c[def.source]), []))];
     if (toDocument.length !== 0) {
-      result.push('------');
-      result.push('------');
-      result.push('');
-      result.push(`## ${def.name}`);
-      result.push('');
+      content.push('------');
+      content.push('------');
+      content.push('');
+      content.push(`## ${def.name}`);
+      content.push('');
       toDocument.forEach((e) => {
-        result.push(`### ${createRef(`${plName}-${def.short}`, e)}`);
-        result.push('');
+        content.push(`### ${createRef(`${plName}-${def.short}`, e)}`);
+        content.push('');
         const f = sfs.guessFile(path.join(def.dir, e));
         assert(typeof f === 'string', `Missing ${def.name} Definition: ${e}`);
         const data = sfs.smartRead(f);
@@ -222,30 +224,34 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
             .stringify(Joi.validate(data, def.schema).error, null, 2)}`
         );
         if (data.type !== undefined) {
-          result.push(`Type: \`${data.type}\``);
-          result.push('');
+          content.push(`Type: \`${data.type}\``);
+          content.push('');
         }
         if (data.website !== undefined) {
-          result.push(`[Website](${data.website})`);
-          result.push('');
+          content.push(`[Website](${data.website})`);
+          content.push('');
         }
         if (data.validFor !== undefined) {
-          result.push(`Valid for: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
-          result.push('');
+          content.push(`Valid for: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
+          content.push('');
         }
-        result.push(data.description);
-        result.push('');
+        content.push(data.description);
+        content.push('');
         if (data.details.length !== 0) {
-          result.push(...startSpoiler('Details', 0));
-          result.push(...data.details);
-          result.push('');
-          result.push(...endSpoiler(0));
+          content.push(...startSpoiler('Details', 0));
+          content.push(...data.details);
+          content.push('');
+          content.push(...endSpoiler(0));
         }
       });
     }
   });
 
-  return result;
+  return [
+    ...index,
+    '',
+    ...content
+  ];
 };
 module.exports.generateDocs = generateDocs;
 
