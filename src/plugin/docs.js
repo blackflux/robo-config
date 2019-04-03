@@ -6,12 +6,6 @@ const treeify = require('object-treeify');
 const { determineVars } = require('./vars');
 const { listTasks } = require('./task');
 
-const startSpoiler = (summary, level) => [
-  `*${summary}:*`
-];
-const endSpoiler = level => [
-];
-
 const normalizeRef = input => input
   .trim()
   .toLowerCase()
@@ -59,22 +53,19 @@ const documentSection = (plName, baseLevel, {
     result.push('');
   }
 
-  result.push(...startSpoiler('Targets', level - baseLevel));
+  result.push('*Targets:*');
   result.push(...documentFiles('project', targets));
-  result.push(...endSpoiler(level - baseLevel));
 
   if (requires.length !== 0) {
-    result.push(...startSpoiler('Requires', level - baseLevel));
+    result.push('*Requires:*');
     result.push(...requires.map(r => `- ${linkRef(`${plName}-req`, r)}`));
     result.push('');
-    result.push(...endSpoiler(level - baseLevel));
   }
 
   if (variables.length !== 0) {
-    result.push(...startSpoiler('Variables', level - baseLevel));
+    result.push('*Variables:*');
     result.push(...variables.map(v => `- ${linkRef(`${plName}-var`, v)}`));
     result.push('');
-    result.push(...endSpoiler(level - baseLevel));
   }
 
   return result;
@@ -142,11 +133,10 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
   sections.forEach((section) => {
     index.push(`${'  '.repeat(section.level - baseLevel)}- ${linkRef(`${plName}-task`, `\`${section.taskName}\``)}`);
     if (lastLevel < section.level) {
-      content.push(...startSpoiler('Details', lastLevel - baseLevel));
+      content.push('*Details:*');
     } else if (lastLevel > section.level) {
       content.push('------');
       content.push('');
-      content.push(...endSpoiler(section.level - baseLevel));
     }
     content.push(...documentSection(plName, baseLevel, section));
     lastLevel = section.level;
@@ -233,10 +223,9 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
         content.push(data.description);
         content.push('');
         if (data.details.length !== 0) {
-          content.push(...startSpoiler('Details', 0));
+          content.push('*Details:*');
           content.push(...data.details);
           content.push('');
-          content.push(...endSpoiler(0));
         }
       });
     }
