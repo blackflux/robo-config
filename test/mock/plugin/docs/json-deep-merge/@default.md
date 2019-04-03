@@ -1,7 +1,7 @@
-- [`json-deep-merge/@default.json`](#mock-plugin-task-ref-json-deep-mergedefaultjson)
-  - [`json-deep-merge/task`](#mock-plugin-task-ref-json-deep-mergetask)
+- :open_file_folder: [`json-deep-merge/@default.json`](#mock-plugin-task-ref-json-deep-mergedefaultjson)
+  - :clipboard: [`json-deep-merge/task`](#mock-plugin-task-ref-json-deep-mergetask)
 
-# <a name="mock-plugin-task-ref-json-deep-mergedefaultjson">json-deep-merge/@default.json</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-json-deep-mergedefaultjson">json-deep-merge/@default.json</a>
 
 Task collection description.
 
@@ -11,8 +11,7 @@ project
 └─ merge-deep-target.json
 ```
 
-*Details:*
-## <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a>
 
 _Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)._
 
@@ -23,8 +22,6 @@ _Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-mer
 project
 └─ merge-deep-target.json
 ```
-
-</details>
 
 ------
 ------

@@ -1,47 +1,10 @@
-- [`misc/@default.json`](#mock-plugin-task-ref-miscdefaultjson)
-  - [`misc/task`](#mock-plugin-task-ref-misctask)
-  - [`misc/@other`](#mock-plugin-task-ref-miscother)
-    - [`misc/task`](#mock-plugin-task-ref-misctask)
-  - [`misc/task`](#mock-plugin-task-ref-misctask)
+- :open_file_folder: [`misc/@default.json`](#mock-plugin-task-ref-miscdefaultjson)
+  - :clipboard: [`misc/task`](#mock-plugin-task-ref-misctask)
+  - :open_file_folder: [`misc/@other`](#mock-plugin-task-ref-miscother)
+    - :clipboard: [`misc/task`](#mock-plugin-task-ref-misctask)
+  - :clipboard: [`misc/task`](#mock-plugin-task-ref-misctask)
 
-# <a name="mock-plugin-task-ref-miscdefaultjson">misc/@default.json</a>
-
-Task collection description.
-
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
-*Requires:*
-- [dependency](#mock-plugin-req-ref-dependency)
-
-*Variables:*
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
-
-*Details:*
-## <a name="mock-plugin-task-ref-misctask">misc/task</a>
-
-_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
-
-- Some purpose.
-
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
-*Requires:*
-- [dependency](#mock-plugin-req-ref-dependency)
-
-*Variables:*
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
-
-## <a name="mock-plugin-task-ref-miscother">misc/@other</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-miscdefaultjson">misc/@default.json</a>
 
 Task collection description.
 
@@ -58,8 +21,7 @@ project
 - [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
 
-*Details:*
-### <a name="mock-plugin-task-ref-misctask">misc/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
 _Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -78,9 +40,24 @@ project
 - [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
 
-------
+## :open_file_folder: <a name="mock-plugin-task-ref-miscother">misc/@other</a>
 
-## <a name="mock-plugin-task-ref-misctask">misc/task</a>
+Task collection description.
+
+*Targets:*
+```
+project
+└─ ${misc}.txt
+```
+
+*Requires:*
+- [dependency](#mock-plugin-req-ref-dependency)
+
+*Variables:*
+- [misc](#mock-plugin-var-ref-misc)
+- [variable](#mock-plugin-var-ref-variable)
+
+### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
 _Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -99,7 +76,24 @@ project
 - [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
 
-</details>
+## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
+
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
+
+- Some purpose.
+
+*Targets:*
+```
+project
+└─ ${misc}.txt
+```
+
+*Requires:*
+- [dependency](#mock-plugin-req-ref-dependency)
+
+*Variables:*
+- [misc](#mock-plugin-var-ref-misc)
+- [variable](#mock-plugin-var-ref-variable)
 
 ------
 ------

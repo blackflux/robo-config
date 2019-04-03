@@ -1,7 +1,7 @@
-- [`misc/@other.json`](#mock-plugin-task-ref-miscotherjson)
-  - [`misc/task`](#mock-plugin-task-ref-misctask)
+- :open_file_folder: [`misc/@other.json`](#mock-plugin-task-ref-miscotherjson)
+  - :clipboard: [`misc/task`](#mock-plugin-task-ref-misctask)
 
-# <a name="mock-plugin-task-ref-miscotherjson">misc/@other.json</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-miscotherjson">misc/@other.json</a>
 
 Task collection description.
 
@@ -18,8 +18,7 @@ project
 - [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
 
-*Details:*
-## <a name="mock-plugin-task-ref-misctask">misc/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
 _Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -37,8 +36,6 @@ project
 *Variables:*
 - [misc](#mock-plugin-var-ref-misc)
 - [variable](#mock-plugin-var-ref-variable)
-
-</details>
 
 ------
 ------

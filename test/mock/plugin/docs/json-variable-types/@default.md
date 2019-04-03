@@ -1,7 +1,7 @@
-- [`json-variable-types/@default.json`](#mock-plugin-task-ref-json-variable-typesdefaultjson)
-  - [`json-variable-types/task`](#mock-plugin-task-ref-json-variable-typestask)
+- :open_file_folder: [`json-variable-types/@default.json`](#mock-plugin-task-ref-json-variable-typesdefaultjson)
+  - :clipboard: [`json-variable-types/task`](#mock-plugin-task-ref-json-variable-typestask)
 
-# <a name="mock-plugin-task-ref-json-variable-typesdefaultjson">json-variable-types/@default.json</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-json-variable-typesdefaultjson">json-variable-types/@default.json</a>
 
 Task collection description.
 
@@ -11,8 +11,7 @@ project
 └─ variables-target.json
 ```
 
-*Details:*
-## <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a>
 
 _Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -23,8 +22,6 @@ _Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overw
 project
 └─ variables-target.json
 ```
-
-</details>
 
 ------
 ------

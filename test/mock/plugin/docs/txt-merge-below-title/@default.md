@@ -1,7 +1,7 @@
-- [`txt-merge-below-title/@default.json`](#mock-plugin-task-ref-txt-merge-below-titledefaultjson)
-  - [`txt-merge-below-title/task`](#mock-plugin-task-ref-txt-merge-below-titletask)
+- :open_file_folder: [`txt-merge-below-title/@default.json`](#mock-plugin-task-ref-txt-merge-below-titledefaultjson)
+  - :clipboard: [`txt-merge-below-title/task`](#mock-plugin-task-ref-txt-merge-below-titletask)
 
-# <a name="mock-plugin-task-ref-txt-merge-below-titledefaultjson">txt-merge-below-title/@default.json</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-txt-merge-below-titledefaultjson">txt-merge-below-title/@default.json</a>
 
 Task collection description.
 
@@ -11,8 +11,7 @@ project
 └─ merge-below-title.txt
 ```
 
-*Details:*
-## <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a>
 
 _Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)._
 
@@ -23,8 +22,6 @@ _Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-r
 project
 └─ merge-below-title.txt
 ```
-
-</details>
 
 ------
 ------

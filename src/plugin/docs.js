@@ -42,7 +42,13 @@ const documentSection = (plName, baseLevel, {
   assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
 
   const result = [];
-  result.push(`${'#'.repeat(level + 1)} ${createRef(`${plName}-task`, taskName)}`, '');
+  result.push(`${
+    '#'.repeat(level + 1)
+  } ${
+    task.target !== undefined ? ':clipboard:' : ':open_file_folder:'
+  } ${
+    createRef(`${plName}-task`, taskName)
+  }`, '');
   if (typeof task.target === 'string') {
     result.push(`_Updating \`${task.target}\` using ${linkRef(`${plName}-strat`, task.strategy)}._`);
     result.push('');
@@ -129,20 +135,16 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
   });
 
   // generate docs for tasks
-  let lastLevel = baseLevel;
   sections.forEach((section) => {
-    index.push(`${'  '.repeat(section.level - baseLevel)}- ${linkRef(`${plName}-task`, `\`${section.taskName}\``)}`);
-    if (lastLevel < section.level) {
-      content.push('*Details:*');
-    } else if (lastLevel > section.level) {
-      content.push('------');
-      content.push('');
-    }
+    index.push(`${
+      '  '.repeat(section.level - baseLevel)
+    }- ${
+      section.task.target !== undefined ? ':clipboard:' : ':open_file_folder:'
+    } ${
+      linkRef(`${plName}-task`, `\`${section.taskName}\``)
+    }`);
     content.push(...documentSection(plName, baseLevel, section));
-    lastLevel = section.level;
   });
-  content.push('</details>');
-  content.push('');
 
   // append docs for requires, variables and strategies
   [

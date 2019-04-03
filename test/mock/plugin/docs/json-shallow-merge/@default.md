@@ -1,7 +1,7 @@
-- [`json-shallow-merge/@default.json`](#mock-plugin-task-ref-json-shallow-mergedefaultjson)
-  - [`json-shallow-merge/task`](#mock-plugin-task-ref-json-shallow-mergetask)
+- :open_file_folder: [`json-shallow-merge/@default.json`](#mock-plugin-task-ref-json-shallow-mergedefaultjson)
+  - :clipboard: [`json-shallow-merge/task`](#mock-plugin-task-ref-json-shallow-mergetask)
 
-# <a name="mock-plugin-task-ref-json-shallow-mergedefaultjson">json-shallow-merge/@default.json</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-json-shallow-mergedefaultjson">json-shallow-merge/@default.json</a>
 
 Task collection description.
 
@@ -11,8 +11,7 @@ project
 └─ merge-shallow-target.json
 ```
 
-*Details:*
-## <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a>
 
 _Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)._
 
@@ -23,8 +22,6 @@ _Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-r
 project
 └─ merge-shallow-target.json
 ```
-
-</details>
 
 ------
 ------

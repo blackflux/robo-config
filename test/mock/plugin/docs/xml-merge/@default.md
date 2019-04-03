@@ -1,7 +1,7 @@
-- [`xml-merge/@default.json`](#mock-plugin-task-ref-xml-mergedefaultjson)
-  - [`xml-merge/task`](#mock-plugin-task-ref-xml-mergetask)
+- :open_file_folder: [`xml-merge/@default.json`](#mock-plugin-task-ref-xml-mergedefaultjson)
+  - :clipboard: [`xml-merge/task`](#mock-plugin-task-ref-xml-mergetask)
 
-# <a name="mock-plugin-task-ref-xml-mergedefaultjson">xml-merge/@default.json</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-xml-mergedefaultjson">xml-merge/@default.json</a>
 
 Task collection description.
 
@@ -11,8 +11,7 @@ project
 └─ merge-target.xml
 ```
 
-*Details:*
-## <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a>
 
 _Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)._
 
@@ -23,8 +22,6 @@ _Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)
 project
 └─ merge-target.xml
 ```
-
-</details>
 
 ------
 ------

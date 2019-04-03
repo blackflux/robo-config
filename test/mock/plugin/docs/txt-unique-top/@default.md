@@ -1,7 +1,7 @@
-- [`txt-unique-top/@default.json`](#mock-plugin-task-ref-txt-unique-topdefaultjson)
-  - [`txt-unique-top/task`](#mock-plugin-task-ref-txt-unique-toptask)
+- :open_file_folder: [`txt-unique-top/@default.json`](#mock-plugin-task-ref-txt-unique-topdefaultjson)
+  - :clipboard: [`txt-unique-top/task`](#mock-plugin-task-ref-txt-unique-toptask)
 
-# <a name="mock-plugin-task-ref-txt-unique-topdefaultjson">txt-unique-top/@default.json</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-txt-unique-topdefaultjson">txt-unique-top/@default.json</a>
 
 Task collection description.
 
@@ -11,8 +11,7 @@ project
 └─ unique-top.txt
 ```
 
-*Details:*
-## <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a>
 
 _Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)._
 
@@ -23,8 +22,6 @@ _Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)
 project
 └─ unique-top.txt
 ```
-
-</details>
 
 ------
 ------
