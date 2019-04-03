@@ -28,11 +28,19 @@
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ merge-target.xml
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-target.xml</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 #### :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a>
 
@@ -40,21 +48,37 @@ _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xm
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ merge-target.xml
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-target.xml</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ### :open_file_folder: <a name="mock-plugin-task-ref-txt-unique-topdefault">txt-unique-top/@default</a>
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ unique-top.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ unique-top.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 #### :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a>
 
@@ -62,21 +86,37 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ unique-top.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ unique-top.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ### :open_file_folder: <a name="mock-plugin-task-ref-txt-overwritedefault">txt-overwrite/@default</a>
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ overwrite-target.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ overwrite-target.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 #### :clipboard: <a name="mock-plugin-task-ref-txt-overwritetask">txt-overwrite/task</a>
 
@@ -84,21 +124,37 @@ _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ overwrite-target.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ overwrite-target.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ### :open_file_folder: <a name="mock-plugin-task-ref-txt-merge-below-titledefault">txt-merge-below-title/@default</a>
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ merge-below-title.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-below-title.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 #### :clipboard: <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a>
 
@@ -106,29 +162,38 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ merge-below-title.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-below-title.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ### :open_file_folder: <a name="mock-plugin-task-ref-miscother">misc/@other</a>
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
@@ -150,19 +215,20 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
@@ -182,19 +248,20 @@ project
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
@@ -216,19 +283,20 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
@@ -248,19 +316,20 @@ project
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
@@ -282,19 +351,20 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
@@ -316,19 +386,20 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
@@ -348,11 +419,19 @@ project
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ variables-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ variables-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 #### :clipboard: <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a>
 
@@ -360,21 +439,37 @@ _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrit
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ variables-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ variables-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ### :open_file_folder: <a name="mock-plugin-task-ref-json-shallow-mergedefault">json-shallow-merge/@default</a>
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ merge-shallow-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-shallow-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 #### :clipboard: <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a>
 
@@ -382,21 +477,37 @@ _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merg
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ merge-shallow-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-shallow-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ### :open_file_folder: <a name="mock-plugin-task-ref-json-deep-mergedefault">json-deep-merge/@default</a>
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ merge-deep-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-deep-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 #### :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a>
 
@@ -404,21 +515,37 @@ _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-d
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ merge-deep-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-deep-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ### :open_file_folder: <a name="mock-plugin-task-ref-escaped-variabledefault">escaped-variable/@default</a>
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ escaped-variable.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ escaped-variable.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 #### :clipboard: <a name="mock-plugin-task-ref-escaped-variabletask">escaped-variable/task</a>
 
@@ -426,11 +553,19 @@ _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ escaped-variable.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ escaped-variable.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ------
 ------

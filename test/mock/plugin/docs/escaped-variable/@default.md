@@ -5,11 +5,19 @@
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ escaped-variable.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ escaped-variable.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ## :clipboard: <a name="mock-plugin-task-ref-escaped-variabletask">escaped-variable/task</a>
 
@@ -17,11 +25,19 @@ _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ escaped-variable.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ escaped-variable.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ------
 ------

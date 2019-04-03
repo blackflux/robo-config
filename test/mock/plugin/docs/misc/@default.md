@@ -8,19 +8,20 @@
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
@@ -42,19 +43,20 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
@@ -74,19 +76,20 @@ project
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
@@ -108,19 +111,20 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
@@ -142,19 +146,20 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ ${misc}.txt
-```
-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Requires</th>
       <th>Variables</th>
     </tr>
     <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ ${misc}.txt</code><br/>
+        </ul>
+      </td>
       <td valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>

@@ -5,11 +5,19 @@
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ merge-deep-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-deep-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ## :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a>
 
@@ -17,11 +25,19 @@ _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-d
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ merge-deep-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-deep-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ------
 ------

@@ -17,7 +17,6 @@ const linkRef = (type, content) => `<a href="#${normalizeRef(`${type}-ref-${cont
 
 const documentFiles = (root, files) => {
   const result = [];
-  result.push('```');
   result.push(root);
 
   const fileTree = files
@@ -27,8 +26,6 @@ const documentFiles = (root, files) => {
     }, {});
 
   result.push(...treeify(fileTree, { joined: false, sortFn: (a, b) => a.localeCompare(b) }));
-  result.push('```');
-  result.push('');
 
   return result;
 };
@@ -59,44 +56,43 @@ const documentSection = (plName, baseLevel, {
     result.push('');
   }
 
-  result.push('*Targets:*');
-  result.push(...documentFiles('project', targets));
-
-  if (requires.length !== 0 && variables.length !== 0) {
-    result.push('<table>');
-    result.push('  <tbody>');
-    result.push('    <tr>');
+  result.push('<table>');
+  result.push('  <tbody>');
+  result.push('    <tr>');
+  if (requires.length !== 0) {
+    result.push('      <th>Targets</th>');
+  }
+  if (requires.length !== 0) {
     result.push('      <th>Requires</th>');
+  }
+  if (variables.length !== 0) {
     result.push('      <th>Variables</th>');
-    result.push('    </tr>');
-    result.push('    <tr>');
+  }
+  result.push('    </tr>');
+  result.push('    <tr>');
+  result.push('      <td valign="top">');
+  result.push('        <ul>');
+  result.push(...documentFiles('project', targets).map(l => `          <code>${l}</code><br/>`));
+  result.push('        </ul>');
+  result.push('      </td>');
+  if (requires.length !== 0) {
     result.push('      <td valign="top">');
     result.push('        <ul>');
     result.push(...requires.map(r => `          <li>${linkRef(`${plName}-req`, r)}</li>`));
     result.push('        </ul>');
     result.push('      </td>');
+  }
+  if (variables.length !== 0) {
     result.push('      <td valign="top">');
     result.push('        <ul>');
     result.push(...variables.map(v => `          <li>${linkRef(`${plName}-var`, v)}</li>`));
     result.push('        </ul>');
     result.push('      </td>');
     result.push('    </tr>');
-    result.push('  </tbody>');
-    result.push('</table>');
-    result.push('');
-  } else {
-    if (requires.length !== 0) {
-      result.push('*Requires:*');
-      result.push(...requires.map(r => `- ${linkRef(`${plName}-req`, r)}`));
-      result.push('');
-    }
-
-    if (variables.length !== 0) {
-      result.push('*Variables:*');
-      result.push(...variables.map(v => `- ${linkRef(`${plName}-var`, v)}`));
-      result.push('');
-    }
   }
+  result.push('  </tbody>');
+  result.push('</table>');
+  result.push('');
 
   return result;
 };

@@ -5,11 +5,19 @@
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ merge-below-title.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-below-title.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ## :clipboard: <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a>
 
@@ -17,11 +25,19 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ merge-below-title.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-below-title.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ------
 ------

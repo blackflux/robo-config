@@ -5,11 +5,19 @@
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ overwrite-target.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ overwrite-target.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ## :clipboard: <a name="mock-plugin-task-ref-txt-overwritetask">txt-overwrite/task</a>
 
@@ -17,11 +25,19 @@ _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ overwrite-target.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ overwrite-target.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ------
 ------

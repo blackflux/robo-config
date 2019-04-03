@@ -5,11 +5,19 @@
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ merge-target.xml
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-target.xml</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ## :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a>
 
@@ -17,11 +25,19 @@ _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xm
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ merge-target.xml
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-target.xml</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ------
 ------

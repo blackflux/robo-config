@@ -5,11 +5,19 @@
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ unique-top.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ unique-top.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ## :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a>
 
@@ -17,11 +25,19 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ unique-top.txt
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ unique-top.txt</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ------
 ------

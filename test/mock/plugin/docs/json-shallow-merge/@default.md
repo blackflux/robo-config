@@ -5,11 +5,19 @@
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ merge-shallow-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-shallow-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ## :clipboard: <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a>
 
@@ -17,11 +25,19 @@ _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merg
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ merge-shallow-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ merge-shallow-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ------
 ------

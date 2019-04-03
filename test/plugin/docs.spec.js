@@ -22,7 +22,6 @@ describe('Integration docs.js', () => {
       'page/world/index.css',
       'page/world/index.js'
     ])).to.deep.equal([
-      '```',
       'root',
       '├─ page',
       '│  ├─ hello',
@@ -31,9 +30,7 @@ describe('Integration docs.js', () => {
       '│     ├─ index.css',
       '│     └─ index.js',
       '└─ vendor',
-      '   └─ index.js',
-      '```',
-      ''
+      '   └─ index.js'
     ]);
   });
 

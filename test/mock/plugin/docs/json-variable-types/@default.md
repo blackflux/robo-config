@@ -5,11 +5,19 @@
 
 Task collection description.
 
-*Targets:*
-```
-project
-└─ variables-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ variables-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ## :clipboard: <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a>
 
@@ -17,11 +25,19 @@ _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrit
 
 - Some purpose.
 
-*Targets:*
-```
-project
-└─ variables-target.json
-```
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <tr>
+      <td valign="top">
+        <ul>
+          <code>project</code><br/>
+          <code>└─ variables-target.json</code><br/>
+        </ul>
+      </td>
+  </tbody>
+</table>
 
 ------
 ------
