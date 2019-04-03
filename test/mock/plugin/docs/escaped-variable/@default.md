@@ -12,8 +12,8 @@ Task collection description.
     <tr>
       <td valign="top">
         <ul>
-          <code>project</code><br/>
-          <code>└─ escaped-variable.txt</code><br/>
+<code>project</code><br/>
+<code>└─ escaped-variable.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -32,8 +32,8 @@ _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite
     <tr>
       <td valign="top">
         <ul>
-          <code>project</code><br/>
-          <code>└─ escaped-variable.txt</code><br/>
+<code>project</code><br/>
+<code>└─ escaped-variable.txt</code><br/>
         </ul>
       </td>
   </tbody>

@@ -12,8 +12,8 @@ Task collection description.
     <tr>
       <td valign="top">
         <ul>
-          <code>project</code><br/>
-          <code>└─ merge-shallow-target.json</code><br/>
+<code>project</code><br/>
+<code>└─ merge-shallow-target.json</code><br/>
         </ul>
       </td>
   </tbody>
@@ -32,8 +32,8 @@ _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merg
     <tr>
       <td valign="top">
         <ul>
-          <code>project</code><br/>
-          <code>└─ merge-shallow-target.json</code><br/>
+<code>project</code><br/>
+<code>└─ merge-shallow-target.json</code><br/>
         </ul>
       </td>
   </tbody>

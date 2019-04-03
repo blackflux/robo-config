@@ -12,8 +12,8 @@ Task collection description.
     <tr>
       <td valign="top">
         <ul>
-          <code>project</code><br/>
-          <code>└─ merge-below-title.txt</code><br/>
+<code>project</code><br/>
+<code>└─ merge-below-title.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -32,8 +32,8 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
     <tr>
       <td valign="top">
         <ul>
-          <code>project</code><br/>
-          <code>└─ merge-below-title.txt</code><br/>
+<code>project</code><br/>
+<code>└─ merge-below-title.txt</code><br/>
         </ul>
       </td>
   </tbody>

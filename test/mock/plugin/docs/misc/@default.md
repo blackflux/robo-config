@@ -18,8 +18,8 @@ Task collection description.
     <tr>
       <td valign="top">
         <ul>
-          <code>project</code><br/>
-          <code>└─ ${misc}.txt</code><br/>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
       <td valign="top">
@@ -53,8 +53,8 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
     <tr>
       <td valign="top">
         <ul>
-          <code>project</code><br/>
-          <code>└─ ${misc}.txt</code><br/>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
       <td valign="top">
@@ -86,8 +86,8 @@ Task collection description.
     <tr>
       <td valign="top">
         <ul>
-          <code>project</code><br/>
-          <code>└─ ${misc}.txt</code><br/>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
       <td valign="top">
@@ -121,8 +121,8 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
     <tr>
       <td valign="top">
         <ul>
-          <code>project</code><br/>
-          <code>└─ ${misc}.txt</code><br/>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
       <td valign="top">
@@ -156,8 +156,8 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
     <tr>
       <td valign="top">
         <ul>
-          <code>project</code><br/>
-          <code>└─ ${misc}.txt</code><br/>
+<code>project</code><br/>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
       <td valign="top">
