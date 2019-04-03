@@ -6,16 +6,6 @@ const treeify = require('object-treeify');
 const { determineVars } = require('./vars');
 const { listTasks } = require('./task');
 
-const startSpoiler = (summary, level) => [
-  `<!---${level}--><details>`,
-  `<!---${level}--><summary>${summary}</summary>`,
-  ''
-];
-const endSpoiler = level => [
-  `<!---${level}--></details>`,
-  ''
-];
-
 const normalizeRef = input => input
   .trim()
   .toLowerCase()
@@ -23,11 +13,10 @@ const normalizeRef = input => input
   .replace(/\s/g, '-')
   .replace(/-+$/, '');
 const createRef = (type, content) => `<a name="${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
-const linkRef = (type, content) => `[${content}](#${normalizeRef(`${type}-ref-${content}`)})`;
+const linkRef = (type, content) => `<a href="#${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
 
 const documentFiles = (root, files) => {
   const result = [];
-  result.push('```');
   result.push(root);
 
   const fileTree = files
@@ -37,8 +26,6 @@ const documentFiles = (root, files) => {
     }, {});
 
   result.push(...treeify(fileTree, { joined: false, sortFn: (a, b) => a.localeCompare(b) }));
-  result.push('```');
-  result.push('');
 
   return result;
 };
@@ -52,35 +39,62 @@ const documentSection = (plName, baseLevel, {
   assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
 
   const result = [];
+  result.push(`${
+    '#'.repeat(level + 1)
+  } ${
+    task.target !== undefined ? ':clipboard:' : ':open_file_folder:'
+  } ${
+    createRef(`${plName}-task`, taskName)
+  }`, '');
   if (typeof task.target === 'string') {
-    result.push(`${'#'.repeat(level + 1)} ${'>'.repeat(level)} ${taskName}`, '');
     result.push(`_Updating \`${task.target}\` using ${linkRef(`${plName}-strat`, task.strategy)}._`);
     result.push('');
     result.push(...task.purpose.map(d => `- ${d}`));
     result.push('');
   } else {
-    result.push(`${'#'.repeat(level + 1)} ${'>'.repeat(level)} \`${taskName}\``, '');
     result.push(task.description);
     result.push('');
   }
 
-  result.push(...startSpoiler('Targets', level - baseLevel));
-  result.push(...documentFiles('project', targets));
-  result.push(...endSpoiler(level - baseLevel));
+  result.push('<table>');
+  result.push('  <tbody>');
+  result.push('    <tr>');
 
+  result.push('      <th>Targets</th>');
   if (requires.length !== 0) {
-    result.push(...startSpoiler('Requires', level - baseLevel));
-    result.push(...requires.map(r => `- ${linkRef(`${plName}-req`, r)}`));
-    result.push('');
-    result.push(...endSpoiler(level - baseLevel));
+    result.push('      <th>Requires</th>');
+  }
+  if (variables.length !== 0) {
+    result.push('      <th>Variables</th>');
   }
 
-  if (variables.length !== 0) {
-    result.push(...startSpoiler('Variables', level - baseLevel));
-    result.push(...variables.map(v => `- ${linkRef(`${plName}-var`, v)}`));
-    result.push('');
-    result.push(...endSpoiler(level - baseLevel));
+  result.push('    </tr>');
+  result.push('    <tr>');
+
+  result.push('      <td align="left" valign="top">');
+  result.push('        <ul>');
+  result.push(...documentFiles('project', targets).map(l => `<code>${l}</code><br/>`));
+  result.push('        </ul>');
+  result.push('      </td>');
+  if (requires.length !== 0) {
+    result.push('      <td align="left" valign="top">');
+    result.push('        <ul>');
+    result.push(...requires.map(r => `          <li>${linkRef(`${plName}-req`, r)}</li>`));
+    result.push('        </ul>');
+    result.push('      </td>');
   }
+  if (variables.length !== 0) {
+    result.push('      <td align="left" valign="top">');
+    result.push('        <ul>');
+    result.push(...variables.map(v => `          <li>${linkRef(`${plName}-var`, v)}</li>`));
+    result.push('        </ul>');
+    result.push('      </td>');
+  }
+
+  result.push('    </tr>');
+  result.push('  </tbody>');
+  result.push('</table>');
+  result.push('');
 
   return result;
 };
@@ -105,7 +119,8 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
       .map(subtaskName => ({ level: level + 1, taskName: subtaskName })));
   }
 
-  const result = [];
+  const index = [];
+  const content = [];
 
   // pull information into upper sections
   sections.forEach((section, idx) => {
@@ -142,20 +157,16 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
   });
 
   // generate docs for tasks
-  let lastLevel = baseLevel;
   sections.forEach((section) => {
-    if (lastLevel < section.level) {
-      result.push(...startSpoiler('Details', lastLevel - baseLevel));
-    } else if (lastLevel > section.level) {
-      result.push('------');
-      result.push('');
-      result.push(...endSpoiler(section.level - baseLevel));
-    }
-    result.push(...documentSection(plName, baseLevel, section));
-    lastLevel = section.level;
+    index.push(`${
+      '  '.repeat(section.level - baseLevel)
+    }- ${
+      section.task.target !== undefined ? ':clipboard:' : ':open_file_folder:'
+    } ${
+      linkRef(`${plName}-task`, `\`${section.taskName}\``)
+    }`);
+    content.push(...documentSection(plName, baseLevel, section));
   });
-  result.push('</details>');
-  result.push('');
 
   // append docs for requires, variables and strategies
   [
@@ -205,14 +216,13 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
   ].forEach((def) => {
     const toDocument = [...new Set(sections.reduce((p, c) => p.concat(c[def.source]), []))];
     if (toDocument.length !== 0) {
-      result.push('------');
-      result.push('------');
-      result.push('');
-      result.push(`## ${def.name}`);
-      result.push('');
+      content.push('------');
+      content.push('');
+      content.push(`## ${def.name}`);
+      content.push('');
       toDocument.forEach((e) => {
-        result.push(`### ${createRef(`${plName}-${def.short}`, e)}`);
-        result.push('');
+        content.push(`### ${createRef(`${plName}-${def.short}`, e)}`);
+        content.push('');
         const f = sfs.guessFile(path.join(def.dir, e));
         assert(typeof f === 'string', `Missing ${def.name} Definition: ${e}`);
         const data = sfs.smartRead(f);
@@ -222,30 +232,33 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
             .stringify(Joi.validate(data, def.schema).error, null, 2)}`
         );
         if (data.type !== undefined) {
-          result.push(`Type: \`${data.type}\``);
-          result.push('');
+          content.push(`Type: \`${data.type}\``);
+          content.push('');
         }
         if (data.website !== undefined) {
-          result.push(`[Website](${data.website})`);
-          result.push('');
+          content.push(`[Website](${data.website})`);
+          content.push('');
         }
         if (data.validFor !== undefined) {
-          result.push(`Valid for: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
-          result.push('');
+          content.push(`Valid for: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
+          content.push('');
         }
-        result.push(data.description);
-        result.push('');
+        content.push(data.description);
+        content.push('');
         if (data.details.length !== 0) {
-          result.push(...startSpoiler('Details', 0));
-          result.push(...data.details);
-          result.push('');
-          result.push(...endSpoiler(0));
+          content.push('*Details:*');
+          content.push(...data.details);
+          content.push('');
         }
       });
     }
   });
 
-  return result;
+  return [
+    ...index,
+    '',
+    ...content
+  ];
 };
 module.exports.generateDocs = generateDocs;
 

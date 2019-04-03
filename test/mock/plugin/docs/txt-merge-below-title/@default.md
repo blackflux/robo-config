@@ -1,39 +1,48 @@
-#  `txt-merge-below-title/@default.json`
+- :open_file_folder: <a href="#mock-plugin-task-ref-txt-merge-below-titledefaultjson">`txt-merge-below-title/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-txt-merge-below-titletask">`txt-merge-below-title/task`</a>
+
+# :open_file_folder: <a name="mock-plugin-task-ref-txt-merge-below-titledefaultjson">txt-merge-below-title/@default.json</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-below-title.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-below-title.txt
-```
+## :clipboard: <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > txt-merge-below-title/task
-
-_Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)._
+_Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-below-title.txt</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-below-title.txt
-```
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Strategies

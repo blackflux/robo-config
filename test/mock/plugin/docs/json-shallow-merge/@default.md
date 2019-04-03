@@ -1,39 +1,48 @@
-#  `json-shallow-merge/@default.json`
+- :open_file_folder: <a href="#mock-plugin-task-ref-json-shallow-mergedefaultjson">`json-shallow-merge/@default.json`</a>
+  - :clipboard: <a href="#mock-plugin-task-ref-json-shallow-mergetask">`json-shallow-merge/task`</a>
+
+# :open_file_folder: <a name="mock-plugin-task-ref-json-shallow-mergedefaultjson">json-shallow-merge/@default.json</a>
 
 Task collection description.
 
-<!---0--><details>
-<!---0--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-shallow-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-shallow-target.json
-```
+## :clipboard: <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a>
 
-<!---0--></details>
-
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
-## > json-shallow-merge/task
-
-_Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)._
+_Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merge-shallow">merge-shallow</a>._
 
 - Some purpose.
 
-<!---1--><details>
-<!---1--><summary>Targets</summary>
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─ merge-shallow-target.json</code><br/>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-```
-project
-└─ merge-shallow-target.json
-```
-
-<!---1--></details>
-
-</details>
-
-------
 ------
 
 ## Strategies
@@ -44,10 +53,6 @@ Valid for: `json`, `yml`
 
 Does a shallow merge aka `Object.assign()`.
 
-<!---0--><details>
-<!---0--><summary>Details</summary>
-
+*Details:*
 Useful when specific keys of the target need to be overwritten.
-
-<!---0--></details>
 
