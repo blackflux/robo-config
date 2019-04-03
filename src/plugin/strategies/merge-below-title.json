@@ -1,0 +1,8 @@
+{
+  "validFor": [
+    "list",
+    "nostruct"
+  ],
+  "description": "Merges content below title.",
+  "details": []
+}

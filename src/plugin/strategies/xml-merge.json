@@ -1,0 +1,9 @@
+{
+  "validFor": [
+    "xml"
+  ],
+  "description": "Does a \"smart\" deep merge.",
+  "details": [
+    "This will not work as desired for all xml merging, but should for many cases."
+  ]
+}

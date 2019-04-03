@@ -1,0 +1,9 @@
+{
+  "validFor": [
+    "list"
+  ],
+  "description": "Merges content at the top of the file and removes existing, duplicate lines.",
+  "details": [
+    "Useful for managing e.g. `.gitignore` when the original content should be kept."
+  ]
+}

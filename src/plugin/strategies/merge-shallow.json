@@ -1,0 +1,10 @@
+{
+  "validFor": [
+    "json",
+    "yml"
+  ],
+  "description": "Does a shallow merge aka `Object.assign()`.",
+  "details": [
+    "Useful when specific keys of the target need to be overwritten."
+  ]
+}

@@ -32,7 +32,7 @@ project
 
 ## > misc/task
 
-_Updating `${misc}.txt` using `overwrite`._
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 
@@ -95,7 +95,7 @@ project
 
 ### >> misc/task
 
-_Updating `${misc}.txt` using `overwrite`._
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 
@@ -130,7 +130,7 @@ project
 
 ## > misc/task
 
-_Updating `${misc}.txt` using `overwrite`._
+_Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
 - Some purpose.
 
@@ -209,4 +209,15 @@ Short description of what this variable does.
 Detailed description of what this variable does.
 
 <!---0--></details>
+
+------
+------
+
+## Strategies
+
+### <a name="mock-plugin-strat-ref-overwrite">overwrite</a>
+
+Valid for: `any`
+
+Simply replace the old with the new content.
 
