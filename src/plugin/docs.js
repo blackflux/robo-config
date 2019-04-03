@@ -54,7 +54,7 @@ const documentSection = (plName, baseLevel, {
   const result = [];
   if (typeof task.target === 'string') {
     result.push(`${'#'.repeat(level + 1)} ${'>'.repeat(level)} ${taskName}`, '');
-    result.push(`_Updating \`${task.target}\` using \`${task.strategy}\`._`);
+    result.push(`_Updating \`${task.target}\` using ${linkRef(`${plName}-strat`, task.strategy)}._`);
     result.push('');
     result.push(...task.purpose.map(d => `- ${d}`));
     result.push('');
@@ -117,6 +117,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
         (p, s) => p.concat(...determineVars(s.variables)),
         determineVars({ target: section.task.target })
       );
+    const strategies = [];
     for (let i = idx + 1; i < sections.length; i += 1) {
       const subSection = sections[i];
       if (subSection.level <= section.level) {
@@ -130,11 +131,13 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
           (p, s) => p.concat(...determineVars(s.variables)),
           determineVars({ target: subSection.task.target })
         ));
+      strategies.push(subSection.task.strategy);
     }
     Object.assign(section, {
       targets: [...new Set(targets.filter(e => !!e))],
       requires: [...new Set(requires)],
-      variables: [...new Set(variables)]
+      variables: [...new Set(variables)],
+      strategies: [...new Set(strategies.filter(e => !!e))]
     });
   });
 
@@ -154,11 +157,12 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
   result.push('</details>');
   result.push('');
 
-  // append docs for requires and variables
+  // append docs for requires, variables and strategies
   [
     {
       name: 'Requires',
       source: 'requires',
+      short: 'req',
       dir: reqDir,
       schema: Joi.object().keys({
         description: Joi.string().required(),
@@ -171,11 +175,29 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
     {
       name: 'Variables',
       source: 'variables',
+      short: 'var',
       dir: varDir,
       schema: Joi.object().keys({
         description: Joi.string().required(),
         details: Joi.array().items(Joi.string()),
-        type: Joi.string().required()
+        type: Joi.string().valid('string', 'boolean', 'object', 'array', 'number', 'integer').required()
+      })
+        .unknown(false)
+        .required()
+    },
+    {
+      name: 'Strategies',
+      source: 'strategies',
+      short: 'strat',
+      dir: path.join(__dirname, 'strategies'),
+      schema: Joi.object().keys({
+        validFor: Joi.array()
+          .items(Joi.string().valid('nostruct', 'list', 'xml', 'json', 'yml', 'any'))
+          .unique()
+          .min(1)
+          .required(),
+        description: Joi.string().required(),
+        details: Joi.array().items(Joi.string())
       })
         .unknown(false)
         .required()
@@ -189,7 +211,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
       result.push(`## ${def.name}`);
       result.push('');
       toDocument.forEach((e) => {
-        result.push(`### ${createRef(`${plName}-${def.name.slice(0, 3)}`, e)}`);
+        result.push(`### ${createRef(`${plName}-${def.short}`, e)}`);
         result.push('');
         const f = sfs.guessFile(path.join(def.dir, e));
         assert(typeof f === 'string', `Missing ${def.name} Definition: ${e}`);
@@ -205,6 +227,10 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
         }
         if (data.website !== undefined) {
           result.push(`[Website](${data.website})`);
+          result.push('');
+        }
+        if (data.validFor !== undefined) {
+          result.push(`Valid for: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
           result.push('');
         }
         result.push(data.description);

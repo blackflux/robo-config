@@ -183,15 +183,8 @@ To ensure this is synchronized you should set up a test. See below for details.
 
 ### Merge Strategies
 
-There are several merge strategies available and more will be added over time:
-
-- `overwrite`: Simply replace the old with the new content.
-- `merge-below-title`: Used for `line` style files. Merges content below title.
-- `unique-top`: Used for unique `line` style files. E.g. `.gitignore`.
-Merges content at the top of the file and removes existing, duplicate lines.
-- `merge-shallow`: Used for `json/yml` style files. Does a shallow merge aka `Object.assign`.
-- `merge-deep`: Used for `json/yml` style files. Does a "smart" deep merge.
-- `xml-merge`: Used for `xml` style files. Does a "smart" deep merge.
+There are several merge strategies available and more will be added over time.
+For documentation see [here](src/plugin/strategies).
 
 ### Tests
 

@@ -17,7 +17,7 @@ project
 
 ## > json-shallow-merge/task
 
-_Updating `merge-shallow-target.json` using `merge-shallow`._
+_Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)._
 
 - Some purpose.
 
@@ -32,4 +32,22 @@ project
 <!---1--></details>
 
 </details>
+
+------
+------
+
+## Strategies
+
+### <a name="mock-plugin-strat-ref-merge-shallow">merge-shallow</a>
+
+Valid for: `json`, `yml`
+
+Does a shallow merge aka `Object.assign()`.
+
+<!---0--><details>
+<!---0--><summary>Details</summary>
+
+Useful when specific keys of the target need to be overwritten.
+
+<!---0--></details>
 
