@@ -13,7 +13,7 @@ Task collection description.
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ variables-target.json</code><br/>
+<code>└─ variables-target.json</code>
         </ul>
       </td>
   </tbody>
@@ -33,7 +33,7 @@ _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrit
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ variables-target.json</code><br/>
+<code>└─ variables-target.json</code>
         </ul>
       </td>
   </tbody>

@@ -13,7 +13,7 @@ Task collection description.
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-below-title.txt</code><br/>
+<code>└─ merge-below-title.txt</code>
         </ul>
       </td>
   </tbody>
@@ -33,7 +33,7 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-below-title.txt</code><br/>
+<code>└─ merge-below-title.txt</code>
         </ul>
       </td>
   </tbody>

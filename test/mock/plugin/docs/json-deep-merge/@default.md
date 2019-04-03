@@ -13,7 +13,7 @@ Task collection description.
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-deep-target.json</code><br/>
+<code>└─ merge-deep-target.json</code>
         </ul>
       </td>
   </tbody>
@@ -33,7 +33,7 @@ _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-d
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-deep-target.json</code><br/>
+<code>└─ merge-deep-target.json</code>
         </ul>
       </td>
   </tbody>

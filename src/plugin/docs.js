@@ -72,7 +72,7 @@ const documentSection = (plName, baseLevel, {
   result.push('    <tr>');
   result.push('      <td valign="top">');
   result.push('        <ul>');
-  result.push(...documentFiles('project', targets).map(l => `<code>${l}</code><br/>`));
+  result.push(...documentFiles('project', targets).map(l => `<code>${l}</code>`).join('<br/>\n').split('\n'));
   result.push('        </ul>');
   result.push('      </td>');
   if (requires.length !== 0) {

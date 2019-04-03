@@ -13,7 +13,7 @@ Task collection description.
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ overwrite-target.txt</code><br/>
+<code>└─ overwrite-target.txt</code>
         </ul>
       </td>
   </tbody>
@@ -33,7 +33,7 @@ _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ overwrite-target.txt</code><br/>
+<code>└─ overwrite-target.txt</code>
         </ul>
       </td>
   </tbody>

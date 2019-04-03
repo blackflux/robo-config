@@ -13,7 +13,7 @@ Task collection description.
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ escaped-variable.txt</code><br/>
+<code>└─ escaped-variable.txt</code>
         </ul>
       </td>
   </tbody>
@@ -33,7 +33,7 @@ _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ escaped-variable.txt</code><br/>
+<code>└─ escaped-variable.txt</code>
         </ul>
       </td>
   </tbody>

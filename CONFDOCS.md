@@ -57,7 +57,7 @@ Manage various configuration files for an open source npm github repo.
 <code>├─ .releaserc.json</code><br/>
 <code>├─ LICENSE</code><br/>
 <code>├─ package.json</code><br/>
-<code>└─ README.md</code><br/>
+<code>└─ README.md</code>
         </ul>
       </td>
       <td valign="top">
@@ -105,7 +105,7 @@ Display various badges in README.
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code><br/>
+<code>└─ README.md</code>
         </ul>
       </td>
       <td valign="top">
@@ -145,7 +145,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code><br/>
+<code>└─ README.md</code>
         </ul>
       </td>
       <td valign="top">
@@ -172,7 +172,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code><br/>
+<code>└─ README.md</code>
         </ul>
       </td>
       <td valign="top">
@@ -200,7 +200,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code><br/>
+<code>└─ README.md</code>
         </ul>
       </td>
       <td valign="top">
@@ -234,7 +234,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code><br/>
+<code>└─ README.md</code>
         </ul>
       </td>
       <td valign="top">
@@ -268,7 +268,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code><br/>
+<code>└─ README.md</code>
         </ul>
       </td>
       <td valign="top">
@@ -302,7 +302,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code><br/>
+<code>└─ README.md</code>
         </ul>
       </td>
       <td valign="top">
@@ -336,7 +336,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code><br/>
+<code>└─ README.md</code>
         </ul>
       </td>
       <td valign="top">
@@ -370,7 +370,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code><br/>
+<code>└─ README.md</code>
         </ul>
       </td>
       <td valign="top">
@@ -402,7 +402,7 @@ Recommended base [dependabot configuration](https://dependabot.com/) for javascr
         <ul>
 <code>project</code><br/>
 <code>└─ .dependabot</code><br/>
-<code>   └─ config.yml</code><br/>
+<code>   └─ config.yml</code>
         </ul>
       </td>
       <td valign="top">
@@ -432,7 +432,7 @@ _Updating `.dependabot/config.yml` using <a href="#blackfluxrobo-config-plugin-s
         <ul>
 <code>project</code><br/>
 <code>└─ .dependabot</code><br/>
-<code>   └─ config.yml</code><br/>
+<code>   └─ config.yml</code>
         </ul>
       </td>
       <td valign="top">
@@ -459,7 +459,7 @@ Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Gi
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .gitignore</code><br/>
+<code>└─ .gitignore</code>
         </ul>
       </td>
       <td valign="top">
@@ -489,7 +489,7 @@ _Updating `.gitignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-uni
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .gitignore</code><br/>
+<code>└─ .gitignore</code>
         </ul>
       </td>
       <td valign="top">
@@ -516,7 +516,7 @@ Recommended base configuration when using MIT License with npm.
         <ul>
 <code>project</code><br/>
 <code>├─ LICENSE</code><br/>
-<code>└─ package.json</code><br/>
+<code>└─ package.json</code>
         </ul>
       </td>
       <td valign="top">
@@ -549,7 +549,7 @@ _Updating `LICENSE` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwr
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ LICENSE</code><br/>
+<code>└─ LICENSE</code>
         </ul>
       </td>
       <td valign="top">
@@ -578,7 +578,7 @@ _Updating `package.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-m
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ package.json</code><br/>
+<code>└─ package.json</code>
         </ul>
       </td>
       <td valign="top">
@@ -610,7 +610,7 @@ Recommended base configuration when using [npm](https://www.npmjs.com/).
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .npmignore</code><br/>
+<code>└─ .npmignore</code>
         </ul>
       </td>
       <td valign="top">
@@ -637,7 +637,7 @@ _Updating `.npmignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-uni
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .npmignore</code><br/>
+<code>└─ .npmignore</code>
         </ul>
       </td>
       <td valign="top">
@@ -662,7 +662,7 @@ Recommended base configuration when using [semantic-release](https://github.com/
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .releaserc.json</code><br/>
+<code>└─ .releaserc.json</code>
         </ul>
       </td>
       <td valign="top">
@@ -689,7 +689,7 @@ _Updating `.releaserc.json` using <a href="#blackfluxrobo-config-plugin-strat-re
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .releaserc.json</code><br/>
+<code>└─ .releaserc.json</code>
         </ul>
       </td>
       <td valign="top">
@@ -718,7 +718,7 @@ _Updating `.circleci/config.yml` using <a href="#blackfluxrobo-config-plugin-str
         <ul>
 <code>project</code><br/>
 <code>└─ .circleci</code><br/>
-<code>   └─ config.yml</code><br/>
+<code>   └─ config.yml</code>
         </ul>
       </td>
       <td valign="top">
@@ -754,7 +754,7 @@ _Updating `.gally.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-ov
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .gally.json</code><br/>
+<code>└─ .gally.json</code>
         </ul>
       </td>
       <td valign="top">
@@ -791,7 +791,7 @@ Recommended base configuration when using Jetbrains.
         <ul>
 <code>project</code><br/>
 <code>└─ .idea</code><br/>
-<code>   └─ ${projectName}.iml</code><br/>
+<code>   └─ ${projectName}.iml</code>
         </ul>
       </td>
       <td valign="top">
@@ -827,7 +827,7 @@ _Updating `.idea/${projectName}.iml` using <a href="#blackfluxrobo-config-plugin
         <ul>
 <code>project</code><br/>
 <code>└─ .idea</code><br/>
-<code>   └─ ${projectName}.iml</code><br/>
+<code>   └─ ${projectName}.iml</code>
         </ul>
       </td>
       <td valign="top">
@@ -857,7 +857,7 @@ Recommended base [code editor configuration](https://editorconfig.org/).
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .editorconfig</code><br/>
+<code>└─ .editorconfig</code>
         </ul>
       </td>
   </tbody>
@@ -880,7 +880,7 @@ _Updating `.editorconfig` using <a href="#blackfluxrobo-config-plugin-strat-ref-
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .editorconfig</code><br/>
+<code>└─ .editorconfig</code>
         </ul>
       </td>
   </tbody>

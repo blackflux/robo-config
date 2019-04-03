@@ -13,7 +13,7 @@ Task collection description.
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ unique-top.txt</code><br/>
+<code>└─ unique-top.txt</code>
         </ul>
       </td>
   </tbody>
@@ -33,7 +33,7 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
       <td valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ unique-top.txt</code><br/>
+<code>└─ unique-top.txt</code>
         </ul>
       </td>
   </tbody>
