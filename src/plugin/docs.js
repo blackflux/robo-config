@@ -15,6 +15,8 @@ const normalizeRef = input => input
 const createRef = (type, content) => `<a name="${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
 const linkRef = (type, content) => `<a href="#${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
 
+const getTaskIcon = task => (task.target !== undefined ? ':clipboard:' : ':open_file_folder:');
+
 const documentFiles = (root, files) => {
   const result = [];
   result.push(root);
@@ -39,13 +41,7 @@ const documentSection = (plName, baseLevel, {
   assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
 
   const result = [];
-  result.push(`${
-    '#'.repeat(level + 1)
-  } ${
-    task.target !== undefined ? ':clipboard:' : ':open_file_folder:'
-  } ${
-    createRef(`${plName}-task`, taskName)
-  }`, '');
+  result.push(`${'#'.repeat(level + 1)} ${getTaskIcon(task)} ${createRef(`${plName}-task`, taskName)}`, '');
   if (typeof task.target === 'string') {
     result.push(`_Updating \`${task.target}\` using ${linkRef(`${plName}-strat`, task.strategy)}._`);
     result.push('');
@@ -158,11 +154,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
 
   // generate docs for tasks
   sections.forEach((section) => {
-    index.push(`${
-      '  '.repeat(section.level - baseLevel)
-    }- ${
-      section.task.target !== undefined ? ':clipboard:' : ':open_file_folder:'
-    } ${
+    index.push(`${'  '.repeat(section.level - baseLevel)}- ${getTaskIcon(section.task)} ${
       linkRef(`${plName}-task`, `\`${section.taskName}\``)
     }`);
     content.push(...documentSection(plName, baseLevel, section));
