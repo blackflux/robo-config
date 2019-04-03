@@ -44,7 +44,7 @@ Manage various configuration files for an open source npm github repo.
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
 <code>├─ .circleci</code><br/>
@@ -57,10 +57,10 @@ Manage various configuration files for an open source npm github repo.
 <code>├─ .releaserc.json</code><br/>
 <code>├─ LICENSE</code><br/>
 <code>├─ package.json</code><br/>
-<code>└─ README.md</code>
+<code>└─ README.md</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
@@ -77,7 +77,7 @@ Manage various configuration files for an open source npm github repo.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -102,13 +102,13 @@ Display various badges in README.
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code>
+<code>└─ README.md</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
@@ -119,7 +119,7 @@ Display various badges in README.
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -142,13 +142,13 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <th>Requires</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code>
+<code>└─ README.md</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a></li>
         </ul>
@@ -169,13 +169,13 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <th>Requires</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code>
+<code>└─ README.md</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
         </ul>
@@ -197,18 +197,18 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code>
+<code>└─ README.md</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
         </ul>
@@ -231,18 +231,18 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code>
+<code>└─ README.md</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-packagename">packageName</a></li>
         </ul>
@@ -265,18 +265,18 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code>
+<code>└─ README.md</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-david-dm">david-dm</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
         </ul>
@@ -299,18 +299,18 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code>
+<code>└─ README.md</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
         </ul>
@@ -333,18 +333,18 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code>
+<code>└─ README.md</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-coveralls">coveralls</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
         </ul>
@@ -367,18 +367,18 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ README.md</code>
+<code>└─ README.md</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
         </ul>
@@ -398,14 +398,14 @@ Recommended base [dependabot configuration](https://dependabot.com/) for javascr
       <th>Requires</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
 <code>└─ .dependabot</code><br/>
-<code>   └─ config.yml</code>
+<code>   └─ config.yml</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
@@ -428,14 +428,14 @@ _Updating `.dependabot/config.yml` using <a href="#blackfluxrobo-config-plugin-s
       <th>Requires</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
 <code>└─ .dependabot</code><br/>
-<code>   └─ config.yml</code>
+<code>   └─ config.yml</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
@@ -456,13 +456,13 @@ Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Gi
       <th>Requires</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .gitignore</code>
+<code>└─ .gitignore</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
         </ul>
@@ -486,13 +486,13 @@ _Updating `.gitignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-uni
       <th>Requires</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .gitignore</code>
+<code>└─ .gitignore</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-git">git</a></li>
         </ul>
@@ -512,19 +512,19 @@ Recommended base configuration when using MIT License with npm.
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
 <code>├─ LICENSE</code><br/>
-<code>└─ package.json</code>
+<code>└─ package.json</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -546,13 +546,13 @@ _Updating `LICENSE` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwr
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ LICENSE</code>
+<code>└─ LICENSE</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
         </ul>
@@ -575,18 +575,18 @@ _Updating `package.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-m
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ package.json</code>
+<code>└─ package.json</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a></li>
@@ -607,13 +607,13 @@ Recommended base configuration when using [npm](https://www.npmjs.com/).
       <th>Requires</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .npmignore</code>
+<code>└─ .npmignore</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
         </ul>
@@ -634,13 +634,13 @@ _Updating `.npmignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-uni
       <th>Requires</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .npmignore</code>
+<code>└─ .npmignore</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
         </ul>
@@ -659,13 +659,13 @@ Recommended base configuration when using [semantic-release](https://github.com/
       <th>Requires</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .releaserc.json</code>
+<code>└─ .releaserc.json</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
         </ul>
@@ -686,13 +686,13 @@ _Updating `.releaserc.json` using <a href="#blackfluxrobo-config-plugin-strat-re
       <th>Requires</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .releaserc.json</code>
+<code>└─ .releaserc.json</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a></li>
         </ul>
@@ -714,14 +714,14 @@ _Updating `.circleci/config.yml` using <a href="#blackfluxrobo-config-plugin-str
       <th>Requires</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
 <code>└─ .circleci</code><br/>
-<code>   └─ config.yml</code>
+<code>   └─ config.yml</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-npm">npm</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-yarn">yarn</a></li>
@@ -751,20 +751,20 @@ _Updating `.gally.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-ov
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .gally.json</code>
+<code>└─ .gally.json</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-circleci">circleci</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-gally">gally</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-github">github</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-owner">owner</a></li>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a></li>
@@ -787,20 +787,20 @@ Recommended base configuration when using Jetbrains.
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
 <code>└─ .idea</code><br/>
-<code>   └─ ${projectName}.iml</code>
+<code>   └─ ${projectName}.iml</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-nyc">nyc</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
         </ul>
@@ -823,20 +823,20 @@ _Updating `.idea/${projectName}.iml` using <a href="#blackfluxrobo-config-plugin
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
 <code>└─ .idea</code><br/>
-<code>   └─ ${projectName}.iml</code>
+<code>   └─ ${projectName}.iml</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a></li>
           <li><a href="#blackfluxrobo-config-plugin-req-ref-nyc">nyc</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#blackfluxrobo-config-plugin-var-ref-projectname">projectName</a></li>
         </ul>
@@ -854,10 +854,10 @@ Recommended base [code editor configuration](https://editorconfig.org/).
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .editorconfig</code>
+<code>└─ .editorconfig</code><br/>
         </ul>
       </td>
   </tbody>
@@ -877,10 +877,10 @@ _Updating `.editorconfig` using <a href="#blackfluxrobo-config-plugin-strat-ref-
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ .editorconfig</code>
+<code>└─ .editorconfig</code><br/>
         </ul>
       </td>
   </tbody>

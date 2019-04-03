@@ -10,10 +10,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-target.xml</code>
+<code>└─ merge-target.xml</code><br/>
         </ul>
       </td>
   </tbody>
@@ -30,10 +30,10 @@ _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xm
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-target.xml</code>
+<code>└─ merge-target.xml</code><br/>
         </ul>
       </td>
   </tbody>

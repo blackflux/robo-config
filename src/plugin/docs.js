@@ -70,20 +70,20 @@ const documentSection = (plName, baseLevel, {
   }
   result.push('    </tr>');
   result.push('    <tr>');
-  result.push('      <td valign="top">');
+  result.push('      <td align="left" valign="top">');
   result.push('        <ul>');
-  result.push(...documentFiles('project', targets).map(l => `<code>${l}</code>`).join('<br/>\n').split('\n'));
+  result.push(...documentFiles('project', targets).map(l => `<code>${l}</code><br/>`));
   result.push('        </ul>');
   result.push('      </td>');
   if (requires.length !== 0) {
-    result.push('      <td valign="top">');
+    result.push('      <td align="left" valign="top">');
     result.push('        <ul>');
     result.push(...requires.map(r => `          <li>${linkRef(`${plName}-req`, r)}</li>`));
     result.push('        </ul>');
     result.push('      </td>');
   }
   if (variables.length !== 0) {
-    result.push('      <td valign="top">');
+    result.push('      <td align="left" valign="top">');
     result.push('        <ul>');
     result.push(...variables.map(v => `          <li>${linkRef(`${plName}-var`, v)}</li>`));
     result.push('        </ul>');

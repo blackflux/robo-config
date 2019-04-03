@@ -10,10 +10,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ variables-target.json</code>
+<code>└─ variables-target.json</code><br/>
         </ul>
       </td>
   </tbody>
@@ -30,10 +30,10 @@ _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrit
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ variables-target.json</code>
+<code>└─ variables-target.json</code><br/>
         </ul>
       </td>
   </tbody>

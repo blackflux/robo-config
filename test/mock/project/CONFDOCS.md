@@ -33,10 +33,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-target.xml</code>
+<code>└─ merge-target.xml</code><br/>
         </ul>
       </td>
   </tbody>
@@ -53,10 +53,10 @@ _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xm
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-target.xml</code>
+<code>└─ merge-target.xml</code><br/>
         </ul>
       </td>
   </tbody>
@@ -71,10 +71,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ unique-top.txt</code>
+<code>└─ unique-top.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -91,10 +91,10 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ unique-top.txt</code>
+<code>└─ unique-top.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -109,10 +109,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ overwrite-target.txt</code>
+<code>└─ overwrite-target.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -129,10 +129,10 @@ _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ overwrite-target.txt</code>
+<code>└─ overwrite-target.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -147,10 +147,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-below-title.txt</code>
+<code>└─ merge-below-title.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -167,10 +167,10 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-below-title.txt</code>
+<code>└─ merge-below-title.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -188,18 +188,18 @@ Task collection description.
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -223,18 +223,18 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -256,18 +256,18 @@ Task collection description.
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -291,18 +291,18 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -324,18 +324,18 @@ Task collection description.
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -359,18 +359,18 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -394,18 +394,18 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -424,10 +424,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ variables-target.json</code>
+<code>└─ variables-target.json</code><br/>
         </ul>
       </td>
   </tbody>
@@ -444,10 +444,10 @@ _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrit
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ variables-target.json</code>
+<code>└─ variables-target.json</code><br/>
         </ul>
       </td>
   </tbody>
@@ -462,10 +462,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-shallow-target.json</code>
+<code>└─ merge-shallow-target.json</code><br/>
         </ul>
       </td>
   </tbody>
@@ -482,10 +482,10 @@ _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merg
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-shallow-target.json</code>
+<code>└─ merge-shallow-target.json</code><br/>
         </ul>
       </td>
   </tbody>
@@ -500,10 +500,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-deep-target.json</code>
+<code>└─ merge-deep-target.json</code><br/>
         </ul>
       </td>
   </tbody>
@@ -520,10 +520,10 @@ _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-d
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-deep-target.json</code>
+<code>└─ merge-deep-target.json</code><br/>
         </ul>
       </td>
   </tbody>
@@ -538,10 +538,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ escaped-variable.txt</code>
+<code>└─ escaped-variable.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -558,10 +558,10 @@ _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ escaped-variable.txt</code>
+<code>└─ escaped-variable.txt</code><br/>
         </ul>
       </td>
   </tbody>

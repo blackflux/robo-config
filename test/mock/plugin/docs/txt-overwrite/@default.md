@@ -10,10 +10,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ overwrite-target.txt</code>
+<code>└─ overwrite-target.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -30,10 +30,10 @@ _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ overwrite-target.txt</code>
+<code>└─ overwrite-target.txt</code><br/>
         </ul>
       </td>
   </tbody>

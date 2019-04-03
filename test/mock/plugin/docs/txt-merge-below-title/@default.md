@@ -10,10 +10,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-below-title.txt</code>
+<code>└─ merge-below-title.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -30,10 +30,10 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-below-title.txt</code>
+<code>└─ merge-below-title.txt</code><br/>
         </ul>
       </td>
   </tbody>

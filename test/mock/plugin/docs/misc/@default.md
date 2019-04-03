@@ -16,18 +16,18 @@ Task collection description.
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -51,18 +51,18 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -84,18 +84,18 @@ Task collection description.
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -119,18 +119,18 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
@@ -154,18 +154,18 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <th>Variables</th>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ ${misc}.txt</code>
+<code>└─ ${misc}.txt</code><br/>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
         </ul>
       </td>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>

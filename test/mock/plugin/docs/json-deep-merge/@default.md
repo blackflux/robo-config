@@ -10,10 +10,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-deep-target.json</code>
+<code>└─ merge-deep-target.json</code><br/>
         </ul>
       </td>
   </tbody>
@@ -30,10 +30,10 @@ _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-d
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-deep-target.json</code>
+<code>└─ merge-deep-target.json</code><br/>
         </ul>
       </td>
   </tbody>

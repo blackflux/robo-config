@@ -10,10 +10,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ escaped-variable.txt</code>
+<code>└─ escaped-variable.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -30,10 +30,10 @@ _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ escaped-variable.txt</code>
+<code>└─ escaped-variable.txt</code><br/>
         </ul>
       </td>
   </tbody>

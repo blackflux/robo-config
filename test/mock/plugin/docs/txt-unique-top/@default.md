@@ -10,10 +10,10 @@ Task collection description.
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ unique-top.txt</code>
+<code>└─ unique-top.txt</code><br/>
         </ul>
       </td>
   </tbody>
@@ -30,10 +30,10 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
     <tr>
     </tr>
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ unique-top.txt</code>
+<code>└─ unique-top.txt</code><br/>
         </ul>
       </td>
   </tbody>
