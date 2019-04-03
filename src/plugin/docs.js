@@ -62,16 +62,40 @@ const documentSection = (plName, baseLevel, {
   result.push('*Targets:*');
   result.push(...documentFiles('project', targets));
 
-  if (requires.length !== 0) {
-    result.push('*Requires:*');
-    result.push(...requires.map(r => `- ${linkRef(`${plName}-req`, r)}`));
+  if (requires.length !== 0 && variables.length !== 0) {
+    result.push('<table>');
+    result.push('  <tbody>');
+    result.push('    <tr>');
+    result.push('      <th>Requires</th>');
+    result.push('      <th>Variables</th>');
+    result.push('    </tr>');
+    result.push('    <tr>');
+    result.push('      <td>');
+    result.push('        <ul>');
+    result.push(...requires.map(r => `          <li>${linkRef(`${plName}-req`, r)}</li>`));
+    result.push('        </ul>');
+    result.push('      </td>');
+    result.push('      <td>');
+    result.push('        <ul>');
+    result.push(...variables.map(v => `          <li>${linkRef(`${plName}-var`, v)}</li>`));
+    result.push('        </ul>');
+    result.push('      </td>');
+    result.push('    </tr>');
+    result.push('  </tbody>');
+    result.push('</table>');
     result.push('');
-  }
+  } else {
+    if (requires.length !== 0) {
+      result.push('*Requires:*');
+      result.push(...requires.map(r => `- ${linkRef(`${plName}-req`, r)}`));
+      result.push('');
+    }
 
-  if (variables.length !== 0) {
-    result.push('*Variables:*');
-    result.push(...variables.map(v => `- ${linkRef(`${plName}-var`, v)}`));
-    result.push('');
+    if (variables.length !== 0) {
+      result.push('*Variables:*');
+      result.push(...variables.map(v => `- ${linkRef(`${plName}-var`, v)}`));
+      result.push('');
+    }
   }
 
   return result;

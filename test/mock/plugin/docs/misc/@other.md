@@ -11,12 +11,27 @@ project
 └─ ${misc}.txt
 ```
 
-*Requires:*
-- [dependency](#mock-plugin-req-ref-dependency)
-
-*Variables:*
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[misc](#mock-plugin-var-ref-misc)</li>
+          <li>[variable](#mock-plugin-var-ref-variable)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
@@ -30,12 +45,27 @@ project
 └─ ${misc}.txt
 ```
 
-*Requires:*
-- [dependency](#mock-plugin-req-ref-dependency)
-
-*Variables:*
-- [misc](#mock-plugin-var-ref-misc)
-- [variable](#mock-plugin-var-ref-variable)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[dependency](#mock-plugin-req-ref-dependency)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[misc](#mock-plugin-var-ref-misc)</li>
+          <li>[variable](#mock-plugin-var-ref-variable)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ------
 ------

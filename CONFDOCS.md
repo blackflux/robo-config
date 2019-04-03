@@ -52,27 +52,42 @@ project
 └─ README.md
 ```
 
-*Requires:*
-- [js-gardener](#blackfluxrobo-config-plugin-req-ref-js-gardener)
-- [semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)
-- [npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)
-- [david-dm](#blackfluxrobo-config-plugin-req-ref-david-dm)
-- [dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)
-- [coveralls](#blackfluxrobo-config-plugin-req-ref-coveralls)
-- [circleci](#blackfluxrobo-config-plugin-req-ref-circleci)
-- [github](#blackfluxrobo-config-plugin-req-ref-github)
-- [javascript](#blackfluxrobo-config-plugin-req-ref-javascript)
-- [git](#blackfluxrobo-config-plugin-req-ref-git)
-- [npm](#blackfluxrobo-config-plugin-req-ref-npm)
-- [yarn](#blackfluxrobo-config-plugin-req-ref-yarn)
-- [gally](#blackfluxrobo-config-plugin-req-ref-gally)
-
-*Variables:*
-- [packageName](#blackfluxrobo-config-plugin-var-ref-packagename)
-- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
-- [ownerName](#blackfluxrobo-config-plugin-var-ref-ownername)
-- [owner](#blackfluxrobo-config-plugin-var-ref-owner)
-- [mergeBot](#blackfluxrobo-config-plugin-var-ref-mergebot)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[js-gardener](#blackfluxrobo-config-plugin-req-ref-js-gardener)</li>
+          <li>[semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)</li>
+          <li>[npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)</li>
+          <li>[david-dm](#blackfluxrobo-config-plugin-req-ref-david-dm)</li>
+          <li>[dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)</li>
+          <li>[coveralls](#blackfluxrobo-config-plugin-req-ref-coveralls)</li>
+          <li>[circleci](#blackfluxrobo-config-plugin-req-ref-circleci)</li>
+          <li>[github](#blackfluxrobo-config-plugin-req-ref-github)</li>
+          <li>[javascript](#blackfluxrobo-config-plugin-req-ref-javascript)</li>
+          <li>[git](#blackfluxrobo-config-plugin-req-ref-git)</li>
+          <li>[npm](#blackfluxrobo-config-plugin-req-ref-npm)</li>
+          <li>[yarn](#blackfluxrobo-config-plugin-req-ref-yarn)</li>
+          <li>[gally](#blackfluxrobo-config-plugin-req-ref-gally)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[packageName](#blackfluxrobo-config-plugin-var-ref-packagename)</li>
+          <li>[repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)</li>
+          <li>[ownerName](#blackfluxrobo-config-plugin-var-ref-ownername)</li>
+          <li>[owner](#blackfluxrobo-config-plugin-var-ref-owner)</li>
+          <li>[mergeBot](#blackfluxrobo-config-plugin-var-ref-mergebot)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-badgesnpm-opensource">badges/@npm-opensource</a>
 
@@ -84,18 +99,33 @@ project
 └─ README.md
 ```
 
-*Requires:*
-- [js-gardener](#blackfluxrobo-config-plugin-req-ref-js-gardener)
-- [semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)
-- [npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)
-- [david-dm](#blackfluxrobo-config-plugin-req-ref-david-dm)
-- [dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)
-- [coveralls](#blackfluxrobo-config-plugin-req-ref-coveralls)
-- [circleci](#blackfluxrobo-config-plugin-req-ref-circleci)
-
-*Variables:*
-- [packageName](#blackfluxrobo-config-plugin-var-ref-packagename)
-- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[js-gardener](#blackfluxrobo-config-plugin-req-ref-js-gardener)</li>
+          <li>[semantic-release](#blackfluxrobo-config-plugin-req-ref-semantic-release)</li>
+          <li>[npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)</li>
+          <li>[david-dm](#blackfluxrobo-config-plugin-req-ref-david-dm)</li>
+          <li>[dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)</li>
+          <li>[coveralls](#blackfluxrobo-config-plugin-req-ref-coveralls)</li>
+          <li>[circleci](#blackfluxrobo-config-plugin-req-ref-circleci)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[packageName](#blackfluxrobo-config-plugin-var-ref-packagename)</li>
+          <li>[repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesjs-gardener">badges/js-gardener</a>
 
@@ -139,11 +169,26 @@ project
 └─ README.md
 ```
 
-*Requires:*
-- [npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)
-
-*Variables:*
-- [packageName](#blackfluxrobo-config-plugin-var-ref-packagename)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[packageName](#blackfluxrobo-config-plugin-var-ref-packagename)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesnpm-status">badges/npm-status</a>
 
@@ -157,11 +202,26 @@ project
 └─ README.md
 ```
 
-*Requires:*
-- [npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)
-
-*Variables:*
-- [packageName](#blackfluxrobo-config-plugin-var-ref-packagename)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[npm-published](#blackfluxrobo-config-plugin-req-ref-npm-published)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[packageName](#blackfluxrobo-config-plugin-var-ref-packagename)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesdavid-dm">badges/david-dm</a>
 
@@ -175,11 +235,26 @@ project
 └─ README.md
 ```
 
-*Requires:*
-- [david-dm](#blackfluxrobo-config-plugin-req-ref-david-dm)
-
-*Variables:*
-- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[david-dm](#blackfluxrobo-config-plugin-req-ref-david-dm)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesdependabot">badges/dependabot</a>
 
@@ -193,11 +268,26 @@ project
 └─ README.md
 ```
 
-*Requires:*
-- [dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)
-
-*Variables:*
-- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[dependabot](#blackfluxrobo-config-plugin-req-ref-dependabot)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgescoveralls">badges/coveralls</a>
 
@@ -211,11 +301,26 @@ project
 └─ README.md
 ```
 
-*Requires:*
-- [coveralls](#blackfluxrobo-config-plugin-req-ref-coveralls)
-
-*Variables:*
-- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[coveralls](#blackfluxrobo-config-plugin-req-ref-coveralls)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgescircleci">badges/circleci</a>
 
@@ -229,11 +334,26 @@ project
 └─ README.md
 ```
 
-*Requires:*
-- [circleci](#blackfluxrobo-config-plugin-req-ref-circleci)
-
-*Variables:*
-- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[circleci](#blackfluxrobo-config-plugin-req-ref-circleci)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-dependabotdefault-js">dependabot/@default-js</a>
 
@@ -311,12 +431,27 @@ project
 └─ package.json
 ```
 
-*Requires:*
-- [npm](#blackfluxrobo-config-plugin-req-ref-npm)
-
-*Variables:*
-- [ownerName](#blackfluxrobo-config-plugin-var-ref-ownername)
-- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[npm](#blackfluxrobo-config-plugin-req-ref-npm)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[ownerName](#blackfluxrobo-config-plugin-var-ref-ownername)</li>
+          <li>[repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-license">license/MIT-LICENSE</a>
 
@@ -345,12 +480,27 @@ project
 └─ package.json
 ```
 
-*Requires:*
-- [npm](#blackfluxrobo-config-plugin-req-ref-npm)
-
-*Variables:*
-- [ownerName](#blackfluxrobo-config-plugin-var-ref-ownername)
-- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[npm](#blackfluxrobo-config-plugin-req-ref-npm)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[ownerName](#blackfluxrobo-config-plugin-var-ref-ownername)</li>
+          <li>[repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-npmdefault">npm/@default</a>
 
@@ -445,15 +595,30 @@ project
 └─ .gally.json
 ```
 
-*Requires:*
-- [circleci](#blackfluxrobo-config-plugin-req-ref-circleci)
-- [gally](#blackfluxrobo-config-plugin-req-ref-gally)
-- [github](#blackfluxrobo-config-plugin-req-ref-github)
-
-*Variables:*
-- [owner](#blackfluxrobo-config-plugin-var-ref-owner)
-- [mergeBot](#blackfluxrobo-config-plugin-var-ref-mergebot)
-- [repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[circleci](#blackfluxrobo-config-plugin-req-ref-circleci)</li>
+          <li>[gally](#blackfluxrobo-config-plugin-req-ref-gally)</li>
+          <li>[github](#blackfluxrobo-config-plugin-req-ref-github)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[owner](#blackfluxrobo-config-plugin-var-ref-owner)</li>
+          <li>[mergeBot](#blackfluxrobo-config-plugin-var-ref-mergebot)</li>
+          <li>[repoKey](#blackfluxrobo-config-plugin-var-ref-repokey)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">jetbrains/@default</a>
 
@@ -466,12 +631,27 @@ project
    └─ ${projectName}.iml
 ```
 
-*Requires:*
-- [jetbrains](#blackfluxrobo-config-plugin-req-ref-jetbrains)
-- [nyc](#blackfluxrobo-config-plugin-req-ref-nyc)
-
-*Variables:*
-- [projectName](#blackfluxrobo-config-plugin-var-ref-projectname)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[jetbrains](#blackfluxrobo-config-plugin-req-ref-jetbrains)</li>
+          <li>[nyc](#blackfluxrobo-config-plugin-req-ref-nyc)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[projectName](#blackfluxrobo-config-plugin-var-ref-projectname)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">jetbrains/exclude-coverage-folder</a>
 
@@ -486,12 +666,27 @@ project
    └─ ${projectName}.iml
 ```
 
-*Requires:*
-- [jetbrains](#blackfluxrobo-config-plugin-req-ref-jetbrains)
-- [nyc](#blackfluxrobo-config-plugin-req-ref-nyc)
-
-*Variables:*
-- [projectName](#blackfluxrobo-config-plugin-var-ref-projectname)
+<table>
+  <tbody>
+    <tr>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>[jetbrains](#blackfluxrobo-config-plugin-req-ref-jetbrains)</li>
+          <li>[nyc](#blackfluxrobo-config-plugin-req-ref-nyc)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>[projectName](#blackfluxrobo-config-plugin-var-ref-projectname)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-editordefault">editor/@default</a>
 
