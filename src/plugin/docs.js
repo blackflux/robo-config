@@ -53,7 +53,7 @@ const documentSection = (plName, baseLevel, {
 
   const result = [];
   if (typeof task.target === 'string') {
-    result.push(`${'#'.repeat(level + 1)} ${'>'.repeat(level)} ${taskName}`, '');
+    result.push(`${'#'.repeat(level + 1)} ${createRef(`${plName}-task`, taskName)}`, '');
     result.push(`_Updating \`${task.target}\` using ${linkRef(`${plName}-strat`, task.strategy)}._`);
     result.push('');
     result.push(...task.purpose.map(d => `- ${d}`));
@@ -145,7 +145,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
   // generate docs for tasks
   let lastLevel = baseLevel;
   sections.forEach((section) => {
-    index.push(`${'  '.repeat(section.level - baseLevel)}- [${section.taskName}](???)`);
+    index.push(`${'  '.repeat(section.level - baseLevel)}- ${linkRef(`${plName}-task`, `\`${section.taskName}\``)}`);
     if (lastLevel < section.level) {
       content.push(...startSpoiler('Details', lastLevel - baseLevel));
     } else if (lastLevel > section.level) {

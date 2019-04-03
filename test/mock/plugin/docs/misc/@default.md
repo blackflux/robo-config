@@ -1,8 +1,8 @@
-- [misc/@default.json](???)
-  - [misc/task](???)
-  - [misc/@other](???)
-    - [misc/task](???)
-  - [misc/task](???)
+- [`misc/@default.json`](#mock-plugin-task-ref-miscdefaultjson)
+  - [`misc/task`](#mock-plugin-task-ref-misctask)
+  - [`misc/@other`](#mock-plugin-task-ref-miscother)
+    - [`misc/task`](#mock-plugin-task-ref-misctask)
+  - [`misc/task`](#mock-plugin-task-ref-misctask)
 
 #  `misc/@default.json`
 
@@ -36,7 +36,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## > misc/task
+## <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
 _Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -99,7 +99,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-### >> misc/task
+### <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
 _Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -134,7 +134,7 @@ project
 
 <!---1--></details>
 
-## > misc/task
+## <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
 _Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 

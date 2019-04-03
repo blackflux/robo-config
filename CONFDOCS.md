@@ -4,33 +4,33 @@ Documents configuration tasks managed by [robo-config](https://github.com/blackf
 
 ## Plugin [@blackflux/robo-config-plugin](https://www.npmjs.com/package/@blackflux/robo-config-plugin)
 
-- [assorted/@npm-opensource](???)
-  - [badges/@npm-opensource](???)
-    - [badges/js-gardener](???)
-    - [badges/semantic-release](???)
-    - [badges/npm-downloads](???)
-    - [badges/npm-status](???)
-    - [badges/david-dm](???)
-    - [badges/dependabot](???)
-    - [badges/coveralls](???)
-    - [badges/circleci](???)
-  - [dependabot/@default-js](???)
-    - [dependabot/js-instant](???)
-  - [git/@default](???)
-    - [git/gitignore](???)
-  - [license/@MIT-npm](???)
-    - [license/MIT-LICENSE](???)
-    - [license/MIT-npm](???)
-  - [npm/@default](???)
-    - [npm/npmignore](???)
-  - [semantic-release/@default](???)
-    - [semantic-release/commit-conventions](???)
-  - [circleci/npm-opensource:two-branch](???)
-  - [gally/npm-opensource:two-branch](???)
-- [jetbrains/@default](???)
-  - [jetbrains/exclude-coverage-folder](???)
-- [editor/@default](???)
-  - [editor/two-space](???)
+- [`assorted/@npm-opensource`](#blackfluxrobo-config-plugin-task-ref-assortednpm-opensource)
+  - [`badges/@npm-opensource`](#blackfluxrobo-config-plugin-task-ref-badgesnpm-opensource)
+    - [`badges/js-gardener`](#blackfluxrobo-config-plugin-task-ref-badgesjs-gardener)
+    - [`badges/semantic-release`](#blackfluxrobo-config-plugin-task-ref-badgessemantic-release)
+    - [`badges/npm-downloads`](#blackfluxrobo-config-plugin-task-ref-badgesnpm-downloads)
+    - [`badges/npm-status`](#blackfluxrobo-config-plugin-task-ref-badgesnpm-status)
+    - [`badges/david-dm`](#blackfluxrobo-config-plugin-task-ref-badgesdavid-dm)
+    - [`badges/dependabot`](#blackfluxrobo-config-plugin-task-ref-badgesdependabot)
+    - [`badges/coveralls`](#blackfluxrobo-config-plugin-task-ref-badgescoveralls)
+    - [`badges/circleci`](#blackfluxrobo-config-plugin-task-ref-badgescircleci)
+  - [`dependabot/@default-js`](#blackfluxrobo-config-plugin-task-ref-dependabotdefault-js)
+    - [`dependabot/js-instant`](#blackfluxrobo-config-plugin-task-ref-dependabotjs-instant)
+  - [`git/@default`](#blackfluxrobo-config-plugin-task-ref-gitdefault)
+    - [`git/gitignore`](#blackfluxrobo-config-plugin-task-ref-gitgitignore)
+  - [`license/@MIT-npm`](#blackfluxrobo-config-plugin-task-ref-licensemit-npm)
+    - [`license/MIT-LICENSE`](#blackfluxrobo-config-plugin-task-ref-licensemit-license)
+    - [`license/MIT-npm`](#blackfluxrobo-config-plugin-task-ref-licensemit-npm)
+  - [`npm/@default`](#blackfluxrobo-config-plugin-task-ref-npmdefault)
+    - [`npm/npmignore`](#blackfluxrobo-config-plugin-task-ref-npmnpmignore)
+  - [`semantic-release/@default`](#blackfluxrobo-config-plugin-task-ref-semantic-releasedefault)
+    - [`semantic-release/commit-conventions`](#blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions)
+  - [`circleci/npm-opensource:two-branch`](#blackfluxrobo-config-plugin-task-ref-circlecinpm-opensourcetwo-branch)
+  - [`gally/npm-opensource:two-branch`](#blackfluxrobo-config-plugin-task-ref-gallynpm-opensourcetwo-branch)
+- [`jetbrains/@default`](#blackfluxrobo-config-plugin-task-ref-jetbrainsdefault)
+  - [`jetbrains/exclude-coverage-folder`](#blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder)
+- [`editor/@default`](#blackfluxrobo-config-plugin-task-ref-editordefault)
+  - [`editor/two-space`](#blackfluxrobo-config-plugin-task-ref-editortwo-space)
 
 ### >> `assorted/@npm-opensource`
 
@@ -127,7 +127,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### >>>> badges/js-gardener
+##### <a name="blackfluxrobo-config-plugin-task-ref-badgesjs-gardener">badges/js-gardener</a>
 
 _Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
 
@@ -150,7 +150,7 @@ project
 
 <!---2--></details>
 
-##### >>>> badges/semantic-release
+##### <a name="blackfluxrobo-config-plugin-task-ref-badgessemantic-release">badges/semantic-release</a>
 
 _Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
 
@@ -173,7 +173,7 @@ project
 
 <!---2--></details>
 
-##### >>>> badges/npm-downloads
+##### <a name="blackfluxrobo-config-plugin-task-ref-badgesnpm-downloads">badges/npm-downloads</a>
 
 _Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
 
@@ -203,7 +203,7 @@ project
 
 <!---2--></details>
 
-##### >>>> badges/npm-status
+##### <a name="blackfluxrobo-config-plugin-task-ref-badgesnpm-status">badges/npm-status</a>
 
 _Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
 
@@ -233,7 +233,7 @@ project
 
 <!---2--></details>
 
-##### >>>> badges/david-dm
+##### <a name="blackfluxrobo-config-plugin-task-ref-badgesdavid-dm">badges/david-dm</a>
 
 _Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
 
@@ -263,7 +263,7 @@ project
 
 <!---2--></details>
 
-##### >>>> badges/dependabot
+##### <a name="blackfluxrobo-config-plugin-task-ref-badgesdependabot">badges/dependabot</a>
 
 _Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
 
@@ -293,7 +293,7 @@ project
 
 <!---2--></details>
 
-##### >>>> badges/coveralls
+##### <a name="blackfluxrobo-config-plugin-task-ref-badgescoveralls">badges/coveralls</a>
 
 _Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
 
@@ -323,7 +323,7 @@ project
 
 <!---2--></details>
 
-##### >>>> badges/circleci
+##### <a name="blackfluxrobo-config-plugin-task-ref-badgescircleci">badges/circleci</a>
 
 _Updating `README.md` using [merge-below-title](#blackfluxrobo-config-plugin-strat-ref-merge-below-title)._
 
@@ -384,7 +384,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### >>>> dependabot/js-instant
+##### <a name="blackfluxrobo-config-plugin-task-ref-dependabotjs-instant">dependabot/js-instant</a>
 
 _Updating `.dependabot/config.yml` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
 
@@ -438,7 +438,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### >>>> git/gitignore
+##### <a name="blackfluxrobo-config-plugin-task-ref-gitgitignore">git/gitignore</a>
 
 _Updating `.gitignore` using [unique-top](#blackfluxrobo-config-plugin-strat-ref-unique-top)._
 
@@ -501,7 +501,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### >>>> license/MIT-LICENSE
+##### <a name="blackfluxrobo-config-plugin-task-ref-licensemit-license">license/MIT-LICENSE</a>
 
 _Updating `LICENSE` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
 
@@ -524,7 +524,7 @@ project
 
 <!---2--></details>
 
-##### >>>> license/MIT-npm
+##### <a name="blackfluxrobo-config-plugin-task-ref-licensemit-npm">license/MIT-npm</a>
 
 _Updating `package.json` using [merge-shallow](#blackfluxrobo-config-plugin-strat-ref-merge-shallow)._
 
@@ -583,7 +583,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### >>>> npm/npmignore
+##### <a name="blackfluxrobo-config-plugin-task-ref-npmnpmignore">npm/npmignore</a>
 
 _Updating `.npmignore` using [unique-top](#blackfluxrobo-config-plugin-strat-ref-unique-top)._
 
@@ -634,7 +634,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### >>>> semantic-release/commit-conventions
+##### <a name="blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">semantic-release/commit-conventions</a>
 
 _Updating `.releaserc.json` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
 
@@ -661,7 +661,7 @@ project
 
 <!---1--></details>
 
-#### >>> circleci/npm-opensource:two-branch
+#### <a name="blackfluxrobo-config-plugin-task-ref-circlecinpm-opensourcetwo-branch">circleci/npm-opensource:two-branch</a>
 
 _Updating `.circleci/config.yml` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
 
@@ -693,7 +693,7 @@ project
 
 <!---1--></details>
 
-#### >>> gally/npm-opensource:two-branch
+#### <a name="blackfluxrobo-config-plugin-task-ref-gallynpm-opensourcetwo-branch">gally/npm-opensource:two-branch</a>
 
 _Updating `.gally.json` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
 
@@ -765,7 +765,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> jetbrains/exclude-coverage-folder
+#### <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">jetbrains/exclude-coverage-folder</a>
 
 _Updating `.idea/${projectName}.iml` using [xml-merge](#blackfluxrobo-config-plugin-strat-ref-xml-merge)._
 
@@ -818,7 +818,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> editor/two-space
+#### <a name="blackfluxrobo-config-plugin-task-ref-editortwo-space">editor/two-space</a>
 
 _Updating `.editorconfig` using [overwrite](#blackfluxrobo-config-plugin-strat-ref-overwrite)._
 

@@ -1,5 +1,5 @@
-- [json-variable-types/@default.json](???)
-  - [json-variable-types/task](???)
+- [`json-variable-types/@default.json`](#mock-plugin-task-ref-json-variable-typesdefaultjson)
+  - [`json-variable-types/task`](#mock-plugin-task-ref-json-variable-typestask)
 
 #  `json-variable-types/@default.json`
 
@@ -18,7 +18,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## > json-variable-types/task
+## <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a>
 
 _Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 

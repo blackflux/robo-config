@@ -1,5 +1,5 @@
-- [txt-merge-below-title/@default.json](???)
-  - [txt-merge-below-title/task](???)
+- [`txt-merge-below-title/@default.json`](#mock-plugin-task-ref-txt-merge-below-titledefaultjson)
+  - [`txt-merge-below-title/task`](#mock-plugin-task-ref-txt-merge-below-titletask)
 
 #  `txt-merge-below-title/@default.json`
 
@@ -18,7 +18,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## > txt-merge-below-title/task
+## <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a>
 
 _Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)._
 

@@ -1,5 +1,5 @@
-- [txt-overwrite/@default.json](???)
-  - [txt-overwrite/task](???)
+- [`txt-overwrite/@default.json`](#mock-plugin-task-ref-txt-overwritedefaultjson)
+  - [`txt-overwrite/task`](#mock-plugin-task-ref-txt-overwritetask)
 
 #  `txt-overwrite/@default.json`
 
@@ -18,7 +18,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## > txt-overwrite/task
+## <a name="mock-plugin-task-ref-txt-overwritetask">txt-overwrite/task</a>
 
 _Updating `overwrite-target.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 

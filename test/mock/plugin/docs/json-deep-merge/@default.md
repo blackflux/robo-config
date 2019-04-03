@@ -1,5 +1,5 @@
-- [json-deep-merge/@default.json](???)
-  - [json-deep-merge/task](???)
+- [`json-deep-merge/@default.json`](#mock-plugin-task-ref-json-deep-mergedefaultjson)
+  - [`json-deep-merge/task`](#mock-plugin-task-ref-json-deep-mergetask)
 
 #  `json-deep-merge/@default.json`
 
@@ -18,7 +18,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## > json-deep-merge/task
+## <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a>
 
 _Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)._
 

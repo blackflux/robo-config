@@ -1,28 +1,28 @@
 ## Plugin [mock-plugin](https://www.npmjs.com/package/mock-plugin)
 
-- [xml-merge/@default](???)
-  - [xml-merge/task](???)
-- [txt-unique-top/@default](???)
-  - [txt-unique-top/task](???)
-- [txt-overwrite/@default](???)
-  - [txt-overwrite/task](???)
-- [txt-merge-below-title/@default](???)
-  - [txt-merge-below-title/task](???)
-- [misc/@other](???)
-  - [misc/task](???)
-- [misc/@default](???)
-  - [misc/task](???)
-  - [misc/@other](???)
-    - [misc/task](???)
-  - [misc/task](???)
-- [json-variable-types/@default](???)
-  - [json-variable-types/task](???)
-- [json-shallow-merge/@default](???)
-  - [json-shallow-merge/task](???)
-- [json-deep-merge/@default](???)
-  - [json-deep-merge/task](???)
-- [escaped-variable/@default](???)
-  - [escaped-variable/task](???)
+- [`xml-merge/@default`](#mock-plugin-task-ref-xml-mergedefault)
+  - [`xml-merge/task`](#mock-plugin-task-ref-xml-mergetask)
+- [`txt-unique-top/@default`](#mock-plugin-task-ref-txt-unique-topdefault)
+  - [`txt-unique-top/task`](#mock-plugin-task-ref-txt-unique-toptask)
+- [`txt-overwrite/@default`](#mock-plugin-task-ref-txt-overwritedefault)
+  - [`txt-overwrite/task`](#mock-plugin-task-ref-txt-overwritetask)
+- [`txt-merge-below-title/@default`](#mock-plugin-task-ref-txt-merge-below-titledefault)
+  - [`txt-merge-below-title/task`](#mock-plugin-task-ref-txt-merge-below-titletask)
+- [`misc/@other`](#mock-plugin-task-ref-miscother)
+  - [`misc/task`](#mock-plugin-task-ref-misctask)
+- [`misc/@default`](#mock-plugin-task-ref-miscdefault)
+  - [`misc/task`](#mock-plugin-task-ref-misctask)
+  - [`misc/@other`](#mock-plugin-task-ref-miscother)
+    - [`misc/task`](#mock-plugin-task-ref-misctask)
+  - [`misc/task`](#mock-plugin-task-ref-misctask)
+- [`json-variable-types/@default`](#mock-plugin-task-ref-json-variable-typesdefault)
+  - [`json-variable-types/task`](#mock-plugin-task-ref-json-variable-typestask)
+- [`json-shallow-merge/@default`](#mock-plugin-task-ref-json-shallow-mergedefault)
+  - [`json-shallow-merge/task`](#mock-plugin-task-ref-json-shallow-mergetask)
+- [`json-deep-merge/@default`](#mock-plugin-task-ref-json-deep-mergedefault)
+  - [`json-deep-merge/task`](#mock-plugin-task-ref-json-deep-mergetask)
+- [`escaped-variable/@default`](#mock-plugin-task-ref-escaped-variabledefault)
+  - [`escaped-variable/task`](#mock-plugin-task-ref-escaped-variabletask)
 
 ### >> `xml-merge/@default`
 
@@ -41,7 +41,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> xml-merge/task
+#### <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a>
 
 _Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)._
 
@@ -78,7 +78,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> txt-unique-top/task
+#### <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a>
 
 _Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)._
 
@@ -115,7 +115,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> txt-overwrite/task
+#### <a name="mock-plugin-task-ref-txt-overwritetask">txt-overwrite/task</a>
 
 _Updating `overwrite-target.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -152,7 +152,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> txt-merge-below-title/task
+#### <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a>
 
 _Updating `merge-below-title.txt` using [merge-below-title](#mock-plugin-strat-ref-merge-below-title)._
 
@@ -204,7 +204,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> misc/task
+#### <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
 _Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -271,7 +271,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> misc/task
+#### <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
 _Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -334,7 +334,7 @@ project
 <!---1--><details>
 <!---1--><summary>Details</summary>
 
-##### >>>> misc/task
+##### <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
 _Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -369,7 +369,7 @@ project
 
 <!---1--></details>
 
-#### >>> misc/task
+#### <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
 _Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -421,7 +421,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> json-variable-types/task
+#### <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a>
 
 _Updating `variables-target.json` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 
@@ -458,7 +458,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> json-shallow-merge/task
+#### <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a>
 
 _Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)._
 
@@ -495,7 +495,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> json-deep-merge/task
+#### <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a>
 
 _Updating `merge-deep-target.json` using [merge-deep](#mock-plugin-strat-ref-merge-deep)._
 
@@ -532,7 +532,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-#### >>> escaped-variable/task
+#### <a name="mock-plugin-task-ref-escaped-variabletask">escaped-variable/task</a>
 
 _Updating `escaped-variable.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 

@@ -1,5 +1,5 @@
-- [xml-merge/@default.json](???)
-  - [xml-merge/task](???)
+- [`xml-merge/@default.json`](#mock-plugin-task-ref-xml-mergedefaultjson)
+  - [`xml-merge/task`](#mock-plugin-task-ref-xml-mergetask)
 
 #  `xml-merge/@default.json`
 
@@ -18,7 +18,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## > xml-merge/task
+## <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a>
 
 _Updating `merge-target.xml` using [xml-merge](#mock-plugin-strat-ref-xml-merge)._
 

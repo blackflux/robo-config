@@ -1,5 +1,5 @@
-- [json-shallow-merge/@default.json](???)
-  - [json-shallow-merge/task](???)
+- [`json-shallow-merge/@default.json`](#mock-plugin-task-ref-json-shallow-mergedefaultjson)
+  - [`json-shallow-merge/task`](#mock-plugin-task-ref-json-shallow-mergetask)
 
 #  `json-shallow-merge/@default.json`
 
@@ -18,7 +18,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## > json-shallow-merge/task
+## <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a>
 
 _Updating `merge-shallow-target.json` using [merge-shallow](#mock-plugin-strat-ref-merge-shallow)._
 

@@ -1,5 +1,5 @@
-- [misc/@other.json](???)
-  - [misc/task](???)
+- [`misc/@other.json`](#mock-plugin-task-ref-miscotherjson)
+  - [`misc/task`](#mock-plugin-task-ref-misctask)
 
 #  `misc/@other.json`
 
@@ -33,7 +33,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## > misc/task
+## <a name="mock-plugin-task-ref-misctask">misc/task</a>
 
 _Updating `${misc}.txt` using [overwrite](#mock-plugin-strat-ref-overwrite)._
 

@@ -1,5 +1,5 @@
-- [txt-unique-top/@default.json](???)
-  - [txt-unique-top/task](???)
+- [`txt-unique-top/@default.json`](#mock-plugin-task-ref-txt-unique-topdefaultjson)
+  - [`txt-unique-top/task`](#mock-plugin-task-ref-txt-unique-toptask)
 
 #  `txt-unique-top/@default.json`
 
@@ -18,7 +18,7 @@ project
 <!---0--><details>
 <!---0--><summary>Details</summary>
 
-## > txt-unique-top/task
+## <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a>
 
 _Updating `unique-top.txt` using [unique-top](#mock-plugin-strat-ref-unique-top)._
 
