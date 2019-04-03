@@ -8,6 +8,7 @@ Task collection description.
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
     </tr>
     <tr>
       <td align="left" valign="top">
@@ -29,6 +30,7 @@ _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
     </tr>
     <tr>
       <td align="left" valign="top">

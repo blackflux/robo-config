@@ -549,6 +549,7 @@ _Updating `LICENSE` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwr
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
       <th>Variables</th>
     </tr>
     <tr>
@@ -863,6 +864,7 @@ Recommended base [code editor configuration](https://editorconfig.org/).
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
     </tr>
     <tr>
       <td align="left" valign="top">
@@ -887,6 +889,7 @@ _Updating `.editorconfig` using <a href="#blackfluxrobo-config-plugin-strat-ref-
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
     </tr>
     <tr>
       <td align="left" valign="top">

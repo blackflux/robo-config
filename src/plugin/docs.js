@@ -60,9 +60,7 @@ const documentSection = (plName, baseLevel, {
   result.push('  <tbody>');
   result.push('    <tr>');
 
-  if (requires.length !== 0) {
-    result.push('      <th>Targets</th>');
-  }
+  result.push('      <th>Targets</th>');
   if (requires.length !== 0) {
     result.push('      <th>Requires</th>');
   }

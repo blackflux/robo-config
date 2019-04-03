@@ -8,6 +8,7 @@ Task collection description.
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
     </tr>
     <tr>
       <td align="left" valign="top">
@@ -29,6 +30,7 @@ _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merg
 <table>
   <tbody>
     <tr>
+      <th>Targets</th>
     </tr>
     <tr>
       <td align="left" valign="top">
