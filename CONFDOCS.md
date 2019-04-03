@@ -1023,7 +1023,7 @@ Does not require the project to be published to npm.
 Dependency management similar to npm.
 
 *Details:*
-Very similar functionality to npm cli. However there are some significant differences.
+Very similar functionality to npm cli.
 
 ### <a name="blackfluxrobo-config-plugin-req-ref-gally">gally</a>
 
