@@ -47,9 +47,9 @@ _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite
 
 ## Strategies
 
-### <a name="mock-plugin-strat-ref-overwrite">overwrite</a>
+### <a name="mock-plugin-strat-ref-overwrite">overwrite</a>  
 
-Valid for: `any`
+:page_with_curl: `any`
 
-Simply replace the old with the new content.
+*Simply replace the old with the new content.*
 

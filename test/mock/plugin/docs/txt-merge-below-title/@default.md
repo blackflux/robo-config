@@ -47,9 +47,9 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
 
 ## Strategies
 
-### <a name="mock-plugin-strat-ref-merge-below-title">merge-below-title</a>
+### <a name="mock-plugin-strat-ref-merge-below-title">merge-below-title</a>  
 
-Valid for: `list`, `nostruct`
+:page_with_curl: `list`, `nostruct`
 
-Merges content below title.
+*Merges content below title.*
 

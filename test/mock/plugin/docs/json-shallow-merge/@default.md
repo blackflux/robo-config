@@ -47,12 +47,11 @@ _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merg
 
 ## Strategies
 
-### <a name="mock-plugin-strat-ref-merge-shallow">merge-shallow</a>
+### <a name="mock-plugin-strat-ref-merge-shallow">merge-shallow</a>  
 
-Valid for: `json`, `yml`
+:page_with_curl: `json`, `yml`
 
-Does a shallow merge aka `Object.assign()`.
+*Does a shallow merge aka `Object.assign()`.*
 
-*Details:*
 Useful when specific keys of the target need to be overwritten.
 

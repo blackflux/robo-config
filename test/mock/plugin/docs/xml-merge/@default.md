@@ -47,12 +47,11 @@ _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xm
 
 ## Strategies
 
-### <a name="mock-plugin-strat-ref-xml-merge">xml-merge</a>
+### <a name="mock-plugin-strat-ref-xml-merge">xml-merge</a>  
 
-Valid for: `xml`
+:page_with_curl: `xml`
 
-Does a "smart" deep merge.
+*Does a "smart" deep merge.*
 
-*Details:*
 This will not work as desired for all xml merging, but should for many cases.
 

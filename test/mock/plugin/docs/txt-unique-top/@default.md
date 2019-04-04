@@ -47,12 +47,11 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
 
 ## Strategies
 
-### <a name="mock-plugin-strat-ref-unique-top">unique-top</a>
+### <a name="mock-plugin-strat-ref-unique-top">unique-top</a>  
 
-Valid for: `list`
+:page_with_curl: `list`
 
-Merges content at the top of the file and removes existing, duplicate lines.
+*Merges content at the top of the file and removes existing, duplicate lines.*
 
-*Details:*
 Useful for managing e.g. `.gitignore` when the original content should be kept.
 

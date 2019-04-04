@@ -213,32 +213,28 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
       content.push(`## ${def.name}`);
       content.push('');
       toDocument.forEach((e) => {
-        content.push(`### ${createRef(`${plName}-${def.short}`, e)}`);
-        content.push('');
         const f = sfs.guessFile(path.join(def.dir, e));
         assert(typeof f === 'string', `Missing ${def.name} Definition: ${e}`);
         const data = sfs.smartRead(f);
+
+        content.push(`### ${createRef(`${plName}-${def.short}`, e)} ${
+          data.website !== undefined ? `([Link](${data.website}))` : ''
+        } ${
+          data.type !== undefined ? `(\`${data.type}\`)` : ''
+        }`);
+        content.push('');
         assert(
           Joi.validate(data, def.schema).error === null,
           `Invalid ${def.name} Definition: ${e}\n\n${JSON
             .stringify(Joi.validate(data, def.schema).error, null, 2)}`
         );
-        if (data.type !== undefined) {
-          content.push(`Type: \`${data.type}\``);
-          content.push('');
-        }
-        if (data.website !== undefined) {
-          content.push(`[Website](${data.website})`);
-          content.push('');
-        }
         if (data.validFor !== undefined) {
-          content.push(`Valid for: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
+          content.push(`:page_with_curl: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
           content.push('');
         }
-        content.push(data.description);
+        content.push(`*${data.description}*`);
         content.push('');
         if (data.details.length !== 0) {
-          content.push('*Details:*');
           content.push(...data.details);
           content.push('');
         }
