@@ -1,7 +1,7 @@
 - <a name="mock-plugin-task-idx-ref-xml-mergedefaultjson">:open_file_folder:</a> <a href="#mock-plugin-task-ref-xml-mergedefaultjson">`xml-merge/@default.json`</a>
   - <a name="mock-plugin-task-idx-ref-xml-mergetask">:clipboard:</a> <a href="#mock-plugin-task-ref-xml-mergetask">`xml-merge/task`</a>
 
-# :open_file_folder: <a name="mock-plugin-task-ref-xml-mergedefaultjson">xml-merge/@default.json</a> (<a href="#mock-plugin-task-idx-ref-xml-mergedefaultjson">:link:`index`</a>)
+# :open_file_folder: <a name="mock-plugin-task-ref-xml-mergedefaultjson">xml-merge/@default.json</a> (<a href="#mock-plugin-task-idx-ref-xml-mergedefaultjson">`index`</a>)
 
 Task collection description.
 
@@ -21,7 +21,7 @@ Task collection description.
   </tbody>
 </table>
 
-## :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a> (<a href="#mock-plugin-task-idx-ref-xml-mergetask">:link:`index`</a>)
+## :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a> (<a href="#mock-plugin-task-idx-ref-xml-mergetask">`index`</a>)
 
 _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xml-merge</a>._
 
