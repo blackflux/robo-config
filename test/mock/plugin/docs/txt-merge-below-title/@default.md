@@ -1,7 +1,7 @@
-- :open_file_folder: <a href="#mock-plugin-task-ref-txt-merge-below-titledefaultjson">`txt-merge-below-title/@default.json`</a>
-  - :clipboard: <a href="#mock-plugin-task-ref-txt-merge-below-titletask">`txt-merge-below-title/task`</a>
+- <a name="mock-plugin-task-idx-ref-open_file_folder">:open_file_folder:</a> <a href="#mock-plugin-task-ref-txt-merge-below-titledefaultjson">`txt-merge-below-title/@default.json`</a>
+  - <a name="mock-plugin-task-idx-ref-clipboard">:clipboard:</a> <a href="#mock-plugin-task-ref-txt-merge-below-titletask">`txt-merge-below-title/task`</a>
 
-# :open_file_folder: <a name="mock-plugin-task-ref-txt-merge-below-titledefaultjson">txt-merge-below-title/@default.json</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-txt-merge-below-titledefaultjson">txt-merge-below-title/@default.json</a> (<a href="#mock-plugin-task-idx-ref-index">`index`</a>)
 
 Task collection description.
 
@@ -21,7 +21,7 @@ Task collection description.
   </tbody>
 </table>
 
-## :clipboard: <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a> (<a href="#mock-plugin-task-idx-ref-index">`index`</a>)
 
 _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 

@@ -12,7 +12,7 @@ const normalizeRef = input => input
   .replace(/[^\w\- ]+/g, '')
   .replace(/\s/g, '-')
   .replace(/-+$/, '');
-const createRef = (type, content) => `<a name="${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
+const anchorRef = (type, content) => `<a name="${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
 const linkRef = (type, content) => `<a href="#${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
 
 const getTaskIcon = task => (task.target !== undefined ? ':clipboard:' : ':open_file_folder:');
@@ -41,7 +41,11 @@ const documentSection = (plName, baseLevel, {
   assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
 
   const result = [];
-  result.push(`${'#'.repeat(level + 1)} ${getTaskIcon(task)} ${createRef(`${plName}-task`, taskName)}`, '');
+  result.push(`${'#'.repeat(level + 1)} ${getTaskIcon(task)} ${
+    anchorRef(`${plName}-task`, taskName)
+  } (${
+    linkRef(`${plName}-task-idx`, '`index`')
+  })`, '');
   if (typeof task.target === 'string') {
     result.push(`_Updating \`${task.target}\` using ${linkRef(`${plName}-strat`, task.strategy)}._`);
     result.push('');
@@ -154,7 +158,9 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
 
   // generate docs for tasks
   sections.forEach((section) => {
-    index.push(`${'  '.repeat(section.level - baseLevel)}- ${getTaskIcon(section.task)} ${
+    index.push(`${'  '.repeat(section.level - baseLevel)}- ${
+      anchorRef(`${plName}-task-idx`, getTaskIcon(section.task))
+    } ${
       linkRef(`${plName}-task`, `\`${section.taskName}\``)
     }`);
     content.push(...documentSection(plName, baseLevel, section));
@@ -217,7 +223,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
         assert(typeof f === 'string', `Missing ${def.name} Definition: ${e}`);
         const data = sfs.smartRead(f);
 
-        content.push(`### ${createRef(`${plName}-${def.short}`, e)} ${
+        content.push(`### ${anchorRef(`${plName}-${def.short}`, e)} ${
           data.website !== undefined ? `([\`link\`](${data.website}))` : ''
         } ${
           data.type !== undefined ? `: \`${data.type}\`` : ''
