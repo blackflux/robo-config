@@ -1,7 +1,7 @@
-- :open_file_folder: <a href="#mock-plugin-task-ref-txt-unique-topdefaultjson">`txt-unique-top/@default.json`</a>
-  - :clipboard: <a href="#mock-plugin-task-ref-txt-unique-toptask">`txt-unique-top/task`</a>
+- <a name="mock-plugin-task-idx-ref-txt-unique-topdefaultjson">:open_file_folder:</a> <a href="#mock-plugin-task-ref-txt-unique-topdefaultjson">`txt-unique-top/@default.json`</a>
+  - <a name="mock-plugin-task-idx-ref-txt-unique-toptask">:clipboard:</a> <a href="#mock-plugin-task-ref-txt-unique-toptask">`txt-unique-top/task`</a>
 
-# :open_file_folder: <a name="mock-plugin-task-ref-txt-unique-topdefaultjson">txt-unique-top/@default.json</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-txt-unique-topdefaultjson">txt-unique-top/@default.json</a> (<a href="#mock-plugin-task-idx-ref-txt-unique-topdefaultjson">`index`</a>)
 
 Task collection description.
 
@@ -21,7 +21,7 @@ Task collection description.
   </tbody>
 </table>
 
-## :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a> (<a href="#mock-plugin-task-idx-ref-txt-unique-toptask">`index`</a>)
 
 _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">unique-top</a>._
 
@@ -47,12 +47,11 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
 
 ## Strategies
 
-### <a name="mock-plugin-strat-ref-unique-top">unique-top</a>
+### <a name="mock-plugin-strat-ref-unique-top">unique-top</a>  
 
-Valid for: `list`
+:small_blue_diamond: `list`
 
-Merges content at the top of the file and removes existing, duplicate lines.
+*Merges content at the top of the file and removes existing, duplicate lines.*
 
-*Details:*
 Useful for managing e.g. `.gitignore` when the original content should be kept.
 

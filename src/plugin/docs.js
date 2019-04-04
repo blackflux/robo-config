@@ -12,8 +12,8 @@ const normalizeRef = input => input
   .replace(/[^\w\- ]+/g, '')
   .replace(/\s/g, '-')
   .replace(/-+$/, '');
-const createRef = (type, content) => `<a name="${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
-const linkRef = (type, content) => `<a href="#${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
+const anchorRef = (type, c, ident = null) => `<a name="${normalizeRef(`${type}-ref-${ident || c}`)}">${c}</a>`;
+const linkRef = (type, c, ident = null) => `<a href="#${normalizeRef(`${type}-ref-${ident || c}`)}">${c}</a>`;
 
 const getTaskIcon = task => (task.target !== undefined ? ':clipboard:' : ':open_file_folder:');
 
@@ -41,7 +41,11 @@ const documentSection = (plName, baseLevel, {
   assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
 
   const result = [];
-  result.push(`${'#'.repeat(level + 1)} ${getTaskIcon(task)} ${createRef(`${plName}-task`, taskName)}`, '');
+  result.push(`${'#'.repeat(level + 1)} ${getTaskIcon(task)} ${
+    anchorRef(`${plName}-task`, taskName)
+  } (${
+    linkRef(`${plName}-task-idx`, '`index`', taskName)
+  })`, '');
   if (typeof task.target === 'string') {
     result.push(`_Updating \`${task.target}\` using ${linkRef(`${plName}-strat`, task.strategy)}._`);
     result.push('');
@@ -154,7 +158,9 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
 
   // generate docs for tasks
   sections.forEach((section) => {
-    index.push(`${'  '.repeat(section.level - baseLevel)}- ${getTaskIcon(section.task)} ${
+    index.push(`${'  '.repeat(section.level - baseLevel)}- ${
+      anchorRef(`${plName}-task-idx`, getTaskIcon(section.task), section.taskName)
+    } ${
       linkRef(`${plName}-task`, `\`${section.taskName}\``)
     }`);
     content.push(...documentSection(plName, baseLevel, section));
@@ -213,32 +219,28 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
       content.push(`## ${def.name}`);
       content.push('');
       toDocument.forEach((e) => {
-        content.push(`### ${createRef(`${plName}-${def.short}`, e)}`);
-        content.push('');
         const f = sfs.guessFile(path.join(def.dir, e));
         assert(typeof f === 'string', `Missing ${def.name} Definition: ${e}`);
         const data = sfs.smartRead(f);
+
+        content.push(`### ${anchorRef(`${plName}-${def.short}`, e)} ${
+          data.website !== undefined ? `([\`link\`](${data.website}))` : ''
+        } ${
+          data.type !== undefined ? `: \`${data.type}\`` : ''
+        }`);
+        content.push('');
         assert(
           Joi.validate(data, def.schema).error === null,
           `Invalid ${def.name} Definition: ${e}\n\n${JSON
             .stringify(Joi.validate(data, def.schema).error, null, 2)}`
         );
-        if (data.type !== undefined) {
-          content.push(`Type: \`${data.type}\``);
-          content.push('');
-        }
-        if (data.website !== undefined) {
-          content.push(`[Website](${data.website})`);
-          content.push('');
-        }
         if (data.validFor !== undefined) {
-          content.push(`Valid for: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
+          content.push(`:small_blue_diamond: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
           content.push('');
         }
-        content.push(data.description);
+        content.push(`*${data.description}*`);
         content.push('');
         if (data.details.length !== 0) {
-          content.push('*Details:*');
           content.push(...data.details);
           content.push('');
         }

@@ -4,35 +4,35 @@ Documents configuration tasks managed by [robo-config](https://github.com/blackf
 
 ## Plugin [@blackflux/robo-config-plugin](https://www.npmjs.com/package/@blackflux/robo-config-plugin)
 
-- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-assortednpm-opensource">`assorted/@npm-opensource`</a>
-  - :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-badgesnpm-opensource">`badges/@npm-opensource`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-badgesjs-gardener">`badges/js-gardener`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-badgessemantic-release">`badges/semantic-release`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-badgesnpm-downloads">`badges/npm-downloads`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-badgesnpm-status">`badges/npm-status`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-badgesdavid-dm">`badges/david-dm`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-badgesdependabot">`badges/dependabot`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-badgescoveralls">`badges/coveralls`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-badgescircleci">`badges/circleci`</a>
-  - :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-dependabotdefault-js">`dependabot/@default-js`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-dependabotjs-instant">`dependabot/js-instant`</a>
-  - :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-gitdefault">`git/@default`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-gitgitignore">`git/gitignore`</a>
-  - :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-npm">`license/@MIT-npm`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-license">`license/MIT-LICENSE`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-npm">`license/MIT-npm`</a>
-  - :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-npmdefault">`npm/@default`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-npmnpmignore">`npm/npmignore`</a>
-  - :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasedefault">`semantic-release/@default`</a>
-    - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">`semantic-release/commit-conventions`</a>
-  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-circlecinpm-opensourcetwo-branch">`circleci/npm-opensource:two-branch`</a>
-  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-gallynpm-opensourcetwo-branch">`gally/npm-opensource:two-branch`</a>
-- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">`jetbrains/@default`</a>
-  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">`jetbrains/exclude-coverage-folder`</a>
-- :open_file_folder: <a href="#blackfluxrobo-config-plugin-task-ref-editordefault">`editor/@default`</a>
-  - :clipboard: <a href="#blackfluxrobo-config-plugin-task-ref-editortwo-space">`editor/two-space`</a>
+- <a name="blackfluxrobo-config-plugin-task-idx-ref-assortednpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-assortednpm-opensource">`assorted/@npm-opensource`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesnpm-opensource">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesnpm-opensource">`badges/@npm-opensource`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesjs-gardener">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesjs-gardener">`badges/js-gardener`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgessemantic-release">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgessemantic-release">`badges/semantic-release`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesnpm-downloads">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesnpm-downloads">`badges/npm-downloads`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesnpm-status">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesnpm-status">`badges/npm-status`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesdavid-dm">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesdavid-dm">`badges/david-dm`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgesdependabot">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgesdependabot">`badges/dependabot`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgescoveralls">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgescoveralls">`badges/coveralls`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-badgescircleci">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-badgescircleci">`badges/circleci`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-dependabotdefault-js">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dependabotdefault-js">`dependabot/@default-js`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-dependabotjs-instant">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-dependabotjs-instant">`dependabot/js-instant`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitdefault">`git/@default`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-gitgitignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gitgitignore">`git/gitignore`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-licensemit-npm">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-npm">`license/@MIT-npm`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-licensemit-license">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-license">`license/MIT-LICENSE`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-licensemit-npm">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-licensemit-npm">`license/MIT-npm`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmdefault">`npm/@default`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-npmnpmignore">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-npmnpmignore">`npm/npmignore`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasedefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasedefault">`semantic-release/@default`</a>
+    - <a name="blackfluxrobo-config-plugin-task-idx-ref-semantic-releasecommit-conventions">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">`semantic-release/commit-conventions`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-circlecinpm-opensourcetwo-branch">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-circlecinpm-opensourcetwo-branch">`circleci/npm-opensource:two-branch`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-gallynpm-opensourcetwo-branch">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-gallynpm-opensourcetwo-branch">`gally/npm-opensource:two-branch`</a>
+- <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">`jetbrains/@default`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-jetbrainsexclude-coverage-folder">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">`jetbrains/exclude-coverage-folder`</a>
+- <a name="blackfluxrobo-config-plugin-task-idx-ref-editordefault">:open_file_folder:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editordefault">`editor/@default`</a>
+  - <a name="blackfluxrobo-config-plugin-task-idx-ref-editortwo-space">:clipboard:</a> <a href="#blackfluxrobo-config-plugin-task-ref-editortwo-space">`editor/two-space`</a>
 
-### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortednpm-opensource">assorted/@npm-opensource</a>
+### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-assortednpm-opensource">assorted/@npm-opensource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-assortednpm-opensource">`index`</a>)
 
 Manage various configuration files for an open source npm github repo.
 
@@ -90,7 +90,7 @@ Manage various configuration files for an open source npm github repo.
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-badgesnpm-opensource">badges/@npm-opensource</a>
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-badgesnpm-opensource">badges/@npm-opensource</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-badgesnpm-opensource">`index`</a>)
 
 Display various badges in README.
 
@@ -129,7 +129,7 @@ Display various badges in README.
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesjs-gardener">badges/js-gardener</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesjs-gardener">badges/js-gardener</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-badgesjs-gardener">`index`</a>)
 
 _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
@@ -157,7 +157,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgessemantic-release">badges/semantic-release</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgessemantic-release">badges/semantic-release</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-badgessemantic-release">`index`</a>)
 
 _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
@@ -185,7 +185,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesnpm-downloads">badges/npm-downloads</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesnpm-downloads">badges/npm-downloads</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-badgesnpm-downloads">`index`</a>)
 
 _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
@@ -219,7 +219,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesnpm-status">badges/npm-status</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesnpm-status">badges/npm-status</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-badgesnpm-status">`index`</a>)
 
 _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
@@ -253,7 +253,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesdavid-dm">badges/david-dm</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesdavid-dm">badges/david-dm</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-badgesdavid-dm">`index`</a>)
 
 _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
@@ -287,7 +287,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesdependabot">badges/dependabot</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgesdependabot">badges/dependabot</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-badgesdependabot">`index`</a>)
 
 _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
@@ -321,7 +321,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgescoveralls">badges/coveralls</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgescoveralls">badges/coveralls</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-badgescoveralls">`index`</a>)
 
 _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
@@ -355,7 +355,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgescircleci">badges/circleci</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-badgescircleci">badges/circleci</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-badgescircleci">`index`</a>)
 
 _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
@@ -389,7 +389,7 @@ _Updating `README.md` using <a href="#blackfluxrobo-config-plugin-strat-ref-merg
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-dependabotdefault-js">dependabot/@default-js</a>
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-dependabotdefault-js">dependabot/@default-js</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dependabotdefault-js">`index`</a>)
 
 Recommended base [dependabot configuration](https://dependabot.com/) for javascript projects.
 
@@ -418,7 +418,7 @@ Recommended base [dependabot configuration](https://dependabot.com/) for javascr
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-dependabotjs-instant">dependabot/js-instant</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-dependabotjs-instant">dependabot/js-instant</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-dependabotjs-instant">`index`</a>)
 
 _Updating `.dependabot/config.yml` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -449,7 +449,7 @@ _Updating `.dependabot/config.yml` using <a href="#blackfluxrobo-config-plugin-s
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-gitdefault">git/@default</a>
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-gitdefault">git/@default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gitdefault">`index`</a>)
 
 Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Git).
 
@@ -475,7 +475,7 @@ Recommended base configuration when using [git](https://en.wikipedia.org/wiki/Gi
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-gitgitignore">git/gitignore</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-gitgitignore">git/gitignore</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gitgitignore">`index`</a>)
 
 _Updating `.gitignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>._
 
@@ -506,7 +506,7 @@ _Updating `.gitignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-uni
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-npm">license/@MIT-npm</a>
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-npm">license/@MIT-npm</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licensemit-npm">`index`</a>)
 
 Recommended base configuration when using MIT License with npm.
 
@@ -540,7 +540,7 @@ Recommended base configuration when using MIT License with npm.
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-license">license/MIT-LICENSE</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-license">license/MIT-LICENSE</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licensemit-license">`index`</a>)
 
 _Updating `LICENSE` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -568,7 +568,7 @@ _Updating `LICENSE` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwr
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-npm">license/MIT-npm</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-licensemit-npm">license/MIT-npm</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-licensemit-npm">`index`</a>)
 
 _Updating `package.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>._
 
@@ -603,7 +603,7 @@ _Updating `package.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-m
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-npmdefault">npm/@default</a>
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-npmdefault">npm/@default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-npmdefault">`index`</a>)
 
 Recommended base configuration when using [npm](https://www.npmjs.com/).
 
@@ -629,7 +629,7 @@ Recommended base configuration when using [npm](https://www.npmjs.com/).
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-npmnpmignore">npm/npmignore</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-npmnpmignore">npm/npmignore</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-npmnpmignore">`index`</a>)
 
 _Updating `.npmignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>._
 
@@ -657,7 +657,7 @@ _Updating `.npmignore` using <a href="#blackfluxrobo-config-plugin-strat-ref-uni
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-semantic-releasedefault">semantic-release/@default</a>
+#### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-semantic-releasedefault">semantic-release/@default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-semantic-releasedefault">`index`</a>)
 
 Recommended base configuration when using [semantic-release](https://github.com/semantic-release/semantic-release).
 
@@ -683,7 +683,7 @@ Recommended base configuration when using [semantic-release](https://github.com/
   </tbody>
 </table>
 
-##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">semantic-release/commit-conventions</a>
+##### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-semantic-releasecommit-conventions">semantic-release/commit-conventions</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-semantic-releasecommit-conventions">`index`</a>)
 
 _Updating `.releaserc.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -711,7 +711,7 @@ _Updating `.releaserc.json` using <a href="#blackfluxrobo-config-plugin-strat-re
   </tbody>
 </table>
 
-#### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-circlecinpm-opensourcetwo-branch">circleci/npm-opensource:two-branch</a>
+#### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-circlecinpm-opensourcetwo-branch">circleci/npm-opensource:two-branch</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-circlecinpm-opensourcetwo-branch">`index`</a>)
 
 _Updating `.circleci/config.yml` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -748,7 +748,7 @@ _Updating `.circleci/config.yml` using <a href="#blackfluxrobo-config-plugin-str
   </tbody>
 </table>
 
-#### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-gallynpm-opensourcetwo-branch">gally/npm-opensource:two-branch</a>
+#### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-gallynpm-opensourcetwo-branch">gally/npm-opensource:two-branch</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-gallynpm-opensourcetwo-branch">`index`</a>)
 
 _Updating `.gally.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -787,7 +787,7 @@ _Updating `.gally.json` using <a href="#blackfluxrobo-config-plugin-strat-ref-ov
   </tbody>
 </table>
 
-### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">jetbrains/@default</a>
+### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsdefault">jetbrains/@default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-jetbrainsdefault">`index`</a>)
 
 Recommended base configuration when using Jetbrains.
 
@@ -821,7 +821,7 @@ Recommended base configuration when using Jetbrains.
   </tbody>
 </table>
 
-#### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">jetbrains/exclude-coverage-folder</a>
+#### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-jetbrainsexclude-coverage-folder">jetbrains/exclude-coverage-folder</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-jetbrainsexclude-coverage-folder">`index`</a>)
 
 _Updating `.idea/${projectName}.iml` using <a href="#blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>._
 
@@ -857,7 +857,7 @@ _Updating `.idea/${projectName}.iml` using <a href="#blackfluxrobo-config-plugin
   </tbody>
 </table>
 
-### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-editordefault">editor/@default</a>
+### :open_file_folder: <a name="blackfluxrobo-config-plugin-task-ref-editordefault">editor/@default</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-editordefault">`index`</a>)
 
 Recommended base [code editor configuration](https://editorconfig.org/).
 
@@ -877,7 +877,7 @@ Recommended base [code editor configuration](https://editorconfig.org/).
   </tbody>
 </table>
 
-#### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-editortwo-space">editor/two-space</a>
+#### :clipboard: <a name="blackfluxrobo-config-plugin-task-ref-editortwo-space">editor/two-space</a> (<a href="#blackfluxrobo-config-plugin-task-idx-ref-editortwo-space">`index`</a>)
 
 _Updating `.editorconfig` using <a href="#blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -906,152 +906,107 @@ _Updating `.editorconfig` using <a href="#blackfluxrobo-config-plugin-strat-ref-
 
 ## Requires
 
-### <a name="blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a> ([`link`](https://github.com/blackflux/js-gardener#readme)) 
 
-[Website](https://github.com/blackflux/js-gardener#readme)
+*NodeJs Project Management.*
 
-NodeJs Project Management.
-
-*Details:*
 Enforces and helps setting up best practices around NodeJs projects.
 Enforces highest code quality and minimizes package setup and maintenance complexity - so you can focus on writing code.
 Highly recommended if you are getting started with a new package and extremely useful if you are maintaining multiple packages.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a> ([`link`](https://github.com/semantic-release/semantic-release)) 
 
-[Website](https://github.com/semantic-release/semantic-release)
+*Automates npm package release workflow.*
 
-Automates npm package release workflow.
-
-*Details:*
 Automates the package release workflow including:
 - determining the next version number
 - generating the release notes
 - publishing the package
 
-### <a name="blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a> ([`link`](https://docs.npmjs.com/about-npm/)) 
 
-[Website](https://docs.npmjs.com/about-npm/)
+*Javascript package repository published.*
 
-Javascript package repository published.
-
-*Details:*
 Requires the project to be published to npm either as a private or public package.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-david-dm">david-dm</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-david-dm">david-dm</a> ([`link`](https://david-dm.org/)) 
 
-[Website](https://david-dm.org/)
+*Dependency badge for javascript github repositories.*
 
-Dependency badge for javascript github repositories.
-
-*Details:*
 Enables displaying of a status badge indicated whether the dependencies are outdated.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a> ([`link`](https://dependabot.com/)) 
 
-[Website](https://dependabot.com/)
+*Automatic dependency updates.*
 
-Automatic dependency updates.
-
-*Details:*
 Makes dependency updates very easy by automatically creating pull requests in your repo.
 All major programming languages are supported or work is done towards supporting them.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-coveralls">coveralls</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-coveralls">coveralls</a> ([`link`](https://coveralls.io/)) 
 
-[Website](https://coveralls.io/)
+*Showcase and analyze coverage reports.*
 
-Showcase and analyze coverage reports.
-
-*Details:*
 Enables displaying of a status badge indicated code coverage percent of the project.
 Furthermore allows anyone to easily drill down into missing coverage or coverage changes.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-circleci">circleci</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-circleci">circleci</a> ([`link`](https://circleci.com/)) 
 
-[Website](https://circleci.com/)
+*Run automated jobs using docker containers.*
 
-Run automated jobs using docker containers.
-
-*Details:*
 Allows set up for ci/cd using docker containers.
 Automates development process quickly, safely, and at scale.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-github">github</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-github">github</a> ([`link`](https://github.com/)) 
 
-[Website](https://github.com/)
+*Major development platform powered by git.*
 
-Major development platform powered by git.
-
-*Details:*
 GitHub is a code hosting platform for collaboration and version control.
 Lets you and others work together on projects.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-javascript">javascript</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-javascript">javascript</a> ([`link`](https://en.wikipedia.org/wiki/JavaScript)) 
 
-[Website](https://en.wikipedia.org/wiki/JavaScript)
+*Programming Language.*
 
-Programming Language.
-
-*Details:*
 JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification.
 It is characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-git">git</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-git">git</a> ([`link`](https://git-scm.com/)) 
 
-[Website](https://git-scm.com/)
+*Version control system.*
 
-Version control system.
-
-*Details:*
 The most used version control system. Not to be confused with github (which uses git).
 
-### <a name="blackfluxrobo-config-plugin-req-ref-npm">npm</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-npm">npm</a> ([`link`](https://docs.npmjs.com/about-npm/)) 
 
-[Website](https://docs.npmjs.com/about-npm/)
+*Javascript package repository.*
 
-Javascript package repository.
-
-*Details:*
 Requires the project to be conform with the npm standard, i.e. contain a package.json file.
 Does not require the project to be published to npm.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-yarn">yarn</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-yarn">yarn</a> ([`link`](https://yarnpkg.com/)) 
 
-[Website](https://yarnpkg.com/)
+*Dependency management similar to npm.*
 
-Dependency management similar to npm.
-
-*Details:*
 Very similar functionality to npm cli.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-gally">gally</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-gally">gally</a> ([`link`](https://github.com/loopmediagroup/gally)) 
 
-[Website](https://github.com/loopmediagroup/gally)
+*Automation around github.com Repository Management*
 
-Automation around github.com Repository Management
-
-*Details:*
 Allows management of github.com repositories through configuration.
 Very powerful when you need to synchronize settings across multiple repositories.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a> ([`link`](https://www.jetbrains.com)) 
 
-[Website](https://www.jetbrains.com)
+*Collection of various IDEs.*
 
-Collection of various IDEs.
-
-*Details:*
 Collection of various IDEs. There exists one for every major programming language and 
 they are all very similar (i.e. shortcuts, layout), which makes them great when switching languages.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-nyc">nyc</a>
+### <a name="blackfluxrobo-config-plugin-req-ref-nyc">nyc</a> ([`link`](https://github.com/istanbuljs/nyc#readme)) 
 
-[Website](https://github.com/istanbuljs/nyc#readme)
+*Coverage testing for javascript projects.*
 
-Coverage testing for javascript projects.
-
-*Details:*
 A major coverage testing framework for javascript.
 Comes with all the bells and whistles.
 
@@ -1059,98 +1014,78 @@ Comes with all the bells and whistles.
 
 ## Variables
 
-### <a name="blackfluxrobo-config-plugin-var-ref-packagename">packageName</a>
+### <a name="blackfluxrobo-config-plugin-var-ref-packagename">packageName</a>  : `string`
 
-Type: `string`
+*Name of the package on npm.*
 
-Name of the package on npm.
-
-*Details:*
 The name of the project as published to npm.
 Note that for scoped packages the name can differ significantly from the repo name.
 
-### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>
+### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>  : `string`
 
-Type: `string`
+*Repository key.*
 
-Repository key.
-
-*Details:*
 The repository key contains the owner or organization of the project and the repository name itself, separated by a slash.
 
-### <a name="blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a>
+### <a name="blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a>  : `string`
 
-Type: `string`
+*Name of the owner of this project.*
 
-Name of the owner of this project.
-
-*Details:*
 The owner name of the project is the name of the person or organization publishing the project under their license.
 
-### <a name="blackfluxrobo-config-plugin-var-ref-owner">owner</a>
+### <a name="blackfluxrobo-config-plugin-var-ref-owner">owner</a>  : `string`
 
-Type: `string`
+*The owner of the code on github.*
 
-The owner of the code on github.
-
-*Details:*
 The code owner is the gatekeeper of the project, ultimately responsible for all changes.
 
-### <a name="blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a>
+### <a name="blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a>  : `string`
 
-Type: `string`
+*The github name of the bot used for automatic merging.*
 
-The github name of the bot used for automatic merging.
+### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>  : `string`
 
-### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>
+*Name of the project.*
 
-Type: `string`
-
-Name of the project.
-
-*Details:*
 The project name is in most cases identical to the repository name.
 
 ------
 
 ## Strategies
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>
+### <a name="blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>  
 
-Valid for: `list`, `nostruct`
+:small_blue_diamond: `list`, `nostruct`
 
-Merges content below title.
+*Merges content below title.*
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>
+### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>  
 
-Valid for: `any`
+:small_blue_diamond: `any`
 
-Simply replace the old with the new content.
+*Simply replace the old with the new content.*
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>
+### <a name="blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>  
 
-Valid for: `list`
+:small_blue_diamond: `list`
 
-Merges content at the top of the file and removes existing, duplicate lines.
+*Merges content at the top of the file and removes existing, duplicate lines.*
 
-*Details:*
 Useful for managing e.g. `.gitignore` when the original content should be kept.
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>
+### <a name="blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>  
 
-Valid for: `json`, `yml`
+:small_blue_diamond: `json`, `yml`
 
-Does a shallow merge aka `Object.assign()`.
+*Does a shallow merge aka `Object.assign()`.*
 
-*Details:*
 Useful when specific keys of the target need to be overwritten.
 
-### <a name="blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>
+### <a name="blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>  
 
-Valid for: `xml`
+:small_blue_diamond: `xml`
 
-Does a "smart" deep merge.
+*Does a "smart" deep merge.*
 
-*Details:*
 This will not work as desired for all xml merging, but should for many cases.
 
