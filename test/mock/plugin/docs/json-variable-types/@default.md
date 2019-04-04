@@ -1,7 +1,7 @@
 - <a name="mock-plugin-task-idx-ref-json-variable-typesdefaultjson">:open_file_folder:</a> <a href="#mock-plugin-task-ref-json-variable-typesdefaultjson">`json-variable-types/@default.json`</a>
   - <a name="mock-plugin-task-idx-ref-json-variable-typestask">:clipboard:</a> <a href="#mock-plugin-task-ref-json-variable-typestask">`json-variable-types/task`</a>
 
-# :open_file_folder: <a name="mock-plugin-task-ref-json-variable-typesdefaultjson">json-variable-types/@default.json</a> (<a href="#mock-plugin-task-idx-ref-json-variable-typesdefaultjson">`index`</a>)
+# :open_file_folder: <a name="mock-plugin-task-ref-json-variable-typesdefaultjson">json-variable-types/@default.json</a> (<a href="#mock-plugin-task-idx-ref-json-variable-typesdefaultjson">:arrow_heading_up:</a>)
 
 Task collection description.
 
@@ -21,7 +21,7 @@ Task collection description.
   </tbody>
 </table>
 
-## :clipboard: <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a> (<a href="#mock-plugin-task-idx-ref-json-variable-typestask">`index`</a>)
+## :clipboard: <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a> (<a href="#mock-plugin-task-idx-ref-json-variable-typestask">:arrow_heading_up:</a>)
 
 _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
