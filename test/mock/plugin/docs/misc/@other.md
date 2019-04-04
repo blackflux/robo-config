@@ -1,7 +1,7 @@
 - <a name="mock-plugin-task-idx-ref-miscotherjson">:open_file_folder:</a> <a href="#mock-plugin-task-ref-miscotherjson">`misc/@other.json`</a>
   - <a name="mock-plugin-task-idx-ref-misctask">:clipboard:</a> <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
 
-# :open_file_folder: <a name="mock-plugin-task-ref-miscotherjson">misc/@other.json</a> (<a href="#mock-plugin-task-idx-ref-miscotherjson">`⬆index`</a>)
+# :open_file_folder: <a name="mock-plugin-task-ref-miscotherjson">misc/@other.json</a> (<a href="#mock-plugin-task-idx-ref-miscotherjson">`:link: index`</a>)
 
 Task collection description.
 
@@ -34,7 +34,7 @@ Task collection description.
   </tbody>
 </table>
 
-## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`⬆index`</a>)
+## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`:link: index`</a>)
 
 _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 

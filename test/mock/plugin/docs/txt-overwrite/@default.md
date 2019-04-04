@@ -1,7 +1,7 @@
 - <a name="mock-plugin-task-idx-ref-txt-overwritedefaultjson">:open_file_folder:</a> <a href="#mock-plugin-task-ref-txt-overwritedefaultjson">`txt-overwrite/@default.json`</a>
   - <a name="mock-plugin-task-idx-ref-txt-overwritetask">:clipboard:</a> <a href="#mock-plugin-task-ref-txt-overwritetask">`txt-overwrite/task`</a>
 
-# :open_file_folder: <a name="mock-plugin-task-ref-txt-overwritedefaultjson">txt-overwrite/@default.json</a> (<a href="#mock-plugin-task-idx-ref-txt-overwritedefaultjson">`⬆index`</a>)
+# :open_file_folder: <a name="mock-plugin-task-ref-txt-overwritedefaultjson">txt-overwrite/@default.json</a> (<a href="#mock-plugin-task-idx-ref-txt-overwritedefaultjson">`:link: index`</a>)
 
 Task collection description.
 
@@ -21,7 +21,7 @@ Task collection description.
   </tbody>
 </table>
 
-## :clipboard: <a name="mock-plugin-task-ref-txt-overwritetask">txt-overwrite/task</a> (<a href="#mock-plugin-task-idx-ref-txt-overwritetask">`⬆index`</a>)
+## :clipboard: <a name="mock-plugin-task-ref-txt-overwritetask">txt-overwrite/task</a> (<a href="#mock-plugin-task-idx-ref-txt-overwritetask">`:link: index`</a>)
 
 _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
