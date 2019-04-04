@@ -603,7 +603,7 @@ _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite
 
 ## Requires
 
-### <a name="mock-plugin-req-ref-dependency">dependency</a> ([Link](https://www.some-tool-name.com)) 
+### <a name="mock-plugin-req-ref-dependency">dependency</a> ([link](https://www.some-tool-name.com)) 
 
 *Short description about this dependency.*
 
@@ -613,13 +613,13 @@ Detailed description about this dependency and how it's used.
 
 ## Variables
 
-### <a name="mock-plugin-var-ref-misc">misc</a>  (`string`)
+### <a name="mock-plugin-var-ref-misc">misc</a>  : `string`
 
 *Short description of what this variable does.*
 
 Detailed description of what this variable does.
 
-### <a name="mock-plugin-var-ref-variable">variable</a>  (`string`)
+### <a name="mock-plugin-var-ref-variable">variable</a>  : `string`
 
 *Short description of what this variable does.*
 
@@ -631,7 +631,7 @@ Detailed description of what this variable does.
 
 ### <a name="mock-plugin-strat-ref-xml-merge">xml-merge</a>  
 
-:page_with_curl: `xml`
+:small_blue_diamond: `xml`
 
 *Does a "smart" deep merge.*
 
@@ -639,7 +639,7 @@ This will not work as desired for all xml merging, but should for many cases.
 
 ### <a name="mock-plugin-strat-ref-unique-top">unique-top</a>  
 
-:page_with_curl: `list`
+:small_blue_diamond: `list`
 
 *Merges content at the top of the file and removes existing, duplicate lines.*
 
@@ -647,19 +647,19 @@ Useful for managing e.g. `.gitignore` when the original content should be kept.
 
 ### <a name="mock-plugin-strat-ref-overwrite">overwrite</a>  
 
-:page_with_curl: `any`
+:small_blue_diamond: `any`
 
 *Simply replace the old with the new content.*
 
 ### <a name="mock-plugin-strat-ref-merge-below-title">merge-below-title</a>  
 
-:page_with_curl: `list`, `nostruct`
+:small_blue_diamond: `list`, `nostruct`
 
 *Merges content below title.*
 
 ### <a name="mock-plugin-strat-ref-merge-shallow">merge-shallow</a>  
 
-:page_with_curl: `json`, `yml`
+:small_blue_diamond: `json`, `yml`
 
 *Does a shallow merge aka `Object.assign()`.*
 
@@ -667,7 +667,7 @@ Useful when specific keys of the target need to be overwritten.
 
 ### <a name="mock-plugin-strat-ref-merge-deep">merge-deep</a>  
 
-:page_with_curl: `json`, `yml`
+:small_blue_diamond: `json`, `yml`
 
 *Does a "smart" deep merge.*
 

@@ -218,9 +218,9 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
         const data = sfs.smartRead(f);
 
         content.push(`### ${createRef(`${plName}-${def.short}`, e)} ${
-          data.website !== undefined ? `([Link](${data.website}))` : ''
+          data.website !== undefined ? `([link](${data.website}))` : ''
         } ${
-          data.type !== undefined ? `(\`${data.type}\`)` : ''
+          data.type !== undefined ? `: \`${data.type}\`` : ''
         }`);
         content.push('');
         assert(
@@ -229,7 +229,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
             .stringify(Joi.validate(data, def.schema).error, null, 2)}`
         );
         if (data.validFor !== undefined) {
-          content.push(`:page_with_curl: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
+          content.push(`:small_blue_diamond: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
           content.push('');
         }
         content.push(`*${data.description}*`);

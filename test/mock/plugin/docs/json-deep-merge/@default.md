@@ -49,7 +49,7 @@ _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-d
 
 ### <a name="mock-plugin-strat-ref-merge-deep">merge-deep</a>  
 
-:page_with_curl: `json`, `yml`
+:small_blue_diamond: `json`, `yml`
 
 *Does a "smart" deep merge.*
 

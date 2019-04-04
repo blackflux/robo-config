@@ -49,7 +49,7 @@ _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xm
 
 ### <a name="mock-plugin-strat-ref-xml-merge">xml-merge</a>  
 
-:page_with_curl: `xml`
+:small_blue_diamond: `xml`
 
 *Does a "smart" deep merge.*
 

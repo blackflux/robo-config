@@ -49,7 +49,7 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
 
 ### <a name="mock-plugin-strat-ref-merge-below-title">merge-below-title</a>  
 
-:page_with_curl: `list`, `nostruct`
+:small_blue_diamond: `list`, `nostruct`
 
 *Merges content below title.*
 

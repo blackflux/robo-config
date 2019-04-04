@@ -49,7 +49,7 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
 
 ### <a name="mock-plugin-strat-ref-unique-top">unique-top</a>  
 
-:page_with_curl: `list`
+:small_blue_diamond: `list`
 
 *Merges content at the top of the file and removes existing, duplicate lines.*
 

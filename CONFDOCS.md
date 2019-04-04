@@ -906,7 +906,7 @@ _Updating `.editorconfig` using <a href="#blackfluxrobo-config-plugin-strat-ref-
 
 ## Requires
 
-### <a name="blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a> ([Link](https://github.com/blackflux/js-gardener#readme)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-js-gardener">js-gardener</a> ([link](https://github.com/blackflux/js-gardener#readme)) 
 
 *NodeJs Project Management.*
 
@@ -914,7 +914,7 @@ Enforces and helps setting up best practices around NodeJs projects.
 Enforces highest code quality and minimizes package setup and maintenance complexity - so you can focus on writing code.
 Highly recommended if you are getting started with a new package and extremely useful if you are maintaining multiple packages.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a> ([Link](https://github.com/semantic-release/semantic-release)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-semantic-release">semantic-release</a> ([link](https://github.com/semantic-release/semantic-release)) 
 
 *Automates npm package release workflow.*
 
@@ -923,87 +923,87 @@ Automates the package release workflow including:
 - generating the release notes
 - publishing the package
 
-### <a name="blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a> ([Link](https://docs.npmjs.com/about-npm/)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-npm-published">npm-published</a> ([link](https://docs.npmjs.com/about-npm/)) 
 
 *Javascript package repository published.*
 
 Requires the project to be published to npm either as a private or public package.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-david-dm">david-dm</a> ([Link](https://david-dm.org/)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-david-dm">david-dm</a> ([link](https://david-dm.org/)) 
 
 *Dependency badge for javascript github repositories.*
 
 Enables displaying of a status badge indicated whether the dependencies are outdated.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a> ([Link](https://dependabot.com/)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-dependabot">dependabot</a> ([link](https://dependabot.com/)) 
 
 *Automatic dependency updates.*
 
 Makes dependency updates very easy by automatically creating pull requests in your repo.
 All major programming languages are supported or work is done towards supporting them.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-coveralls">coveralls</a> ([Link](https://coveralls.io/)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-coveralls">coveralls</a> ([link](https://coveralls.io/)) 
 
 *Showcase and analyze coverage reports.*
 
 Enables displaying of a status badge indicated code coverage percent of the project.
 Furthermore allows anyone to easily drill down into missing coverage or coverage changes.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-circleci">circleci</a> ([Link](https://circleci.com/)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-circleci">circleci</a> ([link](https://circleci.com/)) 
 
 *Run automated jobs using docker containers.*
 
 Allows set up for ci/cd using docker containers.
 Automates development process quickly, safely, and at scale.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-github">github</a> ([Link](https://github.com/)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-github">github</a> ([link](https://github.com/)) 
 
 *Major development platform powered by git.*
 
 GitHub is a code hosting platform for collaboration and version control.
 Lets you and others work together on projects.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-javascript">javascript</a> ([Link](https://en.wikipedia.org/wiki/JavaScript)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-javascript">javascript</a> ([link](https://en.wikipedia.org/wiki/JavaScript)) 
 
 *Programming Language.*
 
 JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification.
 It is characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-git">git</a> ([Link](https://git-scm.com/)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-git">git</a> ([link](https://git-scm.com/)) 
 
 *Version control system.*
 
 The most used version control system. Not to be confused with github (which uses git).
 
-### <a name="blackfluxrobo-config-plugin-req-ref-npm">npm</a> ([Link](https://docs.npmjs.com/about-npm/)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-npm">npm</a> ([link](https://docs.npmjs.com/about-npm/)) 
 
 *Javascript package repository.*
 
 Requires the project to be conform with the npm standard, i.e. contain a package.json file.
 Does not require the project to be published to npm.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-yarn">yarn</a> ([Link](https://yarnpkg.com/)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-yarn">yarn</a> ([link](https://yarnpkg.com/)) 
 
 *Dependency management similar to npm.*
 
 Very similar functionality to npm cli.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-gally">gally</a> ([Link](https://github.com/loopmediagroup/gally)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-gally">gally</a> ([link](https://github.com/loopmediagroup/gally)) 
 
 *Automation around github.com Repository Management*
 
 Allows management of github.com repositories through configuration.
 Very powerful when you need to synchronize settings across multiple repositories.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a> ([Link](https://www.jetbrains.com)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-jetbrains">jetbrains</a> ([link](https://www.jetbrains.com)) 
 
 *Collection of various IDEs.*
 
 Collection of various IDEs. There exists one for every major programming language and 
 they are all very similar (i.e. shortcuts, layout), which makes them great when switching languages.
 
-### <a name="blackfluxrobo-config-plugin-req-ref-nyc">nyc</a> ([Link](https://github.com/istanbuljs/nyc#readme)) 
+### <a name="blackfluxrobo-config-plugin-req-ref-nyc">nyc</a> ([link](https://github.com/istanbuljs/nyc#readme)) 
 
 *Coverage testing for javascript projects.*
 
@@ -1014,36 +1014,36 @@ Comes with all the bells and whistles.
 
 ## Variables
 
-### <a name="blackfluxrobo-config-plugin-var-ref-packagename">packageName</a>  (`string`)
+### <a name="blackfluxrobo-config-plugin-var-ref-packagename">packageName</a>  : `string`
 
 *Name of the package on npm.*
 
 The name of the project as published to npm.
 Note that for scoped packages the name can differ significantly from the repo name.
 
-### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>  (`string`)
+### <a name="blackfluxrobo-config-plugin-var-ref-repokey">repoKey</a>  : `string`
 
 *Repository key.*
 
 The repository key contains the owner or organization of the project and the repository name itself, separated by a slash.
 
-### <a name="blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a>  (`string`)
+### <a name="blackfluxrobo-config-plugin-var-ref-ownername">ownerName</a>  : `string`
 
 *Name of the owner of this project.*
 
 The owner name of the project is the name of the person or organization publishing the project under their license.
 
-### <a name="blackfluxrobo-config-plugin-var-ref-owner">owner</a>  (`string`)
+### <a name="blackfluxrobo-config-plugin-var-ref-owner">owner</a>  : `string`
 
 *The owner of the code on github.*
 
 The code owner is the gatekeeper of the project, ultimately responsible for all changes.
 
-### <a name="blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a>  (`string`)
+### <a name="blackfluxrobo-config-plugin-var-ref-mergebot">mergeBot</a>  : `string`
 
 *The github name of the bot used for automatic merging.*
 
-### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>  (`string`)
+### <a name="blackfluxrobo-config-plugin-var-ref-projectname">projectName</a>  : `string`
 
 *Name of the project.*
 
@@ -1055,19 +1055,19 @@ The project name is in most cases identical to the repository name.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-merge-below-title">merge-below-title</a>  
 
-:page_with_curl: `list`, `nostruct`
+:small_blue_diamond: `list`, `nostruct`
 
 *Merges content below title.*
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-overwrite">overwrite</a>  
 
-:page_with_curl: `any`
+:small_blue_diamond: `any`
 
 *Simply replace the old with the new content.*
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-unique-top">unique-top</a>  
 
-:page_with_curl: `list`
+:small_blue_diamond: `list`
 
 *Merges content at the top of the file and removes existing, duplicate lines.*
 
@@ -1075,7 +1075,7 @@ Useful for managing e.g. `.gitignore` when the original content should be kept.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-merge-shallow">merge-shallow</a>  
 
-:page_with_curl: `json`, `yml`
+:small_blue_diamond: `json`, `yml`
 
 *Does a shallow merge aka `Object.assign()`.*
 
@@ -1083,7 +1083,7 @@ Useful when specific keys of the target need to be overwritten.
 
 ### <a name="blackfluxrobo-config-plugin-strat-ref-xml-merge">xml-merge</a>  
 
-:page_with_curl: `xml`
+:small_blue_diamond: `xml`
 
 *Does a "smart" deep merge.*
 

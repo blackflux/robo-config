@@ -49,7 +49,7 @@ _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrit
 
 ### <a name="mock-plugin-strat-ref-overwrite">overwrite</a>  
 
-:page_with_curl: `any`
+:small_blue_diamond: `any`
 
 *Simply replace the old with the new content.*
 

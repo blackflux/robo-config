@@ -179,7 +179,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
 
 ## Requires
 
-### <a name="mock-plugin-req-ref-dependency">dependency</a> ([Link](https://www.some-tool-name.com)) 
+### <a name="mock-plugin-req-ref-dependency">dependency</a> ([link](https://www.some-tool-name.com)) 
 
 *Short description about this dependency.*
 
@@ -189,13 +189,13 @@ Detailed description about this dependency and how it's used.
 
 ## Variables
 
-### <a name="mock-plugin-var-ref-misc">misc</a>  (`string`)
+### <a name="mock-plugin-var-ref-misc">misc</a>  : `string`
 
 *Short description of what this variable does.*
 
 Detailed description of what this variable does.
 
-### <a name="mock-plugin-var-ref-variable">variable</a>  (`string`)
+### <a name="mock-plugin-var-ref-variable">variable</a>  : `string`
 
 *Short description of what this variable does.*
 
@@ -207,7 +207,7 @@ Detailed description of what this variable does.
 
 ### <a name="mock-plugin-strat-ref-overwrite">overwrite</a>  
 
-:page_with_curl: `any`
+:small_blue_diamond: `any`
 
 *Simply replace the old with the new content.*
 
