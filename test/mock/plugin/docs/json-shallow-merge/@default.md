@@ -1,7 +1,7 @@
 - <a name="mock-plugin-task-idx-ref-json-shallow-mergedefaultjson">:open_file_folder:</a> <a href="#mock-plugin-task-ref-json-shallow-mergedefaultjson">`json-shallow-merge/@default.json`</a>
   - <a name="mock-plugin-task-idx-ref-json-shallow-mergetask">:clipboard:</a> <a href="#mock-plugin-task-ref-json-shallow-mergetask">`json-shallow-merge/task`</a>
 
-# :open_file_folder: <a name="mock-plugin-task-ref-json-shallow-mergedefaultjson">json-shallow-merge/@default.json</a> (<a href="#mock-plugin-task-idx-ref-json-shallow-mergedefaultjson">`index`</a>)
+# :open_file_folder: <a name="mock-plugin-task-ref-json-shallow-mergedefaultjson">json-shallow-merge/@default.json</a> (<a href="#mock-plugin-task-idx-ref-json-shallow-mergedefaultjson">`↸index`</a>)
 
 Task collection description.
 
@@ -21,7 +21,7 @@ Task collection description.
   </tbody>
 </table>
 
-## :clipboard: <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a> (<a href="#mock-plugin-task-idx-ref-json-shallow-mergetask">`index`</a>)
+## :clipboard: <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a> (<a href="#mock-plugin-task-idx-ref-json-shallow-mergetask">`↸index`</a>)
 
 _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merge-shallow">merge-shallow</a>._
 
