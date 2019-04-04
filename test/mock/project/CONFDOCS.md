@@ -603,7 +603,7 @@ _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite
 
 ## Requires
 
-### <a name="mock-plugin-req-ref-dependency">dependency</a> ([link](https://www.some-tool-name.com)) 
+### <a name="mock-plugin-req-ref-dependency">dependency</a> [:link:](https://www.some-tool-name.com) 
 
 *Short description about this dependency.*
 

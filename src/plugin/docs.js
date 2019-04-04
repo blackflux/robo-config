@@ -218,7 +218,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
         const data = sfs.smartRead(f);
 
         content.push(`### ${createRef(`${plName}-${def.short}`, e)} ${
-          data.website !== undefined ? `([link](${data.website}))` : ''
+          data.website !== undefined ? `[:link:](${data.website})` : ''
         } ${
           data.type !== undefined ? `: \`${data.type}\`` : ''
         }`);
