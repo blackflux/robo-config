@@ -12,8 +12,8 @@ const normalizeRef = input => input
   .replace(/[^\w\- ]+/g, '')
   .replace(/\s/g, '-')
   .replace(/-+$/, '');
-const anchorRef = (type, content) => `<a name="${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
-const linkRef = (type, content) => `<a href="#${normalizeRef(`${type}-ref-${content}`)}">${content}</a>`;
+const anchorRef = (type, c, ident = null) => `<a name="${normalizeRef(`${type}-ref-${ident || c}`)}">${c}</a>`;
+const linkRef = (type, c, ident = null) => `<a href="#${normalizeRef(`${type}-ref-${ident || c}`)}">${c}</a>`;
 
 const getTaskIcon = task => (task.target !== undefined ? ':clipboard:' : ':open_file_folder:');
 
@@ -44,7 +44,7 @@ const documentSection = (plName, baseLevel, {
   result.push(`${'#'.repeat(level + 1)} ${getTaskIcon(task)} ${
     anchorRef(`${plName}-task`, taskName)
   } (${
-    linkRef(`${plName}-task-idx`, '`index`')
+    linkRef(`${plName}-task-idx`, '`index`', taskName)
   })`, '');
   if (typeof task.target === 'string') {
     result.push(`_Updating \`${task.target}\` using ${linkRef(`${plName}-strat`, task.strategy)}._`);
@@ -159,7 +159,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
   // generate docs for tasks
   sections.forEach((section) => {
     index.push(`${'  '.repeat(section.level - baseLevel)}- ${
-      anchorRef(`${plName}-task-idx`, getTaskIcon(section.task))
+      anchorRef(`${plName}-task-idx`, getTaskIcon(section.task), section.taskName)
     } ${
       linkRef(`${plName}-task`, `\`${section.taskName}\``)
     }`);
