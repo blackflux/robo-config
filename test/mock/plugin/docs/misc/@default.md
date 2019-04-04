@@ -1,10 +1,10 @@
-- :open_file_folder: <a href="#mock-plugin-task-ref-miscdefaultjson">`misc/@default.json`</a>
-  - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
-  - :open_file_folder: <a href="#mock-plugin-task-ref-miscother">`misc/@other`</a>
-    - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
-  - :clipboard: <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+- <a name="mock-plugin-task-idx-ref-miscdefaultjson">:open_file_folder:</a> <a href="#mock-plugin-task-ref-miscdefaultjson">`misc/@default.json`</a>
+  - <a name="mock-plugin-task-idx-ref-misctask">:clipboard:</a> <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+  - <a name="mock-plugin-task-idx-ref-miscother">:open_file_folder:</a> <a href="#mock-plugin-task-ref-miscother">`misc/@other`</a>
+    - <a name="mock-plugin-task-idx-ref-misctask">:clipboard:</a> <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+  - <a name="mock-plugin-task-idx-ref-misctask">:clipboard:</a> <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
 
-# :open_file_folder: <a name="mock-plugin-task-ref-miscdefaultjson">misc/@default.json</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-miscdefaultjson">misc/@default.json</a> (<a href="#mock-plugin-task-idx-ref-miscdefaultjson">`index`</a>)
 
 Task collection description.
 
@@ -37,7 +37,7 @@ Task collection description.
   </tbody>
 </table>
 
-## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
 _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -72,7 +72,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
   </tbody>
 </table>
 
-## :open_file_folder: <a name="mock-plugin-task-ref-miscother">misc/@other</a>
+## :open_file_folder: <a name="mock-plugin-task-ref-miscother">misc/@other</a> (<a href="#mock-plugin-task-idx-ref-miscother">`index`</a>)
 
 Task collection description.
 
@@ -105,7 +105,7 @@ Task collection description.
   </tbody>
 </table>
 
-### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
+### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
 _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -140,7 +140,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
   </tbody>
 </table>
 
-## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
 _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -179,44 +179,35 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
 
 ## Requires
 
-### <a name="mock-plugin-req-ref-dependency">dependency</a>
+### <a name="mock-plugin-req-ref-dependency">dependency</a> ([`link`](https://www.some-tool-name.com)) 
 
-[Website](https://www.some-tool-name.com)
+*Short description about this dependency.*
 
-Short description about this dependency.
-
-*Details:*
 Detailed description about this dependency and how it's used.
 
 ------
 
 ## Variables
 
-### <a name="mock-plugin-var-ref-misc">misc</a>
+### <a name="mock-plugin-var-ref-misc">misc</a>  : `string`
 
-Type: `string`
+*Short description of what this variable does.*
 
-Short description of what this variable does.
-
-*Details:*
 Detailed description of what this variable does.
 
-### <a name="mock-plugin-var-ref-variable">variable</a>
+### <a name="mock-plugin-var-ref-variable">variable</a>  : `string`
 
-Type: `string`
+*Short description of what this variable does.*
 
-Short description of what this variable does.
-
-*Details:*
 Detailed description of what this variable does.
 
 ------
 
 ## Strategies
 
-### <a name="mock-plugin-strat-ref-overwrite">overwrite</a>
+### <a name="mock-plugin-strat-ref-overwrite">overwrite</a>  
 
-Valid for: `any`
+:small_blue_diamond: `any`
 
-Simply replace the old with the new content.
+*Simply replace the old with the new content.*
 

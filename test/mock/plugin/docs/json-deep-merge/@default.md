@@ -1,7 +1,7 @@
-- :open_file_folder: <a href="#mock-plugin-task-ref-json-deep-mergedefaultjson">`json-deep-merge/@default.json`</a>
-  - :clipboard: <a href="#mock-plugin-task-ref-json-deep-mergetask">`json-deep-merge/task`</a>
+- <a name="mock-plugin-task-idx-ref-json-deep-mergedefaultjson">:open_file_folder:</a> <a href="#mock-plugin-task-ref-json-deep-mergedefaultjson">`json-deep-merge/@default.json`</a>
+  - <a name="mock-plugin-task-idx-ref-json-deep-mergetask">:clipboard:</a> <a href="#mock-plugin-task-ref-json-deep-mergetask">`json-deep-merge/task`</a>
 
-# :open_file_folder: <a name="mock-plugin-task-ref-json-deep-mergedefaultjson">json-deep-merge/@default.json</a>
+# :open_file_folder: <a name="mock-plugin-task-ref-json-deep-mergedefaultjson">json-deep-merge/@default.json</a> (<a href="#mock-plugin-task-idx-ref-json-deep-mergedefaultjson">`index`</a>)
 
 Task collection description.
 
@@ -21,7 +21,7 @@ Task collection description.
   </tbody>
 </table>
 
-## :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a>
+## :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a> (<a href="#mock-plugin-task-idx-ref-json-deep-mergetask">`index`</a>)
 
 _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-deep">merge-deep</a>._
 
@@ -47,12 +47,11 @@ _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-d
 
 ## Strategies
 
-### <a name="mock-plugin-strat-ref-merge-deep">merge-deep</a>
+### <a name="mock-plugin-strat-ref-merge-deep">merge-deep</a>  
 
-Valid for: `json`, `yml`
+:small_blue_diamond: `json`, `yml`
 
-Does a "smart" deep merge.
+*Does a "smart" deep merge.*
 
-*Details:*
 This will not work as desired for all object deep merging, but should for many cases.
 
