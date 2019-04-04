@@ -44,7 +44,7 @@ const documentSection = (plName, baseLevel, {
   result.push(`${'#'.repeat(level + 1)} ${getTaskIcon(task)} ${
     anchorRef(`${plName}-task`, taskName)
   } (${
-    linkRef(`${plName}-task-idx`, ':arrow_heading_up:', taskName)
+    linkRef(`${plName}-task-idx`, '`index`', taskName)
   })`, '');
   if (typeof task.target === 'string') {
     result.push(`_Updating \`${task.target}\` using ${linkRef(`${plName}-strat`, task.strategy)}._`);

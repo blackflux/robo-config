@@ -1,7 +1,7 @@
 - <a name="mock-plugin-task-idx-ref-escaped-variabledefaultjson">:open_file_folder:</a> <a href="#mock-plugin-task-ref-escaped-variabledefaultjson">`escaped-variable/@default.json`</a>
   - <a name="mock-plugin-task-idx-ref-escaped-variabletask">:clipboard:</a> <a href="#mock-plugin-task-ref-escaped-variabletask">`escaped-variable/task`</a>
 
-# :open_file_folder: <a name="mock-plugin-task-ref-escaped-variabledefaultjson">escaped-variable/@default.json</a> (<a href="#mock-plugin-task-idx-ref-escaped-variabledefaultjson">:arrow_heading_up:</a>)
+# :open_file_folder: <a name="mock-plugin-task-ref-escaped-variabledefaultjson">escaped-variable/@default.json</a> (<a href="#mock-plugin-task-idx-ref-escaped-variabledefaultjson">`index`</a>)
 
 Task collection description.
 
@@ -21,7 +21,7 @@ Task collection description.
   </tbody>
 </table>
 
-## :clipboard: <a name="mock-plugin-task-ref-escaped-variabletask">escaped-variable/task</a> (<a href="#mock-plugin-task-idx-ref-escaped-variabletask">:arrow_heading_up:</a>)
+## :clipboard: <a name="mock-plugin-task-ref-escaped-variabletask">escaped-variable/task</a> (<a href="#mock-plugin-task-idx-ref-escaped-variabletask">`index`</a>)
 
 _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 

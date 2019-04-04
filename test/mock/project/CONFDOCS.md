@@ -24,7 +24,7 @@
 - <a name="mock-plugin-task-idx-ref-escaped-variabledefault">:open_file_folder:</a> <a href="#mock-plugin-task-ref-escaped-variabledefault">`escaped-variable/@default`</a>
   - <a name="mock-plugin-task-idx-ref-escaped-variabletask">:clipboard:</a> <a href="#mock-plugin-task-ref-escaped-variabletask">`escaped-variable/task`</a>
 
-### :open_file_folder: <a name="mock-plugin-task-ref-xml-mergedefault">xml-merge/@default</a> (<a href="#mock-plugin-task-idx-ref-xml-mergedefault">:arrow_heading_up:</a>)
+### :open_file_folder: <a name="mock-plugin-task-ref-xml-mergedefault">xml-merge/@default</a> (<a href="#mock-plugin-task-idx-ref-xml-mergedefault">`index`</a>)
 
 Task collection description.
 
@@ -44,7 +44,7 @@ Task collection description.
   </tbody>
 </table>
 
-#### :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a> (<a href="#mock-plugin-task-idx-ref-xml-mergetask">:arrow_heading_up:</a>)
+#### :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a> (<a href="#mock-plugin-task-idx-ref-xml-mergetask">`index`</a>)
 
 _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xml-merge</a>._
 
@@ -66,7 +66,7 @@ _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xm
   </tbody>
 </table>
 
-### :open_file_folder: <a name="mock-plugin-task-ref-txt-unique-topdefault">txt-unique-top/@default</a> (<a href="#mock-plugin-task-idx-ref-txt-unique-topdefault">:arrow_heading_up:</a>)
+### :open_file_folder: <a name="mock-plugin-task-ref-txt-unique-topdefault">txt-unique-top/@default</a> (<a href="#mock-plugin-task-idx-ref-txt-unique-topdefault">`index`</a>)
 
 Task collection description.
 
@@ -86,7 +86,7 @@ Task collection description.
   </tbody>
 </table>
 
-#### :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a> (<a href="#mock-plugin-task-idx-ref-txt-unique-toptask">:arrow_heading_up:</a>)
+#### :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a> (<a href="#mock-plugin-task-idx-ref-txt-unique-toptask">`index`</a>)
 
 _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">unique-top</a>._
 
@@ -108,7 +108,7 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
   </tbody>
 </table>
 
-### :open_file_folder: <a name="mock-plugin-task-ref-txt-overwritedefault">txt-overwrite/@default</a> (<a href="#mock-plugin-task-idx-ref-txt-overwritedefault">:arrow_heading_up:</a>)
+### :open_file_folder: <a name="mock-plugin-task-ref-txt-overwritedefault">txt-overwrite/@default</a> (<a href="#mock-plugin-task-idx-ref-txt-overwritedefault">`index`</a>)
 
 Task collection description.
 
@@ -128,7 +128,7 @@ Task collection description.
   </tbody>
 </table>
 
-#### :clipboard: <a name="mock-plugin-task-ref-txt-overwritetask">txt-overwrite/task</a> (<a href="#mock-plugin-task-idx-ref-txt-overwritetask">:arrow_heading_up:</a>)
+#### :clipboard: <a name="mock-plugin-task-ref-txt-overwritetask">txt-overwrite/task</a> (<a href="#mock-plugin-task-idx-ref-txt-overwritetask">`index`</a>)
 
 _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -150,7 +150,7 @@ _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite
   </tbody>
 </table>
 
-### :open_file_folder: <a name="mock-plugin-task-ref-txt-merge-below-titledefault">txt-merge-below-title/@default</a> (<a href="#mock-plugin-task-idx-ref-txt-merge-below-titledefault">:arrow_heading_up:</a>)
+### :open_file_folder: <a name="mock-plugin-task-ref-txt-merge-below-titledefault">txt-merge-below-title/@default</a> (<a href="#mock-plugin-task-idx-ref-txt-merge-below-titledefault">`index`</a>)
 
 Task collection description.
 
@@ -170,7 +170,7 @@ Task collection description.
   </tbody>
 </table>
 
-#### :clipboard: <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a> (<a href="#mock-plugin-task-idx-ref-txt-merge-below-titletask">:arrow_heading_up:</a>)
+#### :clipboard: <a name="mock-plugin-task-ref-txt-merge-below-titletask">txt-merge-below-title/task</a> (<a href="#mock-plugin-task-idx-ref-txt-merge-below-titletask">`index`</a>)
 
 _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-below-title">merge-below-title</a>._
 
@@ -192,7 +192,7 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
   </tbody>
 </table>
 
-### :open_file_folder: <a name="mock-plugin-task-ref-miscother">misc/@other</a> (<a href="#mock-plugin-task-idx-ref-miscother">:arrow_heading_up:</a>)
+### :open_file_folder: <a name="mock-plugin-task-ref-miscother">misc/@other</a> (<a href="#mock-plugin-task-idx-ref-miscother">`index`</a>)
 
 Task collection description.
 
@@ -225,7 +225,7 @@ Task collection description.
   </tbody>
 </table>
 
-#### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">:arrow_heading_up:</a>)
+#### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
 _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -260,7 +260,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
   </tbody>
 </table>
 
-### :open_file_folder: <a name="mock-plugin-task-ref-miscdefault">misc/@default</a> (<a href="#mock-plugin-task-idx-ref-miscdefault">:arrow_heading_up:</a>)
+### :open_file_folder: <a name="mock-plugin-task-ref-miscdefault">misc/@default</a> (<a href="#mock-plugin-task-idx-ref-miscdefault">`index`</a>)
 
 Task collection description.
 
@@ -293,7 +293,7 @@ Task collection description.
   </tbody>
 </table>
 
-#### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">:arrow_heading_up:</a>)
+#### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
 _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -328,7 +328,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
   </tbody>
 </table>
 
-#### :open_file_folder: <a name="mock-plugin-task-ref-miscother">misc/@other</a> (<a href="#mock-plugin-task-idx-ref-miscother">:arrow_heading_up:</a>)
+#### :open_file_folder: <a name="mock-plugin-task-ref-miscother">misc/@other</a> (<a href="#mock-plugin-task-idx-ref-miscother">`index`</a>)
 
 Task collection description.
 
@@ -361,7 +361,7 @@ Task collection description.
   </tbody>
 </table>
 
-##### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">:arrow_heading_up:</a>)
+##### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
 _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -396,7 +396,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
   </tbody>
 </table>
 
-#### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">:arrow_heading_up:</a>)
+#### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
 _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -431,7 +431,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
   </tbody>
 </table>
 
-### :open_file_folder: <a name="mock-plugin-task-ref-json-variable-typesdefault">json-variable-types/@default</a> (<a href="#mock-plugin-task-idx-ref-json-variable-typesdefault">:arrow_heading_up:</a>)
+### :open_file_folder: <a name="mock-plugin-task-ref-json-variable-typesdefault">json-variable-types/@default</a> (<a href="#mock-plugin-task-idx-ref-json-variable-typesdefault">`index`</a>)
 
 Task collection description.
 
@@ -451,7 +451,7 @@ Task collection description.
   </tbody>
 </table>
 
-#### :clipboard: <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a> (<a href="#mock-plugin-task-idx-ref-json-variable-typestask">:arrow_heading_up:</a>)
+#### :clipboard: <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a> (<a href="#mock-plugin-task-idx-ref-json-variable-typestask">`index`</a>)
 
 _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
@@ -473,7 +473,7 @@ _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrit
   </tbody>
 </table>
 
-### :open_file_folder: <a name="mock-plugin-task-ref-json-shallow-mergedefault">json-shallow-merge/@default</a> (<a href="#mock-plugin-task-idx-ref-json-shallow-mergedefault">:arrow_heading_up:</a>)
+### :open_file_folder: <a name="mock-plugin-task-ref-json-shallow-mergedefault">json-shallow-merge/@default</a> (<a href="#mock-plugin-task-idx-ref-json-shallow-mergedefault">`index`</a>)
 
 Task collection description.
 
@@ -493,7 +493,7 @@ Task collection description.
   </tbody>
 </table>
 
-#### :clipboard: <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a> (<a href="#mock-plugin-task-idx-ref-json-shallow-mergetask">:arrow_heading_up:</a>)
+#### :clipboard: <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a> (<a href="#mock-plugin-task-idx-ref-json-shallow-mergetask">`index`</a>)
 
 _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merge-shallow">merge-shallow</a>._
 
@@ -515,7 +515,7 @@ _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merg
   </tbody>
 </table>
 
-### :open_file_folder: <a name="mock-plugin-task-ref-json-deep-mergedefault">json-deep-merge/@default</a> (<a href="#mock-plugin-task-idx-ref-json-deep-mergedefault">:arrow_heading_up:</a>)
+### :open_file_folder: <a name="mock-plugin-task-ref-json-deep-mergedefault">json-deep-merge/@default</a> (<a href="#mock-plugin-task-idx-ref-json-deep-mergedefault">`index`</a>)
 
 Task collection description.
 
@@ -535,7 +535,7 @@ Task collection description.
   </tbody>
 </table>
 
-#### :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a> (<a href="#mock-plugin-task-idx-ref-json-deep-mergetask">:arrow_heading_up:</a>)
+#### :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a> (<a href="#mock-plugin-task-idx-ref-json-deep-mergetask">`index`</a>)
 
 _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-deep">merge-deep</a>._
 
@@ -557,7 +557,7 @@ _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-d
   </tbody>
 </table>
 
-### :open_file_folder: <a name="mock-plugin-task-ref-escaped-variabledefault">escaped-variable/@default</a> (<a href="#mock-plugin-task-idx-ref-escaped-variabledefault">:arrow_heading_up:</a>)
+### :open_file_folder: <a name="mock-plugin-task-ref-escaped-variabledefault">escaped-variable/@default</a> (<a href="#mock-plugin-task-idx-ref-escaped-variabledefault">`index`</a>)
 
 Task collection description.
 
@@ -577,7 +577,7 @@ Task collection description.
   </tbody>
 </table>
 
-#### :clipboard: <a name="mock-plugin-task-ref-escaped-variabletask">escaped-variable/task</a> (<a href="#mock-plugin-task-idx-ref-escaped-variabletask">:arrow_heading_up:</a>)
+#### :clipboard: <a name="mock-plugin-task-ref-escaped-variabletask">escaped-variable/task</a> (<a href="#mock-plugin-task-idx-ref-escaped-variabletask">`index`</a>)
 
 _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
