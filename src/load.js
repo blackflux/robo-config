@@ -2,7 +2,7 @@ const assert = require('assert');
 const path = require('path');
 const sfs = require('smart-fs');
 const { syncDocs, generateDocs } = require('./plugin/docs');
-const { applyTasksRec, listTasks, extractMeta } = require('./plugin/task');
+const { applyTasksRec, listPublicTasks, extractMeta } = require('./plugin/task');
 
 module.exports = (pl) => {
   assert(Object.keys(pl).length === 5, 'Unknown property exposed.');
@@ -29,7 +29,7 @@ module.exports = (pl) => {
     generateDocs: taskNames => genDocs(taskNames),
     apply: applyTasks,
     test: (projectRoot, variables = {}) => {
-      const taskNames = listTasks(pl.taskDir);
+      const taskNames = listPublicTasks(pl.taskDir);
       const vars = extractMeta(pl.taskDir, taskNames).variables
         .reduce((p, c) => Object.assign(p, { [c]: p[c] || c }), variables);
       const result = applyTasks(projectRoot, taskNames, vars);

@@ -65,7 +65,10 @@ const loadTask = (taskDir, taskName, variables) => {
     Joi.validate(task, taskSchema).error === null,
     `Invalid Task: ${taskName}\n\n${JSON.stringify(Joi.validate(task, taskSchema).error, null, 2)}`
   );
-  assert(taskName.includes('/@') === (task.tasks !== undefined), `Invalid Task Name Detected: ${taskName}`);
+  assert(
+    (taskName.includes('/@') || taskName.includes('/#')) === (task.tasks !== undefined),
+    `Invalid Task Name Detected: ${taskName}`
+  );
 
   if (typeof task.target === 'string') {
     // load and merge task snippets into task
@@ -92,12 +95,12 @@ const applyTask = (taskDir, projectRoot, task) => {
   });
 };
 
-const listTasks = taskDir => sfs
+const listPublicTasks = taskDir => sfs
   .walkDir(taskDir)
   .filter(f => f.includes('/@'))
   .filter(f => f.endsWith('.json'))
   .map(f => f.slice(0, -5));
-module.exports.listTasks = listTasks;
+module.exports.listPublicTasks = listPublicTasks;
 
 const applyTasksRec = (taskDir, projectRoot, taskNames, variables) => {
   const result = [];

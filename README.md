@@ -116,12 +116,13 @@ Snippet files can contain variables which need to be provided when a task refere
 
 There are two types of task files: 
 
-- `@containerTaskName.json`: Container task files. They do not specify any action themselves, but reference other tasks.
+- `@containerTaskName.json`: Public container task files. They do not specify any action themselves, but reference other tasks.
+- `#containerTaskName.json`: Private container task files. Same as public container tasks files, but private.
 - `actionableTaskName.json`: Actionable task files, which contain a single task definition, referencing snippets.
 
 #### Container Tasks
 
-Container task names always starts with an `@` symbol. Only container tasks are usable from outside your plugin.
+Container task names always starts with an `@` or `#` symbol. Only container tasks starting with an `@` are usable from outside your plugin.
 
 A container task definition file contains the following keys:
 
@@ -131,7 +132,7 @@ or referencing a task directory as `taskDirectory/task`
 
 #### Actionable Tasks
 
-Actionable task names must not start with an `@` symbol. They can only be used by container tasks.
+Actionable task names must not start with an `@` or `#` symbol. They can only be used by container tasks.
 
 Actionable task definition files contain the following keys:
 
