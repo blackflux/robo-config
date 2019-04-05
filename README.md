@@ -122,7 +122,7 @@ There are two types of task files:
 
 #### Container Tasks
 
-Container task names always starts with a `@` or a `#` symbol. Only container tasks starting with a `@` are usable from outside your plugin.
+Container task names always starts with an `@` or `#` symbol. Only container tasks starting with an `@` are usable from outside your plugin.
 
 A container task definition file contains the following keys:
 
