@@ -8,7 +8,6 @@ const load = require('./load');
 const pluginPayloadSchema = Joi.object().keys({
   tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)).required(),
   variables: Joi.object().required(),
-  projectRoot: Joi.string().required(),
   confDocs: Joi.string().required()
 })
   .unknown(false)
@@ -28,7 +27,6 @@ module.exports = (projectRoot = appRoot.path) => {
     .entries(config)
     .reduce((p, [k, v]) => Object.assign(p, {
       [k]: Object.assign({
-        projectRoot,
         variables: {},
         confDocs: 'CONFDOCS.md'
       }, v)
