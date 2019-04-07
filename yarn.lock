@@ -199,10 +199,10 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@blackflux/robo-config-plugin@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-1.0.5.tgz#c8ada4c3bf8671d04ce077e06e8896b2dfb384c5"
-  integrity sha512-fTHZkpgXYHV/Hp2DpBx9SM9hwHJSDY260+KjKcsO6Tae84Mykvo5jxHdGnyNF86L2yaUtyDmaMnztPQpZRDY2Q==
+"@blackflux/robo-config-plugin@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@blackflux/robo-config-plugin/-/robo-config-plugin-1.0.6.tgz#7b1eef414a8f6f01ee7aaeece943119d7159b32e"
+  integrity sha512-ruEeWtFCOELKG9Ff0GcJCumfbQNTyhJ5riKUzJkis5SgrQTomrJecObh6ZO3IlxG8oYatbOjId5NU0yc/+utQw==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
