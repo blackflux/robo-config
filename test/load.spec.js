@@ -1,6 +1,5 @@
 const path = require('path');
 const tmp = require('tmp');
-const sfs = require('smart-fs');
 const expect = require('chai').expect;
 const { load: loadSpec } = require('../src/index');
 const plugin = require('./mock/plugin');
@@ -16,14 +15,79 @@ describe('Testing Test Plugin', () => {
   });
 
   it('Testing All Public Tasks', () => {
-    const result = loadSpec(plugin).test(path.join(__dirname, 'mock', 'project'));
-    expect(result).to.deep.equal([]);
+    const result = loadSpec(plugin).test(path.join(__dirname, 'mock', 'projects'));
+    expect(result).to.deep.equal({
+      'xml-merge/@default': [],
+      'txt-unique-top/@default': [],
+      'txt-overwrite/@default': [],
+      'txt-merge-below-title/@default': [],
+      'misc/@other': [],
+      'misc/@default': [],
+      'json-variable-types/@default': [],
+      'json-shallow-merge/@default': [],
+      'json-deep-merge/@default': [],
+      'escaped-variable/@default': []
+    });
   });
 
   it('Testing All Public Tasks (Regeneration)', () => {
-    expect(loadSpec(plugin).test(dir).sort())
-      .to.deep.equal(sfs.walkDir(dir).map(e => `Updated: ${e}`).sort());
-    expect(loadSpec(plugin).test(dir, { variable: 'custom' }))
-      .to.deep.equal(['Updated: misc.txt']);
+    expect(loadSpec(plugin).test(dir)).to.deep.equal({
+      'xml-merge/@default': [
+        'Updated: merge-target.xml',
+        'Updated: CONFDOCS.md'
+      ],
+      'txt-unique-top/@default': [
+        'Updated: unique-top.txt',
+        'Updated: CONFDOCS.md'
+      ],
+      'txt-overwrite/@default': [
+        'Updated: overwrite-target.txt',
+        'Updated: CONFDOCS.md'
+      ],
+      'txt-merge-below-title/@default': [
+        'Updated: merge-below-title.txt',
+        'Updated: CONFDOCS.md'
+      ],
+      'misc/@other': [
+        'Updated: misc.txt',
+        'Updated: CONFDOCS.md'
+      ],
+      'misc/@default': [
+        'Updated: misc.txt',
+        'Updated: CONFDOCS.md'
+      ],
+      'json-variable-types/@default': [
+        'Updated: variables-target.json',
+        'Updated: CONFDOCS.md'
+      ],
+      'json-shallow-merge/@default': [
+        'Updated: merge-shallow-target.json',
+        'Updated: CONFDOCS.md'
+      ],
+      'json-deep-merge/@default': [
+        'Updated: merge-deep-target.json',
+        'Updated: CONFDOCS.md'
+      ],
+      'escaped-variable/@default': [
+        'Updated: escaped-variable.txt',
+        'Updated: CONFDOCS.md'
+      ]
+    });
+    expect(loadSpec(plugin).test(dir, { variable: 'custom' })).to.deep.equal({
+      'xml-merge/@default': [],
+      'txt-unique-top/@default': [],
+      'txt-overwrite/@default': [],
+      'txt-merge-below-title/@default': [],
+      'misc/@other': [
+        'Updated: misc.txt'
+      ],
+      'misc/@default': [
+        'Updated: misc.txt'
+      ],
+      'json-variable-types/@default': [],
+      'json-shallow-merge/@default': [],
+      'json-deep-merge/@default': [],
+      'escaped-variable/@default': []
+    });
   });
 });
