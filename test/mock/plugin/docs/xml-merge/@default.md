@@ -14,7 +14,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-target.xml</code><br/>
+<code>└─&nbsp;merge-target.xml</code><br/>
         </ul>
       </td>
     </tr>
@@ -36,7 +36,7 @@ _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xm
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─ merge-target.xml</code><br/>
+<code>└─&nbsp;merge-target.xml</code><br/>
         </ul>
       </td>
     </tr>
