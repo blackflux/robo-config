@@ -48,9 +48,9 @@ Manage various configuration files for an open source npm github repo.
         <ul>
 <code>project</code><br/>
 <code>├─&nbsp;.circleci</code><br/>
-<code>│&nbsp; └─ config.yml</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;config.yml</code><br/>
 <code>├─&nbsp;.dependabot</code><br/>
-<code>│&nbsp; └─ config.yml</code><br/>
+<code>│&nbsp;&nbsp;└─&nbsp;config.yml</code><br/>
 <code>├─&nbsp;.gally.json</code><br/>
 <code>├─&nbsp;.gitignore</code><br/>
 <code>├─&nbsp;.npmignore</code><br/>
@@ -404,7 +404,7 @@ Recommended base [dependabot configuration](https://dependabot.com/) for javascr
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;.dependabot</code><br/>
-<code>&nbsp;  └─ config.yml</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;config.yml</code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -435,7 +435,7 @@ _Updating `.dependabot/config.yml` using <a href="#blackfluxrobo-config-plugin-s
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;.dependabot</code><br/>
-<code>&nbsp;  └─ config.yml</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;config.yml</code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -729,7 +729,7 @@ _Updating `.circleci/config.yml` using <a href="#blackfluxrobo-config-plugin-str
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;.circleci</code><br/>
-<code>&nbsp;  └─ config.yml</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;config.yml</code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -803,7 +803,7 @@ Recommended base configuration when using Jetbrains.
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;.idea</code><br/>
-<code>&nbsp;  └─ ${projectName}.iml</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;${projectName}.iml</code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -839,7 +839,7 @@ _Updating `.idea/${projectName}.iml` using <a href="#blackfluxrobo-config-plugin
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;.idea</code><br/>
-<code>&nbsp;  └─ ${projectName}.iml</code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;${projectName}.iml</code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
