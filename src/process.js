@@ -19,9 +19,9 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig'), argsCfg =
   assert(argsCfg instanceof Object && !Array.isArray(argsCfg), 'Invalid "argsCfg" parameter format.');
 
   // load configuration file
-  const fileCfg = configFile !== null && sfs.guessFile(configFile) != null
-    ? sfs.smartRead(sfs.guessFile(configFile))
-    : {};
+  const hasFileCfgs = configFile !== null && sfs.guessFile(configFile) != null;
+  assert(configFile === null || hasFileCfgs, `Configuration File missing: ${configFile}`);
+  const fileCfg = hasFileCfgs ? sfs.smartRead(sfs.guessFile(configFile)) : {};
   assert(fileCfg instanceof Object && !Array.isArray(fileCfg), 'Invalid configuration file content.');
 
   // merge file and args config
