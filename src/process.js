@@ -1,7 +1,6 @@
 const assert = require('assert');
 const path = require('path');
 const Joi = require('joi');
-const deepmerge = require('deepmerge');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
 const load = require('./load');
@@ -15,24 +14,21 @@ const pluginPayloadSchema = Joi.object().keys({
   .unknown(false)
   .required();
 
-module.exports = (configFile = path.join(appRoot.path, '.roboconfig'), argsCfg = {}) => {
-  assert(argsCfg instanceof Object && !Array.isArray(argsCfg), 'Invalid "argsCfg" parameter format.');
+module.exports = (projectRoot = appRoot.path) => {
+  assert(typeof projectRoot === 'string', 'Invalid "projectRoot" parameter format.');
 
   // load configuration file
-  const hasFileCfgs = configFile !== null && sfs.guessFile(configFile) != null;
-  assert(configFile === null || hasFileCfgs, `Configuration File missing: ${configFile}`);
-  const fileCfg = hasFileCfgs ? sfs.smartRead(sfs.guessFile(configFile)) : {};
-  assert(fileCfg instanceof Object && !Array.isArray(fileCfg), 'Invalid configuration file content.');
-
-  // merge file and args config
-  const cfg = deepmerge(fileCfg, argsCfg);
+  const configFile = path.join(projectRoot, '.roboconfig');
+  assert(sfs.guessFile(configFile) != null, `Configuration File missing: ${configFile}`);
+  const config = sfs.smartRead(sfs.guessFile(configFile));
+  assert(config instanceof Object && !Array.isArray(config), 'Invalid configuration file content.');
 
   // initialize configs with static defaults
   const pluginCfgs = Object
-    .entries(cfg)
+    .entries(config)
     .reduce((p, [k, v]) => Object.assign(p, {
       [k]: Object.assign({
-        projectRoot: appRoot.path,
+        projectRoot,
         variables: {},
         confDocs: 'CONFDOCS.md'
       }, v)
@@ -62,7 +58,7 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig'), argsCfg =
   Object
     .entries(pluginCfgs)
     .forEach(([pluginName, {
-      plugin, projectRoot, tasks, variables
+      plugin, tasks, variables
     }]) => {
       result.push(...plugin.apply(projectRoot, tasks, variables));
     });
@@ -72,7 +68,7 @@ module.exports = (configFile = path.join(appRoot.path, '.roboconfig'), argsCfg =
   Object
     .entries(pluginCfgs)
     .forEach(([pluginName, {
-      plugin, projectRoot, tasks, confDocs
+      plugin, tasks, confDocs
     }]) => {
       const confDocsFile = path.join(projectRoot, confDocs);
       docFiles[confDocsFile] = docFiles[confDocsFile] || {

@@ -1,7 +1,6 @@
 const path = require('path');
 const tmp = require('tmp');
 const expect = require('chai').expect;
-const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
 const robo = require('../src/index');
 
@@ -19,48 +18,43 @@ describe('Robo + Plugin Integration Tests', () => {
 
   it('Testing Config From File', () => {
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {});
-
-    const prevAppRootPath = appRoot.path;
-    appRoot.path = dir;
-    expect(robo()).to.deep.equal([]);
-    appRoot.path = prevAppRootPath;
+    expect(robo(dir)).to.deep.equal([]);
   });
 
   it('Testing Missing Config File', () => {
-    const prevAppRootPath = appRoot.path;
-    appRoot.path = dir;
-    expect(() => robo()).to.throw(`Configuration File missing: ${dir}/.roboconfig`);
-    appRoot.path = prevAppRootPath;
+    expect(() => robo(dir)).to.throw(`Configuration File missing: ${dir}/.roboconfig`);
   });
 
   it('Testing Bad Task', () => {
-    expect(() => robo(null, {
+    sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {
         tasks: ['unknown/@task'],
         projectRoot: dir
       }
-    })).to.throw('Bad Task Name: unknown/@task');
+    });
+    expect(() => robo(dir)).to.throw('Bad Task Name: unknown/@task');
   });
 
   it('Testing Bad Robo Task', () => {
-    expect(() => robo(null, {
+    sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {
         projectRoot: dir
       }
-    })).to.throw('ValidationError: child "tasks" fails because ["tasks" is required]');
+    });
+    expect(() => robo(dir)).to.throw('ValidationError: child "tasks" fails because ["tasks" is required]');
   });
 
   it('Testing Configuration File Updated', () => {
-    const cfg = {
+    sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {
         tasks: ['txt-overwrite/@default'],
         projectRoot: dir
       }
-    };
-    expect(robo(null, cfg)).to.deep.equal([
+    });
+    expect(robo(dir)).to.deep.equal([
       'Updated: overwrite-target.txt',
       'Updated: CONFDOCS.md'
     ]);
-    expect(robo(null, cfg)).to.deep.equal([]);
+    expect(robo(dir)).to.deep.equal([]);
   });
 });
