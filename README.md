@@ -203,12 +203,14 @@ it('Documenting Plugin Tasks', () => {
 });
 
 it('Testing Plugin Tasks', () => {
-  expect(load(plugin).test(path.join(__dirname, 'path', 'to', 'mock', 'project'))).to.deep.equal([]);
+  expect(load(plugin).test(path.join(__dirname, 'path', 'to', 'mock', 'projects'))).to.deep.equal({
+    'task-dir/task-name': []
+  });
 });
 
 ```
 
-where `project` should contain files similar to a project you would your plugin expect to be used in. 
+where `projects` will contain a customizable "project-like folder" for each task. 
 
 ### Gotchas
 

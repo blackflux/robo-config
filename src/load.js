@@ -28,14 +28,25 @@ module.exports = (pl) => {
     syncDocs: () => syncDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.docDir),
     generateDocs: taskNames => genDocs(taskNames),
     apply: applyTasks,
-    test: (projectRoot, variables = {}, skip = []) => {
-      const taskNames = listPublicTasks(pl.taskDir).filter(t => !skip.includes(t));
-      const vars = extractMeta(pl.taskDir, taskNames).variables
-        .reduce((p, c) => Object.assign(p, { [c]: p[c] || c }), variables);
-      const result = applyTasks(projectRoot, taskNames, vars);
-      if (sfs.smartWrite(path.join(projectRoot, 'CONFDOCS.md'), genDocs(taskNames))) {
-        result.push('Updated: CONFDOCS.md');
-      }
+    test: (testRoot, variables = {}) => {
+      const taskNames = listPublicTasks(pl.taskDir);
+      const result = {};
+      const knownVars = [];
+      taskNames.forEach((taskName) => {
+        const taskRoot = path.join(testRoot, taskName);
+        const taskVars = extractMeta(pl.taskDir, [taskName]).variables
+          .reduce((p, c) => Object.assign(p, { [c]: variables[c] || c }), {});
+        knownVars.push(...Object.keys(taskVars));
+        const taskResult = applyTasks(taskRoot, [taskName], taskVars);
+        if (sfs.smartWrite(path.join(taskRoot, 'CONFDOCS.md'), genDocs([taskName]))) {
+          taskResult.push('Updated: CONFDOCS.md');
+        }
+        result[taskName] = taskResult;
+      });
+      assert(
+        Object.keys(variables).filter(v => !knownVars.includes(v)).length === 0,
+        `Unexpected variable provided: ${Object.keys(variables).filter(v => !knownVars.includes(v)).join(', ')}`
+      );
       return result;
     }
   });
