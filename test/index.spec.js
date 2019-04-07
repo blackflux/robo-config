@@ -26,6 +26,13 @@ describe('Robo + Plugin Integration Tests', () => {
     appRoot.path = prevAppRootPath;
   });
 
+  it('Testing Missing Config File', () => {
+    const prevAppRootPath = appRoot.path;
+    appRoot.path = dir;
+    expect(() => robo()).to.throw(`Configuration File missing: ${dir}/.roboconfig`);
+    appRoot.path = prevAppRootPath;
+  });
+
   it('Testing Bad Task', () => {
     expect(() => robo(null, {
       [pluginFile]: {

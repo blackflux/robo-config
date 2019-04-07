@@ -28,8 +28,8 @@ module.exports = (pl) => {
     syncDocs: () => syncDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.docDir),
     generateDocs: taskNames => genDocs(taskNames),
     apply: applyTasks,
-    test: (projectRoot, variables = {}) => {
-      const taskNames = listPublicTasks(pl.taskDir);
+    test: (projectRoot, variables = {}, skip = []) => {
+      const taskNames = listPublicTasks(pl.taskDir).filter(t => !skip.includes(t));
       const vars = extractMeta(pl.taskDir, taskNames).variables
         .reduce((p, c) => Object.assign(p, { [c]: p[c] || c }), variables);
       const result = applyTasks(projectRoot, taskNames, vars);
