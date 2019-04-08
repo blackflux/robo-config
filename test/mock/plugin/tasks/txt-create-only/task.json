@@ -1,0 +1,11 @@
+{
+  "target": "create-only-target.txt",
+  "strategy": "create-only",
+  "snippets": [
+    "snippet"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}
