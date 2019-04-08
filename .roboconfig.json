@@ -1,9 +1,7 @@
 {
   "@blackflux/robo-config-plugin": {
     "tasks": [
-      "assorted/@npm-opensource",
-      "jetbrains/@default",
-      "editor/@default"
+      "assorted/@npm-opensource"
     ],
     "variables": {
       "repoKey": "blackflux/robo-config",
