@@ -27,6 +27,8 @@ describe('Testing Test Plugin', () => {
       'json-variable-types/@default': [],
       'json-shallow-merge/@default': [],
       'json-deep-merge/@default': [],
+      'json-shallow-default/@default': [],
+      'json-deep-default/@default': [],
       'escaped-variable/@default': []
     });
   });
@@ -73,6 +75,14 @@ describe('Testing Test Plugin', () => {
         'Updated: merge-deep-target.json',
         'Updated: CONFDOCS.md'
       ],
+      'json-shallow-default/@default': [
+        'Updated: default-shallow-target.json',
+        'Updated: CONFDOCS.md'
+      ],
+      'json-deep-default/@default': [
+        'Updated: default-deep-target.json',
+        'Updated: CONFDOCS.md'
+      ],
       'escaped-variable/@default': [
         'Updated: escaped-variable.txt',
         'Updated: CONFDOCS.md'
@@ -93,6 +103,8 @@ describe('Testing Test Plugin', () => {
       'json-variable-types/@default': [],
       'json-shallow-merge/@default': [],
       'json-deep-merge/@default': [],
+      'json-shallow-default/@default': [],
+      'json-deep-default/@default': [],
       'escaped-variable/@default': []
     });
   });
