@@ -1,0 +1,10 @@
+{
+  "validFor": [
+    "json",
+    "yml"
+  ],
+  "description": "Similar to `merge-deep`, but keeps existing values instead of overwriting.",
+  "details": [
+    "Useful to ensure specific keys of the target are present without overwriting existing content."
+  ]
+}

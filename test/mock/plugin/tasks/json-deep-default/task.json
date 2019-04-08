@@ -1,0 +1,11 @@
+{
+  "target": "default-deep-target.json",
+  "strategy": "default-deep",
+  "snippets": [
+    "snippet"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}

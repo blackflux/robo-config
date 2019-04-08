@@ -22,4 +22,20 @@ describe('Integration strategies.js', () => {
     expect(strategies['unique-top'](existing, changeset))
       .to.deep.equal(['new', 'title1', 'title2', '', 'text']);
   });
+
+  describe('Testing Deep Merge', () => {
+    it('Testing Array Concat', () => {
+      const existing = { a: { b: ['c'] } };
+      const changeset = { a: { b: ['d'] } };
+      expect(strategies['merge-deep'](existing, changeset))
+        .to.deep.equal({ a: { b: ['c', 'd'] } });
+    });
+
+    it('Testing Array Concat Deduplication', () => {
+      const existing = { a: { b: ['c'] } };
+      const changeset = { a: { b: ['c', 'd'] } };
+      expect(strategies['merge-deep'](existing, changeset))
+        .to.deep.equal({ a: { b: ['c', 'd'] } });
+    });
+  });
 });
