@@ -1,0 +1,11 @@
+{
+  "target": "default-shallow-target.json",
+  "strategy": "default-shallow",
+  "snippets": [
+    "snippet"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}
