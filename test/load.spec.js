@@ -23,6 +23,7 @@ describe('Testing Test Plugin', () => {
       'txt-merge-below-title/@default': [],
       'misc/@other': [],
       'misc/@default': [],
+      'txt-create-only/@default': [],
       'json-variable-types/@default': [],
       'json-shallow-merge/@default': [],
       'json-deep-merge/@default': [],
@@ -56,6 +57,10 @@ describe('Testing Test Plugin', () => {
         'Updated: misc.txt',
         'Updated: CONFDOCS.md'
       ],
+      'txt-create-only/@default': [
+        'Updated: create-only-target.txt',
+        'Updated: CONFDOCS.md'
+      ],
       'json-variable-types/@default': [
         'Updated: variables-target.json',
         'Updated: CONFDOCS.md'
@@ -84,6 +89,7 @@ describe('Testing Test Plugin', () => {
       'misc/@default': [
         'Updated: misc.txt'
       ],
+      'txt-create-only/@default': [],
       'json-variable-types/@default': [],
       'json-shallow-merge/@default': [],
       'json-deep-merge/@default': [],

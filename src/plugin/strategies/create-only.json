@@ -1,0 +1,7 @@
+{
+  "validFor": [
+    "any"
+  ],
+  "description": "Does nothing when the file is already present, otherwise creates it.",
+  "details": []
+}
