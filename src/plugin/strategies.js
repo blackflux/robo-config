@@ -49,5 +49,6 @@ module.exports = {
     }
   }),
   'xml-merge': (existing, changeset) => xmlMerge(existing, changeset),
-  overwrite: (existing, changeset) => changeset
+  overwrite: (existing, changeset) => changeset,
+  'create-only': (existing, changeset) => existing
 };
