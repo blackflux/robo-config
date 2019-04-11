@@ -1,12 +1,47 @@
 - <a name="mock-plugin-task-idx-ref-miscdefaultjson">:open_file_folder:</a> <a href="#mock-plugin-task-ref-miscdefaultjson">`misc/@default.json`</a>
   - <a name="mock-plugin-task-idx-ref-misctask">:clipboard:</a> <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
+  - <a name="mock-plugin-task-idx-ref-misctask">:clipboard:</a> <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
   - <a name="mock-plugin-task-idx-ref-miscother">:open_file_folder:</a> <a href="#mock-plugin-task-ref-miscother">`misc/@other`</a>
     - <a name="mock-plugin-task-idx-ref-misctask">:clipboard:</a> <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
-  - <a name="mock-plugin-task-idx-ref-misctask">:clipboard:</a> <a href="#mock-plugin-task-ref-misctask">`misc/task`</a>
 
 # :open_file_folder: <a name="mock-plugin-task-ref-miscdefaultjson">misc/@default.json</a> (<a href="#mock-plugin-task-idx-ref-miscdefaultjson">`index`</a>)
 
 Task collection description.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Targets</th>
+      <th>Requires</th>
+      <th>Variables</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">
+        <ul>
+<code>project</code><br/>
+<code>└─&nbsp;${misc}.txt</code><br/>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
+        </ul>
+      </td>
+      <td align="left" valign="top">
+        <ul>
+          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
+
+_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
+
+- Some purpose.
 
 <table>
   <tbody>
@@ -106,41 +141,6 @@ Task collection description.
 </table>
 
 ### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
-
-_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
-
-- Some purpose.
-
-<table>
-  <tbody>
-    <tr>
-      <th>Targets</th>
-      <th>Requires</th>
-      <th>Variables</th>
-    </tr>
-    <tr>
-      <td align="left" valign="top">
-        <ul>
-<code>project</code><br/>
-<code>└─&nbsp;${misc}.txt</code><br/>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#mock-plugin-req-ref-dependency">dependency</a></li>
-        </ul>
-      </td>
-      <td align="left" valign="top">
-        <ul>
-          <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
-          <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-## :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
 _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
