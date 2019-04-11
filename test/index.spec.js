@@ -1,12 +1,9 @@
 const path = require('path');
 const tmp = require('tmp');
 const expect = require('chai').expect;
+const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
 const robo = require('../src/index');
-
-it('Apply Robo Configuration', () => {
-  expect(robo()).to.deep.equal([]);
-});
 
 describe('Robo + Plugin Integration Tests', () => {
   const pluginFile = path.join(__dirname, 'mock', 'plugin.js');
@@ -19,6 +16,14 @@ describe('Robo + Plugin Integration Tests', () => {
   it('Testing Config From File', () => {
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {});
     expect(robo(dir)).to.deep.equal([]);
+  });
+
+  it('Testing Config From File using appRoot.path', () => {
+    const appRootPath = appRoot.path;
+    appRoot.path = dir;
+    sfs.smartWrite(path.join(dir, '.roboconfig.json'), {});
+    expect(robo()).to.deep.equal([]);
+    appRoot.path = appRootPath;
   });
 
   it('Testing Missing Config File', () => {
