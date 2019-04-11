@@ -114,7 +114,11 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
     const task = sfs.smartRead(sfs.guessFile(path.join(taskDir, taskName)));
     sections[idx].task = task;
     sections.splice(idx + 1, 0, ...(task.tasks || [])
-      .sort((a, b) => (b.includes('/@') - a.includes('/@')) * 2 + (b.includes('/#') - a.includes('/#')))
+      .sort((a, b) => (
+        b.includes('/@') - a.includes('/@')
+        || b.includes('/#') - a.includes('/#')
+        || b.localeCompare(a)
+      ))
       .map(stn => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`))
       .map(subtaskName => ({ level: level + 1, taskName: subtaskName })));
   }
