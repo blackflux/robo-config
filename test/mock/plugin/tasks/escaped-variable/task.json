@@ -1,6 +1,7 @@
 {
   "target": "escaped-variable.txt",
   "strategy": "overwrite",
+  "create": true,
   "snippets": [
     "snippet"
   ],

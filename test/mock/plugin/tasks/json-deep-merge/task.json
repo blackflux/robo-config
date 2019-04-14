@@ -1,6 +1,7 @@
 {
   "target": "merge-deep-target.json",
   "strategy": "merge-deep",
+  "create": true,
   "snippets": [
     "snippet"
   ],

@@ -47,7 +47,13 @@ const documentSection = (plName, baseLevel, {
     linkRef(`${plName}-task-idx`, '`index`', taskName)
   })`, '');
   if (typeof task.target === 'string') {
-    result.push(`_Updating \`${task.target}\` using ${linkRef(`${plName}-strat`, task.strategy)}._`);
+    result.push(`_Updating \`${
+      task.target
+    }\`${
+      task.create === true ? '' : ' (if exists)'
+    } using ${
+      linkRef(`${plName}-strat`, task.strategy)
+    }._`);
     result.push('');
     result.push(...task.purpose.map(d => `- ${d}`));
     result.push('');

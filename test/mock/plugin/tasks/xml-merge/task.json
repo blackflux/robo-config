@@ -1,6 +1,7 @@
 {
   "target": "merge-target.xml",
   "strategy": "xml-merge",
+  "create": true,
   "snippets": [
     "snippet"
   ],

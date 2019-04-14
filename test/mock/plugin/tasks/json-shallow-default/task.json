@@ -1,6 +1,7 @@
 {
   "target": "default-shallow-target.json",
   "strategy": "default-shallow",
+  "create": true,
   "snippets": [
     "snippet"
   ],
