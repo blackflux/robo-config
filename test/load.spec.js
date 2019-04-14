@@ -27,6 +27,7 @@ describe('Testing Test Plugin', () => {
       'json-variable-types/@default': [],
       'json-shallow-merge/@default': [],
       'json-deep-merge/@default': [],
+      'json-no-create/@default': [],
       'json-shallow-default/@default': [],
       'json-deep-default/@default': [],
       'escaped-variable/@default': []
@@ -75,6 +76,9 @@ describe('Testing Test Plugin', () => {
         'Updated: merge-deep-target.json',
         'Updated: CONFDOCS.md'
       ],
+      'json-no-create/@default': [
+        'Updated: CONFDOCS.md'
+      ],
       'json-shallow-default/@default': [
         'Updated: default-shallow-target.json',
         'Updated: CONFDOCS.md'
@@ -103,6 +107,7 @@ describe('Testing Test Plugin', () => {
       'json-variable-types/@default': [],
       'json-shallow-merge/@default': [],
       'json-deep-merge/@default': [],
+      'json-no-create/@default': [],
       'json-shallow-default/@default': [],
       'json-deep-default/@default': [],
       'escaped-variable/@default': []

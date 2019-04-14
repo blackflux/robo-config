@@ -1,6 +1,7 @@
 {
   "target": "overwrite-target.txt",
   "strategy": "overwrite",
+  "create": true,
   "snippets": [
     "snippet"
   ],
