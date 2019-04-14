@@ -1,6 +1,7 @@
 {
   "target": "merge-below-title.txt",
   "strategy": "merge-below-title",
+  "create": true,
   "snippets": [
     "snippet"
   ],

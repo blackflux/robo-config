@@ -1,6 +1,7 @@
 {
   "target": "merge-shallow-target.json",
   "strategy": "merge-shallow",
+  "create": true,
   "snippets": [
     "snippet"
   ],

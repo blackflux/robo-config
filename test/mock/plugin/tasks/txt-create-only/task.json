@@ -1,6 +1,7 @@
 {
   "target": "create-only-target.txt",
   "strategy": "create-only",
+  "create": true,
   "snippets": [
     "snippet"
   ],

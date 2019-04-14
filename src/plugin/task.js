@@ -14,6 +14,7 @@ const taskSchema = Joi.object().keys({
   target: Joi.string(),
   format: Joi.string().allow(null),
   strategy: Joi.string().valid(...Object.keys(strategies)),
+  create: Joi.boolean(),
   snippets: Joi.array().items(
     Joi.string(),
     Joi.object().keys({
@@ -26,7 +27,7 @@ const taskSchema = Joi.object().keys({
   description: Joi.string(),
   tasks: Joi.array().items(Joi.string())
 })
-  .and('target', 'strategy', 'snippets', 'format', 'requires', 'purpose')
+  .and('target', 'strategy', 'create', 'snippets', 'format', 'requires', 'purpose')
   .and('tasks', 'description')
   .xor('target', 'tasks')
   .unknown(false)
@@ -91,7 +92,8 @@ const applyTask = (taskDir, projectRoot, task) => {
   const target = path.join(projectRoot, task.target);
   return sfs.smartWrite(target, task.toWrite, {
     treatAs: task.format,
-    mergeStrategy: strategies[task.strategy]
+    mergeStrategy: strategies[task.strategy],
+    create: task.create
   });
 };
 
