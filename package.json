@@ -95,8 +95,8 @@
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
     "object-deep-contain": "1.0.4",
-    "object-scan": "5.0.3",
-    "object-treeify": "1.1.5",
-    "smart-fs": "1.6.0"
+    "object-scan": "5.0.4",
+    "object-treeify": "1.1.6",
+    "smart-fs": "1.6.1"
   }
 }
