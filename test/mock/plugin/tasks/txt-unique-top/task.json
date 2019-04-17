@@ -1,7 +1,6 @@
 {
   "target": "unique-top.txt",
   "strategy": "unique-top",
-  "create": true,
   "snippets": [
     "snippet",
     "divider",
