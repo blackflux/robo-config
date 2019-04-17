@@ -12,7 +12,12 @@ module.exports = (pl) => {
   assert(typeof pl.varDir === 'string');
   assert(typeof pl.docDir === 'string');
 
-  const applyTasks = (projectRoot, taskNames, variables, exclude = []) => {
+  const applyTasks = (projectRoot, taskNames, variables, exclude) => {
+    assert(typeof projectRoot === 'string');
+    assert(Array.isArray(taskNames));
+    assert(variables instanceof Object && !Array.isArray(variables));
+    assert(Array.isArray(exclude));
+
     const meta = extractMeta(pl.taskDir, taskNames);
     const unexpectedVars = Object.keys(variables).filter(v => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
@@ -37,7 +42,7 @@ module.exports = (pl) => {
         const taskVars = extractMeta(pl.taskDir, [taskName]).variables
           .reduce((p, c) => Object.assign(p, { [c]: variables[c] || c }), {});
         knownVars.push(...Object.keys(taskVars));
-        const taskResult = applyTasks(taskRoot, [taskName], taskVars);
+        const taskResult = applyTasks(taskRoot, [taskName], taskVars, []);
         if (sfs.smartWrite(path.join(taskRoot, 'CONFDOCS.md'), genDocs([taskName], []))) {
           taskResult.push('Updated: CONFDOCS.md');
         }
