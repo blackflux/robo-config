@@ -8,6 +8,7 @@ const load = require('./load');
 const pluginPayloadSchema = Joi.object().keys({
   tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)).required(),
   variables: Joi.object().required(),
+  exclude: Joi.array().items(Joi.string()).unique(),
   confDocs: Joi.string().required()
 })
   .unknown(false)
@@ -28,6 +29,7 @@ module.exports = (projectRoot = appRoot.path) => {
     .reduce((p, [k, v]) => Object.assign(p, {
       [k]: Object.assign({
         variables: {},
+        exclude: [],
         confDocs: 'CONFDOCS.md'
       }, v)
     }), {});
@@ -56,9 +58,9 @@ module.exports = (projectRoot = appRoot.path) => {
   Object
     .entries(pluginCfgs)
     .forEach(([pluginName, {
-      plugin, tasks, variables
+      plugin, tasks, variables, exclude
     }]) => {
-      result.push(...plugin.apply(projectRoot, tasks, variables));
+      result.push(...plugin.apply(projectRoot, tasks, variables, exclude));
     });
 
   // write documentation files
@@ -66,14 +68,14 @@ module.exports = (projectRoot = appRoot.path) => {
   Object
     .entries(pluginCfgs)
     .forEach(([pluginName, {
-      plugin, tasks, confDocs
+      plugin, tasks, exclude, confDocs
     }]) => {
       const confDocsFile = path.join(projectRoot, confDocs);
       docFiles[confDocsFile] = docFiles[confDocsFile] || {
         confDocs,
         lines: []
       };
-      docFiles[confDocsFile].lines.push(...plugin.generateDocs(tasks));
+      docFiles[confDocsFile].lines.push(...plugin.generateDocs(tasks, exclude));
     });
   Object
     .entries(docFiles)

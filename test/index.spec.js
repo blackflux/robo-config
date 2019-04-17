@@ -58,4 +58,19 @@ describe('Robo + Plugin Integration Tests', () => {
     ]);
     expect(robo(dir)).to.deep.equal([]);
   });
+
+  it('Testing Target Exclusion', () => {
+    sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
+      [pluginFile]: {
+        tasks: ['txt-overwrite/@default'],
+        exclude: ['overwrite-target.txt']
+      }
+    });
+    expect(robo(dir)).to.deep.equal([
+      'Updated: CONFDOCS.md'
+    ]);
+    expect(robo(dir)).to.deep.equal([]);
+    expect(sfs.smartRead(path.join(dir, 'CONFDOCS.md')))
+      .to.include('<code>└─&nbsp;overwrite-target.txt&nbsp;(excluded)</code><br/>');
+  });
 });

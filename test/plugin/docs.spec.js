@@ -21,7 +21,7 @@ describe('Integration docs.js', () => {
       'page/world',
       'page/world/index.css',
       'page/world/index.js'
-    ])).to.deep.equal([
+    ], [])).to.deep.equal([
       'root',
       '├─ page',
       '│  ├─ hello',
