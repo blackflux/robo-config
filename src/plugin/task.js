@@ -114,7 +114,7 @@ const applyTasksRec = (taskDir, projectRoot, taskNames, variables, exclude) => {
     if (
       task.target !== undefined
       && !exclude.includes(task.target)
-      && applyTask(taskDir, projectRoot, task)
+      && applyTask(taskDir, projectRoot, task) === true
     ) {
       result.push(`Updated: ${task.target}`);
     }
