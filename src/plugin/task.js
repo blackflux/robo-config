@@ -59,6 +59,8 @@ const loadTask = (taskDir, taskName, variables) => {
   }
   const task = sfs.smartRead(taskFilePath);
   if (task.target !== undefined) {
+    assert([false, undefined].includes(task.create), 'Option "create" defaults to true. Remove.');
+    task.create = task.create === undefined ? true : task.create;
     task.format = task.format || null;
   }
 

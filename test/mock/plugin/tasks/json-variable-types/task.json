@@ -1,7 +1,6 @@
 {
   "target": "variables-target.json",
   "strategy": "overwrite",
-  "create": true,
   "snippets": [
     {
       "name": "snippet",
