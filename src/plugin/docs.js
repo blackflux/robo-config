@@ -17,13 +17,14 @@ const linkRef = (type, c, ident = null) => `<a href="#${normalizeRef(`${type}-re
 
 const getTaskIcon = task => (task.target !== undefined ? ':clipboard:' : ':open_file_folder:');
 
-const documentFiles = (root, files) => {
+const documentFiles = (root, files, exclude) => {
   const result = [];
   result.push(root);
 
   const fileTree = files
     .reduce((prev, file) => {
-      file.split('/').reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], prev);
+      `${file}${exclude.includes(file) ? ' (excluded)' : ''}`
+        .split('/').reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], prev);
       return prev;
     }, {});
 
@@ -33,7 +34,7 @@ const documentFiles = (root, files) => {
 };
 module.exports.documentFiles = documentFiles;
 
-const documentSection = (plName, baseLevel, {
+const documentSection = (plName, baseLevel, exclude, {
   level, taskName, task, targets, requires, variables
 }) => {
   assert(Number.isInteger(level), 'Invalid "level" parameter format.');
@@ -79,7 +80,8 @@ const documentSection = (plName, baseLevel, {
 
   result.push('      <td align="left" valign="top">');
   result.push('        <ul>');
-  result.push(...documentFiles('project', targets).map(l => `<code>${l.replace(/\s/g, '&nbsp;')}</code><br/>`));
+  result.push(...documentFiles('project', targets, exclude)
+    .map(l => `<code>${l.replace(/\s/g, '&nbsp;')}</code><br/>`));
   result.push('        </ul>');
   result.push('      </td>');
   if (requires.length !== 0) {
@@ -105,10 +107,14 @@ const documentSection = (plName, baseLevel, {
   return result;
 };
 
-const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => {
+const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, exclude, baseLevel) => {
   assert(
     Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'),
     'Invalid "taskNames" parameter format.'
+  );
+  assert(
+    Array.isArray(exclude) && exclude.every(e => typeof e === 'string'),
+    'Invalid "exclude" parameter format.'
   );
   assert(Number.isInteger(baseLevel), 'Invalid "baseLevel" parameter format.');
 
@@ -173,7 +179,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, baseLevel) => 
     } ${
       linkRef(`${plName}-task`, `\`${section.taskName}\``)
     }`);
-    content.push(...documentSection(plName, baseLevel, section));
+    content.push(...documentSection(plName, baseLevel, exclude, section));
   });
 
   // append docs for requires, variables and strategies
@@ -275,7 +281,7 @@ const syncDocs = (plName, taskDir, reqDir, varDir, docDir) => {
     .map(f => [`${f}.json`, `${f}.md`])
     .forEach(([f, docFile]) => {
       docFiles.push(docFile);
-      if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(plName, taskDir, reqDir, varDir, [f], 0))) {
+      if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(plName, taskDir, reqDir, varDir, [f], [], 0))) {
         result.push(`Updated: ${docFile}`);
       }
     });

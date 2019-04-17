@@ -106,17 +106,21 @@ const listPublicTasks = taskDir => sfs
   .map(f => f.slice(0, -5));
 module.exports.listPublicTasks = listPublicTasks;
 
-const applyTasksRec = (taskDir, projectRoot, taskNames, variables) => {
+const applyTasksRec = (taskDir, projectRoot, taskNames, variables, exclude) => {
   const result = [];
   taskNames.forEach((taskName) => {
     const task = loadTask(taskDir, taskName, variables);
     assert(task !== null, `Bad Task Name: ${taskName}`);
-    if (task.target !== undefined && applyTask(taskDir, projectRoot, task)) {
+    if (
+      task.target !== undefined
+      && !exclude.includes(task.target)
+      && applyTask(taskDir, projectRoot, task) === true
+    ) {
       result.push(`Updated: ${task.target}`);
     }
     if (task.tasks !== undefined) {
       const subtasks = task.tasks.map(stn => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`));
-      result.push(...applyTasksRec(taskDir, projectRoot, subtasks, variables));
+      result.push(...applyTasksRec(taskDir, projectRoot, subtasks, variables, exclude));
     }
   });
   return result;

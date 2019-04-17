@@ -30,7 +30,7 @@ This file could for example contain:
 }
 ```
 
-where `@blackflux/robo-config-plugin` is a specific robo-config plugin.
+where `@blackflux/robo-config-plugin` is a specific robo-config plugin, `tasks` contains tasks from that plugin, `variables` contains task required variables and `exclude` (optionally) contains files that should not be touched by any tasks.
 
 To sync the configuration into the project we have two options:
 
