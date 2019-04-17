@@ -50,7 +50,7 @@ const documentSection = (plName, baseLevel, {
     result.push(`_Updating \`${
       task.target
     }\`${
-      task.create === true ? '' : ' (if exists)'
+      task.create === false ? ' (if exists)' : ''
     } using ${
       linkRef(`${plName}-strat`, task.strategy)
     }._`);
