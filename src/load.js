@@ -12,21 +12,26 @@ module.exports = (pl) => {
   assert(typeof pl.varDir === 'string');
   assert(typeof pl.docDir === 'string');
 
-  const applyTasks = (projectRoot, taskNames, variables) => {
+  const applyTasks = (projectRoot, taskNames, variables, exclude) => {
+    assert(typeof projectRoot === 'string');
+    assert(Array.isArray(taskNames));
+    assert(variables instanceof Object && !Array.isArray(variables));
+    assert(Array.isArray(exclude));
+
     const meta = extractMeta(pl.taskDir, taskNames);
     const unexpectedVars = Object.keys(variables).filter(v => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
-    return applyTasksRec(pl.taskDir, projectRoot, taskNames, variables);
+    return applyTasksRec(pl.taskDir, projectRoot, taskNames, variables, exclude);
   };
-  const genDocs = taskNames => [
+  const genDocs = (taskNames, exclude) => [
     `## Plugin [${pl.name}](https://www.npmjs.com/package/${pl.name})`,
     '',
-    ...generateDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, taskNames, 2)
+    ...generateDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, taskNames, exclude, 2)
   ];
 
   return ({
     syncDocs: () => syncDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.docDir),
-    generateDocs: taskNames => genDocs(taskNames),
+    generateDocs: (taskNames, exclude) => genDocs(taskNames, exclude),
     apply: applyTasks,
     test: (testRoot, variables = {}) => {
       const taskNames = listPublicTasks(pl.taskDir);
@@ -37,8 +42,8 @@ module.exports = (pl) => {
         const taskVars = extractMeta(pl.taskDir, [taskName]).variables
           .reduce((p, c) => Object.assign(p, { [c]: variables[c] || c }), {});
         knownVars.push(...Object.keys(taskVars));
-        const taskResult = applyTasks(taskRoot, [taskName], taskVars);
-        if (sfs.smartWrite(path.join(taskRoot, 'CONFDOCS.md'), genDocs([taskName]))) {
+        const taskResult = applyTasks(taskRoot, [taskName], taskVars, []);
+        if (sfs.smartWrite(path.join(taskRoot, 'CONFDOCS.md'), genDocs([taskName], []))) {
           taskResult.push('Updated: CONFDOCS.md');
         }
         result[taskName] = taskResult;
