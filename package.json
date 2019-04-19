@@ -97,6 +97,6 @@
     "object-deep-contain": "1.0.5",
     "object-scan": "5.0.8",
     "object-treeify": "1.1.6",
-    "smart-fs": "1.6.1"
+    "smart-fs": "1.6.2"
   }
 }
