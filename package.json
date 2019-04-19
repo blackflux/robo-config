@@ -94,7 +94,7 @@
     "lodash.clonedeep": "4.5.0",
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
-    "object-deep-contain": "1.0.5",
+    "object-deep-contain": "1.0.6",
     "object-scan": "5.0.8",
     "object-treeify": "1.1.6",
     "smart-fs": "1.6.2"
