@@ -35,12 +35,12 @@
     "@babel/plugin-proposal-object-rest-spread": "7.4.3",
     "@babel/register": "7.4.0",
     "@blackflux/eslint-plugin-rules": "1.0.2",
-    "@blackflux/robo-config-plugin": "1.7.1",
+    "@blackflux/robo-config-plugin": "1.7.3",
     "babel-eslint": "10.0.1",
     "chai": "4.2.0",
     "coveralls": "3.0.3",
     "eslint": "5.16.0",
-    "js-gardener": "2.0.5",
+    "js-gardener": "2.0.6",
     "nyc": "14.0.0",
     "semantic-release": "15.13.3",
     "tmp": "0.1.0"
@@ -95,7 +95,7 @@
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
     "object-deep-contain": "1.0.5",
-    "object-scan": "5.0.5",
+    "object-scan": "5.0.7",
     "object-treeify": "1.1.6",
     "smart-fs": "1.6.1"
   }
