@@ -93,7 +93,8 @@ const applyTask = (taskDir, projectRoot, task) => {
   return sfs.smartWrite(target, task.toWrite, {
     treatAs: task.format,
     mergeStrategy: strategies[task.strategy],
-    create: task.create
+    create: task.create,
+    pretty: true
   });
 };
 
