@@ -30,7 +30,7 @@ This file could for example contain:
 }
 ```
 
-where `@blackflux/robo-config-plugin` is a specific robo-config plugin.
+where `@blackflux/robo-config-plugin` is a specific robo-config plugin, `tasks` contains tasks from that plugin, `variables` contains task required variables and `exclude` (optionally) contains files that should not be touched by any tasks.
 
 To sync the configuration into the project we have two options:
 
@@ -140,7 +140,7 @@ Actionable task definition files contain the following keys:
 - `format` (_optional_): Indicates the format of the target file. E.g. the file extension might be `dat`, but the content `xml`). 
 Automatically deduced by default. See [smart-fs](https://github.com/blackflux/smart-fs) for supported formats.
 - `strategy`: One of the available merge strategies. These are detailed below.
-- `create`: When set to `false`, no action is taken if the file does not already exist.
+- `create` (_optional_): When set to `false`, no action is taken if the file does not already exist.
 - `snippets`: Array of snippets. A snippet is either the name of the snippet file (if no variables are present) or an object
 containing a `variables` object and the snippet file name as `name`.
 - `requires`: Array of dependencies that this task has. For example when managing the `.gitignore` file this should contain `git`.

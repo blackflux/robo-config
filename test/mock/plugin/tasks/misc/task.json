@@ -2,7 +2,6 @@
 
   "target": "${misc}.txt",
   "strategy": "overwrite",
-  "create": true,
   "snippets": [
     {
       "name": "snippet",
