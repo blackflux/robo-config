@@ -71,8 +71,8 @@ describe('Robo + Plugin Integration Tests', () => {
     ]);
     expect(robo(dir)).to.deep.equal([]);
     expect(sfs.smartRead(path.join(dir, 'CONFDOCS.md'))).to.include(
-      '<code>└─&nbsp;<strike><a href="#mock-plugin-target-ref-overwrite-targettxt">'
-      + 'overwrite-target.txt</a></strike></code><br/>'
+      '<code>└─&nbsp;<a href="#mock-plugin-target-ref-overwrite-targettxt"><strike>'
+      + 'overwrite-target.txt</strike></a></code><br/>'
     );
   });
 });
