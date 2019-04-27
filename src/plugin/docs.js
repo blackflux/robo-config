@@ -24,11 +24,7 @@ const documentFiles = (root, plName, files, exclude) => {
   const fileTree = files
     .reduce((prev, file) => {
       const append = file.split('/');
-      append[append.length - 1] = `${
-        linkRef(`${plName}-target`, append[append.length - 1])
-      }${
-        exclude.includes(file) ? ' (excluded)' : ''
-      }`;
+      append[append.length - 1] = `${linkRef(`${plName}-target`, file)}${exclude.includes(file) ? ' (excluded)' : ''}`;
       append.reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], prev);
       return prev;
     }, {});
