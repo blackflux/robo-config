@@ -1,0 +1,5 @@
+{
+  "description": "Short description for create-only-target.txt",
+  "details": ["Long description for create-only-target.txt"],
+  "formats": ["nostruct"]
+}

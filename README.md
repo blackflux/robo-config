@@ -98,6 +98,7 @@ A plugin is an npm package that exposes an object containing the following keys:
 - `taskDir`: Absolute path to the plugin tasks
 - `reqDir`: Absolute path to the plugin dependency definitions
 - `varDir`: Absolute path to the plugin variable definitions
+- `targetDir`: Absolute path to the plugin target definitions
 - `docDir`: Absolute path to the automatically maintained internal plugin documentation
 
 The folder structures are as following:
@@ -174,6 +175,14 @@ Contains a definition file `$$VAR$$.json` for every global variable `$$VAR$$`. E
 - `description`: Short description of what is expected for this variable.
 - `details`: Array containing longer description of what is expected and high level "why". Each line corresponds to a new line in markdown.
 - `type`: The expected variable type.
+
+### targetDir
+
+Contains a definition file `$$TARGET$$.json` for every target `$$TARGET$$`. Each file contains the following entries:
+
+- `description`: Short description of what this target is used for in project.
+- `details`: Array containing longer description of what target is used for. Each line corresponds to a new line in markdown.
+- `format`: Array of possible file formats.
 
 ### docDir
 

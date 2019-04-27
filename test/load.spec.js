@@ -23,6 +23,7 @@ describe('Testing Test Plugin', () => {
       'txt-merge-below-title/@default': [],
       'misc/@other': [],
       'misc/@default': [],
+      'nested-txt-overwrite/@default': [],
       'txt-create-only/@default': [],
       'json-variable-types/@default': [],
       'json-shallow-merge/@default': [],
@@ -58,6 +59,10 @@ describe('Testing Test Plugin', () => {
       ],
       'misc/@default': [
         'Updated: misc.txt',
+        'Updated: CONFDOCS.md'
+      ],
+      'nested-txt-overwrite/@default': [
+        'Updated: nested/overwrite-target.txt',
         'Updated: CONFDOCS.md'
       ],
       'txt-create-only/@default': [
@@ -103,6 +108,7 @@ describe('Testing Test Plugin', () => {
       'misc/@default': [
         'Updated: misc.txt'
       ],
+      'nested-txt-overwrite/@default': [],
       'txt-create-only/@default': [],
       'json-variable-types/@default': [],
       'json-shallow-merge/@default': [],

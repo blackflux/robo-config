@@ -5,11 +5,12 @@ const { syncDocs, generateDocs } = require('./plugin/docs');
 const { applyTasksRec, listPublicTasks, extractMeta } = require('./plugin/task');
 
 module.exports = (pl) => {
-  assert(Object.keys(pl).length === 5, 'Unknown property exposed.');
+  assert(Object.keys(pl).length === 6, 'Bad Plugin Definition.');
   assert(typeof pl.name === 'string');
   assert(typeof pl.taskDir === 'string');
   assert(typeof pl.reqDir === 'string');
   assert(typeof pl.varDir === 'string');
+  assert(typeof pl.targetDir === 'string');
   assert(typeof pl.docDir === 'string');
 
   const applyTasks = (projectRoot, taskNames, variables, exclude) => {
@@ -26,11 +27,11 @@ module.exports = (pl) => {
   const genDocs = (taskNames, exclude) => [
     `## Plugin [${pl.name}](https://www.npmjs.com/package/${pl.name})`,
     '',
-    ...generateDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, taskNames, exclude, 2)
+    ...generateDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.targetDir, taskNames, exclude, 2)
   ];
 
   return ({
-    syncDocs: () => syncDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.docDir),
+    syncDocs: () => syncDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.targetDir, pl.docDir),
     generateDocs: (taskNames, exclude) => genDocs(taskNames, exclude),
     apply: applyTasks,
     test: (testRoot, variables = {}) => {

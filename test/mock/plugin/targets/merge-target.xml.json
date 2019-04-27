@@ -1,0 +1,5 @@
+{
+  "description": "Short description for merge-target.xml",
+  "details": ["Long description for merge-target.xml"],
+  "formats": ["xml"]
+}

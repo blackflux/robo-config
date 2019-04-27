@@ -1,0 +1,5 @@
+{
+  "description": "Short description for default-shallow-target.json",
+  "details": ["Long description for default-shallow-target.json"],
+  "formats": ["json"]
+}
