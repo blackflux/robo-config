@@ -33,7 +33,14 @@ const documentFiles = (root, plName, files, exclude) => {
       return prev;
     }, {});
 
-  result.push(...treeify(fileTree, { joined: false, sortFn: (a, b) => a.localeCompare(b) }));
+  result.push(...treeify(fileTree, {
+    joined: false,
+    spacerNoNeighbour: '&nbsp;&nbsp;&nbsp;',
+    spacerNeighbour: '│&nbsp;&nbsp;',
+    keyNoNeighbour: '└─&nbsp;',
+    keyNeighbour: '├─&nbsp;',
+    sortFn: (a, b) => a.localeCompare(b)
+  }));
 
   return result;
 };
@@ -86,7 +93,7 @@ const documentSection = (plName, baseLevel, exclude, {
   result.push('      <td align="left" valign="top">');
   result.push('        <ul>');
   result.push(...documentFiles('project', plName, targets, exclude)
-    .map(l => `<code>${l.replace(/\s/g, '&nbsp;')}</code><br/>`));
+    .map(l => `<code>${l}</code><br/>`));
   result.push('        </ul>');
   result.push('      </td>');
   if (requires.length !== 0) {
