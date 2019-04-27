@@ -230,7 +230,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
         description: Joi.string().required(),
         details: Joi.array().items(Joi.string()),
         formats: Joi.array()
-          .items(Joi.string().valid('nostruct', 'list', 'xml', 'json', 'yml'))
+          .items(Joi.string().valid('nostruct', 'list', 'xml', 'json', 'yml', 'other'))
           .unique()
           .min(1)
           .required()
