@@ -25,7 +25,7 @@ const documentFiles = (root, plName, files, exclude) => {
     .reduce((prev, file) => {
       const append = file.split('/');
       append[append.length - 1] = `${
-        anchorRef(`${plName}-target`, append[append.length - 1])
+        linkRef(`${plName}-target`, append[append.length - 1])
       }${
         exclude.includes(file) ? ' (excluded)' : ''
       }`;

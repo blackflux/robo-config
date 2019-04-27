@@ -16,7 +16,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;<a name="mock-plugin-target-ref-escaped-variabletxt">escaped-variable.txt</a></code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-escaped-variabletxt">escaped-variable.txt</a></code><br/>
         </ul>
       </td>
     </tr>
@@ -38,7 +38,7 @@ _Updating `escaped-variable.txt` using <a href="#mock-plugin-strat-ref-overwrite
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;<a name="mock-plugin-target-ref-escaped-variabletxt">escaped-variable.txt</a></code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-escaped-variabletxt">escaped-variable.txt</a></code><br/>
         </ul>
       </td>
     </tr>

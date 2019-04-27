@@ -12,17 +12,6 @@ describe('Integration docs.js', () => {
   });
 
   it('Testing documentFiles', () => {
-    console.log(JSON.stringify(documentFiles('root', 'plName', [
-      'vendor',
-      'vendor/index.js',
-      'page',
-      'page/hello',
-      'page/hello/index.css',
-      'page/world',
-      'page/world/index.css',
-      'page/world/index.js'
-    ], []), null, 2));
-
     expect(documentFiles('root', 'plName', [
       'vendor',
       'vendor/index.js',
@@ -34,18 +23,18 @@ describe('Integration docs.js', () => {
       'page/world/index.js'
     ], [])).to.deep.equal([
       'root',
-      '├─&nbsp;<a name="plname-target-ref-page">page</a>',
-      '├─&nbsp;<a name="plname-target-ref-vendor">vendor</a>',
+      '├─&nbsp;<a href="#plname-target-ref-page">page</a>',
+      '├─&nbsp;<a href="#plname-target-ref-vendor">vendor</a>',
       '├─&nbsp;page',
-      '│&nbsp;&nbsp;├─&nbsp;<a name="plname-target-ref-hello">hello</a>',
-      '│&nbsp;&nbsp;├─&nbsp;<a name="plname-target-ref-world">world</a>',
+      '│&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-hello">hello</a>',
+      '│&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-world">world</a>',
       '│&nbsp;&nbsp;├─&nbsp;hello',
-      '│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a name="plname-target-ref-indexcss">index.css</a>',
+      '│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-indexcss">index.css</a>',
       '│&nbsp;&nbsp;└─&nbsp;world',
-      '│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a name="plname-target-ref-indexcss">index.css</a>',
-      '│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a name="plname-target-ref-indexjs">index.js</a>',
+      '│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-indexcss">index.css</a>',
+      '│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-indexjs">index.js</a>',
       '└─&nbsp;vendor',
-      '&nbsp;&nbsp;&nbsp;└─&nbsp;<a name="plname-target-ref-indexjs">index.js</a>'
+      '&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-indexjs">index.js</a>'
     ]);
   });
 

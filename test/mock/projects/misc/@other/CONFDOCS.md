@@ -18,7 +18,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;<a name="mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -53,7 +53,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;<a name="mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
