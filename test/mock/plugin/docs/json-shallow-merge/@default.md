@@ -14,7 +14,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;merge-shallow-target.json</code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-merge-shallow-targetjson">merge-shallow-target.json</a></code><br/>
         </ul>
       </td>
     </tr>
@@ -23,7 +23,7 @@ Task collection description.
 
 ## :clipboard: <a name="mock-plugin-task-ref-json-shallow-mergetask">json-shallow-merge/task</a> (<a href="#mock-plugin-task-idx-ref-json-shallow-mergetask">`index`</a>)
 
-_Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merge-shallow">merge-shallow</a>._
+_Updating <a href="#mock-plugin-target-ref-merge-shallow-targetjson">merge-shallow-target.json</a> using <a href="#mock-plugin-strat-ref-merge-shallow">merge-shallow</a>._
 
 - Some purpose.
 
@@ -36,12 +36,24 @@ _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merg
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;merge-shallow-target.json</code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-merge-shallow-targetjson">merge-shallow-target.json</a></code><br/>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
+
+------
+
+## Targets
+
+### <a name="mock-plugin-target-ref-merge-shallow-targetjson">merge-shallow-target.json</a>  
+
+:small_blue_diamond: `json`
+
+*Short description for merge-shallow-target.json*
+
+Long description for merge-shallow-target.json
 
 ------
 

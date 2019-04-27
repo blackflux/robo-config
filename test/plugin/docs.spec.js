@@ -12,7 +12,7 @@ describe('Integration docs.js', () => {
   });
 
   it('Testing documentFiles', () => {
-    expect(documentFiles('root', [
+    expect(documentFiles('root', 'plName', [
       'vendor',
       'vendor/index.js',
       'page',
@@ -23,14 +23,18 @@ describe('Integration docs.js', () => {
       'page/world/index.js'
     ], [])).to.deep.equal([
       'root',
-      '├─ page',
-      '│  ├─ hello',
-      '│  │  └─ index.css',
-      '│  └─ world',
-      '│     ├─ index.css',
-      '│     └─ index.js',
-      '└─ vendor',
-      '   └─ index.js'
+      '├─&nbsp;<a href="#plname-target-ref-page">page</a>',
+      '├─&nbsp;<a href="#plname-target-ref-vendor">vendor</a>',
+      '├─&nbsp;page',
+      '│&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-pagehello">hello</a>',
+      '│&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-pageworld">world</a>',
+      '│&nbsp;&nbsp;├─&nbsp;hello',
+      '│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-pagehelloindexcss">index.css</a>',
+      '│&nbsp;&nbsp;└─&nbsp;world',
+      '│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-pageworldindexcss">index.css</a>',
+      '│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-pageworldindexjs">index.js</a>',
+      '└─&nbsp;vendor',
+      '&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-vendorindexjs">index.js</a>'
     ]);
   });
 
@@ -45,6 +49,7 @@ describe('Integration docs.js', () => {
 
     const reqDir = path.join(dir, 'reqs');
     const varDir = path.join(dir, 'vars');
+    const targetDir = path.join(dir, 'targets');
 
     const docDir = path.join(dir, 'docs');
     fs.mkdirSync(docDir);
@@ -52,7 +57,7 @@ describe('Integration docs.js', () => {
     fs.writeFileSync(path.join(docDir, 'scope', '@unknown.md'), '');
 
     expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@unknown.md']);
-    expect(syncDocs('plugin-name', taskDir, reqDir, varDir, docDir)).to.deep.equal([
+    expect(syncDocs('plugin-name', taskDir, reqDir, varDir, targetDir, docDir)).to.deep.equal([
       'Updated: scope/@task.md',
       'Documentation Updated. Please commit and re-run.'
     ]);

@@ -21,7 +21,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;${misc}.txt</code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -41,7 +41,7 @@ Task collection description.
 
 #### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
-_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -56,7 +56,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;${misc}.txt</code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -76,7 +76,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
 
 #### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
-_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -91,7 +91,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;${misc}.txt</code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -124,7 +124,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;${misc}.txt</code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -144,7 +144,7 @@ Task collection description.
 
 ##### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
-_Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -159,7 +159,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;${misc}.txt</code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -202,6 +202,18 @@ Detailed description of what this variable does.
 *Short description of what this variable does.*
 
 Detailed description of what this variable does.
+
+------
+
+## Targets
+
+### <a name="mock-plugin-target-ref-misctxt">${misc}.txt</a>  
+
+:small_blue_diamond: `nostruct`
+
+*Short description for ${misc}.txt*
+
+Long description for ${misc}.txt
 
 ------
 

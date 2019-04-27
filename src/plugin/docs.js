@@ -17,18 +17,29 @@ const linkRef = (type, c, ident = null) => `<a href="#${normalizeRef(`${type}-re
 
 const getTaskIcon = task => (task.target !== undefined ? ':clipboard:' : ':open_file_folder:');
 
-const documentFiles = (root, files, exclude) => {
+const documentFiles = (root, plName, files, exclude) => {
   const result = [];
   result.push(root);
 
   const fileTree = files
     .reduce((prev, file) => {
-      `${file}${exclude.includes(file) ? ' (excluded)' : ''}`
-        .split('/').reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], prev);
+      const append = file.split('/');
+      if (exclude.includes(file)) {
+        append[append.length - 1] = `<strike>${append[append.length - 1]}</strike>`;
+      }
+      append[append.length - 1] = linkRef(`${plName}-target`, append[append.length - 1], file);
+      append.reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], prev);
       return prev;
     }, {});
 
-  result.push(...treeify(fileTree, { joined: false, sortFn: (a, b) => a.localeCompare(b) }));
+  result.push(...treeify(fileTree, {
+    joined: false,
+    spacerNoNeighbour: '&nbsp;&nbsp;&nbsp;',
+    spacerNeighbour: '│&nbsp;&nbsp;',
+    keyNoNeighbour: '└─&nbsp;',
+    keyNeighbour: '├─&nbsp;',
+    sortFn: (a, b) => a.localeCompare(b)
+  }));
 
   return result;
 };
@@ -48,9 +59,9 @@ const documentSection = (plName, baseLevel, exclude, {
     linkRef(`${plName}-task-idx`, '`index`', taskName)
   })`, '');
   if (typeof task.target === 'string') {
-    result.push(`_Updating \`${
-      task.target
-    }\`${
+    result.push(`_Updating ${
+      linkRef(`${plName}-target`, task.target)
+    }${
       task.create === false ? ' (if exists)' : ''
     } using ${
       linkRef(`${plName}-strat`, task.strategy)
@@ -80,8 +91,8 @@ const documentSection = (plName, baseLevel, exclude, {
 
   result.push('      <td align="left" valign="top">');
   result.push('        <ul>');
-  result.push(...documentFiles('project', targets, exclude)
-    .map(l => `<code>${l.replace(/\s/g, '&nbsp;')}</code><br/>`));
+  result.push(...documentFiles('project', plName, targets, exclude)
+    .map(l => `<code>${l}</code><br/>`));
   result.push('        </ul>');
   result.push('      </td>');
   if (requires.length !== 0) {
@@ -107,7 +118,7 @@ const documentSection = (plName, baseLevel, exclude, {
   return result;
 };
 
-const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, exclude, baseLevel) => {
+const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exclude, baseLevel) => {
   assert(
     Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'),
     'Invalid "taskNames" parameter format.'
@@ -211,6 +222,23 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, exclude, baseL
         .required()
     },
     {
+      name: 'Targets',
+      source: 'targets',
+      short: 'target',
+      dir: targetDir,
+      schema: Joi.object().keys({
+        description: Joi.string().required(),
+        details: Joi.array().items(Joi.string()),
+        formats: Joi.array()
+          .items(Joi.string().valid('nostruct', 'list', 'xml', 'json', 'yml'))
+          .unique()
+          .min(1)
+          .required()
+      })
+        .unknown(false)
+        .required()
+    },
+    {
       name: 'Strategies',
       source: 'strategies',
       short: 'strat',
@@ -250,10 +278,13 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, exclude, baseL
           `Invalid ${def.name} Definition: ${e}\n\n${JSON
             .stringify(Joi.validate(data, def.schema).error, null, 2)}`
         );
-        if (data.validFor !== undefined) {
-          content.push(`:small_blue_diamond: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
-          content.push('');
-        }
+        ['validFor', 'formats']
+          .filter(type => data[type] !== undefined)
+          .forEach((type) => {
+            content.push(`:small_blue_diamond: ${data[type].map(v => `\`${v}\``).join(', ')}`);
+            content.push('');
+          });
+
         content.push(`*${data.description}*`);
         content.push('');
         if (data.details.length !== 0) {
@@ -272,7 +303,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, exclude, baseL
 };
 module.exports.generateDocs = generateDocs;
 
-const syncDocs = (plName, taskDir, reqDir, varDir, docDir) => {
+const syncDocs = (plName, taskDir, reqDir, varDir, targetDir, docDir) => {
   const docFiles = [];
 
   // generate doc files
@@ -281,7 +312,10 @@ const syncDocs = (plName, taskDir, reqDir, varDir, docDir) => {
     .map(f => [`${f}.json`, `${f}.md`])
     .forEach(([f, docFile]) => {
       docFiles.push(docFile);
-      if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(plName, taskDir, reqDir, varDir, [f], [], 0))) {
+      if (sfs.smartWrite(
+        path.join(docDir, docFile),
+        generateDocs(plName, taskDir, reqDir, varDir, targetDir, [f], [], 0)
+      )) {
         result.push(`Updated: ${docFile}`);
       }
     });

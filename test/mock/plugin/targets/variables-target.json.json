@@ -1,0 +1,5 @@
+{
+  "description": "Short description for variables-target.json",
+  "details": ["Long description for variables-target.json"],
+  "formats": ["json"]
+}
