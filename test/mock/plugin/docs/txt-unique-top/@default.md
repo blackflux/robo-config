@@ -14,7 +14,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;unique-top.txt</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-unique-toptxt">unique-top.txt</a></code><br/>
         </ul>
       </td>
     </tr>
@@ -36,12 +36,22 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;unique-top.txt</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-unique-toptxt">unique-top.txt</a></code><br/>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
+
+------
+
+## Targets
+
+### <a name="mock-plugin-target-ref-unique-toptxt">unique-top.txt</a>  
+
+*Short description for unique-top.txt*
+
+Long description for unique-top.txt
 
 ------
 

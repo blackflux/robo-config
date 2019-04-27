@@ -12,7 +12,7 @@ describe('Integration docs.js', () => {
   });
 
   it('Testing documentFiles', () => {
-    expect(documentFiles('root', [
+    expect(documentFiles('root', 'plName', [
       'vendor',
       'vendor/index.js',
       'page',
@@ -23,14 +23,17 @@ describe('Integration docs.js', () => {
       'page/world/index.js'
     ], [])).to.deep.equal([
       'root',
-      '├─ page',
+      '├─ <a name="plname-target-ref-page">page</a>',
+      '├─ <a name="plname-target-ref-vendor">vendor</a>',
+      '├─ page', '│  ├─ <a name="plname-target-ref-hello">hello</a>',
+      '│  ├─ <a name="plname-target-ref-world">world</a>',
       '│  ├─ hello',
-      '│  │  └─ index.css',
+      '│  │  └─ <a name="plname-target-ref-indexcss">index.css</a>',
       '│  └─ world',
-      '│     ├─ index.css',
-      '│     └─ index.js',
+      '│     ├─ <a name="plname-target-ref-indexcss">index.css</a>',
+      '│     └─ <a name="plname-target-ref-indexjs">index.js</a>',
       '└─ vendor',
-      '   └─ index.js'
+      '   └─ <a name="plname-target-ref-indexjs">index.js</a>'
     ]);
   });
 
@@ -45,6 +48,7 @@ describe('Integration docs.js', () => {
 
     const reqDir = path.join(dir, 'reqs');
     const varDir = path.join(dir, 'vars');
+    const targetDir = path.join(dir, 'targets');
 
     const docDir = path.join(dir, 'docs');
     fs.mkdirSync(docDir);
@@ -52,7 +56,7 @@ describe('Integration docs.js', () => {
     fs.writeFileSync(path.join(docDir, 'scope', '@unknown.md'), '');
 
     expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@unknown.md']);
-    expect(syncDocs('plugin-name', taskDir, reqDir, varDir, docDir)).to.deep.equal([
+    expect(syncDocs('plugin-name', taskDir, reqDir, varDir, targetDir, docDir)).to.deep.equal([
       'Updated: scope/@task.md',
       'Documentation Updated. Please commit and re-run.'
     ]);

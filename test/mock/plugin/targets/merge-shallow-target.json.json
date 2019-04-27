@@ -1,0 +1,5 @@
+{
+  "description": "Short description for merge-shallow-target.json",
+  "details": ["Long description for merge-shallow-target.json"],
+  "formats": ["json"]
+}

@@ -16,7 +16,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;overwrite-target.txt</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-overwrite-targettxt">overwrite-target.txt</a></code><br/>
         </ul>
       </td>
     </tr>
@@ -38,12 +38,22 @@ _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;overwrite-target.txt</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-overwrite-targettxt">overwrite-target.txt</a></code><br/>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
+
+------
+
+## Targets
+
+### <a name="mock-plugin-target-ref-overwrite-targettxt">overwrite-target.txt</a>  
+
+*Short description for overwrite-target.txt*
+
+Long description for overwrite-target.txt
 
 ------
 

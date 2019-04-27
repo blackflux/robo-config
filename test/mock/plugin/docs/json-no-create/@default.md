@@ -14,7 +14,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;no-create-target.json</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-no-create-targetjson">no-create-target.json</a></code><br/>
         </ul>
       </td>
     </tr>
@@ -36,12 +36,22 @@ _Updating `no-create-target.json` (if exists) using <a href="#mock-plugin-strat-
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;no-create-target.json</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-no-create-targetjson">no-create-target.json</a></code><br/>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
+
+------
+
+## Targets
+
+### <a name="mock-plugin-target-ref-no-create-targetjson">no-create-target.json</a>  
+
+*Short description for no-create-target.json*
+
+Long description for no-create-target.json
 
 ------
 

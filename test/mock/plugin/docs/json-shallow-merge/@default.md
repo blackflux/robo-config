@@ -14,7 +14,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;merge-shallow-target.json</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-merge-shallow-targetjson">merge-shallow-target.json</a></code><br/>
         </ul>
       </td>
     </tr>
@@ -36,12 +36,22 @@ _Updating `merge-shallow-target.json` using <a href="#mock-plugin-strat-ref-merg
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;merge-shallow-target.json</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-merge-shallow-targetjson">merge-shallow-target.json</a></code><br/>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
+
+------
+
+## Targets
+
+### <a name="mock-plugin-target-ref-merge-shallow-targetjson">merge-shallow-target.json</a>  
+
+*Short description for merge-shallow-target.json*
+
+Long description for merge-shallow-target.json
 
 ------
 

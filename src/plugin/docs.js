@@ -17,14 +17,19 @@ const linkRef = (type, c, ident = null) => `<a href="#${normalizeRef(`${type}-re
 
 const getTaskIcon = task => (task.target !== undefined ? ':clipboard:' : ':open_file_folder:');
 
-const documentFiles = (root, files, exclude) => {
+const documentFiles = (root, plName, files, exclude) => {
   const result = [];
   result.push(root);
 
   const fileTree = files
     .reduce((prev, file) => {
-      `${file}${exclude.includes(file) ? ' (excluded)' : ''}`
-        .split('/').reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], prev);
+      const append = file.split('/');
+      append[append.length - 1] = `${
+        anchorRef(`${plName}-target`, append[append.length - 1])
+      }${
+        exclude.includes(file) ? ' (excluded)' : ''
+      }`;
+      append.reduce((p, c) => Object.assign(p, { [c]: p[c] || {} })[c], prev);
       return prev;
     }, {});
 
@@ -80,7 +85,7 @@ const documentSection = (plName, baseLevel, exclude, {
 
   result.push('      <td align="left" valign="top">');
   result.push('        <ul>');
-  result.push(...documentFiles('project', targets, exclude)
+  result.push(...documentFiles('project', plName, targets, exclude)
     .map(l => `<code>${l.replace(/\s/g, '&nbsp;')}</code><br/>`));
   result.push('        </ul>');
   result.push('      </td>');
@@ -107,7 +112,7 @@ const documentSection = (plName, baseLevel, exclude, {
   return result;
 };
 
-const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, exclude, baseLevel) => {
+const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exclude, baseLevel) => {
   assert(
     Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'),
     'Invalid "taskNames" parameter format.'
@@ -211,6 +216,23 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, exclude, baseL
         .required()
     },
     {
+      name: 'Targets',
+      source: 'targets',
+      short: 'target',
+      dir: targetDir,
+      schema: Joi.object().keys({
+        description: Joi.string().required(),
+        details: Joi.array().items(Joi.string()),
+        formats: Joi.array()
+          .items(Joi.string().valid('nostruct', 'list', 'xml', 'json', 'yml'))
+          .unique()
+          .min(1)
+          .required()
+      })
+        .unknown(false)
+        .required()
+    },
+    {
       name: 'Strategies',
       source: 'strategies',
       short: 'strat',
@@ -272,7 +294,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, taskNames, exclude, baseL
 };
 module.exports.generateDocs = generateDocs;
 
-const syncDocs = (plName, taskDir, reqDir, varDir, docDir) => {
+const syncDocs = (plName, taskDir, reqDir, varDir, targetDir, docDir) => {
   const docFiles = [];
 
   // generate doc files
@@ -281,7 +303,10 @@ const syncDocs = (plName, taskDir, reqDir, varDir, docDir) => {
     .map(f => [`${f}.json`, `${f}.md`])
     .forEach(([f, docFile]) => {
       docFiles.push(docFile);
-      if (sfs.smartWrite(path.join(docDir, docFile), generateDocs(plName, taskDir, reqDir, varDir, [f], [], 0))) {
+      if (sfs.smartWrite(
+        path.join(docDir, docFile),
+        generateDocs(plName, taskDir, reqDir, varDir, targetDir, [f], [], 0)
+      )) {
         result.push(`Updated: ${docFile}`);
       }
     });

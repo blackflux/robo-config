@@ -18,7 +18,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;${misc}.txt</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -53,7 +53,7 @@ _Updating `${misc}.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwri
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;${misc}.txt</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -96,6 +96,16 @@ Detailed description of what this variable does.
 *Short description of what this variable does.*
 
 Detailed description of what this variable does.
+
+------
+
+## Targets
+
+### <a name="mock-plugin-target-ref-misctxt">${misc}.txt</a>  
+
+*Short description for ${misc}.txt*
+
+Long description for ${misc}.txt
 
 ------
 

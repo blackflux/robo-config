@@ -16,7 +16,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;create-only-target.txt</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-create-only-targettxt">create-only-target.txt</a></code><br/>
         </ul>
       </td>
     </tr>
@@ -38,12 +38,22 @@ _Updating `create-only-target.txt` using <a href="#mock-plugin-strat-ref-create-
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;create-only-target.txt</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-create-only-targettxt">create-only-target.txt</a></code><br/>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
+
+------
+
+## Targets
+
+### <a name="mock-plugin-target-ref-create-only-targettxt">create-only-target.txt</a>  
+
+*Short description for create-only-target.txt*
+
+Long description for create-only-target.txt
 
 ------
 

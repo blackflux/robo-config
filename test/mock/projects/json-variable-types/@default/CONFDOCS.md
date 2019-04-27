@@ -16,7 +16,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;variables-target.json</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-variables-targetjson">variables-target.json</a></code><br/>
         </ul>
       </td>
     </tr>
@@ -38,12 +38,22 @@ _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrit
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;variables-target.json</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-variables-targetjson">variables-target.json</a></code><br/>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
+
+------
+
+## Targets
+
+### <a name="mock-plugin-target-ref-variables-targetjson">variables-target.json</a>  
+
+*Short description for variables-target.json*
+
+Long description for variables-target.json
 
 ------
 

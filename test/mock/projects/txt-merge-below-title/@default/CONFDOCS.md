@@ -16,7 +16,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;merge-below-title.txt</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-merge-below-titletxt">merge-below-title.txt</a></code><br/>
         </ul>
       </td>
     </tr>
@@ -38,12 +38,22 @@ _Updating `merge-below-title.txt` using <a href="#mock-plugin-strat-ref-merge-be
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;merge-below-title.txt</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-merge-below-titletxt">merge-below-title.txt</a></code><br/>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
+
+------
+
+## Targets
+
+### <a name="mock-plugin-target-ref-merge-below-titletxt">merge-below-title.txt</a>  
+
+*Short description for merge-below-title.txt*
+
+Long description for merge-below-title.txt
 
 ------
 

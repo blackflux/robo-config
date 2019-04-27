@@ -16,7 +16,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;default-deep-target.json</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-default-deep-targetjson">default-deep-target.json</a></code><br/>
         </ul>
       </td>
     </tr>
@@ -38,12 +38,22 @@ _Updating `default-deep-target.json` using <a href="#mock-plugin-strat-ref-defau
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;default-deep-target.json</code><br/>
+<code>└─&nbsp;<a&nbsp;name="mock-plugin-target-ref-default-deep-targetjson">default-deep-target.json</a></code><br/>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
+
+------
+
+## Targets
+
+### <a name="mock-plugin-target-ref-default-deep-targetjson">default-deep-target.json</a>  
+
+*Short description for default-deep-target.json*
+
+Long description for default-deep-target.json
 
 ------
 
