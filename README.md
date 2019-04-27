@@ -180,8 +180,8 @@ Contains a definition file `$$VAR$$.json` for every global variable `$$VAR$$`. E
 
 Contains a definition file `$$TARGET$$.json` for every target `$$TARGET$$`. Each file contains the following entries:
 
-- `description`: Short description of what this target is used for.
-- `details`: Array containing longer description of what is the target does and high level "why". Each line corresponds to a new line in markdown.
+- `description`: Short description of what this target is used for in project.
+- `details`: Array containing longer description of what target is used for. Each line corresponds to a new line in markdown.
 - `format`: Array of possible file formats.
 
 ### docDir
