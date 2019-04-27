@@ -98,7 +98,7 @@ A plugin is an npm package that exposes an object containing the following keys:
 - `taskDir`: Absolute path to the plugin tasks
 - `reqDir`: Absolute path to the plugin dependency definitions
 - `varDir`: Absolute path to the plugin variable definitions
-- `targetDir`: Absolute path to the target documentation
+- `targetDir`: Absolute path to the target definitions
 - `docDir`: Absolute path to the automatically maintained internal plugin documentation
 
 The folder structures are as following:
