@@ -23,7 +23,7 @@ Task collection description.
 
 ## :clipboard: <a name="mock-plugin-task-ref-json-deep-defaulttask">json-deep-default/task</a> (<a href="#mock-plugin-task-idx-ref-json-deep-defaulttask">`index`</a>)
 
-_Updating `default-deep-target.json` using <a href="#mock-plugin-strat-ref-default-deep">default-deep</a>._
+_Updating <a href="#mock-plugin-target-ref-default-deep-targetjson">default-deep-target.json</a> using <a href="#mock-plugin-strat-ref-default-deep">default-deep</a>._
 
 - Some purpose.
 
@@ -48,6 +48,8 @@ _Updating `default-deep-target.json` using <a href="#mock-plugin-strat-ref-defau
 ## Targets
 
 ### <a name="mock-plugin-target-ref-default-deep-targetjson">default-deep-target.json</a>  
+
+:small_blue_diamond: `json`
 
 *Short description for default-deep-target.json*
 

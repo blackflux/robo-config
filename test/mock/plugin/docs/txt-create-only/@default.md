@@ -23,7 +23,7 @@ Task collection description.
 
 ## :clipboard: <a name="mock-plugin-task-ref-txt-create-onlytask">txt-create-only/task</a> (<a href="#mock-plugin-task-idx-ref-txt-create-onlytask">`index`</a>)
 
-_Updating `create-only-target.txt` using <a href="#mock-plugin-strat-ref-create-only">create-only</a>._
+_Updating <a href="#mock-plugin-target-ref-create-only-targettxt">create-only-target.txt</a> using <a href="#mock-plugin-strat-ref-create-only">create-only</a>._
 
 - Some purpose.
 
@@ -48,6 +48,8 @@ _Updating `create-only-target.txt` using <a href="#mock-plugin-strat-ref-create-
 ## Targets
 
 ### <a name="mock-plugin-target-ref-create-only-targettxt">create-only-target.txt</a>  
+
+:small_blue_diamond: `nostruct`
 
 *Short description for create-only-target.txt*
 

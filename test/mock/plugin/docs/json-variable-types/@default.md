@@ -23,7 +23,7 @@ Task collection description.
 
 ## :clipboard: <a name="mock-plugin-task-ref-json-variable-typestask">json-variable-types/task</a> (<a href="#mock-plugin-task-idx-ref-json-variable-typestask">`index`</a>)
 
-_Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#mock-plugin-target-ref-variables-targetjson">variables-target.json</a> using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -48,6 +48,8 @@ _Updating `variables-target.json` using <a href="#mock-plugin-strat-ref-overwrit
 ## Targets
 
 ### <a name="mock-plugin-target-ref-variables-targetjson">variables-target.json</a>  
+
+:small_blue_diamond: `json`
 
 *Short description for variables-target.json*
 

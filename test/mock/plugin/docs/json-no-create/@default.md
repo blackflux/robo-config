@@ -23,7 +23,7 @@ Task collection description.
 
 ## :clipboard: <a name="mock-plugin-task-ref-json-no-createtask">json-no-create/task</a> (<a href="#mock-plugin-task-idx-ref-json-no-createtask">`index`</a>)
 
-_Updating `no-create-target.json` (if exists) using <a href="#mock-plugin-strat-ref-default-deep">default-deep</a>._
+_Updating <a href="#mock-plugin-target-ref-no-create-targetjson">no-create-target.json</a> (if exists) using <a href="#mock-plugin-strat-ref-default-deep">default-deep</a>._
 
 - Some purpose.
 
@@ -48,6 +48,8 @@ _Updating `no-create-target.json` (if exists) using <a href="#mock-plugin-strat-
 ## Targets
 
 ### <a name="mock-plugin-target-ref-no-create-targetjson">no-create-target.json</a>  
+
+:small_blue_diamond: `json`
 
 *Short description for no-create-target.json*
 

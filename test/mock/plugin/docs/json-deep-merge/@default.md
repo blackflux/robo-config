@@ -23,7 +23,7 @@ Task collection description.
 
 ## :clipboard: <a name="mock-plugin-task-ref-json-deep-mergetask">json-deep-merge/task</a> (<a href="#mock-plugin-task-idx-ref-json-deep-mergetask">`index`</a>)
 
-_Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-deep">merge-deep</a>._
+_Updating <a href="#mock-plugin-target-ref-merge-deep-targetjson">merge-deep-target.json</a> using <a href="#mock-plugin-strat-ref-merge-deep">merge-deep</a>._
 
 - Some purpose.
 
@@ -48,6 +48,8 @@ _Updating `merge-deep-target.json` using <a href="#mock-plugin-strat-ref-merge-d
 ## Targets
 
 ### <a name="mock-plugin-target-ref-merge-deep-targetjson">merge-deep-target.json</a>  
+
+:small_blue_diamond: `json`
 
 *Short description for merge-deep-target.json*
 

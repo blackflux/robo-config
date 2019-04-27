@@ -23,7 +23,7 @@ Task collection description.
 
 ## :clipboard: <a name="mock-plugin-task-ref-txt-overwritetask">txt-overwrite/task</a> (<a href="#mock-plugin-task-idx-ref-txt-overwritetask">`index`</a>)
 
-_Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#mock-plugin-target-ref-overwrite-targettxt">overwrite-target.txt</a> using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -48,6 +48,8 @@ _Updating `overwrite-target.txt` using <a href="#mock-plugin-strat-ref-overwrite
 ## Targets
 
 ### <a name="mock-plugin-target-ref-overwrite-targettxt">overwrite-target.txt</a>  
+
+:small_blue_diamond: `nostruct`
 
 *Short description for overwrite-target.txt*
 

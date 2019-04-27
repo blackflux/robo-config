@@ -60,9 +60,9 @@ const documentSection = (plName, baseLevel, exclude, {
     linkRef(`${plName}-task-idx`, '`index`', taskName)
   })`, '');
   if (typeof task.target === 'string') {
-    result.push(`_Updating \`${
-      task.target
-    }\`${
+    result.push(`_Updating ${
+      linkRef(`${plName}-target`, task.target)
+    }${
       task.create === false ? ' (if exists)' : ''
     } using ${
       linkRef(`${plName}-strat`, task.strategy)
@@ -279,10 +279,13 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
           `Invalid ${def.name} Definition: ${e}\n\n${JSON
             .stringify(Joi.validate(data, def.schema).error, null, 2)}`
         );
-        if (data.validFor !== undefined) {
-          content.push(`:small_blue_diamond: ${data.validFor.map(v => `\`${v}\``).join(', ')}`);
-          content.push('');
-        }
+        ['validFor', 'formats']
+          .filter(type => data[type] !== undefined)
+          .forEach((type) => {
+            content.push(`:small_blue_diamond: ${data[type].map(v => `\`${v}\``).join(', ')}`);
+            content.push('');
+          });
+
         content.push(`*${data.description}*`);
         content.push('');
         if (data.details.length !== 0) {

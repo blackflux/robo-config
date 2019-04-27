@@ -25,7 +25,7 @@ Task collection description.
 
 #### :clipboard: <a name="mock-plugin-task-ref-xml-mergetask">xml-merge/task</a> (<a href="#mock-plugin-task-idx-ref-xml-mergetask">`index`</a>)
 
-_Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xml-merge</a>._
+_Updating <a href="#mock-plugin-target-ref-merge-targetxml">merge-target.xml</a> using <a href="#mock-plugin-strat-ref-xml-merge">xml-merge</a>._
 
 - Some purpose.
 
@@ -50,6 +50,8 @@ _Updating `merge-target.xml` using <a href="#mock-plugin-strat-ref-xml-merge">xm
 ## Targets
 
 ### <a name="mock-plugin-target-ref-merge-targetxml">merge-target.xml</a>  
+
+:small_blue_diamond: `xml`
 
 *Short description for merge-target.xml*
 

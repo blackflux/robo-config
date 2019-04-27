@@ -25,7 +25,7 @@ Task collection description.
 
 #### :clipboard: <a name="mock-plugin-task-ref-txt-unique-toptask">txt-unique-top/task</a> (<a href="#mock-plugin-task-idx-ref-txt-unique-toptask">`index`</a>)
 
-_Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">unique-top</a>._
+_Updating <a href="#mock-plugin-target-ref-unique-toptxt">unique-top.txt</a> using <a href="#mock-plugin-strat-ref-unique-top">unique-top</a>._
 
 - Some purpose.
 
@@ -50,6 +50,8 @@ _Updating `unique-top.txt` using <a href="#mock-plugin-strat-ref-unique-top">uni
 ## Targets
 
 ### <a name="mock-plugin-target-ref-unique-toptxt">unique-top.txt</a>  
+
+:small_blue_diamond: `list`
 
 *Short description for unique-top.txt*
 
