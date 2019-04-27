@@ -26,15 +26,15 @@ describe('Integration docs.js', () => {
       '├─&nbsp;<a href="#plname-target-ref-page">page</a>',
       '├─&nbsp;<a href="#plname-target-ref-vendor">vendor</a>',
       '├─&nbsp;page',
-      '│&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-pagehello">page/hello</a>',
-      '│&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-pageworld">page/world</a>',
+      '│&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-pagehello">hello</a>',
+      '│&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-pageworld">world</a>',
       '│&nbsp;&nbsp;├─&nbsp;hello',
-      '│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-pagehelloindexcss">page/hello/index.css</a>',
+      '│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-pagehelloindexcss">index.css</a>',
       '│&nbsp;&nbsp;└─&nbsp;world',
-      '│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-pageworldindexcss">page/world/index.css</a>',
-      '│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-pageworldindexjs">page/world/index.js</a>',
+      '│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;<a href="#plname-target-ref-pageworldindexcss">index.css</a>',
+      '│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-pageworldindexjs">index.js</a>',
       '└─&nbsp;vendor',
-      '&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-vendorindexjs">vendor/index.js</a>'
+      '&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#plname-target-ref-vendorindexjs">index.js</a>'
     ]);
   });
 

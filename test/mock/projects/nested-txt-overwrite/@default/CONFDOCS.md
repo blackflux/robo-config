@@ -17,7 +17,7 @@ Task collection description.
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;nested</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#mock-plugin-target-ref-nestedoverwrite-targettxt">nested/overwrite-target.txt</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#mock-plugin-target-ref-nestedoverwrite-targettxt">overwrite-target.txt</a></code><br/>
         </ul>
       </td>
     </tr>
@@ -40,7 +40,7 @@ _Updating <a href="#mock-plugin-target-ref-nestedoverwrite-targettxt">nested/ove
         <ul>
 <code>project</code><br/>
 <code>└─&nbsp;nested</code><br/>
-<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#mock-plugin-target-ref-nestedoverwrite-targettxt">nested/overwrite-target.txt</a></code><br/>
+<code>&nbsp;&nbsp;&nbsp;└─&nbsp;<a href="#mock-plugin-target-ref-nestedoverwrite-targettxt">overwrite-target.txt</a></code><br/>
         </ul>
       </td>
     </tr>
