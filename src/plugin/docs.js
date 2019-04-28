@@ -193,9 +193,6 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
     content.push(...documentSection(plName, baseLevel, exclude, section));
   });
 
-  // extract all (task) requires
-  const requires = [...new Set(sections.reduce((p, c) => p.concat(c.requires), []))];
-
   // append docs for requires, variables and strategies
   [
     {
@@ -298,7 +295,10 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
                   typeof sfs.guessFile(path.join(reqDir, r)) === 'string',
                   `Missing ${def.name} Definition (required): ${r}`
                 );
-                assert(requires.includes(r), `Requires ${r} must be declared by at least one task.`);
+                assert(
+                  data.requires.includes(r),
+                  `Requires ${r} must be declared by at least one corresponding task.`
+                );
               });
             }
             content.push(`${icon} ${data[type]
