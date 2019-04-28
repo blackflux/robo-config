@@ -236,6 +236,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
           .min(1)
           .required(),
         requires: Joi.array().items(Joi.string()).unique().required(),
+        website: Joi.string().allow(null).required(),
         description: Joi.string().required(),
         details: Joi.array().items(Joi.string())
       })
@@ -272,7 +273,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
         const data = sfs.smartRead(f);
 
         content.push(`### ${anchorRef(`${plName}-${def.short}`, e)} ${
-          data.website !== undefined ? `([\`link\`](${data.website}))` : ''
+          typeof data.website === 'string' ? `([\`link\`](${data.website}))` : ''
         } ${
           data.type !== undefined ? `: \`${data.type}\`` : ''
         }`);
