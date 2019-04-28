@@ -207,9 +207,11 @@ Detailed description of what this variable does.
 
 ## Targets
 
-### <a name="mock-plugin-target-ref-misctxt">${misc}.txt</a>  
+### <a name="mock-plugin-target-ref-misctxt">${misc}.txt</a> ([`link`](https://some.url)) 
 
 :small_blue_diamond: `nostruct`
+
+:small_red_triangle: <a href="#mock-plugin-req-ref-dependency">dependency</a>
 
 *Short description for ${misc}.txt*
 

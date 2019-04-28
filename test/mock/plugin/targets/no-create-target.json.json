@@ -1,5 +1,7 @@
 {
   "description": "Short description for no-create-target.json",
   "details": ["Long description for no-create-target.json"],
-  "formats": ["json"]
+  "formats": ["json"],
+  "requires": [],
+  "website": null
 }

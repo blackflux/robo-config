@@ -1,5 +1,7 @@
 {
   "description": "Short description for merge-below-title.txt",
   "details": ["Long description for merge-below-title.txt"],
-  "formats": ["list"]
+  "formats": ["list"],
+  "requires": [],
+  "website": null
 }

@@ -1,5 +1,7 @@
 {
   "description": "Short description for ${misc}.txt",
   "details": ["Long description for ${misc}.txt"],
-  "formats": ["nostruct"]
+  "formats": ["nostruct"],
+  "requires": ["dependency"],
+  "website": "https://some.url"
 }
