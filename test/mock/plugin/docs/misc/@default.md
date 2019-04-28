@@ -209,6 +209,8 @@ Detailed description of what this variable does.
 
 :small_blue_diamond: `nostruct`
 
+:small_red_triangle: <a href="#mock-plugin-req-ref-dependency">dependency</a>
+
 *Short description for ${misc}.txt*
 
 Long description for ${misc}.txt

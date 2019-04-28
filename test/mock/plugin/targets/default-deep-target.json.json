@@ -1,5 +1,6 @@
 {
   "description": "Short description for default-deep-target.json",
   "details": ["Long description for default-deep-target.json"],
-  "formats": ["json"]
+  "formats": ["json"],
+  "requires": []
 }

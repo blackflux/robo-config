@@ -1,5 +1,6 @@
 {
   "description": "Short description for unique-top.txt",
   "details": ["Long description for unique-top.txt"],
-  "formats": ["list"]
+  "formats": ["list"],
+  "requires": []
 }
