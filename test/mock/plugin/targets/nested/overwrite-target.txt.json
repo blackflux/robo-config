@@ -2,5 +2,6 @@
   "description": "Short description for nested/overwrite-target.txt",
   "details": ["Long description for nested/overwrite-target.txt"],
   "formats": ["nostruct"],
-  "requires": []
+  "requires": [],
+  "website": null
 }
