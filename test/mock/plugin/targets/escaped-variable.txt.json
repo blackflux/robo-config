@@ -1,5 +1,6 @@
 {
   "description": "Short description for escaped-variable.txt",
   "details": ["Long description for escaped-variable.txt"],
-  "formats": ["nostruct"]
+  "formats": ["nostruct"],
+  "requires": []
 }

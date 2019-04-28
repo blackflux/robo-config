@@ -193,6 +193,9 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
     content.push(...documentSection(plName, baseLevel, exclude, section));
   });
 
+  // extract all (task) requires
+  const requires = [...new Set(sections.reduce((p, c) => p.concat(c.requires), []))];
+
   // append docs for requires, variables and strategies
   [
     {
@@ -227,13 +230,14 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
       short: 'target',
       dir: targetDir,
       schema: Joi.object().keys({
-        description: Joi.string().required(),
-        details: Joi.array().items(Joi.string()),
         formats: Joi.array()
           .items(Joi.string().valid('nostruct', 'list', 'xml', 'json', 'yml', 'other'))
           .unique()
           .min(1)
-          .required()
+          .required(),
+        requires: Joi.array().items(Joi.string()).unique().required(),
+        description: Joi.string().required(),
+        details: Joi.array().items(Joi.string())
       })
         .unknown(false)
         .required()
@@ -278,10 +282,27 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
           `Invalid ${def.name} Definition: ${e}\n\n${JSON
             .stringify(Joi.validate(data, def.schema).error, null, 2)}`
         );
-        ['validFor', 'formats']
-          .filter(type => data[type] !== undefined)
-          .forEach((type) => {
-            content.push(`:small_blue_diamond: ${data[type].map(v => `\`${v}\``).join(', ')}`);
+        [[
+          'validFor', ':small_blue_diamond:'
+        ], [
+          'formats', ':small_blue_diamond:'
+        ], [
+          'requires', ':small_red_triangle:'
+        ]]
+          .filter(([type, _]) => data[type] !== undefined && data[type].length !== 0)
+          .forEach(([type, icon]) => {
+            if (type === 'requires') {
+              data[type].forEach((r) => {
+                assert(
+                  typeof sfs.guessFile(path.join(reqDir, r)) === 'string',
+                  `Missing ${def.name} Definition (required): ${r}`
+                );
+                assert(requires.includes(r), `Requires ${r} must be declared by at least one task.`);
+              });
+            }
+            content.push(`${icon} ${data[type]
+              .map(v => (type === 'requires' ? linkRef(`${plName}-req`, v) : `\`${v}\``))
+              .join(', ')}`);
             content.push('');
           });
 
