@@ -286,9 +286,9 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
         [[
           'validFor', ':small_blue_diamond:'
         ], [
-          'formats', ':small_blue_diamond:'
-        ], [
           'requires', ':small_red_triangle:'
+        ], [
+          'formats', ':small_blue_diamond:'
         ]]
           .filter(([type, _]) => data[type] !== undefined && data[type].length !== 0)
           .forEach(([type, icon]) => {
