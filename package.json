@@ -31,16 +31,16 @@
   "homepage": "https://github.com/blackflux/robo-config#readme",
   "devDependencies": {
     "@babel/cli": "7.4.4",
-    "@babel/core": "7.4.4",
+    "@babel/core": "7.4.5",
     "@babel/plugin-proposal-object-rest-spread": "7.4.4",
     "@babel/register": "7.4.4",
-    "@blackflux/eslint-plugin-rules": "1.0.14",
-    "@blackflux/robo-config-plugin": "1.8.2",
+    "@blackflux/eslint-plugin-rules": "1.0.15",
+    "@blackflux/robo-config-plugin": "1.10.3",
     "babel-eslint": "10.0.1",
     "chai": "4.2.0",
     "coveralls": "3.0.3",
     "eslint": "5.16.0",
-    "js-gardener": "2.0.30",
+    "js-gardener": "2.0.31",
     "nyc": "14.1.1",
     "semantic-release": "15.13.12",
     "tmp": "0.1.0"
@@ -94,9 +94,9 @@
     "lodash.clonedeep": "4.5.0",
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
-    "object-deep-contain": "1.0.9",
-    "object-scan": "10.0.1",
-    "object-treeify": "1.1.10",
-    "smart-fs": "1.7.6"
+    "object-deep-contain": "1.0.10",
+    "object-scan": "10.0.2",
+    "object-treeify": "1.1.11",
+    "smart-fs": "1.7.7"
   }
 }
