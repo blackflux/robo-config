@@ -4889,10 +4889,10 @@ object-treeify@1.1.10:
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.10.tgz#7a2c6dce6f015226facf0c5e14314302c4213fef"
   integrity sha512-zrrjgxOs7+jXixpnUL1ory0jwYCN3fI6xW3yi3IGErx7b7A0exeWzkLvDW+Vxhpq5Y44stUPs7v56wyo7PsVIg==
 
-object-treeify@1.1.11:
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.11.tgz#9cca3dd4c51450a23361290c2d6ad79f5f1e6857"
-  integrity sha512-fCyeg1IbTPEa/WHD2QilNuhJoIKAvFz6X1nnvwv6FYaOkJo9I1xAEMr/3p7H9jISVyC9wbxoR1U99De2LWkfJQ==
+object-treeify@1.1.12:
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.12.tgz#c34f62bdc634a32d7c55d2b9c39d6f5a619fc19a"
+  integrity sha512-0Vtx4azZK0GpMKOQLfMzcIxf7MSlwdkGnaRC4/PEJqdEDjCg1aBr8TgmmQxpsnov24NIO+b1H3EInIPxLvUigA==
 
 object-visit@^1.0.0:
   version "1.0.1"
