@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const get = require('lodash.get');
 const deepmerge = require('deepmerge');
-const Joi = require('joi');
+const Joi = require('joi-strict');
 const sfs = require('smart-fs');
 const objectScan = require('object-scan');
 const { populateVars, determineVars } = require('./vars');
@@ -11,27 +11,25 @@ const strategies = require('./strategies');
 
 
 const taskSchema = Joi.object().keys({
-  target: Joi.string(),
-  format: Joi.string().allow(null),
-  strategy: Joi.string().valid(...Object.keys(strategies)),
-  create: Joi.boolean(),
+  target: Joi.string().optional(),
+  format: Joi.string().allow(null).optional(),
+  strategy: Joi.string().valid(...Object.keys(strategies)).optional(),
+  create: Joi.boolean().optional(),
   snippets: Joi.array().items(
-    Joi.string(),
+    Joi.string().optional(),
     Joi.object().keys({
-      name: Joi.string().required(),
-      variables: Joi.object().min(1).required()
-    }).unknown(false)
-  ).min(1),
-  requires: Joi.array().items(Joi.string()),
-  purpose: Joi.array().min(1).items(Joi.string()),
-  description: Joi.string(),
-  tasks: Joi.array().items(Joi.string())
+      name: Joi.string(),
+      variables: Joi.object().min(1)
+    }).unknown(false).optional()
+  ).min(1).optional(),
+  requires: Joi.array().items(Joi.string()).optional(),
+  purpose: Joi.array().min(1).items(Joi.string()).optional(),
+  description: Joi.string().optional(),
+  tasks: Joi.array().items(Joi.string()).optional()
 })
   .and('target', 'strategy', 'create', 'snippets', 'format', 'requires', 'purpose')
   .and('tasks', 'description')
-  .xor('target', 'tasks')
-  .unknown(false)
-  .required();
+  .xor('target', 'tasks');
 
 
 const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {

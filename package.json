@@ -36,6 +36,7 @@
     "@babel/register": "7.4.4",
     "@blackflux/eslint-plugin-rules": "1.0.18",
     "@blackflux/robo-config-plugin": "1.10.5",
+    "@hapi/joi": "15.0.3",
     "babel-eslint": "10.0.1",
     "chai": "4.2.0",
     "coveralls": "3.0.4",
@@ -90,7 +91,7 @@
   "dependencies": {
     "app-root-path": "2.2.1",
     "deepmerge": "3.2.0",
-    "joi": "14.3.1",
+    "joi-strict": "1.0.2",
     "lodash.clonedeep": "4.5.0",
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
