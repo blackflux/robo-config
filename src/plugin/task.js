@@ -20,7 +20,7 @@ const taskSchema = Joi.object().keys({
     Joi.object().keys({
       name: Joi.string(),
       variables: Joi.object().min(1)
-    }).unknown(false).optional()
+    }).optional()
   ).min(1).optional(),
   requires: Joi.array().items(Joi.string()).optional(),
   purpose: Joi.array().min(1).items(Joi.string()).optional(),
