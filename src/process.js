@@ -1,18 +1,16 @@
 const assert = require('assert');
 const path = require('path');
-const Joi = require('joi');
+const Joi = require('joi-strict');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
 const load = require('./load');
 
 const pluginPayloadSchema = Joi.object().keys({
-  tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)).required(),
-  variables: Joi.object().required(),
+  tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)),
+  variables: Joi.object(),
   exclude: Joi.array().items(Joi.string()).unique(),
-  confDocs: Joi.string().required()
-})
-  .unknown(false)
-  .required();
+  confDocs: Joi.string()
+});
 
 module.exports = (projectRoot = appRoot.path) => {
   assert(typeof projectRoot === 'string', 'Invalid "projectRoot" parameter format.');
