@@ -38,11 +38,4 @@ describe('Integration strategies.js', () => {
         .to.deep.equal({ a: { b: ['c', 'd'] } });
     });
   });
-
-  it('Testing order consistent when overwriting', () => {
-    const existing = { a: 1, b: 2, c: 3 };
-    const changeset = { c: 3, b: 2, a: 0 };
-    const result = strategies.overwrite(existing, changeset);
-    expect(JSON.stringify(result)).to.deep.equal('{"a":0,"b":2,"c":3}');
-  });
 });
