@@ -1,6 +1,6 @@
 const assert = require('assert');
 const path = require('path');
-const Joi = require('joi');
+const Joi = require('joi-strict');
 const sfs = require('smart-fs');
 const treeify = require('object-treeify');
 const { determineVars } = require('./vars');
@@ -201,12 +201,10 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
       short: 'req',
       dir: reqDir,
       schema: Joi.object().keys({
-        description: Joi.string().required(),
-        details: Joi.array().items(Joi.string()),
-        website: Joi.string().required()
+        description: Joi.string(),
+        details: Joi.array().items(Joi.string()).optional(),
+        website: Joi.string()
       })
-        .unknown(false)
-        .required()
     },
     {
       name: 'Variables',
@@ -214,12 +212,10 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
       short: 'var',
       dir: varDir,
       schema: Joi.object().keys({
-        description: Joi.string().required(),
-        details: Joi.array().items(Joi.string()),
-        type: Joi.string().valid('string', 'boolean', 'object', 'array', 'number', 'integer').required()
+        description: Joi.string(),
+        details: Joi.array().items(Joi.string()).optional(),
+        type: Joi.string().valid('string', 'boolean', 'object', 'array', 'number', 'integer')
       })
-        .unknown(false)
-        .required()
     },
     {
       name: 'Targets',
@@ -230,15 +226,12 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
         formats: Joi.array()
           .items(Joi.string().valid('nostruct', 'list', 'xml', 'json', 'yml', 'other'))
           .unique()
-          .min(1)
-          .required(),
-        requires: Joi.array().items(Joi.string()).unique().required(),
-        website: Joi.string().allow(null).required(),
-        description: Joi.string().required(),
-        details: Joi.array().items(Joi.string())
+          .min(1),
+        requires: Joi.array().items(Joi.string()).unique(),
+        website: Joi.string().allow(null),
+        description: Joi.string(),
+        details: Joi.array().items(Joi.string()).optional()
       })
-        .unknown(false)
-        .required()
     },
     {
       name: 'Strategies',
@@ -249,13 +242,10 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
         validFor: Joi.array()
           .items(Joi.string().valid('nostruct', 'list', 'xml', 'json', 'yml', 'any'))
           .unique()
-          .min(1)
-          .required(),
-        description: Joi.string().required(),
-        details: Joi.array().items(Joi.string())
+          .min(1),
+        description: Joi.string(),
+        details: Joi.array().items(Joi.string()).optional()
       })
-        .unknown(false)
-        .required()
     }
   ].forEach((def) => {
     const toDocument = [...new Set(sections.reduce((p, c) => p.concat(c[def.source]), []))];
