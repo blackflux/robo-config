@@ -1,8 +1,8 @@
 const assert = require('assert');
 const deepmerge = require('deepmerge');
 const deepContains = require('object-deep-contain');
+const objectAlign = require('object-align');
 const xmlMerge = require('./xml-merge');
-const objectOrder = require('./object-order');
 
 const arrayMerge = (target, source) => {
   const destination = target.concat(source);
@@ -56,5 +56,9 @@ module.exports = Object.entries({
   'create-only': (existing, changeset) => existing
 }).reduce((p, [k, v]) => Object.assign(p, {
   // ensure existing order is persisted
-  [k]: (existing, ...args) => objectOrder(v(existing, ...args), existing)
+  [k]: (existing, ...args) => {
+    const result = v(existing, ...args);
+    objectAlign(result, existing);
+    return result;
+  }
 }), {});
