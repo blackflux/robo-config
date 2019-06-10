@@ -40,7 +40,7 @@
     "chai": "4.2.0",
     "coveralls": "3.0.4",
     "eslint": "5.16.0",
-    "js-gardener": "2.0.36",
+    "js-gardener": "2.0.38",
     "nyc": "14.1.1",
     "semantic-release": "15.13.12",
     "tmp": "0.1.0"
@@ -98,6 +98,6 @@
     "object-deep-contain": "1.0.11",
     "object-scan": "10.0.3",
     "object-treeify": "1.1.12",
-    "smart-fs": "1.7.9"
+    "smart-fs": "1.8.0"
   }
 }
