@@ -90,7 +90,7 @@
   "dependencies": {
     "@hapi/joi": "15.0.3",
     "app-root-path": "2.2.1",
-    "deepmerge": "3.2.0",
+    "deepmerge": "3.2.1",
     "joi-strict": "1.0.2",
     "lodash.clonedeep": "4.5.0",
     "lodash.difference": "4.5.0",
