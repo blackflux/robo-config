@@ -88,7 +88,7 @@
     "lib"
   ],
   "dependencies": {
-    "@hapi/joi": "15.0.3",
+    "@hapi/joi": "15.1.0",
     "app-root-path": "2.2.1",
     "deepmerge": "3.3.0",
     "joi-strict": "1.0.2",
