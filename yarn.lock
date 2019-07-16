@@ -108,10 +108,10 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.5.0.tgz#3e0713dff89ad6ae37faec3b29dcfc5c979770b7"
   integrity sha512-I5nW8AhGpOXGCCNYGc+p7ExQIBxRFnS2fd/d862bNOKvmoEPjYPcfIjsfdy0ujagYOIYPczKgD9l3FsgTkAzKA==
 
-"@babel/plugin-proposal-object-rest-spread@7.5.1":
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.5.1.tgz#5788ab097c63135e4236548b4f112bfce09dd394"
-  integrity sha512-PVGXx5LYHcT7L4MdoE+rM5uq68IKlvU9lljVQ4OXY6aUEnGvezcGbM4VNY57Ug+3R2Zg/nYHlEdiWoIBoRA0mw==
+"@babel/plugin-proposal-object-rest-spread@7.5.4":
+  version "7.5.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.5.4.tgz#250de35d867ce8260a31b1fdac6c4fc1baa99331"
+  integrity sha512-KCx0z3y7y8ipZUMAEEJOyNi11lMb/FOPUjjB113tfowgw0c16EGYos7worCKBcUAh2oG+OBnoUhsnTSoLpV9uA==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-object-rest-spread" "^7.2.0"
@@ -168,12 +168,12 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@blackflux/eslint-plugin-rules@1.0.20":
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.0.20.tgz#2a19b9a4e6789030ce7b145f697adcb71df4e584"
-  integrity sha512-ayIYwtLsBU104WwSHS7JJdJuf1QuVilA6R4J7blMtPrLKfqn2yzitf7jbtpe6u6tkUqQoVfnj7R4KSYp2kBr0w==
+"@blackflux/eslint-plugin-rules@1.0.21":
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/@blackflux/eslint-plugin-rules/-/eslint-plugin-rules-1.0.21.tgz#319740cbf20b3c9a6a1a2e63a58dd939b4600ebd"
+  integrity sha512-R5jw8eLUi2+w7MgVXqwx1CJxH8EsvEippe6DyEL8PG3wrk0dcvbRylHs9DIVU0/HNNjUT/IHQ5QVGZRWDUN1Mg==
   dependencies:
-    smart-fs "1.8.0"
+    smart-fs "1.8.2"
 
 "@blackflux/robo-config-plugin@2.0.1":
   version "2.0.1"
@@ -3566,10 +3566,10 @@ joi-strict@1.0.3:
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.3.tgz#a00636fdb677815a2134e3c5035c71a40dad9177"
   integrity sha512-fTepIytNXkt+LwDET9bQildo8MrQGQtmPd3586dj4JtWbyIK98nk4+cxmcZBg8Rk/NLhHWMpwrrO9x+71mnHpA==
 
-js-gardener@2.0.43:
-  version "2.0.43"
-  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.43.tgz#7a680301e4aefa6d8cbea3e63f822faa075cebf5"
-  integrity sha512-b6oNV2u9afOOXxjtbZDNjGcIH5P3U7blOu1y+Em9ptkPwoXZqbYGLyEYulNQTwN2IKEixX4/P6ol17lFAsKIVg==
+js-gardener@2.0.44:
+  version "2.0.44"
+  resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.44.tgz#25cbeaa6fc1959a76645cd12b3b5dbc0060d3014"
+  integrity sha512-lIuzLpjfFknTEr9tM+28xJPpyKxKnBiax6Ymeux+xQnJ2p6vdqWikQxrZBc+uMko/N/SkQoh3QEXkRO1g2dfXw==
   dependencies:
     "@hapi/joi" "15.1.0"
     chalk "2.4.2"
@@ -3588,7 +3588,7 @@ js-gardener@2.0.43:
     lodash.get "4.4.2"
     mocha "6.1.4"
     npm-check "5.9.0"
-    robo-config "3.0.23"
+    robo-config "3.0.24"
     tmp "0.1.0"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
@@ -4993,11 +4993,6 @@ object-keys@^1.0.11, object-keys@^1.0.12:
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
   integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
 
-object-scan@10.0.3:
-  version "10.0.3"
-  resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-10.0.3.tgz#d29f34a14683cc4aac2b89f3c58442b1273cb542"
-  integrity sha512-J/r2jcp2F6ayOwgxL6+TDlOjw0sdW0w+OEC0uv1CXumYPKdfVzoZ50My7qEUWVFweZId7X1Aj32P0ignCkP5Iw==
-
 object-scan@10.0.4:
   version "10.0.4"
   resolved "https://registry.yarnpkg.com/object-scan/-/object-scan-10.0.4.tgz#be557db3f469f178a3d4b65350efc3db0532d454"
@@ -6110,10 +6105,10 @@ rimraf@2, rimraf@2.6.3, rimraf@^2.5.2, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6
   dependencies:
     glob "^7.1.3"
 
-robo-config@3.0.23:
-  version "3.0.23"
-  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.0.23.tgz#c1cc1699e79e12e353e3ae8ddc3a3a0d6eb9354d"
-  integrity sha512-RkhZmDsvj/ohPvzy8BtHo9ipVL3xp7FouLXar4KjOfdAHW1S3009TGHyVChOubLc6prm1Gil8WWdUCpul2U14w==
+robo-config@3.0.24:
+  version "3.0.24"
+  resolved "https://registry.yarnpkg.com/robo-config/-/robo-config-3.0.24.tgz#555b311c13b00e40f6e5bf61b42f55d00c90abd4"
+  integrity sha512-YdF6erIcimxgbRq/E8GG/c1+A2EvYkqi/9+CflsbOU0rY4WFiYI4glQ4xh8g/Fpx8aroB3Mn3Qf4+PwhBNTIPg==
   dependencies:
     "@hapi/joi" "15.1.0"
     app-root-path "2.2.1"
@@ -6123,7 +6118,7 @@ robo-config@3.0.23:
     lodash.difference "4.5.0"
     lodash.get "4.4.2"
     object-deep-contain "1.0.11"
-    object-scan "10.0.3"
+    object-scan "10.0.4"
     object-treeify "1.1.12"
     smart-fs "1.8.0"
 
