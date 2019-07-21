@@ -10,6 +10,7 @@
       {"type": "test", "release": false},
       {"type": "refactor", "release": false},
       {"type": "ci", "release": false},
+      {"release": false, "type": "amend"},
       {"scope": "no-release", "release": false}
     ],
     "parserOpts": {"noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]}
