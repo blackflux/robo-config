@@ -46,6 +46,7 @@ module.exports = {
     });
     return changeset.concat(existing);
   },
+  'append-new': (existing, changeset) => existing.concat(changeset.filter(e => !existing.includes(e))),
   'merge-shallow': (existing, changeset) => Object.assign(existing, changeset),
   'merge-deep': (existing, changeset) => deepmerge(existing, changeset, { arrayMerge }),
   'default-shallow': (existing, changeset) => Object.assign(changeset, existing),
