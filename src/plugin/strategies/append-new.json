@@ -1,0 +1,9 @@
+{
+  "validFor": [
+    "list"
+  ],
+  "description": "Appends content to end of the file if lines do not exists in file.",
+  "details": [
+    "Useful for managing e.g. `.gitignore` when the original content should be kept."
+  ]
+}
