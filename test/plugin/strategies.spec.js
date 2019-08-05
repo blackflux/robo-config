@@ -23,6 +23,14 @@ describe('Integration strategies.js', () => {
       .to.deep.equal(['new', 'title1', 'title2', '', 'text']);
   });
 
+  it('Testing Merge Strategy: append-new', () => {
+    const existing = ['title1', 'title2', '', 'new', 'text'];
+    expect(strategies['append-new'](existing, ['new']))
+      .to.deep.equal(['title1', 'title2', '', 'new', 'text']);
+    expect(strategies['append-new'](existing, ['new2']))
+      .to.deep.equal(['title1', 'title2', '', 'new', 'text', 'new2']);
+  });
+
   describe('Testing Deep Merge', () => {
     it('Testing Array Concat', () => {
       const existing = { a: { b: ['c'] } };
