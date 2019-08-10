@@ -76,7 +76,7 @@ const loadTask = (taskDir, taskName, variables) => {
     const snippetDir = path.join(taskDir, taskName.split('/')[0], 'snippets');
     task.target = populateVars([task.target], variables, true)[0];
     task.toWrite = deepmerge.all(task.snippets
-      .map(m => (typeof m === 'string' ? [m, {}] : [m.name, m.variables]))
+      .map((m) => (typeof m === 'string' ? [m, {}] : [m.name, m.variables]))
       .map(([snippetName, snippetVars]) => [snippetName, populateVars(snippetVars, variables, true)])
       .map(([snippetName, snippetVars]) => loadSnippet(snippetDir, snippetName, task, snippetVars)));
   }
@@ -98,11 +98,11 @@ const applyTask = (taskDir, projectRoot, task) => {
   });
 };
 
-const listPublicTasks = taskDir => sfs
+const listPublicTasks = (taskDir) => sfs
   .walkDir(taskDir)
-  .filter(f => f.includes('/@'))
-  .filter(f => f.endsWith('.json'))
-  .map(f => f.slice(0, -5));
+  .filter((f) => f.includes('/@'))
+  .filter((f) => f.endsWith('.json'))
+  .map((f) => f.slice(0, -5));
 module.exports.listPublicTasks = listPublicTasks;
 
 const applyTasksRec = (taskDir, projectRoot, taskNames, variables, exclude) => {
@@ -118,7 +118,7 @@ const applyTasksRec = (taskDir, projectRoot, taskNames, variables, exclude) => {
       result.push(`Updated: ${task.target}`);
     }
     if (task.tasks !== undefined) {
-      const subtasks = task.tasks.map(stn => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`));
+      const subtasks = task.tasks.map((stn) => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`));
       result.push(...applyTasksRec(taskDir, projectRoot, subtasks, variables, exclude));
     }
   });
@@ -129,7 +129,7 @@ module.exports.applyTasksRec = applyTasksRec;
 const extractMeta = (taskDir, taskNames) => {
   assert(typeof taskDir === 'string', 'Invalid "taskDir" parameter format.');
   assert(
-    Array.isArray(taskNames) && taskNames.every(t => typeof t === 'string'),
+    Array.isArray(taskNames) && taskNames.every((t) => typeof t === 'string'),
     'Invalid "taskNames" parameter format.'
   );
 
@@ -143,10 +143,10 @@ const extractMeta = (taskDir, taskNames) => {
     if (fileName !== null) {
       const task = sfs.smartRead(fileName);
       if (task.tasks !== undefined) {
-        buffer.push(...task.tasks.map(stn => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`)));
+        buffer.push(...task.tasks.map((stn) => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`)));
       }
       objectScan(['snippets[*].variables', 'target'], { joined: false })(task)
-        .forEach(vs => determineVars([get(task, vs)]).forEach(v => variables.add(v)));
+        .forEach((vs) => determineVars([get(task, vs)]).forEach((v) => variables.add(v)));
       if (task.target !== undefined) {
         target.add(task.target);
       }

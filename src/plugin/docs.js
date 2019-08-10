@@ -6,7 +6,7 @@ const treeify = require('object-treeify');
 const { determineVars } = require('./vars');
 const { listPublicTasks } = require('./task');
 
-const normalizeRef = input => input
+const normalizeRef = (input) => input
   .trim()
   .toLowerCase()
   .replace(/[^\w\- ]+/g, '')
@@ -15,7 +15,7 @@ const normalizeRef = input => input
 const anchorRef = (type, c, ident = null) => `<a name="${normalizeRef(`${type}-ref-${ident || c}`)}">${c}</a>`;
 const linkRef = (type, c, ident = null) => `<a href="#${normalizeRef(`${type}-ref-${ident || c}`)}">${c}</a>`;
 
-const getTaskIcon = task => (task.target !== undefined ? ':clipboard:' : ':open_file_folder:');
+const getTaskIcon = (task) => (task.target !== undefined ? ':clipboard:' : ':open_file_folder:');
 
 const documentFiles = (root, plName, files, exclude) => {
   const result = [];
@@ -67,7 +67,7 @@ const documentSection = (plName, baseLevel, exclude, {
       linkRef(`${plName}-strat`, task.strategy)
     }._`);
     result.push('');
-    result.push(...task.purpose.map(d => `- ${d}`));
+    result.push(...task.purpose.map((d) => `- ${d}`));
     result.push('');
   } else {
     result.push(task.description);
@@ -92,20 +92,20 @@ const documentSection = (plName, baseLevel, exclude, {
   result.push('      <td align="left" valign="top">');
   result.push('        <ul>');
   result.push(...documentFiles('project', plName, targets, exclude)
-    .map(l => `<code>${l}</code><br/>`));
+    .map((l) => `<code>${l}</code><br/>`));
   result.push('        </ul>');
   result.push('      </td>');
   if (requires.length !== 0) {
     result.push('      <td align="left" valign="top">');
     result.push('        <ul>');
-    result.push(...requires.map(r => `          <li>${linkRef(`${plName}-req`, r)}</li>`));
+    result.push(...requires.map((r) => `          <li>${linkRef(`${plName}-req`, r)}</li>`));
     result.push('        </ul>');
     result.push('      </td>');
   }
   if (variables.length !== 0) {
     result.push('      <td align="left" valign="top">');
     result.push('        <ul>');
-    result.push(...variables.map(v => `          <li>${linkRef(`${plName}-var`, v)}</li>`));
+    result.push(...variables.map((v) => `          <li>${linkRef(`${plName}-var`, v)}</li>`));
     result.push('        </ul>');
     result.push('      </td>');
   }
@@ -120,16 +120,16 @@ const documentSection = (plName, baseLevel, exclude, {
 
 const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exclude, baseLevel) => {
   assert(
-    Array.isArray(taskNames) && taskNames.every(e => typeof e === 'string'),
+    Array.isArray(taskNames) && taskNames.every((e) => typeof e === 'string'),
     'Invalid "taskNames" parameter format.'
   );
   assert(
-    Array.isArray(exclude) && exclude.every(e => typeof e === 'string'),
+    Array.isArray(exclude) && exclude.every((e) => typeof e === 'string'),
     'Invalid "exclude" parameter format.'
   );
   assert(Number.isInteger(baseLevel), 'Invalid "baseLevel" parameter format.');
 
-  const sections = taskNames.map(taskName => ({ level: baseLevel, taskName }));
+  const sections = taskNames.map((taskName) => ({ level: baseLevel, taskName }));
 
   // expand tasks with subtasks
   for (let idx = 0; idx < sections.length; idx += 1) {
@@ -142,8 +142,8 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
         || b.includes('/#') - a.includes('/#')
         || b.localeCompare(a)
       ))
-      .map(stn => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`))
-      .map(subtaskName => ({ level: level + 1, taskName: subtaskName })));
+      .map((stn) => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`))
+      .map((subtaskName) => ({ level: level + 1, taskName: subtaskName })));
   }
 
   const index = [];
@@ -154,7 +154,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
     const targets = [section.task.target];
     const requires = section.task.requires || [];
     const variables = (section.task.snippets || [])
-      .filter(s => typeof s !== 'string')
+      .filter((s) => typeof s !== 'string')
       .reduce(
         (p, s) => p.concat(...determineVars(s.variables)),
         determineVars({ target: section.task.target })
@@ -168,7 +168,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
       targets.push(subSection.task.target);
       requires.push(...(subSection.task.requires || []));
       variables.push(...(subSection.task.snippets || [])
-        .filter(s => typeof s !== 'string')
+        .filter((s) => typeof s !== 'string')
         .reduce(
           (p, s) => p.concat(...determineVars(s.variables)),
           determineVars({ target: subSection.task.target })
@@ -176,10 +176,10 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
       strategies.push(subSection.task.strategy);
     }
     Object.assign(section, {
-      targets: [...new Set(targets.filter(e => !!e))],
+      targets: [...new Set(targets.filter((e) => !!e))],
       requires: [...new Set(requires)],
       variables: [...new Set(variables)],
-      strategies: [...new Set(strategies.filter(e => !!e))]
+      strategies: [...new Set(strategies.filter((e) => !!e))]
     });
   });
 
@@ -292,7 +292,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
               });
             }
             content.push(`${icon} ${data[type]
-              .map(v => (type === 'requires' ? linkRef(`${plName}-req`, v) : `\`${v}\``))
+              .map((v) => (type === 'requires' ? linkRef(`${plName}-req`, v) : `\`${v}\``))
               .join(', ')}`);
             content.push('');
           });
@@ -321,7 +321,7 @@ const syncDocs = (plName, taskDir, reqDir, varDir, targetDir, docDir) => {
   // generate doc files
   const result = [];
   listPublicTasks(taskDir)
-    .map(f => [`${f}.json`, `${f}.md`])
+    .map((f) => [`${f}.json`, `${f}.md`])
     .forEach(([f, docFile]) => {
       docFiles.push(docFile);
       if (sfs.smartWrite(
@@ -335,10 +335,10 @@ const syncDocs = (plName, taskDir, reqDir, varDir, targetDir, docDir) => {
   // delete outdated doc files
   sfs
     .walkDir(docDir)
-    .filter(f => f.includes('/@'))
-    .filter(f => f.endsWith('.md'))
-    .filter(f => !docFiles.includes(f))
-    .forEach(f => sfs.cleaningDelete(path.join(docDir, f)));
+    .filter((f) => f.includes('/@'))
+    .filter((f) => f.endsWith('.md'))
+    .filter((f) => !docFiles.includes(f))
+    .forEach((f) => sfs.cleaningDelete(path.join(docDir, f)));
 
   if (result.length !== 0) {
     result.push('Documentation Updated. Please commit and re-run.');

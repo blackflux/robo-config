@@ -12,8 +12,8 @@ const mergeRec = (target, changeset) => {
 
   if (
     isArray
-    && target.every(e => e instanceof Object && !Array.isArray(e))
-    && changeset.every(e => e instanceof Object && !Array.isArray(e))
+    && target.every((e) => e instanceof Object && !Array.isArray(e))
+    && changeset.every((e) => e instanceof Object && !Array.isArray(e))
   ) {
     let next = 0;
     for (let idx = 0; idx < target.length && next < changeset.length; idx += 1) {
