@@ -25,11 +25,12 @@ module.exports = (projectRoot = appRoot.path) => {
   const pluginCfgs = Object
     .entries(config)
     .reduce((p, [k, v]) => Object.assign(p, {
-      [k]: Object.assign({
+      [k]: {
         variables: {},
         exclude: [],
-        confDocs: 'CONFDOCS.md'
-      }, v)
+        confDocs: 'CONFDOCS.md',
+        ...v
+      }
     }), {});
 
   // validate configs
