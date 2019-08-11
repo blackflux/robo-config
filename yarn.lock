@@ -3554,6 +3554,11 @@ joi-strict@1.0.4:
   resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.4.tgz#8bf55f7b4d6accd5b530ac98276131b59e982254"
   integrity sha512-ChSFFa+Z3iD9x9QsBFMEHwXrwt2Gq2OD1fg+Mgje1Tx+Pqt7ma+LXgMdzVoC7GHCxhO3ySDVBtDumES/yycMXg==
 
+joi-strict@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.0.5.tgz#f4abad8bfd39281eb987f8ceb36c76d5d8de30c2"
+  integrity sha512-ZOU1FTny1MmAlm6vXoD77LFqif23KZQVC9m7euLkYq0QHDj0GHKz/A/IRXzhkk3DPll/Y7A74b1R9M7M4fqzTw==
+
 js-gardener@2.0.59:
   version "2.0.59"
   resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.59.tgz#d4f0ecdfb387403b4fc4e4ee0aa956be1ea0b29e"
@@ -4988,6 +4993,11 @@ object-treeify@1.1.14:
   version "1.1.14"
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.14.tgz#6b1b6ec691710c43e1b36f117a2a51f215999132"
   integrity sha512-UcEXe/df7Ui/Ov/rrKMu9/ba60JwYGbhqsj0bKgpFB2oMFz9qyFK69ddSQRFyqV1R6b5+3OT3USHl+BsIt02aA==
+
+object-treeify@1.1.15:
+  version "1.1.15"
+  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.15.tgz#69214f8e83a87020065601765d312348bd3d7c42"
+  integrity sha512-0JQn7EhJvuBCtlUZed4UDmmC5AvfXng/5ClaWeOR+3ab2PZcVph4iBWsN5ehchhbLluRRv0HaFBQkvnmKS6b6A==
 
 object-visit@^1.0.0:
   version "1.0.1"
