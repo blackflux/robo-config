@@ -97,7 +97,7 @@
     "@hapi/joi": "15.1.0",
     "app-root-path": "2.2.1",
     "deepmerge": "4.0.0",
-    "joi-strict": "1.0.4",
+    "joi-strict": "1.0.5",
     "lodash.clonedeep": "4.5.0",
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
