@@ -86,10 +86,10 @@ module.exports.determineVars = (data) => {
     joined: false,
     filterFn: (key, value) => {
       [key[key.length - 1], value]
-        .filter(str => typeof str === 'string')
-        .map(str => str.match(varRegex))
-        .filter(matches => matches !== null)
-        .forEach(matches => result.push(...matches.map(m => m.slice(2, -1))));
+        .filter((str) => typeof str === 'string')
+        .map((str) => str.match(varRegex))
+        .filter((matches) => matches !== null)
+        .forEach((matches) => result.push(...matches.map((m) => m.slice(2, -1))));
       return true;
     }
   })(data);

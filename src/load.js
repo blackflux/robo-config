@@ -20,7 +20,7 @@ module.exports = (pl) => {
     assert(Array.isArray(exclude));
 
     const meta = extractMeta(pl.taskDir, taskNames);
-    const unexpectedVars = Object.keys(variables).filter(v => !meta.variables.includes(v));
+    const unexpectedVars = Object.keys(variables).filter((v) => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
     return applyTasksRec(pl.taskDir, projectRoot, taskNames, variables, exclude);
   };
@@ -50,8 +50,8 @@ module.exports = (pl) => {
         result[taskName] = taskResult;
       });
       assert(
-        Object.keys(variables).filter(v => !knownVars.includes(v)).length === 0,
-        `Unexpected variable provided: ${Object.keys(variables).filter(v => !knownVars.includes(v)).join(', ')}`
+        Object.keys(variables).filter((v) => !knownVars.includes(v)).length === 0,
+        `Unexpected variable provided: ${Object.keys(variables).filter((v) => !knownVars.includes(v)).join(', ')}`
       );
       return result;
     }
