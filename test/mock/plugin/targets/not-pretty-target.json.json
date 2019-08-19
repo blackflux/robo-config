@@ -1,0 +1,7 @@
+{
+  "description": "Short description for not-pretty-target.json",
+  "details": ["Long description for not-pretty-target.json"],
+  "formats": ["json"],
+  "requires": [],
+  "website": null
+}
