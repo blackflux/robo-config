@@ -142,6 +142,7 @@ Actionable task definition files contain the following keys:
 Automatically deduced by default. See [smart-fs](https://github.com/blackflux/smart-fs) for supported formats.
 - `strategy`: One of the available merge strategies. These are detailed below.
 - `create` (_optional_): When set to `false`, no action is taken if the file does not already exist.
+- `pretty` (_optional_): By default files are written in [pretty-mode](https://github.com/blackflux/smart-fs). Can be set to `false` to deactivate. Note that files are only written when the _logical_ content changes.
 - `snippets`: Array of snippets. A snippet is either the name of the snippet file (if no variables are present) or an object
 containing a `variables` object and the snippet file name as `name`.
 - `requires`: Array of dependencies that this task has. For example when managing the `.gitignore` file this should contain `git`.

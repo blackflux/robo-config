@@ -15,6 +15,7 @@ const taskSchema = Joi.object().keys({
   format: Joi.string().allow(null).optional(),
   strategy: Joi.string().valid(...Object.keys(strategies)).optional(),
   create: Joi.boolean().optional(),
+  pretty: Joi.boolean().optional(),
   snippets: Joi.array().items(
     Joi.string().optional(),
     Joi.object().keys({
@@ -58,8 +59,9 @@ const loadTask = (taskDir, taskName, variables) => {
   const task = sfs.smartRead(taskFilePath);
   if (task.target !== undefined) {
     assert([false, undefined].includes(task.create), 'Option "create" defaults to true. Remove.');
-    task.create = task.create === undefined ? true : task.create;
     task.format = task.format || null;
+    task.create = task.create === undefined ? true : task.create;
+    task.pretty = task.pretty === undefined ? true : task.pretty;
   }
 
   assert(
@@ -94,7 +96,7 @@ const applyTask = (taskDir, projectRoot, task) => {
     treatAs: task.format,
     mergeStrategy: strategies[task.strategy],
     create: task.create,
-    pretty: true
+    pretty: task.pretty
   });
 };
 

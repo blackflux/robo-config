@@ -1,0 +1,12 @@
+{
+  "target": "not-pretty-target.json",
+  "strategy": "overwrite",
+  "pretty": false,
+  "snippets": [
+    "snippet"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}
