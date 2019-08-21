@@ -4993,6 +4993,11 @@ object-deep-contain@1.0.16:
   resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.16.tgz#1065366cf5a94fd9646d87a959686a25f8db6949"
   integrity sha512-RbpNH0tDVVQOdfbqzF7+ECKU7OkLPUMERYGYGlYrkwvLz+uV508j4Z0ayyJpHhujOVw7wK3JBEsmT8WD7gJAsw==
 
+object-deep-contain@1.0.17:
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.17.tgz#d5dab5b2e6a700695a2da5d9c971aaef091fdeee"
+  integrity sha512-Dv/l57JpEXZqdZiYH+M6/qkZCvukflYcxtEkY1nfHiDZuaSSW96VVFbZhNVqDlUJWutn0AeQFfBb7z4L20Ckvg==
+
 object-keys@^1.0.11, object-keys@^1.0.12:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
