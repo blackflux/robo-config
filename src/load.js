@@ -5,7 +5,7 @@ const { syncDocs, generateDocs } = require('./plugin/docs');
 const { applyTasksRec, listPublicTasks, extractMeta } = require('./plugin/task');
 
 module.exports = (pl) => {
-  assert(Object.keys(pl).length === 6, 'Bad Plugin Definition.');
+  assert(Object.keys(pl).filter((k) => k !== 'exports').length === 6, 'Bad Plugin Definition.');
   assert(typeof pl.name === 'string');
   assert(typeof pl.taskDir === 'string');
   assert(typeof pl.reqDir === 'string');
