@@ -1,24 +1,22 @@
 const path = require('path');
-const tmp = require('tmp');
 const expect = require('chai').expect;
+const { describe } = require('node-tdd');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
 const robo = require('../src/index');
 
-describe('Robo + Plugin Integration Tests', () => {
-  const pluginFile = path.join(__dirname, 'mock', 'plugin.js');
-
-  let dir;
+describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
+  let pluginFile;
   beforeEach(() => {
-    dir = tmp.dirSync({ keep: false, unsafeCleanup: true }).name;
+    pluginFile = path.join(__dirname, 'mock', 'plugin.js');
   });
 
-  it('Testing Config From File', () => {
+  it('Testing Config From File', ({ dir }) => {
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {});
     expect(robo(dir)).to.deep.equal([]);
   });
 
-  it('Testing Config From File using appRoot.path', () => {
+  it('Testing Config From File using appRoot.path', ({ dir }) => {
     const appRootPath = appRoot.path;
     appRoot.path = dir;
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {});
@@ -26,11 +24,11 @@ describe('Robo + Plugin Integration Tests', () => {
     appRoot.path = appRootPath;
   });
 
-  it('Testing Missing Config File', () => {
+  it('Testing Missing Config File', ({ dir }) => {
     expect(() => robo(dir)).to.throw(`Configuration File missing: ${dir}/.roboconfig`);
   });
 
-  it('Testing Bad Task', () => {
+  it('Testing Bad Task', ({ dir }) => {
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {
         tasks: ['unknown/@task']
@@ -39,14 +37,14 @@ describe('Robo + Plugin Integration Tests', () => {
     expect(() => robo(dir)).to.throw('Bad Task Name: unknown/@task');
   });
 
-  it('Testing Bad Robo Task', () => {
+  it('Testing Bad Robo Task', ({ dir }) => {
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {}
     });
     expect(() => robo(dir)).to.throw('ValidationError: child "tasks" fails because ["tasks" is required]');
   });
 
-  it('Testing Configuration File Updated', () => {
+  it('Testing Configuration File Updated', ({ dir }) => {
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {
         tasks: ['txt-overwrite/@default']
@@ -59,7 +57,7 @@ describe('Robo + Plugin Integration Tests', () => {
     expect(robo(dir)).to.deep.equal([]);
   });
 
-  it('Testing Target Exclusion', () => {
+  it('Testing Target Exclusion', ({ dir }) => {
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {
         tasks: ['txt-overwrite/@default'],

@@ -1,15 +1,10 @@
 const path = require('path');
-const tmp = require('tmp');
 const expect = require('chai').expect;
+const { describe } = require('node-tdd');
 const { load: loadSpec } = require('../src/index');
 const plugin = require('./mock/plugin');
 
-describe('Testing Test Plugin', () => {
-  let dir;
-  beforeEach(() => {
-    dir = tmp.dirSync({ keep: false, unsafeCleanup: true }).name;
-  });
-
+describe('Testing Test Plugin', { useTmpDir: true }, () => {
   it('Synchronize Tasks Documentation', () => {
     expect(loadSpec(plugin).syncDocs()).to.deep.equal([]);
   });
@@ -36,7 +31,7 @@ describe('Testing Test Plugin', () => {
     });
   });
 
-  it('Testing All Public Tasks (Regeneration)', () => {
+  it('Testing All Public Tasks (Regeneration)', ({ dir }) => {
     expect(loadSpec(plugin).test(dir)).to.deep.equal({
       'xml-merge/@default': [
         'Updated: merge-target.xml',

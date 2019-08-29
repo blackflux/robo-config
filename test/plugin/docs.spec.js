@@ -1,16 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const tmp = require('tmp');
 const expect = require('chai').expect;
+const { describe } = require('node-tdd');
 const sfs = require('smart-fs');
 const { documentFiles, syncDocs } = require('../../src/plugin/docs');
 
-describe('Integration docs.js', () => {
-  let dir;
-  beforeEach(() => {
-    dir = tmp.dirSync({ keep: false, unsafeCleanup: true }).name;
-  });
-
+describe('Integration docs.js', { useTmpDir: true }, () => {
   it('Testing documentFiles', () => {
     expect(documentFiles('root', 'plName', [
       'vendor',
@@ -38,7 +33,7 @@ describe('Integration docs.js', () => {
     ]);
   });
 
-  it('Testing documentFolder (delete and write)', () => {
+  it('Testing documentFolder (delete and write)', ({ dir }) => {
     const taskDir = path.join(dir, 'tasks');
     fs.mkdirSync(taskDir);
     fs.mkdirSync(path.join(taskDir, 'scope'));
