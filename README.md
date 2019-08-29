@@ -47,10 +47,11 @@ Then create a test similar to
 const expect = require('chai').expect;
 const robo = require('robo-config');
 
-it('Apply Robo Configuration', () => {
-  expect(robo()).to.deep.equal([]);
+describe('Running Robo Config', () => {
+  it('Applying Configuration', () => {
+    expect(robo()).to.deep.equal([]);
+  });
 });
-
 ```
 
 
@@ -209,13 +210,15 @@ const expect = require('chai').expect;
 const { load } = require('robo-config');
 const plugin = require('./path/to/plugin');
 
-it('Documenting Plugin Tasks', () => {
-  expect(load(plugin).syncDocs()).to.deep.equal([]);
-});
+describe('Testing Plugin', () => {
+  it('Documenting Plugin Tasks', () => {
+    expect(load(plugin).syncDocs()).to.deep.equal([]);
+  });
 
-it('Testing Plugin Tasks', () => {
-  expect(load(plugin).test(path.join(__dirname, 'path', 'to', 'mock', 'projects'))).to.deep.equal({
-    'task-dir/task-name': []
+  it('Testing Plugin Tasks', () => {
+    expect(load(plugin).test(path.join(__dirname, 'path', 'to', 'mock', 'projects'))).to.deep.equal({
+      'task-dir/task-name': []
+    });
   });
 });
 
