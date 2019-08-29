@@ -1,17 +1,20 @@
 const assert = require('assert');
 const path = require('path');
-const sfs = require('smart-fs');
+const fs = require('smart-fs');
+const Joi = require('joi-strict');
 const { syncDocs, generateDocs } = require('./plugin/docs');
 const { applyTasksRec, listPublicTasks, extractMeta } = require('./plugin/task');
 
 module.exports = (pl) => {
-  assert(Object.keys(pl).filter((k) => k !== 'exports').length === 6, 'Bad Plugin Definition.');
-  assert(typeof pl.name === 'string');
-  assert(typeof pl.taskDir === 'string');
-  assert(typeof pl.reqDir === 'string');
-  assert(typeof pl.varDir === 'string');
-  assert(typeof pl.targetDir === 'string');
-  assert(typeof pl.docDir === 'string');
+  Joi.assert(pl, Joi.object().keys({
+    name: Joi.string(),
+    taskDir: Joi.string(),
+    reqDir: Joi.string(),
+    varDir: Joi.string(),
+    targetDir: Joi.string(),
+    docDir: Joi.string(),
+    exports: Joi.any().optional()
+  }), 'Bad Plugin Definition.');
 
   const applyTasks = (projectRoot, taskNames, variables, exclude) => {
     assert(typeof projectRoot === 'string');
@@ -44,7 +47,7 @@ module.exports = (pl) => {
           .reduce((p, c) => Object.assign(p, { [c]: variables[c] || c }), {});
         knownVars.push(...Object.keys(taskVars));
         const taskResult = applyTasks(taskRoot, [taskName], taskVars, []);
-        if (sfs.smartWrite(path.join(taskRoot, 'CONFDOCS.md'), genDocs([taskName], []))) {
+        if (fs.smartWrite(path.join(taskRoot, 'CONFDOCS.md'), genDocs([taskName], []))) {
           taskResult.push('Updated: CONFDOCS.md');
         }
         result[taskName] = taskResult;
