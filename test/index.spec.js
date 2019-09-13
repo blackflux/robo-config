@@ -41,7 +41,7 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {}
     });
-    expect(() => robo(dir)).to.throw('ValidationError: child "tasks" fails because ["tasks" is required]');
+    expect(() => robo(dir)).to.throw('ValidationError: "tasks" is required');
   });
 
   it('Testing Configuration File Updated', ({ dir }) => {

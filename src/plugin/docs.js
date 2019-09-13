@@ -266,9 +266,9 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
         }`);
         content.push('');
         assert(
-          Joi.validate(data, def.schema).error === null,
+          def.schema.validate(data).error === undefined,
           `Invalid ${def.name} Definition: ${e}\n\n${JSON
-            .stringify(Joi.validate(data, def.schema).error, null, 2)}`
+            .stringify(def.schema.validate(data).error, null, 2)}`
         );
         [[
           'validFor', ':small_blue_diamond:'

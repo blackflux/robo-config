@@ -37,8 +37,8 @@ module.exports = (projectRoot = appRoot.path) => {
   Object
     .values(pluginCfgs)
     .forEach((pluginPayload) => {
-      const validationError = Joi.validate(pluginPayload, pluginPayloadSchema).error;
-      if (validationError !== null) {
+      const validationError = pluginPayloadSchema.validate(pluginPayload).error;
+      if (validationError !== undefined) {
         throw new Error(validationError);
       }
     });
