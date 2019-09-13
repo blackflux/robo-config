@@ -37,7 +37,7 @@ module.exports = (projectRoot = appRoot.path) => {
   Object
     .values(pluginCfgs)
     .forEach((pluginPayload) => {
-      Joi.assert(pluginPayload, pluginPayloadSchema);
+      Joi.assert(pluginPayload, pluginPayloadSchema, 'Validation Error:\n\n');
     });
 
   // load the plugins
