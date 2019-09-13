@@ -265,7 +265,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
           data.type !== undefined ? `: \`${data.type}\`` : ''
         }`);
         content.push('');
-        Joi.assert(data, def.schema);
+        Joi.assert(data, def.schema, `Invalid ${def.name} Definition: ${e}\n\n`);
         [[
           'validFor', ':small_blue_diamond:'
         ], [
