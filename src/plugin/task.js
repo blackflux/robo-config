@@ -64,10 +64,7 @@ const loadTask = (taskDir, taskName, variables) => {
     task.pretty = task.pretty === undefined ? true : task.pretty;
   }
 
-  assert(
-    taskSchema.validate(task).error === undefined,
-    `Invalid Task: ${taskName}\n\n${JSON.stringify(taskSchema.validate(task).error, null, 2)}`
-  );
+  Joi.assert(task, taskSchema);
   assert(
     (taskName.includes('/@') || taskName.includes('/#')) === (task.tasks !== undefined),
     `Invalid Task Name Detected: ${taskName}`
