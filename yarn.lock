@@ -3573,6 +3573,13 @@ joi-strict@1.1.1:
   dependencies:
     "@hapi/joi" "16.0.1"
 
+joi-strict@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/joi-strict/-/joi-strict-1.1.2.tgz#6ccc94f615ccafb4bf707a7764b184ae152690a4"
+  integrity sha512-5FJarK5iGIUL4e+CBhvv4B9ptW2GcpUVkTKhNfwYNYMjG2UjQV2PGO5c5oQLUIS7s7ugO5Z9W5+LGuLfeQUqDA==
+  dependencies:
+    "@hapi/joi" "16.0.1"
+
 js-gardener@2.0.89:
   version "2.0.89"
   resolved "https://registry.yarnpkg.com/js-gardener/-/js-gardener-2.0.89.tgz#2ae4a3b21694d3b77c430f5758710b7394ea8c9c"
@@ -5017,6 +5024,11 @@ object-deep-contain@1.0.18:
   resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.18.tgz#74fb17fd70648712e131670f813ca47f3f8538ea"
   integrity sha512-Mr3c+1cGX3WoZr2sTsjbUjurckRNvu9RUPwoP8yeG8nDCnU5dswIcyq6IWrrZQAp/65akHaZl3UC4OxRUCzvNw==
 
+object-deep-contain@1.0.19:
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.19.tgz#faec02a5552f70c58f972344cfafe9f778cdf274"
+  integrity sha512-SYI0nlnmN0BRurAyXcbIzaO8aih9IYcNbBj1KeawlL5wfB5/jp+agmuLaUXpXHYZQ9zbRficvBSuR7XKcaNe6A==
+
 object-inspect@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.6.0.tgz#c70b6cbf72f274aab4c34c0c82f5167bf82cf15b"
@@ -5041,6 +5053,11 @@ object-treeify@1.1.19:
   version "1.1.19"
   resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.19.tgz#5987fae7218c2ff0bac547ed632fa23571cc8866"
   integrity sha512-I1RwSZyxXhgfm3+RYmBSZWozLHe1UuGn6dwW3Ppz3Iub5xzNs0TArp7UgPER22o914EIOcRfCQokRM9MLZGOOQ==
+
+object-treeify@1.1.20:
+  version "1.1.20"
+  resolved "https://registry.yarnpkg.com/object-treeify/-/object-treeify-1.1.20.tgz#34076946e2b6a14c8a3accef4f3a07686659ebaa"
+  integrity sha512-vtED3MD4Y3lEP1BE6klEP10HWj1XNPC+dCWo7QkrDpXspQVHg5gnJ8cSt9YxZhgGSM3YDV87dEjzOnoHWbGxmg==
 
 object-visit@^1.0.0:
   version "1.0.1"
