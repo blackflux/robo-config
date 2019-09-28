@@ -141,6 +141,7 @@ Actionable task definition files contain the following keys:
 - `target`: The relative file path to the target file in the project that robo-config is used in.
 - `format` (_optional_): Indicates the format of the target file. E.g. the file extension might be `dat`, but the content `xml`). 
 Automatically deduced by default. See [smart-fs](https://github.com/blackflux/smart-fs) for supported formats.
+- `resolve`: Whether or not to resolve the snippet.
 - `strategy`: One of the available merge strategies. These are detailed below.
 - `create` (_optional_): When set to `false`, no action is taken if the file does not already exist.
 - `pretty` (_optional_): By default files are written in [pretty-mode](https://github.com/blackflux/smart-fs). Can be set to `false` to deactivate. Note that files are only written when the _logical_ content changes.
