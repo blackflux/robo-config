@@ -13,6 +13,7 @@ const strategies = require('./strategies');
 const taskSchema = Joi.object().keys({
   target: Joi.string().optional(),
   format: Joi.string().allow(null).optional(),
+  resolve: Joi.boolean().optional(),
   strategy: Joi.string().valid(...Object.keys(strategies)).optional(),
   create: Joi.boolean().optional(),
   pretty: Joi.boolean().optional(),
@@ -29,6 +30,7 @@ const taskSchema = Joi.object().keys({
   tasks: Joi.array().items(Joi.string()).optional()
 })
   .and('target', 'strategy', 'create', 'snippets', 'format', 'requires', 'purpose')
+  .with('resolve', 'target')
   .and('tasks', 'description')
   .xor('target', 'tasks');
 
@@ -41,7 +43,7 @@ const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
 
   const fileName = sfs.guessFile(path.join(snippetDir, snippetName));
   assert(fileName !== null, `Invalid Snippet File Name: ${snippetName}`);
-  const snippet = sfs.smartRead(fileName, { treatAs: task.format });
+  const snippet = sfs.smartRead(fileName, { treatAs: task.format, resolve: task.resolve || false });
 
   return populateVars(snippet, snippetVars, false);
 };
