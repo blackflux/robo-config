@@ -1,0 +1,7 @@
+{
+  "description": "Short description for resolved-target.yml",
+  "details": ["Long description for resolved-target.yml"],
+  "formats": ["yml"],
+  "requires": [],
+  "website": null
+}
