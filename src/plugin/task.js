@@ -29,8 +29,7 @@ const taskSchema = Joi.object().keys({
   description: Joi.string().optional(),
   tasks: Joi.array().items(Joi.string()).optional()
 })
-  .and('target', 'strategy', 'create', 'snippets', 'format', 'requires', 'purpose')
-  .with('resolve', 'target')
+  .and('target', 'strategy', 'create', 'snippets', 'format', 'requires', 'purpose', 'resolve')
   .and('tasks', 'description')
   .xor('target', 'tasks');
 
@@ -43,7 +42,10 @@ const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
 
   const fileName = sfs.guessFile(path.join(snippetDir, snippetName));
   assert(fileName !== null, `Invalid Snippet File Name: ${snippetName}`);
-  const snippet = sfs.smartRead(fileName, { treatAs: task.format, resolve: task.resolve || false });
+  const snippet = sfs.smartRead(fileName, {
+    treatAs: task.format,
+    resolve: task.resolve
+  });
 
   return populateVars(snippet, snippetVars, false);
 };
@@ -64,6 +66,7 @@ const loadTask = (taskDir, taskName, variables) => {
     task.format = task.format || null;
     task.create = task.create === undefined ? true : task.create;
     task.pretty = task.pretty === undefined ? true : task.pretty;
+    task.resolve = task.resolve === undefined ? false : task.resolve;
   }
 
   Joi.assert(task, taskSchema, `Invalid Task: ${taskName}\n\n`);

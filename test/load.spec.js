@@ -27,7 +27,8 @@ describe('Testing Test Plugin', { useTmpDir: true }, () => {
       'json-not-pretty/@default': [],
       'json-shallow-default/@default': [],
       'json-deep-default/@default': [],
-      'escaped-variable/@default': []
+      'escaped-variable/@default': [],
+      'yml-resolved/@default': []
     });
   });
 
@@ -95,6 +96,10 @@ describe('Testing Test Plugin', { useTmpDir: true }, () => {
       'escaped-variable/@default': [
         'Updated: escaped-variable.txt',
         'Updated: CONFDOCS.md'
+      ],
+      'yml-resolved/@default': [
+        'Updated: resolved-target.yml',
+        'Updated: CONFDOCS.md'
       ]
     });
     expect(loadSpec(plugin).test(dir, { variable: 'custom' })).to.deep.equal({
@@ -117,7 +122,8 @@ describe('Testing Test Plugin', { useTmpDir: true }, () => {
       'json-not-pretty/@default': [],
       'json-shallow-default/@default': [],
       'json-deep-default/@default': [],
-      'escaped-variable/@default': []
+      'escaped-variable/@default': [],
+      'yml-resolved/@default': []
     });
   });
 });

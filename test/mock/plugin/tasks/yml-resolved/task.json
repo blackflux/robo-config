@@ -1,0 +1,13 @@
+{
+  "target": "resolved-target.yml",
+  "resolve": true,
+  "strategy": "overwrite",
+  "pretty": false,
+  "snippets": [
+    "snippet"
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}
