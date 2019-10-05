@@ -4,6 +4,7 @@ const fs = require('smart-fs');
 const Joi = require('joi-strict');
 const { syncDocs, generateDocs } = require('./plugin/docs');
 const { applyTasksRec, listPublicTasks, extractMeta } = require('./plugin/task');
+const lockFile = require('./lock-file');
 
 module.exports = (pl) => {
   Joi.assert(pl, Joi.object().keys({
@@ -22,10 +23,16 @@ module.exports = (pl) => {
     assert(variables instanceof Object && !Array.isArray(variables));
     assert(Array.isArray(exclude));
 
+    lockFile.resetPlugin(projectRoot, pl.name);
+
     const meta = extractMeta(pl.taskDir, taskNames);
     const unexpectedVars = Object.keys(variables).filter((v) => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
-    return applyTasksRec(pl.taskDir, projectRoot, taskNames, variables, exclude);
+    const result = applyTasksRec(pl.name, pl.taskDir, projectRoot, taskNames, variables, exclude);
+
+    lockFile.validatePlugin(projectRoot, pl.name);
+
+    return result;
   };
   const genDocs = (taskNames, exclude) => [
     `## Plugin [${pl.name}](https://www.npmjs.com/package/${pl.name})`,
@@ -34,6 +41,7 @@ module.exports = (pl) => {
   ];
 
   return ({
+    name: pl.name,
     syncDocs: () => syncDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.targetDir, pl.docDir),
     generateDocs: (taskNames, exclude) => genDocs(taskNames, exclude),
     apply: applyTasks,

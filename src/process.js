@@ -4,6 +4,7 @@ const Joi = require('joi-strict');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
 const load = require('./load');
+const lockFile = require('./lock-file');
 
 const pluginPayloadSchema = Joi.object().keys({
   tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)),
@@ -17,8 +18,8 @@ module.exports = (projectRoot = appRoot.path) => {
 
   // load configuration file
   const configFile = path.join(projectRoot, '.roboconfig');
-  assert(sfs.guessFile(configFile) != null, `Configuration File missing: ${configFile}`);
-  const config = sfs.smartRead(sfs.guessFile(configFile));
+  assert(sfs.guessFile(configFile, { exclude: ['lock'] }) != null, `Configuration File missing: ${configFile}`);
+  const config = sfs.smartRead(sfs.guessFile(configFile, { exclude: ['lock'] }));
   assert(config instanceof Object && !Array.isArray(config), 'Invalid configuration file content.');
 
   // initialize configs with static defaults
@@ -48,6 +49,9 @@ module.exports = (projectRoot = appRoot.path) => {
       const plugin = load(require(pluginName));
       Object.assign(pluginPayload, { plugin });
     });
+
+  // validate plugin lockfile
+  lockFile.validateConfig(projectRoot, Object.values(pluginCfgs).map((e) => e.plugin.name));
 
   // execute plugins
   const result = [];
