@@ -1,0 +1,5 @@
+{
+  "mock-plugin": [
+    "nested/overwrite-target.txt"
+  ]
+}
