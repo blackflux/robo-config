@@ -28,12 +28,11 @@ module.exports = (pl) => {
     const meta = extractMeta(pl.taskDir, taskNames);
     const unexpectedVars = Object.keys(variables).filter((v) => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
-    const result = applyTasksRec(pl.taskDir, projectRoot, taskNames, variables, exclude);
 
     meta.target.forEach((t) => lockFile.markPluginFile(projectRoot, pl.name, t));
     lockFile.validatePlugin(projectRoot, pl.name);
 
-    return result;
+    return applyTasksRec(pl.taskDir, projectRoot, taskNames, variables, exclude);
   };
   const genDocs = (taskNames, exclude) => [
     `## Plugin [${pl.name}](https://www.npmjs.com/package/${pl.name})`,
