@@ -4,7 +4,6 @@ const fs = require('smart-fs');
 const Joi = require('joi-strict');
 const { syncDocs, generateDocs } = require('./plugin/docs');
 const { applyTasksRec, listPublicTasks, extractMeta } = require('./plugin/task');
-const lockFile = require('./lock-file');
 
 module.exports = (pl) => {
   Joi.assert(pl, Joi.object().keys({
@@ -26,7 +25,6 @@ module.exports = (pl) => {
     const meta = extractMeta(pl.taskDir, taskNames);
     const unexpectedVars = Object.keys(variables).filter((v) => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
-    lockFile.validatePlugin(projectRoot, pl.name, meta.target);
     return applyTasksRec(pl.taskDir, projectRoot, taskNames, variables, exclude);
   };
   const genDocs = (taskNames, exclude) => [
@@ -37,6 +35,7 @@ module.exports = (pl) => {
 
   return ({
     name: pl.name,
+    getTargets: (taskNames) => extractMeta(pl.taskDir, taskNames),
     syncDocs: () => syncDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.targetDir, pl.docDir),
     generateDocs: (taskNames, exclude) => genDocs(taskNames, exclude),
     apply: applyTasks,

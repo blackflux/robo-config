@@ -51,7 +51,7 @@ module.exports = (projectRoot = appRoot.path) => {
     });
 
   // validate plugin lockfile
-  lockFile.validatePlugins(projectRoot, Object.values(pluginCfgs).map((e) => e.plugin.name));
+  lockFile.validate(projectRoot, Object.values(pluginCfgs));
 
   // execute plugins
   const result = [];
