@@ -8,7 +8,6 @@ const sfs = require('smart-fs');
 const objectScan = require('object-scan');
 const { populateVars, determineVars } = require('./vars');
 const strategies = require('./strategies');
-const lockFile = require('../lock-file');
 
 
 const taskSchema = Joi.object().keys({
@@ -110,7 +109,7 @@ const listPublicTasks = (taskDir) => sfs
   .map((f) => f.slice(0, -5));
 module.exports.listPublicTasks = listPublicTasks;
 
-const applyTasksRec = (pluginName, taskDir, projectRoot, taskNames, variables, exclude) => {
+const applyTasksRec = (taskDir, projectRoot, taskNames, variables, exclude) => {
   const result = [];
   taskNames.forEach((taskName) => {
     const task = loadTask(taskDir, taskName, variables);
@@ -124,10 +123,7 @@ const applyTasksRec = (pluginName, taskDir, projectRoot, taskNames, variables, e
     }
     if (task.tasks !== undefined) {
       const subtasks = task.tasks.map((stn) => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`));
-      result.push(...applyTasksRec(pluginName, taskDir, projectRoot, subtasks, variables, exclude));
-    }
-    if (task.target !== undefined) {
-      lockFile.markPluginFile(projectRoot, pluginName, task.target);
+      result.push(...applyTasksRec(taskDir, projectRoot, subtasks, variables, exclude));
     }
   });
   return result;
