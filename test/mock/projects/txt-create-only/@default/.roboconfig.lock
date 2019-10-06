@@ -1,5 +1,5 @@
 {
-  "mock-plugin": {
-    "create-only-target.txt": true
-  }
+  "mock-plugin": [
+    "create-only-target.txt"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "mock-plugin": {
-    "${misc}.txt": true
-  }
+  "mock-plugin": [
+    "${misc}.txt"
+  ]
 }

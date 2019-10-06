@@ -1,5 +1,5 @@
 {
-  "mock-plugin": {
-    "unique-top.txt": true
-  }
+  "mock-plugin": [
+    "unique-top.txt"
+  ]
 }

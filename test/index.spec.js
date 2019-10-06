@@ -94,12 +94,10 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
       }
     });
     sfs.smartWrite(path.join(dir, '.roboconfig.lock'), {
-      'mock-plugin': {
-        'unknown-file.txt': true
-      }
+      'mock-plugin': ['unknown-file.txt']
     }, { treatAs: 'json' });
     expect(() => robo(dir)).to.throw(
-      'File "unknown-file.txt" not managed by plugin "mock-plugin". '
+      'File(s) "unknown-file.txt" not managed by plugin "mock-plugin". '
       + 'Delete file as necessary and remove from lock file.'
     );
   });

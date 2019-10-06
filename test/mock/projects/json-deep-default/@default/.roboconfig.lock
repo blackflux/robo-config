@@ -1,5 +1,5 @@
 {
-  "mock-plugin": {
-    "default-deep-target.json": true
-  }
+  "mock-plugin": [
+    "default-deep-target.json"
+  ]
 }

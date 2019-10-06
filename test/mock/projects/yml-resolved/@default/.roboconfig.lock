@@ -1,5 +1,5 @@
 {
-  "mock-plugin": {
-    "resolved-target.yml": true
-  }
+  "mock-plugin": [
+    "resolved-target.yml"
+  ]
 }

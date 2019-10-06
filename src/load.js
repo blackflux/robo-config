@@ -23,15 +23,10 @@ module.exports = (pl) => {
     assert(variables instanceof Object && !Array.isArray(variables));
     assert(Array.isArray(exclude));
 
-    lockFile.resetPlugin(projectRoot, pl.name);
-
     const meta = extractMeta(pl.taskDir, taskNames);
     const unexpectedVars = Object.keys(variables).filter((v) => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
-
-    meta.target.forEach((t) => lockFile.markPluginFile(projectRoot, pl.name, t));
-    lockFile.validatePlugin(projectRoot, pl.name);
-
+    lockFile.validatePlugin(projectRoot, pl.name, meta.target);
     return applyTasksRec(pl.taskDir, projectRoot, taskNames, variables, exclude);
   };
   const genDocs = (taskNames, exclude) => [

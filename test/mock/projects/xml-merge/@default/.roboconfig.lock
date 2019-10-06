@@ -1,5 +1,5 @@
 {
-  "mock-plugin": {
-    "merge-target.xml": true
-  }
+  "mock-plugin": [
+    "merge-target.xml"
+  ]
 }

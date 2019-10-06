@@ -1,5 +1,5 @@
 {
-  "mock-plugin": {
-    "merge-below-title.txt": true
-  }
+  "mock-plugin": [
+    "merge-below-title.txt"
+  ]
 }

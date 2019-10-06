@@ -1,5 +1,5 @@
 {
-  "mock-plugin": {
-    "merge-shallow-target.json": true
-  }
+  "mock-plugin": [
+    "merge-shallow-target.json"
+  ]
 }

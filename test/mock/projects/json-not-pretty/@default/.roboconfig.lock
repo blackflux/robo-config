@@ -1,5 +1,5 @@
 {
-  "mock-plugin": {
-    "not-pretty-target.json": true
-  }
+  "mock-plugin": [
+    "not-pretty-target.json"
+  ]
 }

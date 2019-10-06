@@ -1,5 +1,5 @@
 {
-  "mock-plugin": {
-    "overwrite-target.txt": true
-  }
+  "mock-plugin": [
+    "overwrite-target.txt"
+  ]
 }
