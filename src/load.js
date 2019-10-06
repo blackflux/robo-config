@@ -34,6 +34,8 @@ module.exports = (pl) => {
   ];
 
   return ({
+    name: pl.name,
+    getTargets: (taskNames) => extractMeta(pl.taskDir, taskNames),
     syncDocs: () => syncDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.targetDir, pl.docDir),
     generateDocs: (taskNames, exclude) => genDocs(taskNames, exclude),
     apply: applyTasks,

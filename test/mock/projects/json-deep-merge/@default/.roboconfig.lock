@@ -1,0 +1,5 @@
+{
+  "mock-plugin": [
+    "merge-deep-target.json"
+  ]
+}

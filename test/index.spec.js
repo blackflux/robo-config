@@ -73,4 +73,32 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
       + 'overwrite-target.txt</strike></a></code><br/>'
     );
   });
+
+  it('Testing Unknown Plugin', ({ dir }) => {
+    sfs.smartWrite(path.join(dir, '.roboconfig.json'), {});
+    sfs.smartWrite(path.join(dir, '.roboconfig.lock'), {
+      unknown: {
+        'some-file.txt': true
+      }
+    }, { treatAs: 'json' });
+    expect(() => robo(dir)).to.throw(
+      'Unknown plugin "unknown". Delete files "some-file.txt" '
+      + 'as necessary and remove from lock file.'
+    );
+  });
+
+  it('Testing Unknown File', ({ dir }) => {
+    sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
+      [pluginFile]: {
+        tasks: ['txt-overwrite/@default']
+      }
+    });
+    sfs.smartWrite(path.join(dir, '.roboconfig.lock'), {
+      'mock-plugin': ['unknown-file.txt']
+    }, { treatAs: 'json' });
+    expect(() => robo(dir)).to.throw(
+      'File(s) "unknown-file.txt" not managed by plugin "mock-plugin". '
+      + 'Delete file as necessary and remove from lock file.'
+    );
+  });
 });

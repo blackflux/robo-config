@@ -1,0 +1,5 @@
+{
+  "mock-plugin": [
+    "no-create-target.json"
+  ]
+}
