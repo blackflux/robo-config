@@ -51,8 +51,8 @@
     "eslint-plugin-json": "1.4.0",
     "eslint-plugin-markdown": "1.0.0",
     "eslint-plugin-mocha": "6.1.1",
-    "js-gardener": "2.0.105",
-    "node-tdd": "2.5.15",
+    "js-gardener": "2.0.106",
+    "node-tdd": "2.5.16",
     "nyc": "14.1.1",
     "semantic-release": "15.13.24"
   },
@@ -100,7 +100,7 @@
   ],
   "dependencies": {
     "app-root-path": "2.2.1",
-    "deepmerge": "4.1.0",
+    "deepmerge": "4.1.1",
     "joi-strict": "1.1.7",
     "lodash.clonedeep": "4.5.0",
     "lodash.difference": "4.5.0",
