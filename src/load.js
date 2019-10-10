@@ -22,6 +22,11 @@ module.exports = (pl) => {
     assert(variables instanceof Object && !Array.isArray(variables));
     assert(Array.isArray(exclude));
 
+    if (fs.existsSync(path.join(projectRoot, 'package.json'))) {
+      const pluginName = fs.smartRead(path.join(projectRoot, 'package.json')).name;
+      assert(pluginName === pl.name, `Bad plugin name "${pl.name}". Should be "${pluginName}".`);
+    }
+
     const meta = extractMeta(pl.taskDir, taskNames);
     const unexpectedVars = Object.keys(variables).filter((v) => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
