@@ -45,7 +45,6 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
   });
 
   it('Testing Configuration File Updated', ({ dir }) => {
-    sfs.smartWrite(path.join(dir, 'package.json'), { name: 'mock-plugin' });
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {
         tasks: ['txt-overwrite/@default']
