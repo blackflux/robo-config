@@ -101,13 +101,13 @@
   "dependencies": {
     "app-root-path": "3.0.0",
     "deepmerge": "4.2.2",
-    "joi-strict": "1.1.8",
+    "joi-strict": "1.1.9",
     "lodash.clonedeep": "4.5.0",
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
     "object-deep-contain": "1.0.20",
     "object-scan": "10.0.14",
     "object-treeify": "1.1.21",
-    "smart-fs": "1.11.0"
+    "smart-fs": "1.11.2"
   }
 }
