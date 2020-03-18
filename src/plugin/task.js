@@ -89,9 +89,12 @@ const loadTask = (taskDir, taskName, variables) => {
 };
 
 
-const applyTask = (taskDir, projectRoot, task) => {
+const applyTask = (taskDir, projectRoot, task, exclude) => {
   assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
   assert(typeof projectRoot === 'string', 'Invalid "projectRoot" parameter format.');
+  if (exclude.includes(task.target)) {
+    return false;
+  }
 
   const target = path.join(projectRoot, task.target);
   return sfs.smartWrite(target, task.toWrite, {
@@ -116,8 +119,7 @@ const applyTasksRec = (taskDir, projectRoot, taskNames, variables, exclude) => {
     assert(task !== null, `Bad Task Name: ${taskName}`);
     if (
       task.target !== undefined
-      && !exclude.includes(task.target)
-      && applyTask(taskDir, projectRoot, task) === true
+      && applyTask(taskDir, projectRoot, task, exclude) === true
     ) {
       result.push(`Updated: ${task.target}`);
     }
