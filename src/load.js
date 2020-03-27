@@ -52,11 +52,11 @@ module.exports = (pl) => {
         const meta = extractMeta(pl.taskDir, [taskName]);
         const taskVars = meta.variables
           .reduce((p, c) => Object.assign(p, { [c]: variables[c] || c }), {});
+        knownTargets[path.join(taskName, 'CONFDOCS.md')] = true;
+        knownTargets[path.join(taskName, '.roboconfig.lock')] = true;
         meta.target.forEach((t) => {
           knownTargets[path.join(taskName, populateVars({ t }, taskVars, true).t)] = true;
         });
-        knownTargets[path.join(taskName, 'CONFDOCS.md')] = true;
-        knownTargets[path.join(taskName, '.roboconfig.lock')] = true;
         knownVars.push(...Object.keys(taskVars));
         const taskResult = applyTasks(taskRoot, [taskName], taskVars, []);
         if (fs.smartWrite(path.join(taskRoot, 'CONFDOCS.md'), genDocs([taskName], []))) {
