@@ -72,7 +72,10 @@ module.exports = (pl) => {
       const rougeTargets = Object
         .entries(knownTargets)
         .filter(([_, v]) => v !== true);
-      assert(rougeTargets.length === 0, `Rouge test targets detected: ${rougeTargets}`);
+      assert(
+        rougeTargets.length === 0,
+        `Rouge test targets detected: ${JSON.stringify(rougeTargets)}`
+      );
       return result;
     }
   });
