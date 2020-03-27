@@ -50,7 +50,8 @@ module.exports = (pl) => {
       taskNames.forEach((taskName) => {
         const taskRoot = path.join(testRoot, taskName);
         const meta = extractMeta(pl.taskDir, [taskName]);
-        const taskVars = meta.variables.reduce((p, c) => Object.assign(p, { [c]: variables[c] || c }), {});
+        const taskVars = meta.variables
+          .reduce((p, c) => Object.assign(p, { [c]: variables[c] || c }), {});
         meta.target.forEach((t) => {
           knownTargets[path.join(taskName, populateVars({ t }, taskVars, true).t)] = true;
         });
