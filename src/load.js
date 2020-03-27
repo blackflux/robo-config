@@ -55,7 +55,8 @@ module.exports = (pl) => {
         knownTargets[path.join(taskName, 'CONFDOCS.md')] = true;
         knownTargets[path.join(taskName, '.roboconfig.lock')] = true;
         meta.target.forEach((t) => {
-          knownTargets[path.join(taskName, populateVars({ t }, taskVars, true).t)] = true;
+          const target = populateVars([t], taskVars, true)[0];
+          knownTargets[path.join(taskName, target)] = true;
         });
         knownVars.push(...Object.keys(taskVars));
         const taskResult = applyTasks(taskRoot, [taskName], taskVars, []);
