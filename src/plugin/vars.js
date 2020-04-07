@@ -44,7 +44,7 @@ module.exports.populateVars = (data, variables, allowUnused) => {
 
   objectScan(['**'], {
     joined: false,
-    filterFn: (key, value, { parents }) => {
+    filterFn: ({ key, value, parents }) => {
       const relKey = key[key.length - 1];
       const entry = { key: relKey, value };
 
@@ -84,7 +84,7 @@ module.exports.determineVars = (data) => {
   const result = [];
   objectScan(['**'], {
     joined: false,
-    filterFn: (key, value) => {
+    filterFn: ({ key, value }) => {
       [key[key.length - 1], value]
         .filter((str) => typeof str === 'string')
         .map((str) => str.match(varRegex))
