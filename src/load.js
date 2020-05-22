@@ -17,28 +17,28 @@ module.exports = (pl) => {
     exports: Joi.any().optional()
   }), 'Bad Plugin Definition.');
 
-  const applyTasks = (projectRoot, taskNames, variables, exclude) => {
+  const applyTasks = (projectRoot, tasks, variables, exclude) => {
     assert(typeof projectRoot === 'string');
-    assert(Array.isArray(taskNames));
+    assert(!Array.isArray(tasks) && tasks instanceof Object);
     assert(variables instanceof Object && !Array.isArray(variables));
     assert(Array.isArray(exclude));
 
-    const meta = extractMeta(pl.taskDir, taskNames);
+    const meta = extractMeta(pl.taskDir, tasks);
     const unexpectedVars = Object.keys(variables).filter((v) => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
-    return applyTasksRec(pl.taskDir, projectRoot, taskNames, variables, exclude);
+    return applyTasksRec(pl.taskDir, projectRoot, tasks, variables, exclude);
   };
-  const genDocs = (taskNames, exclude) => [
+  const genDocs = (tasks, exclude) => [
     `## Plugin [${pl.name}](https://www.npmjs.com/package/${pl.name})`,
     '',
-    ...generateDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.targetDir, taskNames, exclude, 2)
+    ...generateDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.targetDir, tasks, exclude, 2)
   ];
 
   return ({
     name: pl.name,
-    getTargets: (taskNames) => extractMeta(pl.taskDir, taskNames),
+    getTargets: (tasks) => extractMeta(pl.taskDir, tasks),
     syncDocs: () => syncDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.targetDir, pl.docDir),
-    generateDocs: (taskNames, exclude) => genDocs(taskNames, exclude),
+    generateDocs: (tasks, exclude) => genDocs(tasks, exclude),
     apply: applyTasks,
     test: (testRoot, variables = {}) => {
       const knownTargets = fs
@@ -48,8 +48,9 @@ module.exports = (pl) => {
       const result = {};
       const knownVars = [];
       taskNames.forEach((taskName) => {
+        const task = { [taskName]: {} };
         const taskRoot = path.join(testRoot, taskName);
-        const meta = extractMeta(pl.taskDir, [taskName]);
+        const meta = extractMeta(pl.taskDir, task);
         const taskVars = meta.variables
           .reduce((p, c) => Object.assign(p, { [c]: variables[c] || c }), {});
         knownTargets[path.join(taskName, 'CONFDOCS.md')] = true;
@@ -59,8 +60,8 @@ module.exports = (pl) => {
           knownTargets[path.join(taskName, target)] = true;
         });
         knownVars.push(...Object.keys(taskVars));
-        const taskResult = applyTasks(taskRoot, [taskName], taskVars, []);
-        if (fs.smartWrite(path.join(taskRoot, 'CONFDOCS.md'), genDocs([taskName], []))) {
+        const taskResult = applyTasks(taskRoot, task, taskVars, []);
+        if (fs.smartWrite(path.join(taskRoot, 'CONFDOCS.md'), genDocs(task, []))) {
           taskResult.push('Updated: CONFDOCS.md');
         }
         result[taskName] = taskResult;

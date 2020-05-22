@@ -112,10 +112,12 @@ const listPublicTasks = (taskDir) => sfs
   .map((f) => f.slice(0, -5));
 module.exports.listPublicTasks = listPublicTasks;
 
-const applyTasksRec = (taskDir, projectRoot, taskNames, variables, exclude) => {
+const applyTasksRec = (taskDir, projectRoot, tasks, variables, exclude) => {
   const result = [];
-  taskNames.forEach((taskName) => {
-    const task = loadTask(taskDir, taskName, variables);
+  Object.entries(tasks).forEach(([tid, taskVars]) => {
+    const [taskName, ref] = tid.split('~');
+    const vars = populateVars({ ...variables, ...taskVars }, { ref }, true);
+    const task = loadTask(taskDir, taskName, vars);
     assert(task !== null, `Bad Task Name: ${taskName}`);
     if (
       task.target !== undefined
@@ -124,32 +126,37 @@ const applyTasksRec = (taskDir, projectRoot, taskNames, variables, exclude) => {
       result.push(`Updated: ${task.target}`);
     }
     if (task.tasks !== undefined) {
-      const subtasks = task.tasks.map((stn) => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`));
-      result.push(...applyTasksRec(taskDir, projectRoot, subtasks, variables, exclude));
+      const subtasks = task.tasks.reduce(
+        (p, stn) => Object.assign(p, {
+          [stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`]: {}
+        }),
+        {}
+      );
+      result.push(...applyTasksRec(taskDir, projectRoot, subtasks, vars, exclude));
     }
   });
   return result;
 };
 module.exports.applyTasksRec = applyTasksRec;
 
-const extractMeta = (taskDir, taskNames) => {
+const extractMeta = (taskDir, tasks) => {
   assert(typeof taskDir === 'string', 'Invalid "taskDir" parameter format.');
   assert(
-    Array.isArray(taskNames) && taskNames.every((t) => typeof t === 'string'),
-    'Invalid "taskNames" parameter format.'
+    !Array.isArray(tasks) && tasks instanceof Object,
+    'Invalid "tasks" parameter format.'
   );
 
   const variables = new Set();
   const target = new Set();
 
-  const buffer = taskNames.slice();
-  while (buffer.length !== 0) {
-    const taskName = buffer.pop();
+  const taskNameStack = Object.keys(tasks).map((tid) => tid.split('~')[0]);
+  while (taskNameStack.length !== 0) {
+    const taskName = taskNameStack.pop();
     const fileName = sfs.guessFile(path.join(taskDir, taskName));
     if (fileName !== null) {
       const task = sfs.smartRead(fileName);
       if (task.tasks !== undefined) {
-        buffer.push(...task.tasks.map((stn) => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`)));
+        taskNameStack.push(...task.tasks.map((stn) => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`)));
       }
       objectScan(['snippets[*].variables', 'target'], { joined: false })(task)
         .forEach((vs) => determineVars([get(task, vs)]).forEach((v) => variables.add(v)));
