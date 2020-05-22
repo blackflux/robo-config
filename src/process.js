@@ -7,7 +7,7 @@ const load = require('./load');
 const lockFile = require('./lock-file');
 
 const pluginPayloadSchema = Joi.object().keys({
-  tasks: Joi.array().items(Joi.string().regex(/^[^/@]+\/@[^/@]+$/)),
+  tasks: Joi.object().pattern(Joi.string().regex(/^[^/@]+\/@[^/@]+$/), Joi.object()),
   variables: Joi.object(),
   exclude: Joi.array().items(Joi.string()).unique(),
   confDocs: Joi.string()
@@ -33,6 +33,17 @@ module.exports = (projectRoot = appRoot.path) => {
         ...v
       }
     }), {});
+
+  // generify data format
+  Object
+    .values(pluginCfgs)
+    .forEach((pluginCfg) => {
+      if (Array.isArray(pluginCfg.tasks)) {
+        Object.assign(pluginCfg, {
+          tasks: pluginCfg.tasks.reduce((p, c) => Object.assign(p, { [c]: {} }), {})
+        });
+      }
+    });
 
   // validate configs
   Object

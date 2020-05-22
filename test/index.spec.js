@@ -101,4 +101,32 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
       + 'Delete file as necessary and remove from lock file.'
     );
   });
+
+  it('Testing Multi Task', ({ dir }) => {
+    sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
+      [pluginFile]: {
+        tasks: {
+          'misc/@default~target1': {
+            // eslint-disable-next-line no-template-curly-in-string
+            misc: '${self}'
+          },
+          'misc/@default~target2': {
+            // eslint-disable-next-line no-template-curly-in-string
+            misc: '${self}'
+          }
+        },
+        variables: {
+          variable: 'var'
+        }
+      }
+    });
+    expect(robo(dir)).to.deep.equal([
+      'Updated: target1.txt',
+      'Updated: target2.txt',
+      'Updated: CONFDOCS.md'
+    ]);
+    expect(robo(dir)).to.deep.equal([]);
+    expect(sfs.smartRead(path.join(dir, 'target1.txt'))).to.deep.equal(['var']);
+    expect(sfs.smartRead(path.join(dir, 'target2.txt'))).to.deep.equal(['var']);
+  });
 });
