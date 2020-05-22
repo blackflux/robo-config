@@ -105,16 +105,20 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
   it('Testing Multi Task', ({ dir }) => {
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {
-        tasks: {
-          'misc/@default~target1': {
-            // eslint-disable-next-line no-template-curly-in-string
-            misc: '${ref}'
+        tasks: [
+          {
+            name: 'misc/@default',
+            variables: {
+              misc: 'target1'
+            }
           },
-          'misc/@default~target2': {
-            // eslint-disable-next-line no-template-curly-in-string
-            misc: '${ref}'
+          {
+            name: 'misc/@default',
+            variables: {
+              misc: 'target2'
+            }
           }
-        },
+        ],
         variables: {
           variable: 'var'
         }
