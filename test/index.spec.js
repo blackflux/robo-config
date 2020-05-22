@@ -108,11 +108,11 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
         tasks: {
           'misc/@default~target1': {
             // eslint-disable-next-line no-template-curly-in-string
-            misc: '${self}'
+            misc: '${ref}'
           },
           'misc/@default~target2': {
             // eslint-disable-next-line no-template-curly-in-string
-            misc: '${self}'
+            misc: '${ref}'
           }
         },
         variables: {

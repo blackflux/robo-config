@@ -115,8 +115,8 @@ module.exports.listPublicTasks = listPublicTasks;
 const applyTasksRec = (taskDir, projectRoot, tasks, variables, exclude) => {
   const result = [];
   Object.entries(tasks).forEach(([tid, taskVars]) => {
-    const [taskName, self] = tid.split('~');
-    const vars = populateVars({ ...variables, ...taskVars }, { self }, true);
+    const [taskName, ref] = tid.split('~');
+    const vars = populateVars({ ...variables, ...taskVars }, { ref }, true);
     const task = loadTask(taskDir, taskName, vars);
     assert(task !== null, `Bad Task Name: ${taskName}`);
     if (
