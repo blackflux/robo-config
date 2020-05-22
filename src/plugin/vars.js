@@ -3,9 +3,24 @@ const cloneDeep = require('lodash.clonedeep');
 const difference = require('lodash.difference');
 const objectScan = require('object-scan');
 
-const varRegex = /\${([-_a-zA-Z0-9]+)}/g;
-const varRegexExact = /^\${([-_a-zA-Z0-9]+)}$/g;
-const escapedVarRegex = /\$([\\]+){([-_a-zA-Z0-9]+)}/g;
+const varNameGroup = /([-_a-zA-Z0-9]+)/;
+
+const varRegex = new RegExp([
+  /\${/.source,
+  varNameGroup.source,
+  /}/.source
+].join(''), 'g');
+const varRegexExact = new RegExp([
+  /^/.source,
+  varRegex.source,
+  /$/.source
+].join(''), 'g');
+const escapedVarRegex = new RegExp([
+  /\$([\\]+){/.source,
+  varNameGroup.source,
+  /}/.source
+].join(''), 'g');
+
 
 const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
   assert(typeof input === 'string', 'Invalid "input" parameter format.');
