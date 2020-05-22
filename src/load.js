@@ -19,7 +19,10 @@ module.exports = (pl) => {
 
   const applyTasks = (projectRoot, tasks, variables, exclude) => {
     assert(typeof projectRoot === 'string');
-    assert(Array.isArray(tasks));
+    assert(
+      Array.isArray(tasks) && tasks.every((e) => !Array.isArray(e) && e instanceof Object),
+      'Invalid "tasks" parameter format.'
+    );
     assert(variables instanceof Object && !Array.isArray(variables));
     assert(Array.isArray(exclude));
 
