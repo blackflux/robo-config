@@ -7,7 +7,13 @@ const load = require('./load');
 const lockFile = require('./lock-file');
 
 const pluginPayloadSchema = Joi.object().keys({
-  tasks: Joi.object().pattern(Joi.string().regex(/^[^/@]+\/@[^/@]+$/), Joi.object()),
+  tasks: Joi.array().items(Joi.alternatives(
+    Joi.string().regex(/^[^/@]+\/@[^/@]+$/),
+    Joi.object().keys({
+      name: Joi.string().regex(/^[^/@]+\/@[^/@]+$/),
+      variables: Joi.object()
+    })
+  )),
   variables: Joi.object(),
   exclude: Joi.array().items(Joi.string()).unique(),
   confDocs: Joi.string()
@@ -34,22 +40,21 @@ module.exports = (projectRoot = appRoot.path) => {
       }
     }), {});
 
-  // generify data format
-  Object
-    .values(pluginCfgs)
-    .forEach((pluginCfg) => {
-      if (Array.isArray(pluginCfg.tasks)) {
-        Object.assign(pluginCfg, {
-          tasks: pluginCfg.tasks.reduce((p, c) => Object.assign(p, { [c]: {} }), {})
-        });
-      }
-    });
-
   // validate configs
   Object
     .values(pluginCfgs)
     .forEach((pluginPayload) => {
       Joi.assert(pluginPayload, pluginPayloadSchema, 'Validation Error:\n\n');
+    });
+
+  // generify data format
+  Object
+    .values(pluginCfgs)
+    .forEach((pluginCfg) => {
+      Object.assign(pluginCfg, {
+        tasks: pluginCfg.tasks
+          .map((name) => (typeof name === 'string' ? { name, variables: {} } : name))
+      });
     });
 
   // load the plugins

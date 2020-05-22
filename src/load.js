@@ -19,7 +19,10 @@ module.exports = (pl) => {
 
   const applyTasks = (projectRoot, tasks, variables, exclude) => {
     assert(typeof projectRoot === 'string');
-    assert(!Array.isArray(tasks) && tasks instanceof Object);
+    assert(
+      Array.isArray(tasks) && tasks.every((e) => !Array.isArray(e) && e instanceof Object),
+      'Invalid "tasks" parameter format.'
+    );
     assert(variables instanceof Object && !Array.isArray(variables));
     assert(Array.isArray(exclude));
 
@@ -48,7 +51,7 @@ module.exports = (pl) => {
       const result = {};
       const knownVars = [];
       taskNames.forEach((taskName) => {
-        const task = { [taskName]: {} };
+        const task = [{ name: taskName, variables: {} }];
         const taskRoot = path.join(testRoot, taskName);
         const meta = extractMeta(pl.taskDir, task);
         const taskVars = meta.variables
