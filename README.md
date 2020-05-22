@@ -63,24 +63,24 @@ describe('Running Robo Config', () => {
 ## But why...?
 
 _Why does this package even exist?_ -
-Let's face it, without npm and micro-services this repo would probably not exist. 
-Npm has encouraged us developers to create a new repo and package for every 
+Let's face it, without npm and micro-services this repo would probably not exist.
+Npm has encouraged us developers to create a new repo and package for every
 re-usable code snippet. This is great from the re-usability perspective,
 however it means that a single developer might actively maintain many repos.
 
-Most maintenance tasks (automated repository configuration, automated tests, automated dependency updates, automated versioning or releases) 
+Most maintenance tasks (automated repository configuration, automated tests, automated dependency updates, automated versioning or releases)
 can be done by just simply adding a configuration file to the repo and activating the corresponding service.
 That's great, but what happens when:
 
-- A nasty bug is discovered in one of the config files? 
+- A nasty bug is discovered in one of the config files?
 - A provider changes their configuration file (format)?
 - A major language version was released and tests should also be run against it?
 - A cool new service popped up and one should really use it?
 
 How does one ensure changes will propagate to all relevant repos?
 If you never had to batch update a few dozen repos with the same change manually, you're lucky -
-I can tell you it's not fun. Either you do them all at the same time (let's hope it was the right change) or 
-you will inadvertently forget to apply the change to some repos. That's where this package comes in! 
+I can tell you it's not fun. Either you do them all at the same time (let's hope it was the right change) or
+you will inadvertently forget to apply the change to some repos. That's where this package comes in!
 
 Simply pick the plugin(s)/task(s) that are most appropriate for your repo or create your own.
 Changes will propagate to your repos as dependencies are updated, giving you full control when they are applied.
@@ -111,12 +111,12 @@ This directory is the core of every robo-config plugin.
 Top level it only contains sub-directories, which we call "task directories" since they are used to group tasks.
 For example a task directory `editor` might indicate tasks related to the editor that is used for the project that uses robo-config.
 
-Each task directory then contains task files and a `snippets` folder. 
+Each task directory then contains task files and a `snippets` folder.
 
 The snippets folder contains raw configuration files or parts thereof which are applied using tasks and merge strategies.
 Snippet files can contain variables which need to be provided when a task references the snippet.
 
-There are two types of task files: 
+There are two types of task files:
 
 - `@containerTaskName.json`: Public container task files. They do not specify any action themselves, but reference other tasks.
 - `#containerTaskName.json`: Private container task files. Same as public container tasks files, but private.
@@ -128,9 +128,9 @@ Container task names always starts with an `@` or `#` symbol. Only container tas
 
 A container task definition file contains the following keys:
 
-- `tasks`: Array of task names. These can be relative as `task` 
+- `tasks`: Array of task names. These can be relative as `task`
 or referencing a task directory as `taskDirectory/task`
-- `description`: High level description of what this container task does. 
+- `description`: High level description of what this container task does.
 
 #### Actionable Tasks
 
@@ -139,7 +139,7 @@ Actionable task names must not start with an `@` or `#` symbol. They can only be
 Actionable task definition files contain the following keys:
 
 - `target`: The relative file path to the target file in the project that robo-config is used in.
-- `format` (_optional_): Indicates the format of the target file. E.g. the file extension might be `dat`, but the content `xml`). 
+- `format` (_optional_): Indicates the format of the target file. E.g. the file extension might be `dat`, but the content `xml`).
 Automatically deduced by default. See [smart-fs](https://github.com/blackflux/smart-fs) for supported formats.
 - `resolve`: Whether or not to resolve the snippet.
 - `strategy`: One of the available merge strategies. These are detailed below.
@@ -225,7 +225,7 @@ describe('Testing Plugin', () => {
 
 ```
 
-where `projects` will contain a customizable "project-like folder" for each task. 
+where `projects` will contain a customizable "project-like folder" for each task.
 
 ### Gotchas
 
@@ -238,4 +238,10 @@ Handy when configuration files need to contain variables of the same format.
 #### File Guessing
 
 In almost all cases you don't need to and should not specify the file extension of a task/file you're using.
-It will automatically be picked up. 
+It will automatically be picked up.
+
+#### Using Tasks Multiple Times
+
+Tasks can be used multiple times with different variables by defining them as an object, mapping to variables.
+To keep the task names unique, a tilde and a reference can be appended to task name. The reference can be referenced
+from the task variable values by using `${ref}`.

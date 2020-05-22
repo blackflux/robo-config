@@ -118,10 +118,10 @@ const documentSection = (plName, baseLevel, exclude, {
   return result;
 };
 
-const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exclude, baseLevel) => {
+const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude, baseLevel) => {
   assert(
-    Array.isArray(taskNames) && taskNames.every((e) => typeof e === 'string'),
-    'Invalid "taskNames" parameter format.'
+    !Array.isArray(tasks) && tasks instanceof Object,
+    'Invalid "tasks" parameter format.'
   );
   assert(
     Array.isArray(exclude) && exclude.every((e) => typeof e === 'string'),
@@ -129,7 +129,10 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, taskNames, exc
   );
   assert(Number.isInteger(baseLevel), 'Invalid "baseLevel" parameter format.');
 
-  const sections = taskNames.map((taskName) => ({ level: baseLevel, taskName }));
+  const sections = Object.keys(tasks).map((taskId) => ({
+    level: baseLevel,
+    taskName: taskId.split('~')[0]
+  }));
 
   // expand tasks with subtasks
   for (let idx = 0; idx < sections.length; idx += 1) {
@@ -322,7 +325,7 @@ const syncDocs = (plName, taskDir, reqDir, varDir, targetDir, docDir) => {
       docFiles.push(docFile);
       if (sfs.smartWrite(
         path.join(docDir, docFile),
-        generateDocs(plName, taskDir, reqDir, varDir, targetDir, [f], [], 0)
+        generateDocs(plName, taskDir, reqDir, varDir, targetDir, { [f]: {} }, [], 0)
       )) {
         result.push(`Updated: ${docFile}`);
       }
