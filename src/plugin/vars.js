@@ -108,7 +108,11 @@ module.exports.determineVars = (data) => {
         .filter((str) => typeof str === 'string')
         .map((str) => str.match(varRegex))
         .filter((matches) => matches !== null)
-        .forEach((matches) => result.push(...matches.map((m) => m.slice(2, -1))));
+        .forEach((matches) => {
+          matches.forEach((m) => {
+            result.push(varRegex.exec(m).groups.name);
+          });
+        });
       return true;
     }
   })(data);
