@@ -242,6 +242,12 @@ It will automatically be picked up.
 
 #### Using Tasks Multiple Times
 
-Tasks can be used multiple times with different variables by defining them as an object, mapping to variables.
-To keep the task names unique, a tilde and a reference can be appended to task name. The reference can be referenced
-from the task variable values by using `${ref}`.
+Tasks can be used multiple times with different variables by defining them as an object, containing the keys `name` and `variables`.
+
+#### Modifiers
+
+Modifiers can be used on variables as `${var|MOD}`. Currently the following modifiers `MOD` are available:
+
+- `UPPER`: upper case the variable content
+- `TITLE`: title case the variable content
+- `LOWER`: lower case the variable content

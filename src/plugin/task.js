@@ -114,11 +114,10 @@ module.exports.listPublicTasks = listPublicTasks;
 
 const applyTasksRec = (taskDir, projectRoot, tasks, variables, exclude) => {
   const result = [];
-  Object.entries(tasks).forEach(([tid, taskVars]) => {
-    const [taskName, ref] = tid.split('~');
-    const vars = populateVars({ ...variables, ...taskVars }, { ref }, true);
-    const task = loadTask(taskDir, taskName, vars);
-    assert(task !== null, `Bad Task Name: ${taskName}`);
+  tasks.forEach((t) => {
+    const vars = { ...variables, ...t.variables };
+    const task = loadTask(taskDir, t.name, vars);
+    assert(task !== null, `Bad Task Name: ${t.name}`);
     if (
       task.target !== undefined
       && applyTask(taskDir, projectRoot, task, exclude) === true
@@ -126,12 +125,10 @@ const applyTasksRec = (taskDir, projectRoot, tasks, variables, exclude) => {
       result.push(`Updated: ${task.target}`);
     }
     if (task.tasks !== undefined) {
-      const subtasks = task.tasks.reduce(
-        (p, stn) => Object.assign(p, {
-          [stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`]: {}
-        }),
-        {}
-      );
+      const subtasks = task.tasks.map((stn) => ({
+        name: stn.includes('/') ? stn : `${t.name.split('/')[0]}/${stn}`,
+        variables: {}
+      }));
       result.push(...applyTasksRec(taskDir, projectRoot, subtasks, vars, exclude));
     }
   });
@@ -142,14 +139,14 @@ module.exports.applyTasksRec = applyTasksRec;
 const extractMeta = (taskDir, tasks) => {
   assert(typeof taskDir === 'string', 'Invalid "taskDir" parameter format.');
   assert(
-    !Array.isArray(tasks) && tasks instanceof Object,
+    Array.isArray(tasks) && tasks.every((e) => !Array.isArray(e) && e instanceof Object),
     'Invalid "tasks" parameter format.'
   );
 
   const variables = new Set();
   const target = new Set();
 
-  const taskNameStack = Object.keys(tasks).map((tid) => tid.split('~')[0]);
+  const taskNameStack = tasks.map(({ name }) => name);
   while (taskNameStack.length !== 0) {
     const taskName = taskNameStack.pop();
     const fileName = sfs.guessFile(path.join(taskDir, taskName));

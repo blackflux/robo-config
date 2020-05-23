@@ -1,1 +1,4 @@
 ${variable}
+${variable|UPPER}
+${variable|TITLE}
+${variable|LOWER}
