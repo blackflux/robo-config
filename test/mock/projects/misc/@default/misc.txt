@@ -1,1 +1,4 @@
 variable
+VARIABLE
+Variable
+variable

@@ -130,7 +130,9 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
       'Updated: CONFDOCS.md'
     ]);
     expect(robo(dir)).to.deep.equal([]);
-    expect(sfs.smartRead(path.join(dir, 'target1.txt'))).to.deep.equal(['var']);
-    expect(sfs.smartRead(path.join(dir, 'target2.txt'))).to.deep.equal(['var']);
+    expect(sfs.smartRead(path.join(dir, 'target1.txt')))
+      .to.deep.equal(['var', 'VAR', 'Var', 'var']);
+    expect(sfs.smartRead(path.join(dir, 'target2.txt')))
+      .to.deep.equal(['var', 'VAR', 'Var', 'var']);
   });
 });

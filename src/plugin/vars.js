@@ -3,9 +3,44 @@ const cloneDeep = require('lodash.clonedeep');
 const difference = require('lodash.difference');
 const objectScan = require('object-scan');
 
-const varRegex = /\${([-_a-zA-Z0-9]+)}/g;
-const varRegexExact = /^\${([-_a-zA-Z0-9]+)}$/g;
-const escapedVarRegex = /\$([\\]+){([-_a-zA-Z0-9]+)}/g;
+const modifiers = {
+  UPPER: (input) => input.toUpperCase(),
+  TITLE: (input) => `${input.slice(0, 1).toUpperCase()}${input.slice(1).toLowerCase()}`,
+  LOWER: (input) => input.toLowerCase()
+};
+const applyModifier = (input, modifier) => {
+  if (typeof input !== 'string') {
+    return input;
+  }
+  if (modifier === undefined) {
+    return input;
+  }
+  return modifiers[modifier](input);
+};
+
+const varNameGroup = new RegExp([
+  /(?<varName>[-_a-zA-Z0-9]+)/.source,
+  '(?:\\|(?<modifier>',
+  Object.keys(modifiers).join('|'),
+  '))?'
+].join(''), 'g');
+
+const varRegex = new RegExp([
+  /\${/.source,
+  varNameGroup.source,
+  /}/.source
+].join(''), 'g');
+const varRegexExact = new RegExp([
+  /^/.source,
+  varRegex.source,
+  /$/.source
+].join(''), 'g');
+const escapedVarRegex = new RegExp([
+  /\$(?<escape>[\\]+){/.source,
+  varNameGroup.source,
+  /}/.source
+].join(''), 'g');
+
 
 const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
   assert(typeof input === 'string', 'Invalid "input" parameter format.');
@@ -15,14 +50,15 @@ const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
 
   let result;
   if (allowFullMatch === true && input.match(varRegexExact) !== null) {
-    const varName = input.slice(2, -1);
-    result = variables[varName];
+    const { varName, modifier } = varRegexExact.exec(input).groups;
+    result = applyModifier(variables[varName], modifier);
     assert(result !== undefined, `Unmatched Variable Found: $\{${varName}}`);
     usedVars.add(varName);
   } else {
     result = input
-      .replace(varRegex, (_, varName) => {
-        const r = variables[varName];
+      .replace(varRegex, (...args) => {
+        const { varName, modifier } = args[args.length - 1];
+        const r = applyModifier(variables[varName], modifier);
         assert(r !== undefined, `Unmatched Variable Found: $\{${varName}}`);
         assert(typeof r === 'string', `Variable Expected to be String: $\{${varName}}`);
         usedVars.add(varName);
@@ -30,7 +66,10 @@ const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
       });
   }
   return typeof result === 'string'
-    ? result.replace(escapedVarRegex, (_, escape, varName) => `$${escape.slice(1)}{${varName}}`)
+    ? result.replace(escapedVarRegex, (...args) => {
+      const { escape, varName } = args[args.length - 1];
+      return `$${escape.slice(1)}{${varName}}`;
+    })
     : result;
 };
 
@@ -89,7 +128,11 @@ module.exports.determineVars = (data) => {
         .filter((str) => typeof str === 'string')
         .map((str) => str.match(varRegex))
         .filter((matches) => matches !== null)
-        .forEach((matches) => result.push(...matches.map((m) => m.slice(2, -1))));
+        .forEach((matches) => {
+          matches.forEach((m) => {
+            result.push(varRegex.exec(m).groups.varName);
+          });
+        });
       return true;
     }
   })(data);
