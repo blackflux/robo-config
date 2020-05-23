@@ -1,1 +1,3 @@
 ${variable}
+${variable|TITLE}
+${variable|CAPS}

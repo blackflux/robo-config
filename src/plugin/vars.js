@@ -3,7 +3,26 @@ const cloneDeep = require('lodash.clonedeep');
 const difference = require('lodash.difference');
 const objectScan = require('object-scan');
 
-const varNameGroup = /(?<name>[-_a-zA-Z0-9]+)/;
+const modifiers = {
+  CAPS: (input) => input.toUpperCase(),
+  TITLE: (input) => `${input.slice(0, 1).toUpperCase()}${input.slice(1).toLowerCase()}`
+};
+const applyModifier = (input, modifier) => {
+  if (typeof input !== 'string') {
+    return input;
+  }
+  if (modifier === undefined) {
+    return input;
+  }
+  return modifiers[modifier](input);
+};
+
+const varNameGroup = new RegExp([
+  /(?<name>[-_a-zA-Z0-9]+)/.source,
+  '(?:\\|(?<modifier>',
+  Object.keys(modifiers).join('|'),
+  '))?'
+].join(''), 'g');
 
 const varRegex = new RegExp([
   /\${/.source,
@@ -30,15 +49,15 @@ const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
 
   let result;
   if (allowFullMatch === true && input.match(varRegexExact) !== null) {
-    const { name } = varRegexExact.exec(input).groups;
-    result = variables[name];
+    const { name, modifier } = varRegexExact.exec(input).groups;
+    result = applyModifier(variables[name], modifier);
     assert(result !== undefined, `Unmatched Variable Found: $\{${name}}`);
     usedVars.add(name);
   } else {
     result = input
       .replace(varRegex, (...args) => {
-        const { name } = args[args.length - 1];
-        const r = variables[name];
+        const { name, modifier } = args[args.length - 1];
+        const r = applyModifier(variables[name], modifier);
         assert(r !== undefined, `Unmatched Variable Found: $\{${name}}`);
         assert(typeof r === 'string', `Variable Expected to be String: $\{${name}}`);
         usedVars.add(name);

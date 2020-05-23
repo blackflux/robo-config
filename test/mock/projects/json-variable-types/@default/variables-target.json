@@ -4,7 +4,7 @@
       "children": [
         {
           "object": {},
-          "##key##": "##value##",
+          "##key##": "##VALUE##",
           "prefix##pkey##": "value##pvalue##"
         }
       ]

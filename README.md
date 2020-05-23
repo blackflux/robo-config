@@ -243,3 +243,10 @@ It will automatically be picked up.
 #### Using Tasks Multiple Times
 
 Tasks can be used multiple times with different variables by defining them as an object, containing the keys `name` and `variables`.
+
+#### Modifiers
+
+Modifiers can be used on variables as `${var|MOD}`. Currently the following modifiers `MOD` are available:
+
+- `CAPS`: capitalize the variable content
+- `TITLE`: title case the variable content
