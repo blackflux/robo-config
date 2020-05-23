@@ -131,8 +131,8 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
     ]);
     expect(robo(dir)).to.deep.equal([]);
     expect(sfs.smartRead(path.join(dir, 'target1.txt')))
-      .to.deep.equal(['var', 'Var', 'VAR']);
+      .to.deep.equal(['var', 'VAR', 'Var', 'var']);
     expect(sfs.smartRead(path.join(dir, 'target2.txt')))
-      .to.deep.equal(['var', 'Var', 'VAR']);
+      .to.deep.equal(['var', 'VAR', 'Var', 'var']);
   });
 });

@@ -248,5 +248,6 @@ Tasks can be used multiple times with different variables by defining them as an
 
 Modifiers can be used on variables as `${var|MOD}`. Currently the following modifiers `MOD` are available:
 
-- `CAPS`: capitalize the variable content
+- `UPPER`: upper case the variable content
 - `TITLE`: title case the variable content
+- `LOWER`: lower case the variable content

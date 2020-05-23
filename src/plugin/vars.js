@@ -4,8 +4,9 @@ const difference = require('lodash.difference');
 const objectScan = require('object-scan');
 
 const modifiers = {
-  CAPS: (input) => input.toUpperCase(),
-  TITLE: (input) => `${input.slice(0, 1).toUpperCase()}${input.slice(1).toLowerCase()}`
+  UPPER: (input) => input.toUpperCase(),
+  TITLE: (input) => `${input.slice(0, 1).toUpperCase()}${input.slice(1).toLowerCase()}`,
+  LOWER: (input) => input.toLowerCase()
 };
 const applyModifier = (input, modifier) => {
   if (typeof input !== 'string') {

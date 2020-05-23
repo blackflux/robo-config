@@ -1,3 +1,4 @@
 ${variable}
+${variable|UPPER}
 ${variable|TITLE}
-${variable|CAPS}
+${variable|LOWER}
