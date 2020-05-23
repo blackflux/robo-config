@@ -19,7 +19,7 @@ const applyModifier = (input, modifier) => {
 };
 
 const varNameGroup = new RegExp([
-  /(?<name>[-_a-zA-Z0-9]+)/.source,
+  /(?<varName>[-_a-zA-Z0-9]+)/.source,
   '(?:\\|(?<modifier>',
   Object.keys(modifiers).join('|'),
   '))?'
@@ -50,25 +50,25 @@ const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
 
   let result;
   if (allowFullMatch === true && input.match(varRegexExact) !== null) {
-    const { name, modifier } = varRegexExact.exec(input).groups;
-    result = applyModifier(variables[name], modifier);
-    assert(result !== undefined, `Unmatched Variable Found: $\{${name}}`);
-    usedVars.add(name);
+    const { varName, modifier } = varRegexExact.exec(input).groups;
+    result = applyModifier(variables[varName], modifier);
+    assert(result !== undefined, `Unmatched Variable Found: $\{${varName}}`);
+    usedVars.add(varName);
   } else {
     result = input
       .replace(varRegex, (...args) => {
-        const { name, modifier } = args[args.length - 1];
-        const r = applyModifier(variables[name], modifier);
-        assert(r !== undefined, `Unmatched Variable Found: $\{${name}}`);
-        assert(typeof r === 'string', `Variable Expected to be String: $\{${name}}`);
-        usedVars.add(name);
+        const { varName, modifier } = args[args.length - 1];
+        const r = applyModifier(variables[varName], modifier);
+        assert(r !== undefined, `Unmatched Variable Found: $\{${varName}}`);
+        assert(typeof r === 'string', `Variable Expected to be String: $\{${varName}}`);
+        usedVars.add(varName);
         return r;
       });
   }
   return typeof result === 'string'
     ? result.replace(escapedVarRegex, (...args) => {
-      const { escape, name } = args[args.length - 1];
-      return `$${escape.slice(1)}{${name}}`;
+      const { escape, varName } = args[args.length - 1];
+      return `$${escape.slice(1)}{${varName}}`;
     })
     : result;
 };
@@ -130,7 +130,7 @@ module.exports.determineVars = (data) => {
         .filter((matches) => matches !== null)
         .forEach((matches) => {
           matches.forEach((m) => {
-            result.push(varRegex.exec(m).groups.name);
+            result.push(varRegex.exec(m).groups.varName);
           });
         });
       return true;
