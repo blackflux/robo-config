@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('smart-fs');
+const { populateVars } = require('./plugin/vars');
 
 module.exports.validate = (projectRoot, plugins) => {
   const lockFile = fs.existsSync(path.join(projectRoot, '.roboconfig.lock'))
@@ -16,7 +17,18 @@ module.exports.validate = (projectRoot, plugins) => {
 
   plugins.forEach((plugin) => {
     const pluginName = plugin.plugin.name;
-    const targets = plugin.plugin.getTargets(plugin.tasks).target;
+    const targets = (() => {
+      const result = new Set();
+      plugin.tasks.forEach((task) => {
+        const taskTargets = plugin.plugin.getTargets([task]).target;
+        const vars = { ...plugin.variables, ...task.variables };
+        populateVars(taskTargets, vars, true)
+          .forEach((target) => {
+            result.add(target);
+          });
+      });
+      return [...result];
+    })();
     const lockedTargets = lockFile[pluginName] || [];
     const notManaged = lockedTargets.filter((lt) => !targets.includes(lt));
     if (notManaged.length !== 0) {
