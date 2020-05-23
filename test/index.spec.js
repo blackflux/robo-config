@@ -134,5 +134,7 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
       .to.deep.equal(['var', 'VAR', 'Var', 'var']);
     expect(sfs.smartRead(path.join(dir, 'target2.txt')))
       .to.deep.equal(['var', 'VAR', 'Var', 'var']);
+    expect(sfs.smartRead(path.join(dir, '.roboconfig.lock'), { treatAs: 'json' }))
+      .to.deep.equal({ 'mock-plugin': ['target1.txt', 'target2.txt'] });
   });
 });
