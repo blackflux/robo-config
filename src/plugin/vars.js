@@ -3,7 +3,7 @@ const cloneDeep = require('lodash.clonedeep');
 const difference = require('lodash.difference');
 const objectScan = require('object-scan');
 
-const varNameGroup = /([-_a-zA-Z0-9]+)/;
+const varNameGroup = /(?<name>[-_a-zA-Z0-9]+)/;
 
 const varRegex = new RegExp([
   /\${/.source,
@@ -16,7 +16,7 @@ const varRegexExact = new RegExp([
   /$/.source
 ].join(''), 'g');
 const escapedVarRegex = new RegExp([
-  /\$([\\]+){/.source,
+  /\$(?<escape>[\\]+){/.source,
   varNameGroup.source,
   /}/.source
 ].join(''), 'g');
@@ -30,22 +30,26 @@ const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
 
   let result;
   if (allowFullMatch === true && input.match(varRegexExact) !== null) {
-    const varName = input.slice(2, -1);
-    result = variables[varName];
-    assert(result !== undefined, `Unmatched Variable Found: $\{${varName}}`);
-    usedVars.add(varName);
+    const { name } = varRegexExact.exec(input).groups;
+    result = variables[name];
+    assert(result !== undefined, `Unmatched Variable Found: $\{${name}}`);
+    usedVars.add(name);
   } else {
     result = input
-      .replace(varRegex, (_, varName) => {
-        const r = variables[varName];
-        assert(r !== undefined, `Unmatched Variable Found: $\{${varName}}`);
-        assert(typeof r === 'string', `Variable Expected to be String: $\{${varName}}`);
-        usedVars.add(varName);
+      .replace(varRegex, (...args) => {
+        const { name } = args[args.length - 1];
+        const r = variables[name];
+        assert(r !== undefined, `Unmatched Variable Found: $\{${name}}`);
+        assert(typeof r === 'string', `Variable Expected to be String: $\{${name}}`);
+        usedVars.add(name);
         return r;
       });
   }
   return typeof result === 'string'
-    ? result.replace(escapedVarRegex, (_, escape, varName) => `$${escape.slice(1)}{${varName}}`)
+    ? result.replace(escapedVarRegex, (...args) => {
+      const { escape, name } = args[args.length - 1];
+      return `$${escape.slice(1)}{${name}}`;
+    })
     : result;
 };
 
