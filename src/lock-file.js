@@ -27,7 +27,7 @@ module.exports.validate = (projectRoot, plugins) => {
             result.add(target);
           });
       });
-      return [...result];
+      return [...result].sort();
     })();
     const lockedTargets = lockFile[pluginName] || [];
     const notManaged = lockedTargets.filter((lt) => !targets.includes(lt));
@@ -37,6 +37,12 @@ module.exports.validate = (projectRoot, plugins) => {
     }
     lockFile[pluginName] = targets;
   });
-
-  fs.smartWrite(path.join(projectRoot, '.roboconfig.lock'), lockFile, { treatAs: 'json' });
+  fs.smartWrite(
+    path.join(projectRoot, '.roboconfig.lock'),
+    Object.keys(lockFile).sort()
+      .reduce((p, k) => Object.assign(p, {
+        [k]: lockFile[k]
+      }), {}),
+    { treatAs: 'json' }
+  );
 };
