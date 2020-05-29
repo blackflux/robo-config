@@ -21,7 +21,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-miscyml">${misc}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -32,6 +32,12 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-integer">integer</a></li>
+          <li><a href="#mock-plugin-var-ref-number">number</a></li>
+          <li><a href="#mock-plugin-var-ref-array">array</a></li>
+          <li><a href="#mock-plugin-var-ref-object">object</a></li>
+          <li><a href="#mock-plugin-var-ref-boolean">boolean</a></li>
+          <li><a href="#mock-plugin-var-ref-string">string</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
@@ -41,7 +47,7 @@ Task collection description.
 
 #### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
-_Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#mock-plugin-target-ref-miscyml">${misc}.yml</a> using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -56,7 +62,7 @@ _Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a hre
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-miscyml">${misc}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -67,6 +73,12 @@ _Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a hre
       <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-integer">integer</a></li>
+          <li><a href="#mock-plugin-var-ref-number">number</a></li>
+          <li><a href="#mock-plugin-var-ref-array">array</a></li>
+          <li><a href="#mock-plugin-var-ref-object">object</a></li>
+          <li><a href="#mock-plugin-var-ref-boolean">boolean</a></li>
+          <li><a href="#mock-plugin-var-ref-string">string</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
@@ -76,7 +88,7 @@ _Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a hre
 
 #### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
-_Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#mock-plugin-target-ref-miscyml">${misc}.yml</a> using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -91,7 +103,7 @@ _Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a hre
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-miscyml">${misc}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -102,6 +114,12 @@ _Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a hre
       <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-integer">integer</a></li>
+          <li><a href="#mock-plugin-var-ref-number">number</a></li>
+          <li><a href="#mock-plugin-var-ref-array">array</a></li>
+          <li><a href="#mock-plugin-var-ref-object">object</a></li>
+          <li><a href="#mock-plugin-var-ref-boolean">boolean</a></li>
+          <li><a href="#mock-plugin-var-ref-string">string</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
@@ -124,7 +142,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-miscyml">${misc}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -135,6 +153,12 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-integer">integer</a></li>
+          <li><a href="#mock-plugin-var-ref-number">number</a></li>
+          <li><a href="#mock-plugin-var-ref-array">array</a></li>
+          <li><a href="#mock-plugin-var-ref-object">object</a></li>
+          <li><a href="#mock-plugin-var-ref-boolean">boolean</a></li>
+          <li><a href="#mock-plugin-var-ref-string">string</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
@@ -144,7 +168,7 @@ Task collection description.
 
 ##### :clipboard: <a name="mock-plugin-task-ref-misctask">misc/task</a> (<a href="#mock-plugin-task-idx-ref-misctask">`index`</a>)
 
-_Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
+_Updating <a href="#mock-plugin-target-ref-miscyml">${misc}.yml</a> using <a href="#mock-plugin-strat-ref-overwrite">overwrite</a>._
 
 - Some purpose.
 
@@ -159,7 +183,7 @@ _Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a hre
       <td align="left" valign="top">
         <ul>
 <code>project</code><br/>
-<code>└─&nbsp;<a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a></code><br/>
+<code>└─&nbsp;<a href="#mock-plugin-target-ref-miscyml">${misc}.yml</a></code><br/>
         </ul>
       </td>
       <td align="left" valign="top">
@@ -170,6 +194,12 @@ _Updating <a href="#mock-plugin-target-ref-misctxt">${misc}.txt</a> using <a hre
       <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-integer">integer</a></li>
+          <li><a href="#mock-plugin-var-ref-number">number</a></li>
+          <li><a href="#mock-plugin-var-ref-array">array</a></li>
+          <li><a href="#mock-plugin-var-ref-object">object</a></li>
+          <li><a href="#mock-plugin-var-ref-boolean">boolean</a></li>
+          <li><a href="#mock-plugin-var-ref-string">string</a></li>
           <li><a href="#mock-plugin-var-ref-variable">variable</a></li>
         </ul>
       </td>
@@ -197,6 +227,30 @@ Detailed description about this dependency and how it's used.
 
 Detailed description of what this variable does.
 
+### <a name="mock-plugin-var-ref-integer">integer</a>  : `integer`
+
+*Integer Variable*
+
+### <a name="mock-plugin-var-ref-number">number</a>  : `number`
+
+*Number Variable*
+
+### <a name="mock-plugin-var-ref-array">array</a>  : `array`
+
+*Array Variable*
+
+### <a name="mock-plugin-var-ref-object">object</a>  : `object`
+
+*Object Variable*
+
+### <a name="mock-plugin-var-ref-boolean">boolean</a>  : `boolean`
+
+*Boolean Variable*
+
+### <a name="mock-plugin-var-ref-string">string</a>  : `string`
+
+*String Variable*
+
 ### <a name="mock-plugin-var-ref-variable">variable</a>  : `string`
 
 *Short description of what this variable does.*
@@ -207,7 +261,7 @@ Detailed description of what this variable does.
 
 ## Targets
 
-### <a name="mock-plugin-target-ref-misctxt">${misc}.txt</a> ([`link`](https://some.url)) 
+### <a name="mock-plugin-target-ref-miscyml">${misc}.yml</a> ([`link`](https://some.url)) 
 
 :small_red_triangle: <a href="#mock-plugin-req-ref-dependency">dependency</a>
 

@@ -1,12 +1,18 @@
 {
-
-  "target": "${misc}.txt",
+  "target": "${misc}.yml",
   "strategy": "overwrite",
   "snippets": [
     {
       "name": "snippet",
       "variables": {
-        "variable": "${variable}"
+        "variable": "${variable}",
+        "string": "${string}",
+        "boolean": "${boolean}",
+        "object": "${object}",
+        "array": "${array}",
+        "number": "${number}",
+        "integer": "${integer}",
+        "words": "some words"
       }
     }
   ],
