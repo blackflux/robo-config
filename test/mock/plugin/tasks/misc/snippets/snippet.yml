@@ -1,0 +1,17 @@
+data:
+  - ${variable}
+  - ${variable|UPPER}
+  - ${variable|TITLE}
+  - ${variable|LOWER}
+  - ${words|KEBAB}
+  - ${words|SNAKE}
+  - ${words|STRIP}
+  - ${words|TITLE|STRIP}
+  - ${words|UPPER|SNAKE}
+  - ${words|LOWER|KEBAB}
+  - ${string}
+  - ${boolean}
+  - ${object}
+  - ${array}
+  - ${number}
+  - ${integer}

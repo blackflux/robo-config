@@ -1,0 +1,17 @@
+data:
+  - variable
+  - VARIABLE
+  - Variable
+  - variable
+  - some-words
+  - some_words
+  - somewords
+  - SomeWords
+  - SOME_WORDS
+  - some-words
+  - string
+  - boolean
+  - object
+  - array
+  - number
+  - integer

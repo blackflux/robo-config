@@ -3,6 +3,7 @@ const path = require('path');
 const Joi = require('joi-strict');
 const appRoot = require('app-root-path');
 const sfs = require('smart-fs');
+const objectScan = require('object-scan');
 const load = require('./load');
 const lockFile = require('./lock-file');
 
@@ -63,6 +64,11 @@ module.exports = (projectRoot = appRoot.path) => {
     .forEach(([pluginName, pluginPayload]) => {
       // eslint-disable-next-line import/no-dynamic-require,global-require
       const plugin = load(require(pluginName));
+      objectScan(['**.variables'], {
+        filterFn: ({ value }) => {
+          plugin.validateVars(value);
+        }
+      })(pluginPayload);
       Object.assign(pluginPayload, { plugin });
     });
 
