@@ -102,6 +102,31 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
     );
   });
 
+  it('Testing Bad Variable Format', ({ dir }) => {
+    sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
+      [pluginFile]: {
+        tasks: [
+          {
+            name: 'misc/@default',
+            variables: {
+              misc: 'target1'
+            }
+          }
+        ],
+        variables: {
+          variable: 123,
+          string: 'string',
+          boolean: true,
+          object: {},
+          array: [],
+          number: 123.1,
+          integer: 113
+        }
+      }
+    });
+    expect(() => robo(dir)).to.throw('Invalid variable type for "variable". Expected "string".');
+  });
+
   it('Testing Multi Task', ({ dir }) => {
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {
@@ -120,21 +145,30 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
           }
         ],
         variables: {
-          variable: 'var'
+          variable: 'var',
+          string: 'string',
+          boolean: true,
+          object: {},
+          array: [],
+          number: 123.1,
+          integer: 113
         }
       }
     });
     expect(robo(dir)).to.deep.equal([
-      'Updated: target1.txt',
-      'Updated: target2.txt',
+      'Updated: target1.yml',
+      'Updated: target2.yml',
       'Updated: CONFDOCS.md'
     ]);
     expect(robo(dir)).to.deep.equal([]);
-    expect(sfs.smartRead(path.join(dir, 'target1.txt')))
-      .to.deep.equal(['var', 'VAR', 'Var', 'var']);
-    expect(sfs.smartRead(path.join(dir, 'target2.txt')))
-      .to.deep.equal(['var', 'VAR', 'Var', 'var']);
+    const data = [
+      'var', 'VAR', 'Var', 'var',
+      'some-words', 'some_words', 'somewords', 'SomeWords', 'SOME_WORDS', 'some-words',
+      'string', true, {}, [], 123.1, 113
+    ];
+    expect(sfs.smartRead(path.join(dir, 'target1.yml'))).to.deep.equal({ data });
+    expect(sfs.smartRead(path.join(dir, 'target2.yml'))).to.deep.equal({ data });
     expect(sfs.smartRead(path.join(dir, '.roboconfig.lock'), { treatAs: 'json' }))
-      .to.deep.equal({ 'mock-plugin': ['target1.txt', 'target2.txt'] });
+      .to.deep.equal({ 'mock-plugin': ['target1.yml', 'target2.yml'] });
   });
 });

@@ -5,8 +5,11 @@ const objectScan = require('object-scan');
 
 const modifiers = {
   UPPER: (input) => input.toUpperCase(),
-  TITLE: (input) => `${input.slice(0, 1).toUpperCase()}${input.slice(1).toLowerCase()}`,
-  LOWER: (input) => input.toLowerCase()
+  TITLE: (input) => input.toLowerCase().replace(/(?<![a-z])[a-z]/g, (m) => m.toUpperCase()),
+  LOWER: (input) => input.toLowerCase(),
+  KEBAB: (input) => input.replace(/[^a-zA-Z0-9]+/g, '-'),
+  SNAKE: (input) => input.replace(/[^a-zA-Z0-9]+/g, '_'),
+  STRIP: (input) => input.replace(/[^a-zA-Z0-9]+/g, '')
 };
 const applyModifier = (input, modifier) => {
   if (typeof input !== 'string') {
@@ -15,14 +18,14 @@ const applyModifier = (input, modifier) => {
   if (modifier === undefined) {
     return input;
   }
-  return modifiers[modifier](input);
+  return modifier.slice(1).split('|').reduce((value, m) => modifiers[m](value), input);
 };
 
 const varNameGroup = new RegExp([
   /(?<varName>[-_a-zA-Z0-9]+)/.source,
-  '(?:\\|(?<modifier>',
+  '(?<modifier>(?:\\|(?:',
   Object.keys(modifiers).join('|'),
-  '))?'
+  '))+)?'
 ].join(''), 'g');
 
 const varRegex = new RegExp([
@@ -60,7 +63,7 @@ const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
         const { varName, modifier } = args[args.length - 1];
         const r = applyModifier(variables[varName], modifier);
         assert(r !== undefined, `Unmatched Variable Found: $\{${varName}}`);
-        assert(typeof r === 'string', `Variable Expected to be String: $\{${varName}}`);
+        assert(!(r instanceof Object), `Variable Expected to be Primitive: $\{${varName}}`);
         usedVars.add(varName);
         return r;
       });
@@ -137,4 +140,13 @@ module.exports.determineVars = (data) => {
     }
   })(data);
   return result;
+};
+
+module.exports.varTypes = {
+  string: (v) => typeof v === 'string',
+  boolean: (v) => typeof v === 'boolean',
+  object: (v) => v instanceof Object && !Array.isArray(v),
+  array: (v) => Array.isArray(v),
+  number: (v) => typeof v === 'number',
+  integer: (v) => Number.isInteger(v)
 };

@@ -4,7 +4,7 @@ const fs = require('smart-fs');
 const Joi = require('joi-strict');
 const { syncDocs, generateDocs } = require('./plugin/docs');
 const { applyTasksRec, listPublicTasks, extractMeta } = require('./plugin/task');
-const { populateVars } = require('./plugin/vars');
+const { populateVars, varTypes } = require('./plugin/vars');
 
 module.exports = (pl) => {
   Joi.assert(pl, Joi.object().keys({
@@ -16,6 +16,10 @@ module.exports = (pl) => {
     docDir: Joi.string(),
     exports: Joi.any().optional()
   }), 'Bad Plugin Definition.');
+
+  const var2Type = fs.walkDir(pl.varDir).reduce((p, f) => Object.assign(p, {
+    [f.slice(0, -5)]: fs.smartRead(path.join(pl.varDir, f)).type
+  }), {});
 
   const applyTasks = (projectRoot, tasks, variables, exclude) => {
     assert(typeof projectRoot === 'string');
@@ -43,6 +47,13 @@ module.exports = (pl) => {
     syncDocs: () => syncDocs(pl.name, pl.taskDir, pl.reqDir, pl.varDir, pl.targetDir, pl.docDir),
     generateDocs: (tasks, exclude) => genDocs(tasks, exclude),
     apply: applyTasks,
+    validateVars: (vars) => {
+      Object.entries(vars).forEach(([k, v]) => {
+        if (varTypes[var2Type[k]](v) !== true) {
+          throw new Error(`Invalid variable type for "${k}". Expected "${var2Type[k]}".`);
+        }
+      });
+    },
     test: (testRoot, variables = {}) => {
       const knownTargets = fs
         .walkDir(testRoot)

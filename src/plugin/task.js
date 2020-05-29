@@ -1,5 +1,5 @@
 const assert = require('assert');
-const fs = require('fs');
+const fs = require('smart-fs');
 const path = require('path');
 const get = require('lodash.get');
 const deepmerge = require('deepmerge');

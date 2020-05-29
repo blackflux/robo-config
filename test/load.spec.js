@@ -51,11 +51,11 @@ describe('Testing Test Plugin', { useTmpDir: true }, () => {
         'Updated: CONFDOCS.md'
       ],
       'misc/@other': [
-        'Updated: misc.txt',
+        'Updated: misc.yml',
         'Updated: CONFDOCS.md'
       ],
       'misc/@default': [
-        'Updated: misc.txt',
+        'Updated: misc.yml',
         'Updated: CONFDOCS.md'
       ],
       'nested-txt-overwrite/@default': [
@@ -108,10 +108,10 @@ describe('Testing Test Plugin', { useTmpDir: true }, () => {
       'txt-overwrite/@default': [],
       'txt-merge-below-title/@default': [],
       'misc/@other': [
-        'Updated: misc.txt'
+        'Updated: misc.yml'
       ],
       'misc/@default': [
-        'Updated: misc.txt'
+        'Updated: misc.yml'
       ],
       'nested-txt-overwrite/@default': [],
       'txt-create-only/@default': [],

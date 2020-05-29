@@ -3,7 +3,7 @@ const path = require('path');
 const Joi = require('joi-strict');
 const sfs = require('smart-fs');
 const treeify = require('object-treeify');
-const { determineVars } = require('./vars');
+const { determineVars, varTypes } = require('./vars');
 const { listPublicTasks } = require('./task');
 
 const normalizeRef = (input) => input
@@ -217,7 +217,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude
       schema: Joi.object().keys({
         description: Joi.string(),
         details: Joi.array().items(Joi.string()).optional(),
-        type: Joi.string().valid('string', 'boolean', 'object', 'array', 'number', 'integer')
+        type: Joi.string().valid(...Object.keys(varTypes))
       })
     },
     {
