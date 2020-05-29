@@ -3,6 +3,8 @@ data:
   - ${variable|UPPER}
   - ${variable|TITLE}
   - ${variable|LOWER}
+  - ${words|TITLE}
+  - ${words|CAMEL}
   - ${words|KEBAB}
   - ${words|SNAKE}
   - ${words|STRIP}

@@ -5,7 +5,14 @@ const objectScan = require('object-scan');
 
 const modifiers = {
   UPPER: (input) => input.toUpperCase(),
-  TITLE: (input) => input.toLowerCase().replace(/(?<![a-z])[a-z]/g, (m) => m.toUpperCase()),
+  TITLE: (input) => input.toLowerCase().replace(
+    /(?:^\w|[A-Z]|\b\w)/g,
+    (w) => w.toUpperCase()
+  ),
+  CAMEL: (input) => input.replace(
+    /(?:^\w|[A-Z]|\b\w)/g,
+    (w, idx) => (idx === 0 ? w.toLowerCase() : w.toUpperCase())
+  ).replace(/[^a-zA-Z0-9]+/g, ''),
   LOWER: (input) => input.toLowerCase(),
   KEBAB: (input) => input.replace(/[^a-zA-Z0-9]+/g, '-'),
   SNAKE: (input) => input.replace(/[^a-zA-Z0-9]+/g, '_'),
