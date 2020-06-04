@@ -3,5 +3,5 @@
   "details": [
     "Detailed description of what this variable does."
   ],
-  "type": "string"
+  "type": ["string", "integer"]
 }
