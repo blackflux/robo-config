@@ -49,7 +49,8 @@ module.exports = (pl) => {
     apply: applyTasks,
     validateVars: (vars) => {
       Object.entries(vars).forEach(([k, v]) => {
-        if (varTypes[var2Type[k]](v) !== true) {
+        const types = Array.isArray(var2Type[k]) ? var2Type[k] : [var2Type[k]];
+        if (!types.some((t) => varTypes[t](v) === true)) {
           throw new Error(`Invalid variable type for "${k}". Expected "${var2Type[k]}".`);
         }
       });

@@ -221,7 +221,7 @@ Detailed description about this dependency and how it's used.
 
 ## Variables
 
-### <a name="mock-plugin-var-ref-misc">misc</a>  : `string`
+### <a name="mock-plugin-var-ref-misc">misc</a>  : [`string`, `integer`]
 
 *Short description of what this variable does.*
 
