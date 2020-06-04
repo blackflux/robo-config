@@ -217,7 +217,10 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude
       schema: Joi.object().keys({
         description: Joi.string(),
         details: Joi.array().items(Joi.string()).optional(),
-        type: Joi.string().valid(...Object.keys(varTypes))
+        type: Joi.alternatives(
+          Joi.string().valid(...Object.keys(varTypes)),
+          Joi.array().items(Joi.string().valid(...Object.keys(varTypes))).min(1).unique()
+        )
       })
     },
     {
@@ -265,7 +268,15 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude
         content.push(`### ${anchorRef(`${plName}-${def.short}`, e)} ${
           typeof data.website === 'string' ? `([\`link\`](${data.website}))` : ''
         } ${
-          data.type !== undefined ? `: \`${data.type}\`` : ''
+          (() => {
+            if (data.type === undefined) {
+              return '';
+            }
+            if (Array.isArray(data.type)) {
+              return `: [\`${data.type.join('`, `')}\`]`;
+            }
+            return `: \`${data.type}\``;
+          })()
         }`);
         content.push('');
         Joi.assert(data, def.schema, `Invalid ${def.name} Definition: ${e}\n\n`);
