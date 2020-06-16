@@ -51,7 +51,6 @@ const escapedVarRegex = new RegExp([
   /}/.source
 ].join(''), 'g');
 
-
 const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
   assert(typeof input === 'string', 'Invalid "input" parameter format.');
   assert(variables instanceof Object && !Array.isArray(variables), 'Invalid "variables" parameter format.');

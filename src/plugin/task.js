@@ -9,7 +9,6 @@ const objectScan = require('object-scan');
 const { populateVars, determineVars } = require('./vars');
 const strategies = require('./strategies');
 
-
 const taskSchema = Joi.object().keys({
   target: Joi.string().optional(),
   format: Joi.string().allow(null).optional(),
@@ -33,7 +32,6 @@ const taskSchema = Joi.object().keys({
   .and('tasks', 'description')
   .xor('target', 'tasks');
 
-
 const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
   assert(typeof snippetDir === 'string', 'Invalid "snippetDir" parameter format.');
   assert(typeof snippetName === 'string', 'Invalid "snippetName" parameter format.');
@@ -49,7 +47,6 @@ const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
 
   return populateVars(snippet, snippetVars, false);
 };
-
 
 const loadTask = (taskDir, taskName, variables) => {
   assert(typeof taskName === 'string', 'Invalid "taskName" parameter format.');
@@ -87,7 +84,6 @@ const loadTask = (taskDir, taskName, variables) => {
 
   return task;
 };
-
 
 const applyTask = (taskDir, projectRoot, task, exclude) => {
   assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
