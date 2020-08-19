@@ -35,6 +35,12 @@ module.exports.validate = (projectRoot, plugins) => {
       throw new Error(`File(s) ${notManaged.map((e) => `"${e}"`).join(', ')} not managed by plugin "${pluginName}". `
         + 'Delete file as necessary and remove from lock file.');
     }
+    plugin.exclude.forEach((ex) => {
+      if (!targets.includes(ex)) {
+        throw new Error(`Excluded file "${ex}" not managed by plugin "${pluginName}". `
+        + 'Delete reference in configuration file.');
+      }
+    });
     lockFile[pluginName] = targets;
   });
   fs.smartWrite(

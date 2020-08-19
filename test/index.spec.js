@@ -102,6 +102,19 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
     );
   });
 
+  it('Testing Unknown Target Exclusion', ({ dir }) => {
+    sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
+      [pluginFile]: {
+        tasks: ['txt-overwrite/@default'],
+        exclude: ['unknown-file.txt']
+      }
+    });
+    expect(() => robo(dir)).to.throw(
+      'Excluded file "unknown-file.txt" not managed by plugin "mock-plugin". '
+      + 'Delete reference in configuration file.'
+    );
+  });
+
   it('Testing Bad Variable Format', ({ dir }) => {
     sfs.smartWrite(path.join(dir, '.roboconfig.json'), {
       [pluginFile]: {
