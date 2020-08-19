@@ -37,7 +37,7 @@ module.exports.validate = (projectRoot, plugins) => {
     }
     plugin.exclude.forEach((ex) => {
       if (!targets.includes(ex)) {
-        throw new Error(`Excluded file "${ex}" not managed by plugin "${pluginName}". `
+        throw new Error(`Excluded file "${ex}" not managed by plugin "${pluginName}" task(s). `
         + 'Delete reference in configuration file or add missing task.');
       }
     });

@@ -110,7 +110,7 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
       }
     });
     expect(() => robo(dir)).to.throw(
-      'Excluded file "unknown-file.txt" not managed by plugin "mock-plugin". '
+      'Excluded file "unknown-file.txt" not managed by plugin "mock-plugin" task(s). '
       + 'Delete reference in configuration file or add missing task.'
     );
   });
