@@ -5376,10 +5376,10 @@ object-deep-contain@1.0.25:
   resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.25.tgz#1ab50297421932ccc7bb73cb28fbc28725dbabe5"
   integrity sha512-2CRNQrChlMKjdCKuqDI2EH7qXiRBzwzW4IupABhAzRUM9KFjFHoRtN7KIFXs2e6i9ix1lQ2lUsprqRL/MoALng==
 
-object-deep-contain@1.0.26:
-  version "1.0.26"
-  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.26.tgz#a0c88b4f640fbc0fd361b8fde20a9d85be1d1b4f"
-  integrity sha512-p/nHQ3fuamOF1pWcrg5hArr0VTb6ctFIckfbAoiWkLcaSNzx8C6K20Pq14rfQkdHetzsor7AmrQ3ZcNv2etHqQ==
+object-deep-contain@1.0.27:
+  version "1.0.27"
+  resolved "https://registry.yarnpkg.com/object-deep-contain/-/object-deep-contain-1.0.27.tgz#16aecab563c29a15987a2cf9dcc9367ca7cb2348"
+  integrity sha512-VTMi2nYRKwNqysc5LASl6Amtq7AaxUh64WZ+frQMUU3puY0B4jF6+f7t4yEDU3auqCMnCSRUNDQWN4rw9RStSQ==
 
 object-inspect@^1.7.0:
   version "1.8.0"
