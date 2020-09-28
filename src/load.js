@@ -42,8 +42,7 @@ module.exports = (pl) => {
         }
       }
     });
-    const unexpectedVars = Object.keys(vars)
-      .filter((v) => !meta.variables.includes(v));
+    const unexpectedVars = Object.keys(vars).filter((v) => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
     return applyTasksRec(pl.taskDir, projectRoot, tasks, vars, exclude);
   };
