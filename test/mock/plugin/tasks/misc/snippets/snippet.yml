@@ -17,3 +17,4 @@ data:
   - ${array}
   - ${number}
   - ${integer}
+  - ${default}

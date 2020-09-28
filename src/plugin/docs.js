@@ -220,7 +220,8 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude
         type: Joi.alternatives(
           Joi.string().valid(...Object.keys(varTypes)),
           Joi.array().items(Joi.string().valid(...Object.keys(varTypes))).min(1).unique()
-        )
+        ),
+        default: Joi.any().optional()
       })
     },
     {
@@ -306,6 +307,10 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude
               .join(', ')}`);
             content.push('');
           });
+        if (data.default !== undefined) {
+          content.push(`**Default**: \`${data.default}\``);
+          content.push('');
+        }
 
         content.push(`*${data.description}*`);
         content.push('');
