@@ -1,0 +1,8 @@
+{
+  "description": "Short description of what this variable does.",
+  "details": [
+    "Detailed description of what this variable does."
+  ],
+  "type": "string",
+  "default": "default-value"
+}
