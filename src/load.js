@@ -31,9 +31,20 @@ module.exports = (pl) => {
     assert(Array.isArray(exclude));
 
     const meta = extractMeta(pl.taskDir, tasks);
-    const unexpectedVars = Object.keys(variables).filter((v) => !meta.variables.includes(v));
+    const vars = { ...variables };
+    meta.variables.forEach((v) => {
+      if (vars[v] === undefined) {
+        const varPath = path.join(pl.varDir, `${v}.json`);
+        assert(fs.existsSync(varPath), `Unexpected Variable Detected: ${v}`);
+        const varDef = fs.smartRead(varPath);
+        if (varDef.default !== undefined) {
+          vars[v] = varDef.default;
+        }
+      }
+    });
+    const unexpectedVars = Object.keys(vars).filter((v) => !meta.variables.includes(v));
     assert(unexpectedVars.length === 0, `Unexpected Variable(s) Provided: ${unexpectedVars.join(', ')}`);
-    return applyTasksRec(pl.taskDir, projectRoot, tasks, variables, exclude);
+    return applyTasksRec(pl.taskDir, projectRoot, tasks, vars, exclude);
   };
   const genDocs = (tasks, exclude) => [
     `## Plugin [${pl.name}](https://www.npmjs.com/package/${pl.name})`,

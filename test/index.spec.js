@@ -178,7 +178,7 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
       'var', 'VAR', 'Var', 'var',
       'Some Words', 'someWords', 'some-words', 'some_words',
       'somewords', 'SomeWords', 'SOME_WORDS', 'some-words',
-      'string', true, {}, [], 123.1, 113
+      'string', true, {}, [], 123.1, 113, 'default-value'
     ];
     expect(sfs.smartRead(path.join(dir, 'target1.yml'))).to.deep.equal({ data });
     expect(sfs.smartRead(path.join(dir, 'target2.yml'))).to.deep.equal({ data });

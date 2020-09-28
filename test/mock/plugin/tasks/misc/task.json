@@ -12,6 +12,7 @@
         "array": "${array}",
         "number": "${number}",
         "integer": "${integer}",
+        "default": "${default}",
         "words": "some words"
       }
     }

@@ -32,6 +32,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-default">default</a></li>
           <li><a href="#mock-plugin-var-ref-integer">integer</a></li>
           <li><a href="#mock-plugin-var-ref-number">number</a></li>
           <li><a href="#mock-plugin-var-ref-array">array</a></li>
@@ -73,6 +74,7 @@ _Updating <a href="#mock-plugin-target-ref-miscyml">${misc}.yml</a> using <a hre
       <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-default">default</a></li>
           <li><a href="#mock-plugin-var-ref-integer">integer</a></li>
           <li><a href="#mock-plugin-var-ref-number">number</a></li>
           <li><a href="#mock-plugin-var-ref-array">array</a></li>
@@ -114,6 +116,7 @@ _Updating <a href="#mock-plugin-target-ref-miscyml">${misc}.yml</a> using <a hre
       <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-default">default</a></li>
           <li><a href="#mock-plugin-var-ref-integer">integer</a></li>
           <li><a href="#mock-plugin-var-ref-number">number</a></li>
           <li><a href="#mock-plugin-var-ref-array">array</a></li>
@@ -153,6 +156,7 @@ Task collection description.
       <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-default">default</a></li>
           <li><a href="#mock-plugin-var-ref-integer">integer</a></li>
           <li><a href="#mock-plugin-var-ref-number">number</a></li>
           <li><a href="#mock-plugin-var-ref-array">array</a></li>
@@ -194,6 +198,7 @@ _Updating <a href="#mock-plugin-target-ref-miscyml">${misc}.yml</a> using <a hre
       <td align="left" valign="top">
         <ul>
           <li><a href="#mock-plugin-var-ref-misc">misc</a></li>
+          <li><a href="#mock-plugin-var-ref-default">default</a></li>
           <li><a href="#mock-plugin-var-ref-integer">integer</a></li>
           <li><a href="#mock-plugin-var-ref-number">number</a></li>
           <li><a href="#mock-plugin-var-ref-array">array</a></li>
@@ -222,6 +227,14 @@ Detailed description about this dependency and how it's used.
 ## Variables
 
 ### <a name="mock-plugin-var-ref-misc">misc</a>  : [`string`, `integer`]
+
+*Short description of what this variable does.*
+
+Detailed description of what this variable does.
+
+### <a name="mock-plugin-var-ref-default">default</a>  : `string`
+
+**Default**: `default-value`
 
 *Short description of what this variable does.*
 
