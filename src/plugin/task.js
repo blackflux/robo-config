@@ -44,15 +44,16 @@ const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
 
   const isTemplate = fileName.endsWith('.mustache');
   const contentRaw = fs.readFileSync(fileName, 'utf8');
-  const content = isTemplate ? mustache.render(contentRaw, snippetVars) : contentRaw;
-
-  const snippet = sfs.smartParse(content, {
+  const contentRendered = isTemplate
+    ? mustache.render(contentRaw, snippetVars)
+    : contentRaw;
+  const contentParsed = sfs.smartParse(contentRendered, {
     treatAs: task.format,
     resolve: task.resolve,
     refPath: isTemplate ? fileName.slice(0, -9) : fileName
   });
 
-  return populateVars(snippet, snippetVars, isTemplate);
+  return populateVars(contentParsed, snippetVars, isTemplate);
 };
 
 const loadTask = (taskDir, taskName, variables) => {
