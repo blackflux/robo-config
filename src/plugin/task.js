@@ -5,6 +5,7 @@ const get = require('lodash.get');
 const deepmerge = require('deepmerge');
 const Joi = require('joi-strict');
 const sfs = require('smart-fs');
+const mustache = require('mustache');
 const objectScan = require('object-scan');
 const { populateVars, determineVars } = require('./vars');
 const strategies = require('./strategies');
@@ -40,12 +41,18 @@ const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
 
   const fileName = sfs.guessFile(path.join(snippetDir, snippetName));
   assert(fileName !== null, `Invalid Snippet File Name: ${snippetName}`);
-  const snippet = sfs.smartRead(fileName, {
+
+  const isTemplate = fileName.endsWith('.mustache');
+  const contentRaw = fs.readFileSync(fileName, 'utf8');
+  const content = isTemplate ? mustache.render(contentRaw, snippetVars) : contentRaw;
+
+  const snippet = sfs.smartParse(content, {
     treatAs: task.format,
-    resolve: task.resolve
+    resolve: task.resolve,
+    refPath: isTemplate ? fileName.slice(0, -9) : fileName
   });
 
-  return populateVars(snippet, snippetVars, false);
+  return populateVars(snippet, snippetVars, isTemplate);
 };
 
 const loadTask = (taskDir, taskName, variables) => {

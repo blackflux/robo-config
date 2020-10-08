@@ -18,6 +18,7 @@ describe('Testing Test Plugin', { useTmpDir: true }, () => {
       'txt-merge-below-title/@default': [],
       'misc/@other': [],
       'misc/@default': [],
+      'template/@default': [],
       'nested-txt-overwrite/@default': [],
       'txt-create-only/@default': [],
       'json-variable-types/@default': [],
@@ -60,6 +61,10 @@ describe('Testing Test Plugin', { useTmpDir: true }, () => {
       ],
       'nested-txt-overwrite/@default': [
         'Updated: nested/overwrite-target.txt',
+        'Updated: CONFDOCS.md'
+      ],
+      'template/@default': [
+        'Updated: template.yml',
         'Updated: CONFDOCS.md'
       ],
       'txt-create-only/@default': [
@@ -113,6 +118,7 @@ describe('Testing Test Plugin', { useTmpDir: true }, () => {
       'misc/@default': [
         'Updated: misc.yml'
       ],
+      'template/@default': [],
       'nested-txt-overwrite/@default': [],
       'txt-create-only/@default': [],
       'json-variable-types/@default': [],

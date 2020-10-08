@@ -1,0 +1,19 @@
+{
+  "target": "template.yml",
+  "format": "yml",
+  "strategy": "overwrite",
+  "snippets": [
+    {
+      "name": "snippet.yml",
+      "variables": {
+        "cond": false,
+        "value1": "v1",
+        "value2": "v2"
+      }
+    }
+  ],
+  "requires": [],
+  "purpose": [
+    "Some purpose."
+  ]
+}

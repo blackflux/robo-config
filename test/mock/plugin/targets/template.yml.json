@@ -1,0 +1,7 @@
+{
+  "description": "Short description for template.yml",
+  "details": ["Long description for template.yml"],
+  "formats": ["nostruct"],
+  "requires": ["dependency"],
+  "website": "https://some.url"
+}
