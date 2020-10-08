@@ -150,6 +150,8 @@ containing a `variables` object and the snippet file name as `name`.
 - `requires`: Array of dependencies that this task has. For example when managing the `.gitignore` file this should contain `git`.
 - `purpose`: Description of what the task accomplishes provided as Array. Each entry corresponds to a new line in markdown.
 
+**Templating**: Snippet files can contain [mustache](https://mustache.github.io/) templates. This has to be indicated by ending the file with ".mustache". Parsing and variable substitution of mustache templates happens before other parsing and variable resolution.
+
 #### Local and Global Variables
 
 Variables are specified as `${variableName}`.
