@@ -109,7 +109,7 @@
     "mustache": "4.0.1",
     "object-deep-contain": "1.0.28",
     "object-scan": "13.6.1",
-    "object-treeify": "1.1.28",
+    "object-treeify": "1.1.29",
     "smart-fs": "1.12.1"
   }
 }
