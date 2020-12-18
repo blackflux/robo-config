@@ -102,7 +102,7 @@
   "dependencies": {
     "app-root-path": "3.0.0",
     "deepmerge": "4.2.2",
-    "joi-strict": "1.2.8",
+    "joi-strict": "1.2.9",
     "lodash.clonedeep": "4.5.0",
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
