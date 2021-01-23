@@ -1,13 +1,13 @@
 const assert = require('assert');
 const deepmerge = require('deepmerge');
-const deepContains = require('object-deep-contain');
+const { contains } = require('object-lib');
 const xmlMerge = require('./xml-merge');
 
 const arrayMerge = (target, source) => {
   const destination = target.concat(source);
   for (let idx1 = 0; idx1 < target.length; idx1 += 1) {
     for (let idx2 = destination.length - 1; idx2 >= target.length; idx2 -= 1) {
-      if (deepContains(destination[idx1], destination[idx2])) {
+      if (contains(destination[idx1], destination[idx2])) {
         destination.splice(idx2, 1);
       }
     }

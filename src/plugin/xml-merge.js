@@ -1,4 +1,4 @@
-const objectDeepContain = require('object-deep-contain');
+const { contains } = require('object-lib');
 
 const mergeRec = (target, changeset) => {
   if (changeset === undefined) {
@@ -20,7 +20,7 @@ const mergeRec = (target, changeset) => {
       const targetElement = target[idx];
       const toInsert = changeset[next];
 
-      if (objectDeepContain(
+      if (contains(
         targetElement,
         Object
           .entries(toInsert)
