@@ -5411,10 +5411,10 @@ object-lib@1.3.0:
   dependencies:
     object-scan "13.8.0"
 
-object-lib@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/object-lib/-/object-lib-2.0.2.tgz#859a32a35ac29567c52f544c517951db4eb83ff6"
-  integrity sha512-+k9W+/7Ld4lm6jNWIdC+3x0VQMTYL+vatbQeGAhmSPbITxLsSH0zqTQKD/WmmmfdN2AdFxU7drMcPEx/gW4jdw==
+object-lib@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/object-lib/-/object-lib-2.0.3.tgz#7a862123d59ddf65625e584bcbdcb38d07fbbee9"
+  integrity sha512-Jkqskm0st/JBmjj3Sqd4HTnCdplTsirvysNgVCFArZRSIyuQ981bVoTrfgvOzddYFmPPZHzZIbebhNl5dFR/IA==
   dependencies:
     object-scan "13.8.0"
 
