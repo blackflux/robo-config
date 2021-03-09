@@ -8,7 +8,7 @@
       "packageName": "robo-config",
       "projectName": "robo-config",
       "owner": "simlu",
-      "nodeVersion": "10",
+      "nodeVersion": "12",
       "ownerName": "Lukas Siemon",
       "mergeBot": "MrsFlux"
     }
