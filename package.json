@@ -109,7 +109,7 @@
     "mustache": "4.1.0",
     "object-lib": "2.1.0",
     "object-scan": "14.0.0",
-    "object-treeify": "1.1.33",
+    "object-treeify": "2.0.0",
     "smart-fs": "1.12.5"
   }
 }
