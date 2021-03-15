@@ -110,6 +110,6 @@
     "object-lib": "2.1.1",
     "object-scan": "14.0.0",
     "object-treeify": "2.0.0",
-    "smart-fs": "1.12.6"
+    "smart-fs": "1.12.7"
   }
 }
