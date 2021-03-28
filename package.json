@@ -106,7 +106,7 @@
     "lodash.clonedeep": "4.5.0",
     "lodash.difference": "4.5.0",
     "lodash.get": "4.4.2",
-    "mustache": "4.1.0",
+    "mustache": "4.2.0",
     "object-lib": "3.0.0",
     "object-scan": "14.0.0",
     "object-treeify": "2.0.0",
