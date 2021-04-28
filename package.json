@@ -108,7 +108,7 @@
     "lodash.get": "4.4.2",
     "mustache": "4.2.0",
     "object-lib": "3.0.0",
-    "object-scan": "14.0.0",
+    "object-scan": "14.2.0",
     "object-treeify": "2.0.0",
     "smart-fs": "2.0.2"
   }
