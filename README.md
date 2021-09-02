@@ -206,7 +206,7 @@ For documentation see [here](src/plugin/strategies).
 
 To ensure your plugin is in a valid state you should set up tests like so
 
-<!-- eslint-disable import/no-unresolved, import/no-extraneous-dependencies -->
+<!-- eslint-disable import/no-unresolved, import/no-extraneous-dependencies, import/extensions -->
 ```js
 const path = require('path');
 const expect = require('chai').expect;
@@ -224,7 +224,6 @@ describe('Testing Plugin', () => {
     });
   });
 });
-
 ```
 
 where `projects` will contain a customizable "project-like folder" for each task.
