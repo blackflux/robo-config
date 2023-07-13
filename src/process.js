@@ -1,11 +1,11 @@
-const assert = require('assert');
-const path = require('path');
-const Joi = require('joi-strict');
-const appRoot = require('app-root-path');
-const sfs = require('smart-fs');
-const objectScan = require('object-scan');
-const load = require('./load');
-const lockFile = require('./lock-file');
+import assert from 'assert';
+import fs from 'smart-fs';
+import path from 'path';
+import Joi from 'joi-strict';
+import appRoot from 'app-root-path';
+import objectScan from 'object-scan';
+import load from './load.js';
+import { validate } from './lock-file.js';
 
 const pluginPayloadSchema = Joi.object().keys({
   tasks: Joi.array().items(Joi.alternatives(
@@ -20,13 +20,13 @@ const pluginPayloadSchema = Joi.object().keys({
   confDocs: Joi.string()
 });
 
-module.exports = (projectRoot = appRoot.path) => {
+export default async (projectRoot = appRoot.path) => {
   assert(typeof projectRoot === 'string', 'Invalid "projectRoot" parameter format.');
 
   // load configuration file
   const configFile = path.join(projectRoot, '.roboconfig');
-  assert(sfs.guessFile(configFile, { exclude: ['lock'] }) != null, `Configuration File missing: ${configFile}`);
-  const config = sfs.smartRead(sfs.guessFile(configFile, { exclude: ['lock'] }));
+  assert(fs.guessFile(configFile, { exclude: ['lock'] }) != null, `Configuration File missing: ${configFile}`);
+  const config = fs.smartRead(fs.guessFile(configFile, { exclude: ['lock'] }));
   assert(config instanceof Object && !Array.isArray(config), 'Invalid configuration file content.');
 
   // initialize configs with static defaults
@@ -59,21 +59,22 @@ module.exports = (projectRoot = appRoot.path) => {
     });
 
   // load the plugins
-  Object
-    .entries(pluginCfgs)
-    .forEach(([pluginName, pluginPayload]) => {
-      // eslint-disable-next-line import/no-dynamic-require,global-require
-      const plugin = load(require(pluginName));
-      objectScan(['**.variables'], {
-        filterFn: ({ value }) => {
-          plugin.validateVars(value);
-        }
-      })(pluginPayload);
-      Object.assign(pluginPayload, { plugin });
-    });
+  const entries = Object.entries(pluginCfgs);
+  for (let i = 0; i < entries.length; i += 1) {
+    const [pluginName, pluginPayload] = entries[i];
+    // eslint-disable-next-line no-await-in-loop
+    const { default: raw } = await import(pluginName);
+    const plugin = load(raw);
+    objectScan(['**.variables'], {
+      filterFn: ({ value }) => {
+        plugin.validateVars(value);
+      }
+    })(pluginPayload);
+    Object.assign(pluginPayload, { plugin });
+  }
 
   // validate plugin lockfile
-  lockFile.validate(projectRoot, Object.values(pluginCfgs));
+  validate(projectRoot, Object.values(pluginCfgs));
 
   // execute plugins
   const result = [];
@@ -102,7 +103,7 @@ module.exports = (projectRoot = appRoot.path) => {
   Object
     .entries(docFiles)
     .forEach(([confDocsFile, { confDocs, lines }]) => {
-      if (sfs.smartWrite(
+      if (fs.smartWrite(
         confDocsFile,
         [
           '# Codebase Configuration Documentation',

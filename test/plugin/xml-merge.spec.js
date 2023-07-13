@@ -1,19 +1,18 @@
-const fs = require('fs');
-const path = require('path');
-const expect = require('chai').expect;
-const { describe } = require('node-tdd');
-const sfs = require('smart-fs');
-const xmlMerge = require('../../src/plugin/xml-merge');
+import fs from 'smart-fs';
+import path from 'path';
+import { expect } from 'chai';
+import { describe } from 'node-tdd';
+import xmlMerge from '../../src/plugin/xml-merge.js';
 
 describe('Testing xml-merge.js', () => {
   describe('Integration Tests', () => {
     // eslint-disable-next-line mocha/no-setup-in-describe
-    fs.readdirSync(path.join(__dirname, 'xml-merge'))
+    fs.readdirSync(path.join(fs.dirname(import.meta.url), 'xml-merge'))
       .forEach((f) => {
         it(`Testing '${f}'`, () => {
-          const target = sfs.smartRead(path.join(__dirname, 'xml-merge', f, 'target.xml'));
-          const changeset = sfs.smartRead(path.join(__dirname, 'xml-merge', f, 'changeset.xml'));
-          const result = sfs.smartRead(path.join(__dirname, 'xml-merge', f, 'result.xml'));
+          const target = fs.smartRead(path.join(fs.dirname(import.meta.url), 'xml-merge', f, 'target.xml'));
+          const changeset = fs.smartRead(path.join(fs.dirname(import.meta.url), 'xml-merge', f, 'changeset.xml'));
+          const result = fs.smartRead(path.join(fs.dirname(import.meta.url), 'xml-merge', f, 'result.xml'));
           const merged = xmlMerge(target, changeset);
           expect(result).to.deep.equal(merged);
         });
@@ -29,10 +28,10 @@ describe('Testing xml-merge.js', () => {
         fs.writeFileSync(path.join(dir, 'result.xml'), result);
 
         const merged = xmlMerge(
-          sfs.smartRead(path.join(dir, 'target.xml')),
-          sfs.smartRead(path.join(dir, 'changeset.xml'))
+          fs.smartRead(path.join(dir, 'target.xml')),
+          fs.smartRead(path.join(dir, 'changeset.xml'))
         );
-        expect(merged).to.deep.equal(sfs.smartRead(path.join(dir, 'result.xml')));
+        expect(merged).to.deep.equal(fs.smartRead(path.join(dir, 'result.xml')));
       };
     });
 
