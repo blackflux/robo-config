@@ -1,14 +1,13 @@
-const assert = require('assert');
-const fs = require('smart-fs');
-const path = require('path');
-const get = require('lodash.get');
-const deepmerge = require('deepmerge');
-const Joi = require('joi-strict');
-const sfs = require('smart-fs');
-const mustache = require('mustache');
-const objectScan = require('object-scan');
-const { populateVars, determineVars } = require('./vars');
-const strategies = require('./strategies');
+import assert from 'assert';
+import fs from 'smart-fs';
+import path from 'path';
+import get from 'lodash.get';
+import deepmerge from 'deepmerge';
+import Joi from 'joi-strict';
+import mustache from 'mustache';
+import objectScan from 'object-scan';
+import { populateVars, determineVars } from './vars.js';
+import strategies from './strategies.js';
 
 const taskSchema = Joi.object().keys({
   target: Joi.string().optional(),
@@ -39,7 +38,7 @@ const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
   assert(task instanceof Object && !Array.isArray(task), 'Invalid "task" parameter format.');
   assert(snippetVars instanceof Object && !Array.isArray(snippetVars), 'Invalid "snippetVars" parameter format.');
 
-  const fileName = sfs.guessFile(path.join(snippetDir, snippetName));
+  const fileName = fs.guessFile(path.join(snippetDir, snippetName));
   assert(fileName !== null, `Invalid Snippet File Name: ${snippetName}`);
 
   const isTemplate = fileName.endsWith('.mustache');
@@ -47,7 +46,7 @@ const loadSnippet = (snippetDir, snippetName, task, snippetVars) => {
   const contentRendered = isTemplate
     ? mustache.render(contentRaw, snippetVars)
     : contentRaw;
-  const contentParsed = sfs.smartParse(contentRendered, {
+  const contentParsed = fs.smartParse(contentRendered, {
     treatAs: task.format,
     resolve: task.resolve,
     refPath: isTemplate ? fileName.slice(0, -9) : fileName
@@ -65,7 +64,7 @@ const loadTask = (taskDir, taskName, variables) => {
   if (!fs.existsSync(taskFilePath)) {
     return null;
   }
-  const task = sfs.smartRead(taskFilePath);
+  const task = fs.smartRead(taskFilePath);
   if (task.target !== undefined) {
     assert([false, undefined].includes(task.create), 'Option "create" defaults to true. Remove.');
     task.format = task.format || null;
@@ -101,7 +100,7 @@ const applyTask = (taskDir, projectRoot, task, exclude) => {
   }
 
   const target = path.join(projectRoot, task.target);
-  return sfs.smartWrite(target, task.toWrite, {
+  return fs.smartWrite(target, task.toWrite, {
     treatAs: task.format,
     mergeStrategy: strategies[task.strategy],
     create: task.create,
@@ -109,14 +108,13 @@ const applyTask = (taskDir, projectRoot, task, exclude) => {
   });
 };
 
-const listPublicTasks = (taskDir) => sfs
+export const listPublicTasks = (taskDir) => fs
   .walkDir(taskDir)
   .filter((f) => f.includes('/@'))
   .filter((f) => f.endsWith('.json'))
   .map((f) => f.slice(0, -5));
-module.exports.listPublicTasks = listPublicTasks;
 
-const applyTasksRec = (taskDir, projectRoot, tasks, variables, exclude) => {
+export const applyTasksRec = (taskDir, projectRoot, tasks, variables, exclude) => {
   const result = [];
   tasks.forEach((t) => {
     const vars = { ...variables, ...t.variables };
@@ -138,9 +136,8 @@ const applyTasksRec = (taskDir, projectRoot, tasks, variables, exclude) => {
   });
   return result;
 };
-module.exports.applyTasksRec = applyTasksRec;
 
-const extractMeta = (taskDir, tasks) => {
+export const extractMeta = (taskDir, tasks) => {
   assert(typeof taskDir === 'string', 'Invalid "taskDir" parameter format.');
   assert(
     Array.isArray(tasks) && tasks.every((e) => !Array.isArray(e) && e instanceof Object),
@@ -153,9 +150,9 @@ const extractMeta = (taskDir, tasks) => {
   const taskNameStack = tasks.map(({ name }) => name);
   while (taskNameStack.length !== 0) {
     const taskName = taskNameStack.pop();
-    const fileName = sfs.guessFile(path.join(taskDir, taskName));
+    const fileName = fs.guessFile(path.join(taskDir, taskName));
     if (fileName !== null) {
-      const task = sfs.smartRead(fileName);
+      const task = fs.smartRead(fileName);
       if (task.tasks !== undefined) {
         taskNameStack.push(...task.tasks.map((stn) => (stn.includes('/') ? stn : `${taskName.split('/')[0]}/${stn}`)));
       }
@@ -171,4 +168,3 @@ const extractMeta = (taskDir, tasks) => {
     target: [...target]
   };
 };
-module.exports.extractMeta = extractMeta;

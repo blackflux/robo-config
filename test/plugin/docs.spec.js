@@ -1,9 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-const expect = require('chai').expect;
-const { describe } = require('node-tdd');
-const sfs = require('smart-fs');
-const { documentFiles, syncDocs } = require('../../src/plugin/docs');
+import fs from 'smart-fs';
+import path from 'path';
+import { expect } from 'chai';
+import { describe } from 'node-tdd';
+import { documentFiles, syncDocs } from '../../src/plugin/docs.js';
 
 describe('Integration docs.js', { useTmpDir: true }, () => {
   it('Testing documentFiles', () => {
@@ -51,11 +50,11 @@ describe('Integration docs.js', { useTmpDir: true }, () => {
     fs.mkdirSync(path.join(docDir, 'scope'));
     fs.writeFileSync(path.join(docDir, 'scope', '@unknown.md'), '');
 
-    expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@unknown.md']);
+    expect(fs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@unknown.md']);
     expect(syncDocs('plugin-name', taskDir, reqDir, varDir, targetDir, docDir)).to.deep.equal([
       'Updated: scope/@task.md',
       'Documentation Updated. Please commit and re-run.'
     ]);
-    expect(sfs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@task.md']);
+    expect(fs.walkDir(dir)).to.deep.equal(['tasks/scope/@task.json', 'docs/scope/@task.md']);
   });
 });

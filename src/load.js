@@ -1,12 +1,12 @@
-const assert = require('assert');
-const path = require('path');
-const fs = require('smart-fs');
-const Joi = require('joi-strict');
-const { syncDocs, generateDocs } = require('./plugin/docs');
-const { applyTasksRec, listPublicTasks, extractMeta } = require('./plugin/task');
-const { populateVars, varTypes } = require('./plugin/vars');
+import assert from 'assert';
+import path from 'path';
+import fs from 'smart-fs';
+import Joi from 'joi-strict';
+import { syncDocs, generateDocs } from './plugin/docs.js';
+import { applyTasksRec, listPublicTasks, extractMeta } from './plugin/task.js';
+import { populateVars, varTypes } from './plugin/vars.js';
 
-module.exports = (pl) => {
+export default (pl) => {
   Joi.assert(pl, Joi.object().keys({
     name: Joi.string(),
     taskDir: Joi.string(),
