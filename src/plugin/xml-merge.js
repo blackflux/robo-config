@@ -1,4 +1,4 @@
-const { contains } = require('object-lib');
+import { contains } from 'object-lib';
 
 const mergeRec = (target, changeset) => {
   if (changeset === undefined) {
@@ -43,4 +43,4 @@ const mergeRec = (target, changeset) => {
   return changeset;
 };
 
-module.exports = (target, changeset) => Object.assign(target, { data: mergeRec(target.data, changeset.data) });
+export default (target, changeset) => Object.assign(target, { data: mergeRec(target.data, changeset.data) });

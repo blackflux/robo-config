@@ -1,8 +1,11 @@
-const path = require('path');
-const expect = require('chai').expect;
-const { describe } = require('node-tdd');
-const { load: loadSpec } = require('../src/index');
-const plugin = require('./mock/plugin');
+import fs from 'smart-fs';
+import path from 'path';
+import { expect } from 'chai';
+import { describe } from 'node-tdd';
+import index from '../src/index.js';
+import plugin from './mock/plugin.js';
+
+const { load: loadSpec } = index;
 
 describe('Testing Test Plugin', { useTmpDir: true }, () => {
   it('Synchronize Tasks Documentation', () => {
@@ -10,7 +13,7 @@ describe('Testing Test Plugin', { useTmpDir: true }, () => {
   });
 
   it('Testing All Public Tasks', () => {
-    const result = loadSpec(plugin).test(path.join(__dirname, 'mock', 'projects'));
+    const result = loadSpec(plugin).test(path.join(fs.dirname(import.meta.url), 'mock', 'projects'));
     expect(result).to.deep.equal({
       'xml-merge/@default': [],
       'txt-unique-top/@default': [],

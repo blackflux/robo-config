@@ -1,10 +1,10 @@
-const assert = require('assert');
-const path = require('path');
-const Joi = require('joi-strict');
-const sfs = require('smart-fs');
-const treeify = require('object-treeify');
-const { determineVars, varTypes } = require('./vars');
-const { listPublicTasks } = require('./task');
+import assert from 'assert';
+import path from 'path';
+import Joi from 'joi-strict';
+import fs from 'smart-fs';
+import treeify from 'object-treeify';
+import { determineVars, varTypes } from './vars.js';
+import { listPublicTasks } from './task.js';
 
 const normalizeRef = (input) => input
   .trim()
@@ -17,7 +17,7 @@ const linkRef = (type, c, ident = null) => `<a href="#${normalizeRef(`${type}-re
 
 const getTaskIcon = (task) => (task.target !== undefined ? ':clipboard:' : ':open_file_folder:');
 
-const documentFiles = (root, plName, files, exclude) => {
+export const documentFiles = (root, plName, files, exclude) => {
   const result = [];
   result.push(root);
 
@@ -43,7 +43,6 @@ const documentFiles = (root, plName, files, exclude) => {
 
   return result;
 };
-module.exports.documentFiles = documentFiles;
 
 const documentSection = (plName, baseLevel, exclude, {
   level, taskName, task, targets, requires, variables
@@ -118,7 +117,7 @@ const documentSection = (plName, baseLevel, exclude, {
   return result;
 };
 
-const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude, baseLevel) => {
+export const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude, baseLevel) => {
   assert(
     Array.isArray(tasks) && tasks.every((e) => !Array.isArray(e) && e instanceof Object),
     'Invalid "tasks" parameter format.'
@@ -137,7 +136,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude
   // expand tasks with subtasks
   for (let idx = 0; idx < sections.length; idx += 1) {
     const { level, taskName } = sections[idx];
-    const task = sfs.smartRead(sfs.guessFile(path.join(taskDir, taskName)));
+    const task = fs.smartRead(fs.guessFile(path.join(taskDir, taskName)));
     sections[idx].task = task;
     sections.splice(idx + 1, 0, ...(task.tasks || [])
       .sort((a, b) => (
@@ -244,7 +243,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude
       name: 'Strategies',
       source: 'strategies',
       short: 'strat',
-      dir: path.join(__dirname, 'strategies'),
+      dir: path.join(fs.dirname(import.meta.url), 'strategies'),
       schema: Joi.object().keys({
         validFor: Joi.array()
           .items(Joi.string().valid('nostruct', 'list', 'xml', 'json', 'yml', 'any'))
@@ -262,9 +261,9 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude
       content.push(`## ${def.name}`);
       content.push('');
       toDocument.forEach((e) => {
-        const f = sfs.guessFile(path.join(def.dir, e));
+        const f = fs.guessFile(path.join(def.dir, e));
         assert(typeof f === 'string', `Missing ${def.name} Definition: ${e}`);
-        const data = sfs.smartRead(f);
+        const data = fs.smartRead(f);
 
         content.push(`### ${anchorRef(`${plName}-${def.short}`, e)} ${
           typeof data.website === 'string' ? `([\`link\`](${data.website}))` : ''
@@ -293,7 +292,7 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude
             if (type === 'requires') {
               data[type].forEach((r) => {
                 assert(
-                  typeof sfs.guessFile(path.join(reqDir, r)) === 'string',
+                  typeof fs.guessFile(path.join(reqDir, r)) === 'string',
                   `Missing ${def.name} Definition (required): ${r}`
                 );
                 assert(
@@ -328,9 +327,8 @@ const generateDocs = (plName, taskDir, reqDir, varDir, targetDir, tasks, exclude
     ...content
   ];
 };
-module.exports.generateDocs = generateDocs;
 
-const syncDocs = (plName, taskDir, reqDir, varDir, targetDir, docDir) => {
+export const syncDocs = (plName, taskDir, reqDir, varDir, targetDir, docDir) => {
   const docFiles = [];
 
   // generate doc files
@@ -339,7 +337,7 @@ const syncDocs = (plName, taskDir, reqDir, varDir, targetDir, docDir) => {
     .map((f) => [`${f}.json`, `${f}.md`])
     .forEach(([f, docFile]) => {
       docFiles.push(docFile);
-      if (sfs.smartWrite(
+      if (fs.smartWrite(
         path.join(docDir, docFile),
         generateDocs(plName, taskDir, reqDir, varDir, targetDir, [{ name: f, variables: {} }], [], 0)
       )) {
@@ -348,16 +346,15 @@ const syncDocs = (plName, taskDir, reqDir, varDir, targetDir, docDir) => {
     });
 
   // delete outdated doc files
-  sfs
+  fs
     .walkDir(docDir)
     .filter((f) => f.includes('/@'))
     .filter((f) => f.endsWith('.md'))
     .filter((f) => !docFiles.includes(f))
-    .forEach((f) => sfs.cleaningDelete(path.join(docDir, f)));
+    .forEach((f) => fs.cleaningDelete(path.join(docDir, f)));
 
   if (result.length !== 0) {
     result.push('Documentation Updated. Please commit and re-run.');
   }
   return result;
 };
-module.exports.syncDocs = syncDocs;

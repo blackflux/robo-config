@@ -1,5 +1,5 @@
-const expect = require('chai').expect;
-const strategies = require('../../src/plugin/strategies');
+import { expect } from 'chai';
+import strategies from '../../src/plugin/strategies.js';
 
 describe('Integration strategies.js', () => {
   it('Testing Merge Strategy: overwrite', () => {

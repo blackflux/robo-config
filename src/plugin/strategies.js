@@ -1,7 +1,7 @@
-const assert = require('assert');
-const deepmerge = require('deepmerge');
-const { contains } = require('object-lib');
-const xmlMerge = require('./xml-merge');
+import assert from 'assert';
+import deepmerge from 'deepmerge';
+import { contains } from 'object-lib';
+import xmlMerge from './xml-merge.js';
 
 const arrayMerge = (target, source) => {
   const destination = target.concat(source);
@@ -15,7 +15,7 @@ const arrayMerge = (target, source) => {
   return destination;
 };
 
-module.exports = {
+export default {
   'merge-below-title': (existing, changeset) => {
     assert(Array.isArray(existing), 'Invalid "existing" parameter format.');
     assert(Array.isArray(changeset), 'Invalid "changeset" parameter format.');

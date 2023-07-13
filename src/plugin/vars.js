@@ -1,7 +1,7 @@
-const assert = require('assert');
-const cloneDeep = require('lodash.clonedeep');
-const difference = require('lodash.difference');
-const objectScan = require('object-scan');
+import assert from 'assert';
+import cloneDeep from 'lodash.clonedeep';
+import difference from 'lodash.difference';
+import objectScan from 'object-scan';
 
 const modifiers = {
   UPPER: (input) => input.toUpperCase(),
@@ -82,7 +82,7 @@ const substituteVariables = (input, variables, allowFullMatch, usedVars) => {
     : result;
 };
 
-module.exports.populateVars = (data, variables, allowUnused) => {
+export const populateVars = (data, variables, allowUnused) => {
   assert(data instanceof Object, 'Invalid "data" parameter format.');
   assert(variables instanceof Object && !Array.isArray(variables), 'Invalid "variables" parameter format.');
   assert(typeof allowUnused === 'boolean', 'Invalid "allowUnused" parameter format.');
@@ -126,7 +126,7 @@ module.exports.populateVars = (data, variables, allowUnused) => {
   return result;
 };
 
-module.exports.determineVars = (data) => {
+export const determineVars = (data) => {
   assert(data instanceof Object, 'Invalid "data" parameter format.');
 
   const result = [];
@@ -148,7 +148,7 @@ module.exports.determineVars = (data) => {
   return result;
 };
 
-module.exports.varTypes = {
+export const varTypes = {
   string: (v) => typeof v === 'string',
   boolean: (v) => typeof v === 'boolean',
   object: (v) => v instanceof Object && !Array.isArray(v),

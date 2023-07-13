@@ -1,8 +1,8 @@
-const path = require('path');
-const fs = require('smart-fs');
-const { populateVars } = require('./plugin/vars');
+import path from 'path';
+import fs from 'smart-fs';
+import { populateVars } from './plugin/vars.js';
 
-module.exports.validate = (projectRoot, plugins) => {
+export const validate = (projectRoot, plugins) => {
   const lockFile = fs.existsSync(path.join(projectRoot, '.roboconfig.lock'))
     ? fs.smartRead(path.join(projectRoot, '.roboconfig.lock'), { treatAs: 'json' })
     : {};

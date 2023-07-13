@@ -44,12 +44,12 @@ Then create a test similar to
 
 <!-- eslint-disable import/no-unresolved, import/no-extraneous-dependencies -->
 ```js
-const expect = require('chai').expect;
-const robo = require('robo-config');
+import { expect } from 'chai';
+import robo from 'robo-config';
 
 describe('Running Robo Config', () => {
-  it('Applying Configuration', () => {
-    expect(robo()).to.deep.equal([]);
+  it('Applying Configuration', async () => {
+    expect(await robo()).to.deep.equal([]);
   });
 });
 ```
@@ -208,10 +208,12 @@ To ensure your plugin is in a valid state you should set up tests like so
 
 <!-- eslint-disable import/no-unresolved, import/no-extraneous-dependencies, import/extensions -->
 ```js
-const path = require('path');
-const expect = require('chai').expect;
-const { load } = require('robo-config');
-const plugin = require('./path/to/plugin');
+import path from 'path';
+import { expect } from 'chai';
+import robo from 'robo-config';
+import plugin from './path/to/plugin';
+
+const { load } = robo;
 
 describe('Testing Plugin', () => {
   it('Documenting Plugin Tasks', () => {
@@ -219,7 +221,7 @@ describe('Testing Plugin', () => {
   });
 
   it('Testing Plugin Tasks', () => {
-    expect(load(plugin).test(path.join(__dirname, 'path', 'to', 'mock', 'projects'))).to.deep.equal({
+    expect(load(plugin).test(path.join(fs.dirname(import.meta.url), 'path', 'to', 'mock', 'projects'))).to.deep.equal({
       'task-dir/task-name': []
     });
   });

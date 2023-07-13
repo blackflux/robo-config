@@ -1,6 +1,6 @@
-const load = require('./load');
-const process = require('./process');
+import load from './load.js';
+import process from './process.js';
 
-const fn = (...args) => process(...args);
+const fn = async (...args) => process(...args);
 fn.load = load;
-module.exports = fn;
+export default fn;
