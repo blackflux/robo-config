@@ -1,6 +1,6 @@
 import assert from 'assert';
-import fs from 'smart-fs';
 import path from 'path';
+import fs from 'smart-fs';
 import get from 'lodash.get';
 import deepmerge from 'deepmerge';
 import Joi from 'joi-strict';

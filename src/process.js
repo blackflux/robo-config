@@ -1,6 +1,6 @@
 import assert from 'assert';
-import fs from 'smart-fs';
 import path from 'path';
+import fs from 'smart-fs';
 import Joi from 'joi-strict';
 import appRoot from 'app-root-path';
 import objectScan from 'object-scan';
