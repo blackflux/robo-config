@@ -7,6 +7,7 @@ import robo from '../src/index.js';
 
 describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
   let pluginFile;
+
   beforeEach(() => {
     pluginFile = path.join(fs.dirname(import.meta.url), 'mock', 'plugin.js');
   });
@@ -187,8 +188,8 @@ describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
       'somewords', 'SomeWords', 'SOME_WORDS', 'some-words',
       'string', true, {}, [], 123.1, 113, 'default-value'
     ];
-    expect(fs.smartRead(path.join(dir, 'target1.yml'))).to.deep.equal({ data });
-    expect(fs.smartRead(path.join(dir, 'target2.yml'))).to.deep.equal({ data });
+    expect(await fs.smartRead(path.join(dir, 'target1.yml'))).to.deep.equal({ data });
+    expect(await fs.smartRead(path.join(dir, 'target2.yml'))).to.deep.equal({ data });
     expect(fs.smartRead(path.join(dir, '.roboconfig.lock'), { treatAs: 'json' }))
       .to.deep.equal({ 'mock-plugin': ['target1.yml', 'target2.yml'] });
   });
