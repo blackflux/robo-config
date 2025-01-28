@@ -7,6 +7,7 @@ import robo from '../src/index.js';
 
 describe('Robo + Plugin Integration Tests', { useTmpDir: true }, () => {
   let pluginFile;
+
   beforeEach(() => {
     pluginFile = path.join(fs.dirname(import.meta.url), 'mock', 'plugin.js');
   });

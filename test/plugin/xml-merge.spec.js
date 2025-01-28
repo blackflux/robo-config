@@ -21,6 +21,7 @@ describe('Testing xml-merge.js', () => {
 
   describe('Unit tests', { useTmpDir: true }, () => {
     let executeTest;
+
     beforeEach(({ dir }) => {
       executeTest = (target, changeset, result) => {
         fs.writeFileSync(path.join(dir, 'target.xml'), target);
