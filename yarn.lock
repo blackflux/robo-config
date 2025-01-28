@@ -1874,15 +1874,6 @@ fs-extra@11.1.1:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
-fs-extra@11.3.0:
-  version "11.3.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.3.0.tgz#0daced136bbaf65a555a326719af931adc7a314d"
-  integrity sha512-Z4XaCL6dUDHfP/jT25jJKMmtxvuwbkrD1vNSMFlo9lNLY2c5FHYSQgHPRZUjAB26TpDEoW9HCOgplrdbaPV/ew==
-  dependencies:
-    graceful-fs "^4.2.0"
-    jsonfile "^6.0.1"
-    universalify "^2.0.0"
-
 fsevents@~2.3.2:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
@@ -4210,20 +4201,6 @@ smart-fs@4.0.1:
     xml-js "1.6.11"
     yaml-boost "2.0.1"
 
-smart-fs@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/smart-fs/-/smart-fs-5.0.0.tgz#f75ba1fe67758b94ae61a8b2ebfe39bbfb0e1cba"
-  integrity sha512-i84c60L6Ux9fhOW6iijahs0EjHvCm5Ja/V/mo68J9nRpe1rEq89qVjhseONxSxKTGzvZ+q0mxvqENpurdfw3fw==
-  dependencies:
-    fs-extra "11.3.0"
-    js-yaml "4.1.0"
-    json-stringify-pretty-compact "4.0.0"
-    lodash.clonedeep "4.5.0"
-    lodash.isequal "4.5.0"
-    object-lib "4.1.1"
-    xml-js "1.6.11"
-    yaml-boost "4.0.0"
-
 sort-keys@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-2.0.0.tgz#658535584861ec97d730d6cf41822e1f56684128"
@@ -4900,16 +4877,6 @@ yaml-boost@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-2.0.1.tgz#494d669f602d3b3712d74ad1a0171b7a56eb63ea"
   integrity sha512-ubZ+yhP57cO0deJi/RdWtJhWan7ma3U2j1VLTeRrHVOsmoMZN8eZOZVqvUgbM/4147n5gmUTbpspie/b440ZbQ==
-  dependencies:
-    js-yaml "4.1.0"
-    lodash.get "4.4.2"
-    lodash.mergewith "4.6.2"
-    lodash.set "4.3.2"
-
-yaml-boost@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/yaml-boost/-/yaml-boost-4.0.0.tgz#83c7c4d7d35dc87888b0787b5b7c2adc1bd01915"
-  integrity sha512-BVf80ZjZ1wFNDmPW50AvV7HX471W8fErv8z6bRrOwJAq53FG2GzukGvG4kcdMHpd9Cha59TOppbjRJUP+pqUvQ==
   dependencies:
     js-yaml "4.1.0"
     lodash.get "4.4.2"
